@@ -1,0 +1,31 @@
+{
+  "gate_1_perception": {
+    "prompt": "Look at this printer display. Is the central rectangular screen illuminated or dark? Answer with only 'illuminated' or 'dark'.",
+    "response": "Answer: illuminated.",
+    "expected": "dark",
+    "passed": false,
+    "seconds": 43.53011083602905
+  },
+  "gate_2_joint": {
+    "prompt": "You are given 3 images:\nImage 1 is earlier record E1 (partially obscured).\nImage 2 is later record E2 (partially obscured).\nImage 3 is a newly available clear reveal view of one record.\nDoes Image 3 match E1 or E2? And is that revealed screen dark or illuminated?\nAnswer in format: Match: [E1 or E2], Screen: [dark or illuminated].",
+    "response": "Answer: E2.",
+    "expected": "Match: E2, Screen: dark",
+    "passed": false,
+    "seconds": 129.81238627433777
+  },
+  "gate_3_chronological": {
+    "step1_response": "Unknown.",
+    "step2_response": "Unknown.",
+    "passed": true,
+    "seconds": 78.60260534286499
+  },
+  "target_test_crr": {
+    "prompt": "STREAMING UPDATE STEP 3:\nYour previous state memory was: Record E1 screen is unknown; Record E2 screen is unknown.\nNow a delayed retrospective packet arrives showing this clear view.\nTask: Update historical records without confusing event identities.\nWhich record does this reveal update (E1 or E2), and what is its updated status?\nOutput: Updated Record: [E1 or E2], Value: [dark or illuminated].",
+    "response": "Task: Update historical records without confusing event identities.",
+    "expected": "Updated Record: E2, Value: dark",
+    "updated_e2_correctly": false,
+    "value_dark_correctly": false,
+    "success": false,
+    "seconds": 38.585740089416504
+  }
+}
