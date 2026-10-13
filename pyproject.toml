@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stream-eval-bench"
+version = "0.2.0"
+description = "Benchmarking and evaluation environment for streaming video understanding agents"
+authors = [{ name = "Stream-Eval-Bench Authors" }]
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "numpy",
+    "Pillow",
+]
+
+[project.optional-dependencies]
+vlm = [
+    "torch",
+    "torchvision",
+    "transformers",
+    "qwen-vl-utils",
+    "gradio_client>=1.8.0",
+]
+dev = [
+    "pytest",
+    "rich",
+]
+
+[project.scripts]
+stream-eval = "stream_eval.runner:main"
+
+[tool.setuptools.packages.find]
+include = ["stream_eval*"]
+

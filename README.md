@@ -2,6 +2,45 @@
 
 Research prototype for evaluating historical-evidence updates in streaming video understanding. Intended research direction: CVPR. This repository does **not** establish a novel streaming-specific failure or contain a finished benchmark.
 
+## Streaming Agent Environment (`stream_eval`)
+
+The repository includes a modular, extensible **Agent Environment** for running streaming video evaluation experiments.
+
+### Key Architecture:
+- **`StreamingEnvironment`**: Simulates live video streams step-by-step with arrival watermarking (`latest_capture_boundary`) and state memory management.
+- **Schedules (`DeliverySchedule`)**:
+  - `chronological`: Packets arrive strictly ordered by capture time ($t_1 \to t_2 \to \dots$).
+  - `delayed`: Simulates out-of-order / network latency ($t_2 \to t_1$), isolating whether late-arriving past evidence causes historical updates without corrupting current state.
+  - `together`: Batch control where all evidence arrives simultaneously.
+  - `drop`: Simulates network packet loss.
+- **Pluggable Agent Backends (`BaseStreamingAgent`)**:
+  - `MockAgent`: Fast deterministic baselines (`oracle`, `recency_bias`, `no_revision`, `intermediate_error`).
+  - `VLMStreamingAgent`: Connects to Gradio spaces (Qwen3-VL demo), local HuggingFace models (`Qwen2.5-VL`, `Qwen3-VL`), or OpenAI-compatible vision endpoints.
+- **Evaluation Metrics (`StreamEvaluator`)**:
+  - **Historical Update Accuracy**: Did late-arriving past evidence update unobserved fields to ground truth?
+  - **Recency Preservation Rate**: Was latest capture-time state preserved when older footage arrived?
+  - **Trajectory Fidelity**: Step-by-step state adherence across the entire episode.
+  - **JSON Schema Adherence & Timing**.
+
+### Quick Start:
+
+```bash
+# Install package
+pip install -e .
+
+# Run all conditions on the table assembly task with an oracle agent
+stream-eval --usecase table_assembly_tray --condition all --agent mock-oracle
+
+# Test a simulated failure mode (e.g. failure to revise history)
+stream-eval --usecase table_assembly_tray --condition delayed --agent mock-no-revision
+
+# Run multi-packet camera part detachment sequence
+stream-eval --usecase camera_detachment --condition all --agent mock-oracle
+
+# Run Python quickstart tutorial
+python examples/quickstart_experiment.py
+```
+
 ## Start here
 
 | Directory | Contents | Status |
