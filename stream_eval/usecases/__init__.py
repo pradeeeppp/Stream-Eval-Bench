@@ -7,7 +7,10 @@ from stream_eval.usecases.registry import (
     list_usecases,
 )
 import stream_eval.usecases.table_assembly
+import stream_eval.usecases.table_components
 import stream_eval.usecases.camera_detachment
+import stream_eval.usecases.camera_mount
+import stream_eval.usecases.printer_operations
 
 __all__ = [
     "UseCase",

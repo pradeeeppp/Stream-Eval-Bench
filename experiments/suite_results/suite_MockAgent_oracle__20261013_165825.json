@@ -1,0 +1,2385 @@
+{
+  "timestamp": "2026-10-13T16:58:25.585005",
+  "agent": {
+    "agent_name": "MockAgent(oracle)",
+    "type": "MockAgent"
+  },
+  "total_usecases": 5,
+  "results_by_usecase": {
+    "table_assembly_tray": {
+      "usecase_name": "HoloAssist Table Assembly Tray Tracking",
+      "joint_accuracy": 1.0,
+      "chronological_accuracy": 1.0,
+      "delayed_accuracy": 1.0,
+      "streaming_order_effect_gap": 0.0,
+      "historical_update_success": true,
+      "recency_preserved": true,
+      "episodes": {
+        "together": {
+          "usecase_id": "table_assembly_tray",
+          "condition": "together",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "earlier",
+                "later"
+              ],
+              "latest_capture_boundary": 119.924,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: earlier): Original capture timestamp 64.019\u201375.908s.\nVideo packet 2 (ID: later): Original capture timestamp 112.009\u2013119.924s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 119.924s.\nPrevious model-produced memory: {\"earlier\": \"no\", \"latest\": \"yes\"}\nTask: Track whether the large round tray rests on the table frame. An open frame is not a tray. Answer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Return only JSON with keys earlier and latest, each with value yes, no, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"no\", \"latest\": \"yes\"}",
+              "parsed_state": {
+                "earlier": "no",
+                "latest": "yes"
+              },
+              "expected_state": {
+                "earlier": "no",
+                "latest": "yes"
+              },
+              "elapsed_seconds": 2.5199995434377342e-05,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "no",
+                    "got": "no",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.590070"
+            }
+          ],
+          "final_state": {
+            "earlier": "no",
+            "latest": "yes"
+          },
+          "expected_final_state": {
+            "earlier": "no",
+            "latest": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 2.5199995434377342e-05,
+            "avg_step_seconds": 2.5199995434377342e-05,
+            "final_field_details": {
+              "earlier": {
+                "expected": "no",
+                "got": "no",
+                "matched": true
+              },
+              "latest": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 2 steps"
+          },
+          "environment_metadata": {
+            "schedule": "together",
+            "total_packets": 2,
+            "steps_count": 1
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.590148"
+        },
+        "chronological": {
+          "usecase_id": "table_assembly_tray",
+          "condition": "chronological",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "earlier"
+              ],
+              "latest_capture_boundary": 75.908,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: earlier): Original capture timestamp 64.019\u201375.908s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 75.908s.\nPrevious model-produced memory: {\"earlier\": \"no\", \"latest\": \"no\"}\nTask: Track whether the large round tray rests on the table frame. An open frame is not a tray. Answer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Return only JSON with keys earlier and latest, each with value yes, no, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"no\", \"latest\": \"no\"}",
+              "parsed_state": {
+                "earlier": "no",
+                "latest": "no"
+              },
+              "expected_state": {
+                "earlier": "no",
+                "latest": "no"
+              },
+              "elapsed_seconds": 1.170000177808106e-05,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "no",
+                    "got": "no",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "no",
+                    "got": "no",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.590559"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "later"
+              ],
+              "latest_capture_boundary": 119.924,
+              "input_memory": "{\"earlier\": \"no\", \"latest\": \"no\"}",
+              "prompt": "Video packet 1 (ID: later): Original capture timestamp 112.009\u2013119.924s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 119.924s.\nPrevious model-produced memory: {\"earlier\": \"no\", \"latest\": \"yes\"}\nTask: Track whether the large round tray rests on the table frame. An open frame is not a tray. Answer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Return only JSON with keys earlier and latest, each with value yes, no, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"no\", \"latest\": \"yes\"}",
+              "parsed_state": {
+                "earlier": "no",
+                "latest": "yes"
+              },
+              "expected_state": {
+                "earlier": "no",
+                "latest": "yes"
+              },
+              "elapsed_seconds": 6.199996278155595e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "no",
+                    "got": "no",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.590624"
+            }
+          ],
+          "final_state": {
+            "earlier": "no",
+            "latest": "yes"
+          },
+          "expected_final_state": {
+            "earlier": "no",
+            "latest": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.7899998056236655e-05,
+            "avg_step_seconds": 8.949999028118327e-06,
+            "final_field_details": {
+              "earlier": {
+                "expected": "no",
+                "got": "no",
+                "matched": true
+              },
+              "latest": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 2 steps"
+          },
+          "environment_metadata": {
+            "schedule": "chronological",
+            "total_packets": 2,
+            "steps_count": 2
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.590665"
+        },
+        "delayed": {
+          "usecase_id": "table_assembly_tray",
+          "condition": "delayed",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "later"
+              ],
+              "latest_capture_boundary": 119.924,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: later): Original capture timestamp 112.009\u2013119.924s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 119.924s.\nPrevious model-produced memory: {\"earlier\": \"unknown\", \"latest\": \"yes\"}\nTask: Track whether the large round tray rests on the table frame. An open frame is not a tray. Answer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Return only JSON with keys earlier and latest, each with value yes, no, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"unknown\", \"latest\": \"yes\"}",
+              "parsed_state": {
+                "earlier": "unknown",
+                "latest": "yes"
+              },
+              "expected_state": {
+                "earlier": "unknown",
+                "latest": "yes"
+              },
+              "elapsed_seconds": 6.099995516706258e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.590752"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "earlier"
+              ],
+              "latest_capture_boundary": 119.924,
+              "input_memory": "{\"earlier\": \"unknown\", \"latest\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: earlier): Original capture timestamp 64.019\u201375.908s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 119.924s.\nPrevious model-produced memory: {\"earlier\": \"no\", \"latest\": \"yes\"}\nTask: Track whether the large round tray rests on the table frame. An open frame is not a tray. Answer two questions: earlier = was the tray resting on the frame around capture time 72 seconds? latest = was the tray resting on the frame at the latest capture time received? Use unknown when the relevant evidence has not been received. Do not infer an earlier state from later footage. An older clip arriving later can update history but does not become the latest capture time. Return only JSON with keys earlier and latest, each with value yes, no, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"no\", \"latest\": \"yes\"}",
+              "parsed_state": {
+                "earlier": "no",
+                "latest": "yes"
+              },
+              "expected_state": {
+                "earlier": "no",
+                "latest": "yes"
+              },
+              "elapsed_seconds": 4.399997123982757e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "no",
+                    "got": "no",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.590794"
+            }
+          ],
+          "final_state": {
+            "earlier": "no",
+            "latest": "yes"
+          },
+          "expected_final_state": {
+            "earlier": "no",
+            "latest": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.0499992640689015e-05,
+            "avg_step_seconds": 5.249996320344508e-06,
+            "final_field_details": {
+              "earlier": {
+                "expected": "no",
+                "got": "no",
+                "matched": true
+              },
+              "latest": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": true,
+            "recency_preserved": true,
+            "prior_earlier_state": "unknown",
+            "updated_earlier_state": "no",
+            "prior_latest_state": "yes",
+            "preserved_latest_state": "yes",
+            "isolated_order_effect_detected": false
+          },
+          "environment_metadata": {
+            "schedule": "delayed",
+            "total_packets": 2,
+            "steps_count": 2
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.590826"
+        }
+      }
+    },
+    "table_components_tracking": {
+      "usecase_name": "HoloAssist Table Component Assembly State Tracking",
+      "joint_accuracy": 1.0,
+      "chronological_accuracy": 1.0,
+      "delayed_accuracy": 1.0,
+      "streaming_order_effect_gap": 0.0,
+      "historical_update_success": true,
+      "recency_preserved": true,
+      "episodes": {
+        "together": {
+          "usecase_id": "table_components_tracking",
+          "condition": "together",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "frame_assembly",
+                "tray_completion"
+              ],
+              "latest_capture_boundary": 120.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: frame_assembly): Original capture timestamp 64.000\u201375.900s.\nVideo packet 2 (ID: tray_completion): Original capture timestamp 112.000\u2013120.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 120.000s.\nPrevious model-produced memory: {\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}\nTask: Track the assembly components of the round table. Answer two questions: legs_assembled = are the metal table legs fastened to the circular frame at capture time 75s? tray_placed = is the removable round tray resting on the top frame at latest capture time received? Use yes, no, or unknown. Return only JSON with keys legs_assembled and tray_placed.\nReturn only a single JSON object with keys: [\"legs_assembled\", \"tray_placed\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}",
+              "parsed_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "expected_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "elapsed_seconds": 9.099996532313526e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "legs_assembled": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "tray_placed": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.591151"
+            }
+          ],
+          "final_state": {
+            "legs_assembled": "yes",
+            "tray_placed": "yes"
+          },
+          "expected_final_state": {
+            "legs_assembled": "yes",
+            "tray_placed": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 9.099996532313526e-06,
+            "avg_step_seconds": 9.099996532313526e-06,
+            "final_field_details": {
+              "legs_assembled": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              },
+              "tray_placed": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 2 steps"
+          },
+          "environment_metadata": {
+            "schedule": "together",
+            "total_packets": 2,
+            "steps_count": 1
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.591184"
+        },
+        "chronological": {
+          "usecase_id": "table_components_tracking",
+          "condition": "chronological",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "frame_assembly"
+              ],
+              "latest_capture_boundary": 75.9,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: frame_assembly): Original capture timestamp 64.000\u201375.900s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 75.900s.\nPrevious model-produced memory: {\"legs_assembled\": \"yes\", \"tray_placed\": \"no\"}\nTask: Track the assembly components of the round table. Answer two questions: legs_assembled = are the metal table legs fastened to the circular frame at capture time 75s? tray_placed = is the removable round tray resting on the top frame at latest capture time received? Use yes, no, or unknown. Return only JSON with keys legs_assembled and tray_placed.\nReturn only a single JSON object with keys: [\"legs_assembled\", \"tray_placed\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"legs_assembled\": \"yes\", \"tray_placed\": \"no\"}",
+              "parsed_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "no"
+              },
+              "expected_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "no"
+              },
+              "elapsed_seconds": 5.700007022824138e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "legs_assembled": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "tray_placed": {
+                    "expected": "no",
+                    "got": "no",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.591262"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "tray_completion"
+              ],
+              "latest_capture_boundary": 120.0,
+              "input_memory": "{\"legs_assembled\": \"yes\", \"tray_placed\": \"no\"}",
+              "prompt": "Video packet 1 (ID: tray_completion): Original capture timestamp 112.000\u2013120.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 120.000s.\nPrevious model-produced memory: {\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}\nTask: Track the assembly components of the round table. Answer two questions: legs_assembled = are the metal table legs fastened to the circular frame at capture time 75s? tray_placed = is the removable round tray resting on the top frame at latest capture time received? Use yes, no, or unknown. Return only JSON with keys legs_assembled and tray_placed.\nReturn only a single JSON object with keys: [\"legs_assembled\", \"tray_placed\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}",
+              "parsed_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "expected_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "elapsed_seconds": 4.599998646881431e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "legs_assembled": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "tray_placed": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.591302"
+            }
+          ],
+          "final_state": {
+            "legs_assembled": "yes",
+            "tray_placed": "yes"
+          },
+          "expected_final_state": {
+            "legs_assembled": "yes",
+            "tray_placed": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.030000566970557e-05,
+            "avg_step_seconds": 5.150002834852785e-06,
+            "final_field_details": {
+              "legs_assembled": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              },
+              "tray_placed": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 2 steps"
+          },
+          "environment_metadata": {
+            "schedule": "chronological",
+            "total_packets": 2,
+            "steps_count": 2
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.591329"
+        },
+        "delayed": {
+          "usecase_id": "table_components_tracking",
+          "condition": "delayed",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "tray_completion"
+              ],
+              "latest_capture_boundary": 120.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: tray_completion): Original capture timestamp 112.000\u2013120.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 120.000s.\nPrevious model-produced memory: {\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}\nTask: Track the assembly components of the round table. Answer two questions: legs_assembled = are the metal table legs fastened to the circular frame at capture time 75s? tray_placed = is the removable round tray resting on the top frame at latest capture time received? Use yes, no, or unknown. Return only JSON with keys legs_assembled and tray_placed.\nReturn only a single JSON object with keys: [\"legs_assembled\", \"tray_placed\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}",
+              "parsed_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "expected_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "elapsed_seconds": 4.900000931229442e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "legs_assembled": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "tray_placed": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.591389"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "frame_assembly"
+              ],
+              "latest_capture_boundary": 120.0,
+              "input_memory": "{\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: frame_assembly): Original capture timestamp 64.000\u201375.900s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 120.000s.\nPrevious model-produced memory: {\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}\nTask: Track the assembly components of the round table. Answer two questions: legs_assembled = are the metal table legs fastened to the circular frame at capture time 75s? tray_placed = is the removable round tray resting on the top frame at latest capture time received? Use yes, no, or unknown. Return only JSON with keys legs_assembled and tray_placed.\nReturn only a single JSON object with keys: [\"legs_assembled\", \"tray_placed\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"legs_assembled\": \"yes\", \"tray_placed\": \"yes\"}",
+              "parsed_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "expected_state": {
+                "legs_assembled": "yes",
+                "tray_placed": "yes"
+              },
+              "elapsed_seconds": 4.2000028770416975e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "legs_assembled": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "tray_placed": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.591432"
+            }
+          ],
+          "final_state": {
+            "legs_assembled": "yes",
+            "tray_placed": "yes"
+          },
+          "expected_final_state": {
+            "legs_assembled": "yes",
+            "tray_placed": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 9.10000380827114e-06,
+            "avg_step_seconds": 4.55000190413557e-06,
+            "final_field_details": {
+              "legs_assembled": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              },
+              "tray_placed": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": true,
+            "recency_preserved": true,
+            "prior_tray_state": "yes",
+            "final_tray_state": "yes"
+          },
+          "environment_metadata": {
+            "schedule": "delayed",
+            "total_packets": 2,
+            "steps_count": 2
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.591463"
+        }
+      }
+    },
+    "camera_detachment": {
+      "usecase_name": "HoloAssist Camera Part Detachment Tracking",
+      "joint_accuracy": 1.0,
+      "chronological_accuracy": 1.0,
+      "delayed_accuracy": 1.0,
+      "streaming_order_effect_gap": 0.0,
+      "historical_update_success": true,
+      "recency_preserved": true,
+      "episodes": {
+        "together": {
+          "usecase_id": "camera_detachment",
+          "condition": "together",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: 0): Original capture timestamp 6.000\u20139.000s.\nVideo packet 2 (ID: 1): Original capture timestamp 9.000\u201312.000s.\nVideo packet 3 (ID: 2): Original capture timestamp 12.000\u201315.000s.\nVideo packet 4 (ID: 3): Original capture timestamp 15.000\u201318.000s.\nVideo packet 5 (ID: 4): Original capture timestamp 18.000\u201321.000s.\nVideo packet 6 (ID: 5): Original capture timestamp 21.000\u201324.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 1.889999839477241e-05,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.599651"
+            }
+          ],
+          "final_state": {
+            "first_detached": "lens",
+            "second_detached": "cap",
+            "detachments": 2,
+            "lens_attached_now": "yes"
+          },
+          "expected_final_state": {
+            "first_detached": "lens",
+            "second_detached": "cap",
+            "detachments": 2,
+            "lens_attached_now": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.889999839477241e-05,
+            "avg_step_seconds": 1.889999839477241e-05,
+            "final_field_details": {
+              "first_detached": {
+                "expected": "lens",
+                "got": "lens",
+                "matched": true
+              },
+              "second_detached": {
+                "expected": "cap",
+                "got": "cap",
+                "matched": true
+              },
+              "detachments": {
+                "expected": 2,
+                "got": 2,
+                "matched": true
+              },
+              "lens_attached_now": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 4 steps"
+          },
+          "environment_metadata": {
+            "schedule": "together",
+            "total_packets": 6,
+            "steps_count": 1
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.599705"
+        },
+        "chronological": {
+          "usecase_id": "camera_detachment",
+          "condition": "chronological",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                0
+              ],
+              "latest_capture_boundary": 9.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: 0): Original capture timestamp 6.000\u20139.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 9.000s.\nPrevious model-produced memory: {\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 0, \"lens_attached_now\": \"unknown\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 0, \"lens_attached_now\": \"unknown\"}",
+              "parsed_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 0,
+                "lens_attached_now": "unknown"
+              },
+              "expected_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 0,
+                "lens_attached_now": "unknown"
+              },
+              "elapsed_seconds": 1.1500000255182385e-05,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 0,
+                    "got": 0,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.599814"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                1
+              ],
+              "latest_capture_boundary": 12.0,
+              "input_memory": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 0, \"lens_attached_now\": \"unknown\"}",
+              "prompt": "Video packet 1 (ID: 1): Original capture timestamp 9.000\u201312.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 12.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "unknown",
+                "detachments": 1,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "unknown",
+                "detachments": 1,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 5.800000508315861e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 1,
+                    "got": 1,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.599874"
+            },
+            {
+              "step_index": 2,
+              "packet_ids": [
+                2
+              ],
+              "latest_capture_boundary": 15.0,
+              "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: 2): Original capture timestamp 12.000\u201315.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 15.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 4.399997123982757e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.599917"
+            },
+            {
+              "step_index": 3,
+              "packet_ids": [
+                3
+              ],
+              "latest_capture_boundary": 18.0,
+              "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: 3): Original capture timestamp 15.000\u201318.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 18.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 9.899995347950608e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.599961"
+            },
+            {
+              "step_index": 4,
+              "packet_ids": [
+                4
+              ],
+              "latest_capture_boundary": 21.0,
+              "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: 4): Original capture timestamp 18.000\u201321.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 21.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 4.599998646881431e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600006"
+            },
+            {
+              "step_index": 5,
+              "packet_ids": [
+                5
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: 5): Original capture timestamp 21.000\u201324.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 4.099994839634746e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600050"
+            }
+          ],
+          "final_state": {
+            "first_detached": "lens",
+            "second_detached": "cap",
+            "detachments": 2,
+            "lens_attached_now": "yes"
+          },
+          "expected_final_state": {
+            "first_detached": "lens",
+            "second_detached": "cap",
+            "detachments": 2,
+            "lens_attached_now": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 4.029998672194779e-05,
+            "avg_step_seconds": 6.716664453657965e-06,
+            "final_field_details": {
+              "first_detached": {
+                "expected": "lens",
+                "got": "lens",
+                "matched": true
+              },
+              "second_detached": {
+                "expected": "cap",
+                "got": "cap",
+                "matched": true
+              },
+              "detachments": {
+                "expected": 2,
+                "got": 2,
+                "matched": true
+              },
+              "lens_attached_now": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 4 steps"
+          },
+          "environment_metadata": {
+            "schedule": "chronological",
+            "total_packets": 6,
+            "steps_count": 6
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.600085"
+        },
+        "delayed": {
+          "usecase_id": "camera_detachment",
+          "condition": "delayed",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                0
+              ],
+              "latest_capture_boundary": 9.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: 0): Original capture timestamp 6.000\u20139.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 9.000s.\nPrevious model-produced memory: {\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 0, \"lens_attached_now\": \"unknown\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 0, \"lens_attached_now\": \"unknown\"}",
+              "parsed_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 0,
+                "lens_attached_now": "unknown"
+              },
+              "expected_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 0,
+                "lens_attached_now": "unknown"
+              },
+              "elapsed_seconds": 6.70000008540228e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 0,
+                    "got": 0,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600193"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                2
+              ],
+              "latest_capture_boundary": 15.0,
+              "input_memory": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 0, \"lens_attached_now\": \"unknown\"}",
+              "prompt": "Video packet 1 (ID: 2): Original capture timestamp 12.000\u201315.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 15.000s.\nPrevious model-produced memory: {\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"unknown\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"unknown\"}",
+              "parsed_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 1,
+                "lens_attached_now": "unknown"
+              },
+              "expected_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 1,
+                "lens_attached_now": "unknown"
+              },
+              "elapsed_seconds": 1.170000177808106e-05,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 1,
+                    "got": 1,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600265"
+            },
+            {
+              "step_index": 2,
+              "packet_ids": [
+                3
+              ],
+              "latest_capture_boundary": 18.0,
+              "input_memory": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"unknown\"}",
+              "prompt": "Video packet 1 (ID: 3): Original capture timestamp 15.000\u201318.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 18.000s.\nPrevious model-produced memory: {\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 1,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "unknown",
+                "second_detached": "unknown",
+                "detachments": 1,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 6.599999323952943e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 1,
+                    "got": 1,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600315"
+            },
+            {
+              "step_index": 3,
+              "packet_ids": [
+                1
+              ],
+              "latest_capture_boundary": 18.0,
+              "input_memory": "{\"first_detached\": \"unknown\", \"second_detached\": \"unknown\", \"detachments\": 1, \"lens_attached_now\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: 1): Original capture timestamp 9.000\u201312.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 18.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 4.1000021155923605e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600353"
+            },
+            {
+              "step_index": 4,
+              "packet_ids": [
+                4
+              ],
+              "latest_capture_boundary": 21.0,
+              "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: 4): Original capture timestamp 18.000\u201321.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 21.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 3.9000005926936865e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600389"
+            },
+            {
+              "step_index": 5,
+              "packet_ids": [
+                5
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: 5): Original capture timestamp 21.000\u201324.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}\nTask: Track camera-part detachments in the capture-time interval 6\u201324 seconds. first_detached and second_detached name the first and second separate part-removal actions in CAPTURE-TIME order (lens or cap; unknown if not established). detachments is the number of distinct removals supported by the received footage, not the number of clips. lens_attached_now describes the latest capture time received, not the last packet arrival. Do not count putting a part back on as another removal. Return only JSON with keys first_detached, second_detached, detachments, lens_attached_now.\nReturn only a single JSON object with keys: [\"first_detached\", \"second_detached\", \"detachments\", \"lens_attached_now\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"first_detached\": \"lens\", \"second_detached\": \"cap\", \"detachments\": 2, \"lens_attached_now\": \"yes\"}",
+              "parsed_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "expected_state": {
+                "first_detached": "lens",
+                "second_detached": "cap",
+                "detachments": 2,
+                "lens_attached_now": "yes"
+              },
+              "elapsed_seconds": 3.6000055843032897e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 4,
+                "total_fields": 4,
+                "accuracy": 1.0,
+                "fields": {
+                  "first_detached": {
+                    "expected": "lens",
+                    "got": "lens",
+                    "match": true
+                  },
+                  "second_detached": {
+                    "expected": "cap",
+                    "got": "cap",
+                    "match": true
+                  },
+                  "detachments": {
+                    "expected": 2,
+                    "got": 2,
+                    "match": true
+                  },
+                  "lens_attached_now": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.600428"
+            }
+          ],
+          "final_state": {
+            "first_detached": "lens",
+            "second_detached": "cap",
+            "detachments": 2,
+            "lens_attached_now": "yes"
+          },
+          "expected_final_state": {
+            "first_detached": "lens",
+            "second_detached": "cap",
+            "detachments": 2,
+            "lens_attached_now": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 3.660000948002562e-05,
+            "avg_step_seconds": 6.10000158000427e-06,
+            "final_field_details": {
+              "first_detached": {
+                "expected": "lens",
+                "got": "lens",
+                "matched": true
+              },
+              "second_detached": {
+                "expected": "cap",
+                "got": "cap",
+                "matched": true
+              },
+              "detachments": {
+                "expected": 2,
+                "got": 2,
+                "matched": true
+              },
+              "lens_attached_now": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": true,
+            "recency_preserved": true,
+            "pre_arrival_first_detached": "unknown",
+            "post_arrival_first_detached": "lens",
+            "pre_arrival_lens_attached_now": "yes",
+            "post_arrival_lens_attached_now": "yes"
+          },
+          "environment_metadata": {
+            "schedule": "delayed",
+            "total_packets": 6,
+            "steps_count": 6
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.600475"
+        }
+      }
+    },
+    "camera_mount_status": {
+      "usecase_name": "HoloAssist Camera Lens Mounting State Across Intervals",
+      "joint_accuracy": 1.0,
+      "chronological_accuracy": 1.0,
+      "delayed_accuracy": 1.0,
+      "streaming_order_effect_gap": 0.0,
+      "historical_update_success": true,
+      "recency_preserved": true,
+      "episodes": {
+        "together": {
+          "usecase_id": "camera_mount_status",
+          "condition": "together",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "camera_start",
+                "camera_middle",
+                "camera_end"
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: camera_start): Original capture timestamp 6.000\u20139.000s.\nVideo packet 2 (ID: camera_middle): Original capture timestamp 10.000\u201314.000s.\nVideo packet 3 (ID: camera_end): Original capture timestamp 21.000\u201324.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"at_start\": \"yes\", \"at_end\": \"yes\"}\nTask: Track whether the cylindrical lens is mounted on the camera body (not held separately). Ignore the lens cap. Answer two fields: at_start = was the lens mounted on the camera body around capture time 6 to 9 seconds? at_end = was the lens mounted on the camera body at the latest capture time received? Use yes, no, or unknown. Return only JSON with keys at_start and at_end.\nReturn only a single JSON object with keys: [\"at_start\", \"at_end\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"at_start\": \"yes\", \"at_end\": \"yes\"}",
+              "parsed_state": {
+                "at_start": "yes",
+                "at_end": "yes"
+              },
+              "expected_state": {
+                "at_start": "yes",
+                "at_end": "yes"
+              },
+              "elapsed_seconds": 1.0700001439545304e-05,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "at_start": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "at_end": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.601695"
+            }
+          ],
+          "final_state": {
+            "at_start": "yes",
+            "at_end": "yes"
+          },
+          "expected_final_state": {
+            "at_start": "yes",
+            "at_end": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.0700001439545304e-05,
+            "avg_step_seconds": 1.0700001439545304e-05,
+            "final_field_details": {
+              "at_start": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              },
+              "at_end": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 3 steps"
+          },
+          "environment_metadata": {
+            "schedule": "together",
+            "total_packets": 3,
+            "steps_count": 1
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.601732"
+        },
+        "chronological": {
+          "usecase_id": "camera_mount_status",
+          "condition": "chronological",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "camera_start"
+              ],
+              "latest_capture_boundary": 9.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: camera_start): Original capture timestamp 6.000\u20139.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 9.000s.\nPrevious model-produced memory: {\"at_start\": \"yes\", \"at_end\": \"unknown\"}\nTask: Track whether the cylindrical lens is mounted on the camera body (not held separately). Ignore the lens cap. Answer two fields: at_start = was the lens mounted on the camera body around capture time 6 to 9 seconds? at_end = was the lens mounted on the camera body at the latest capture time received? Use yes, no, or unknown. Return only JSON with keys at_start and at_end.\nReturn only a single JSON object with keys: [\"at_start\", \"at_end\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"at_start\": \"yes\", \"at_end\": \"unknown\"}",
+              "parsed_state": {
+                "at_start": "yes",
+                "at_end": "unknown"
+              },
+              "expected_state": {
+                "at_start": "yes",
+                "at_end": "unknown"
+              },
+              "elapsed_seconds": 6.300004315562546e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "at_start": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "at_end": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.601828"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "camera_middle"
+              ],
+              "latest_capture_boundary": 14.0,
+              "input_memory": "{\"at_start\": \"yes\", \"at_end\": \"unknown\"}",
+              "prompt": "Video packet 1 (ID: camera_middle): Original capture timestamp 10.000\u201314.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 14.000s.\nPrevious model-produced memory: {\"at_start\": \"yes\", \"at_end\": \"no\"}\nTask: Track whether the cylindrical lens is mounted on the camera body (not held separately). Ignore the lens cap. Answer two fields: at_start = was the lens mounted on the camera body around capture time 6 to 9 seconds? at_end = was the lens mounted on the camera body at the latest capture time received? Use yes, no, or unknown. Return only JSON with keys at_start and at_end.\nReturn only a single JSON object with keys: [\"at_start\", \"at_end\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"at_start\": \"yes\", \"at_end\": \"no\"}",
+              "parsed_state": {
+                "at_start": "yes",
+                "at_end": "no"
+              },
+              "expected_state": {
+                "at_start": "yes",
+                "at_end": "no"
+              },
+              "elapsed_seconds": 5.500005499925464e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "at_start": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "at_end": {
+                    "expected": "no",
+                    "got": "no",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.601878"
+            },
+            {
+              "step_index": 2,
+              "packet_ids": [
+                "camera_end"
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{\"at_start\": \"yes\", \"at_end\": \"no\"}",
+              "prompt": "Video packet 1 (ID: camera_end): Original capture timestamp 21.000\u201324.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"at_start\": \"yes\", \"at_end\": \"yes\"}\nTask: Track whether the cylindrical lens is mounted on the camera body (not held separately). Ignore the lens cap. Answer two fields: at_start = was the lens mounted on the camera body around capture time 6 to 9 seconds? at_end = was the lens mounted on the camera body at the latest capture time received? Use yes, no, or unknown. Return only JSON with keys at_start and at_end.\nReturn only a single JSON object with keys: [\"at_start\", \"at_end\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"at_start\": \"yes\", \"at_end\": \"yes\"}",
+              "parsed_state": {
+                "at_start": "yes",
+                "at_end": "yes"
+              },
+              "expected_state": {
+                "at_start": "yes",
+                "at_end": "yes"
+              },
+              "elapsed_seconds": 4.699999408330768e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "at_start": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "at_end": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.601931"
+            }
+          ],
+          "final_state": {
+            "at_start": "yes",
+            "at_end": "yes"
+          },
+          "expected_final_state": {
+            "at_start": "yes",
+            "at_end": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.650000922381878e-05,
+            "avg_step_seconds": 5.500003074606259e-06,
+            "final_field_details": {
+              "at_start": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              },
+              "at_end": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 3 steps"
+          },
+          "environment_metadata": {
+            "schedule": "chronological",
+            "total_packets": 3,
+            "steps_count": 3
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.601960"
+        },
+        "delayed": {
+          "usecase_id": "camera_mount_status",
+          "condition": "delayed",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "camera_end"
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: camera_end): Original capture timestamp 21.000\u201324.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"at_start\": \"unknown\", \"at_end\": \"yes\"}\nTask: Track whether the cylindrical lens is mounted on the camera body (not held separately). Ignore the lens cap. Answer two fields: at_start = was the lens mounted on the camera body around capture time 6 to 9 seconds? at_end = was the lens mounted on the camera body at the latest capture time received? Use yes, no, or unknown. Return only JSON with keys at_start and at_end.\nReturn only a single JSON object with keys: [\"at_start\", \"at_end\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"at_start\": \"unknown\", \"at_end\": \"yes\"}",
+              "parsed_state": {
+                "at_start": "unknown",
+                "at_end": "yes"
+              },
+              "expected_state": {
+                "at_start": "unknown",
+                "at_end": "yes"
+              },
+              "elapsed_seconds": 5.100002454128116e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "at_start": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "at_end": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.602031"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "camera_middle"
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{\"at_start\": \"unknown\", \"at_end\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: camera_middle): Original capture timestamp 10.000\u201314.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"at_start\": \"unknown\", \"at_end\": \"yes\"}\nTask: Track whether the cylindrical lens is mounted on the camera body (not held separately). Ignore the lens cap. Answer two fields: at_start = was the lens mounted on the camera body around capture time 6 to 9 seconds? at_end = was the lens mounted on the camera body at the latest capture time received? Use yes, no, or unknown. Return only JSON with keys at_start and at_end.\nReturn only a single JSON object with keys: [\"at_start\", \"at_end\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"at_start\": \"unknown\", \"at_end\": \"yes\"}",
+              "parsed_state": {
+                "at_start": "unknown",
+                "at_end": "yes"
+              },
+              "expected_state": {
+                "at_start": "unknown",
+                "at_end": "yes"
+              },
+              "elapsed_seconds": 4.1000021155923605e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "at_start": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "at_end": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.602070"
+            },
+            {
+              "step_index": 2,
+              "packet_ids": [
+                "camera_start"
+              ],
+              "latest_capture_boundary": 24.0,
+              "input_memory": "{\"at_start\": \"unknown\", \"at_end\": \"yes\"}",
+              "prompt": "Video packet 1 (ID: camera_start): Original capture timestamp 6.000\u20139.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 24.000s.\nPrevious model-produced memory: {\"at_start\": \"yes\", \"at_end\": \"yes\"}\nTask: Track whether the cylindrical lens is mounted on the camera body (not held separately). Ignore the lens cap. Answer two fields: at_start = was the lens mounted on the camera body around capture time 6 to 9 seconds? at_end = was the lens mounted on the camera body at the latest capture time received? Use yes, no, or unknown. Return only JSON with keys at_start and at_end.\nReturn only a single JSON object with keys: [\"at_start\", \"at_end\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"at_start\": \"yes\", \"at_end\": \"yes\"}",
+              "parsed_state": {
+                "at_start": "yes",
+                "at_end": "yes"
+              },
+              "expected_state": {
+                "at_start": "yes",
+                "at_end": "yes"
+              },
+              "elapsed_seconds": 3.9000005926936865e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "at_start": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  },
+                  "at_end": {
+                    "expected": "yes",
+                    "got": "yes",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.602113"
+            }
+          ],
+          "final_state": {
+            "at_start": "yes",
+            "at_end": "yes"
+          },
+          "expected_final_state": {
+            "at_start": "yes",
+            "at_end": "yes"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.3100005162414163e-05,
+            "avg_step_seconds": 4.366668387471388e-06,
+            "final_field_details": {
+              "at_start": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              },
+              "at_end": {
+                "expected": "yes",
+                "got": "yes",
+                "matched": true
+              }
+            },
+            "historical_update_success": true,
+            "recency_preserved": true,
+            "prior_start_state": "unknown",
+            "final_start_state": "yes",
+            "prior_end_state": "yes",
+            "final_end_state": "yes"
+          },
+          "environment_metadata": {
+            "schedule": "delayed",
+            "total_packets": 3,
+            "steps_count": 3
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.602148"
+        }
+      }
+    },
+    "printer_display_tracking": {
+      "usecase_name": "HoloAssist Printer Display Illumination Tracking",
+      "joint_accuracy": 1.0,
+      "chronological_accuracy": 1.0,
+      "delayed_accuracy": 1.0,
+      "streaming_order_effect_gap": 0.0,
+      "historical_update_success": true,
+      "recency_preserved": true,
+      "episodes": {
+        "together": {
+          "usecase_id": "printer_display_tracking",
+          "condition": "together",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "printer_early",
+                "printer_late"
+              ],
+              "latest_capture_boundary": 45.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: printer_early): Original capture timestamp 18.000\u201322.000s.\nVideo packet 2 (ID: printer_late): Original capture timestamp 40.000\u201345.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 45.000s.\nPrevious model-produced memory: {\"earlier\": \"unknown\", \"latest\": \"dark\"}\nTask: Track the central rectangular printer LCD display state across capture time intervals. Ignore small indicator LEDs. Answer two fields: earlier = was the main central display illuminated or dark around capture time 19 seconds? latest = was the main central display illuminated or dark at the latest capture time received? Use unknown when evidence has not yet arrived. Do not infer earlier status from later footage. Return only JSON with keys earlier and latest, each with value illuminated, dark, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"unknown\", \"latest\": \"dark\"}",
+              "parsed_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "expected_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "elapsed_seconds": 1.0600000678095967e-05,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "dark",
+                    "got": "dark",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.604196"
+            }
+          ],
+          "final_state": {
+            "earlier": "unknown",
+            "latest": "dark"
+          },
+          "expected_final_state": {
+            "earlier": "unknown",
+            "latest": "dark"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.0600000678095967e-05,
+            "avg_step_seconds": 1.0600000678095967e-05,
+            "final_field_details": {
+              "earlier": {
+                "expected": "unknown",
+                "got": "unknown",
+                "matched": true
+              },
+              "latest": {
+                "expected": "dark",
+                "got": "dark",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 2 steps"
+          },
+          "environment_metadata": {
+            "schedule": "together",
+            "total_packets": 2,
+            "steps_count": 1
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.604237"
+        },
+        "chronological": {
+          "usecase_id": "printer_display_tracking",
+          "condition": "chronological",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "printer_early"
+              ],
+              "latest_capture_boundary": 22.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: printer_early): Original capture timestamp 18.000\u201322.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 22.000s.\nPrevious model-produced memory: {\"earlier\": \"unknown\", \"latest\": \"unknown\"}\nTask: Track the central rectangular printer LCD display state across capture time intervals. Ignore small indicator LEDs. Answer two fields: earlier = was the main central display illuminated or dark around capture time 19 seconds? latest = was the main central display illuminated or dark at the latest capture time received? Use unknown when evidence has not yet arrived. Do not infer earlier status from later footage. Return only JSON with keys earlier and latest, each with value illuminated, dark, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"unknown\", \"latest\": \"unknown\"}",
+              "parsed_state": {
+                "earlier": "unknown",
+                "latest": "unknown"
+              },
+              "expected_state": {
+                "earlier": "unknown",
+                "latest": "unknown"
+              },
+              "elapsed_seconds": 6.499998562503606e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.604336"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "printer_late"
+              ],
+              "latest_capture_boundary": 45.0,
+              "input_memory": "{\"earlier\": \"unknown\", \"latest\": \"unknown\"}",
+              "prompt": "Video packet 1 (ID: printer_late): Original capture timestamp 40.000\u201345.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 45.000s.\nPrevious model-produced memory: {\"earlier\": \"unknown\", \"latest\": \"dark\"}\nTask: Track the central rectangular printer LCD display state across capture time intervals. Ignore small indicator LEDs. Answer two fields: earlier = was the main central display illuminated or dark around capture time 19 seconds? latest = was the main central display illuminated or dark at the latest capture time received? Use unknown when evidence has not yet arrived. Do not infer earlier status from later footage. Return only JSON with keys earlier and latest, each with value illuminated, dark, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"unknown\", \"latest\": \"dark\"}",
+              "parsed_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "expected_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "elapsed_seconds": 5.200003215577453e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "dark",
+                    "got": "dark",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.604387"
+            }
+          ],
+          "final_state": {
+            "earlier": "unknown",
+            "latest": "dark"
+          },
+          "expected_final_state": {
+            "earlier": "unknown",
+            "latest": "dark"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 1.170000177808106e-05,
+            "avg_step_seconds": 5.85000088904053e-06,
+            "final_field_details": {
+              "earlier": {
+                "expected": "unknown",
+                "got": "unknown",
+                "matched": true
+              },
+              "latest": {
+                "expected": "dark",
+                "got": "dark",
+                "matched": true
+              }
+            },
+            "historical_update_success": null,
+            "recency_preserved": null,
+            "revision_diagnostic": "Condition not delayed or < 2 steps"
+          },
+          "environment_metadata": {
+            "schedule": "chronological",
+            "total_packets": 2,
+            "steps_count": 2
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.604420"
+        },
+        "delayed": {
+          "usecase_id": "printer_display_tracking",
+          "condition": "delayed",
+          "steps": [
+            {
+              "step_index": 0,
+              "packet_ids": [
+                "printer_late"
+              ],
+              "latest_capture_boundary": 45.0,
+              "input_memory": "{}",
+              "prompt": "Video packet 1 (ID: printer_late): Original capture timestamp 40.000\u201345.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 45.000s.\nPrevious model-produced memory: {\"earlier\": \"unknown\", \"latest\": \"dark\"}\nTask: Track the central rectangular printer LCD display state across capture time intervals. Ignore small indicator LEDs. Answer two fields: earlier = was the main central display illuminated or dark around capture time 19 seconds? latest = was the main central display illuminated or dark at the latest capture time received? Use unknown when evidence has not yet arrived. Do not infer earlier status from later footage. Return only JSON with keys earlier and latest, each with value illuminated, dark, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"unknown\", \"latest\": \"dark\"}",
+              "parsed_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "expected_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "elapsed_seconds": 5.099995178170502e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "dark",
+                    "got": "dark",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.604490"
+            },
+            {
+              "step_index": 1,
+              "packet_ids": [
+                "printer_early"
+              ],
+              "latest_capture_boundary": 45.0,
+              "input_memory": "{\"earlier\": \"unknown\", \"latest\": \"dark\"}",
+              "prompt": "Video packet 1 (ID: printer_early): Original capture timestamp 18.000\u201322.000s.\nPlayback time is local to each packet. Use original capture timestamps.\nA delayed packet represents older evidence, not a newly occurring physical event.\nUpdate historical facts supported by older evidence, and preserve facts about later capture times.\nLatest capture timestamp boundary received: 45.000s.\nPrevious model-produced memory: {\"earlier\": \"unknown\", \"latest\": \"dark\"}\nTask: Track the central rectangular printer LCD display state across capture time intervals. Ignore small indicator LEDs. Answer two fields: earlier = was the main central display illuminated or dark around capture time 19 seconds? latest = was the main central display illuminated or dark at the latest capture time received? Use unknown when evidence has not yet arrived. Do not infer earlier status from later footage. Return only JSON with keys earlier and latest, each with value illuminated, dark, or unknown.\nReturn only a single JSON object with keys: [\"earlier\", \"latest\"].\nUse 'unknown' for unsupported or unobserved fields. Do not include commentary or markdown fences.",
+              "raw_response": "{\"earlier\": \"unknown\", \"latest\": \"dark\"}",
+              "parsed_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "expected_state": {
+                "earlier": "unknown",
+                "latest": "dark"
+              },
+              "elapsed_seconds": 4.29999636253342e-06,
+              "is_valid_json": true,
+              "step_metrics": {
+                "match_count": 2,
+                "total_fields": 2,
+                "accuracy": 1.0,
+                "fields": {
+                  "earlier": {
+                    "expected": "unknown",
+                    "got": "unknown",
+                    "match": true
+                  },
+                  "latest": {
+                    "expected": "dark",
+                    "got": "dark",
+                    "match": true
+                  }
+                }
+              },
+              "utc_timestamp": "2026-10-13T16:58:25.604528"
+            }
+          ],
+          "final_state": {
+            "earlier": "unknown",
+            "latest": "dark"
+          },
+          "expected_final_state": {
+            "earlier": "unknown",
+            "latest": "dark"
+          },
+          "metrics": {
+            "json_parse_rate": 1.0,
+            "schema_adherence_rate": 1.0,
+            "final_accuracy": 1.0,
+            "final_perfect": true,
+            "trajectory_fidelity": 1.0,
+            "perfect_trajectory": true,
+            "total_elapsed_seconds": 9.399991540703923e-06,
+            "avg_step_seconds": 4.699995770351961e-06,
+            "final_field_details": {
+              "earlier": {
+                "expected": "unknown",
+                "got": "unknown",
+                "matched": true
+              },
+              "latest": {
+                "expected": "dark",
+                "got": "dark",
+                "matched": true
+              }
+            },
+            "historical_update_success": true,
+            "recency_preserved": true,
+            "prior_latest_state": "dark",
+            "preserved_latest_state": "dark",
+            "unsupported_early_hallucination": false
+          },
+          "environment_metadata": {
+            "schedule": "delayed",
+            "total_packets": 2,
+            "steps_count": 2
+          },
+          "agent_metadata": {
+            "agent_name": "MockAgent(oracle)",
+            "type": "MockAgent"
+          },
+          "utc_timestamp": "2026-10-13T16:58:25.604557"
+        }
+      }
+    }
+  },
+  "macro_metrics": {
+    "macro_joint_accuracy": 1.0,
+    "macro_chronological_accuracy": 1.0,
+    "macro_delayed_accuracy": 1.0,
+    "macro_streaming_order_gap": 0.0,
+    "macro_historical_revision_rate": 1.0,
+    "macro_recency_preservation_rate": 1.0
+  }
+}
