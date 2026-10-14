@@ -1,0 +1,707 @@
+{
+  "benchmark_name": "Stream-Eval-Bench: 25 Hard Hugging Face Videos Prototype",
+  "model": "HuggingFaceTB/SmolVLM-256M-Instruct",
+  "total_videos": 25,
+  "macro_metrics": {
+    "joint_accuracy": 0.32,
+    "chronological_accuracy": 0.32,
+    "delayed_accuracy": 0.36,
+    "streaming_order_gap": -0.04
+  },
+  "by_category": {
+    "Multi-Object Occlusion Tracking": {
+      "total": 5,
+      "joint_acc": 0.6,
+      "chrono_acc": 0.4,
+      "delayed_acc": 0.4,
+      "order_gap": 0.2
+    },
+    "Action & Event Counting": {
+      "total": 5,
+      "joint_acc": 0.4,
+      "chrono_acc": 0.4,
+      "delayed_acc": 0.4,
+      "order_gap": 0.0
+    },
+    "Temporal Sequence & Action Order": {
+      "total": 4,
+      "joint_acc": 0.0,
+      "chrono_acc": 0.0,
+      "delayed_acc": 0.25,
+      "order_gap": -0.25
+    },
+    "Object Possession & State Tracking": {
+      "total": 4,
+      "joint_acc": 0.25,
+      "chrono_acc": 0.25,
+      "delayed_acc": 0.25,
+      "order_gap": 0.0
+    },
+    "Action Prediction (Future Horizon)": {
+      "total": 4,
+      "joint_acc": 0.5,
+      "chrono_acc": 0.75,
+      "delayed_acc": 0.75,
+      "order_gap": -0.25
+    },
+    "State Change & Physical Dynamics": {
+      "total": 3,
+      "joint_acc": 0.0,
+      "chrono_acc": 0.0,
+      "delayed_acc": 0.0,
+      "order_gap": 0.0
+    }
+  },
+  "per_video_results": [
+    {
+      "index": 1,
+      "id": "video_10336",
+      "category": "Multi-Object Occlusion Tracking",
+      "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+      "ground_truth": "Under the third object from the left.",
+      "joint": {
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": false,
+        "latency_seconds": 2.19
+      },
+      "chronological": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 2,
+      "id": "video_8176",
+      "category": "Multi-Object Occlusion Tracking",
+      "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+      "ground_truth": "Under the second object from the left.",
+      "joint": {
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": false,
+        "latency_seconds": 1.47
+      },
+      "chronological": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 3,
+      "id": "video_10803",
+      "category": "Multi-Object Occlusion Tracking",
+      "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+      "ground_truth": "Under the first object from the left.",
+      "joint": {
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": true,
+        "latency_seconds": 1.08
+      },
+      "chronological": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 4,
+      "id": "video_3889",
+      "category": "Multi-Object Occlusion Tracking",
+      "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+      "ground_truth": "Under the second object from the left.",
+      "joint": {
+        "raw": "Under the second object from the left.",
+        "normalized": "Under the second object from the left.",
+        "correct": true,
+        "latency_seconds": 1.1
+      },
+      "chronological": {
+        "step1_memory": "Under the second object from the left.",
+        "raw": "Under the third object from the left.",
+        "normalized": "Under the third object from the left.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Under the second object from the left.",
+        "raw": "Under the third object from the left.",
+        "normalized": "Under the third object from the left.",
+        "correct": false
+      },
+      "streaming_order_gap": 1.0
+    },
+    {
+      "index": 5,
+      "id": "video_7110",
+      "category": "Multi-Object Occlusion Tracking",
+      "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+      "ground_truth": "Under the first object from the left.",
+      "joint": {
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": true,
+        "latency_seconds": 1.07
+      },
+      "chronological": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "Under the first object from the left.",
+        "raw": "Under the first object from the left.",
+        "normalized": "Under the first object from the left.",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 6,
+      "id": "video_6480",
+      "category": "Action & Event Counting",
+      "question": "How many times did the person launch objects on the table?",
+      "ground_truth": "3",
+      "joint": {
+        "raw": "Answer: 3.",
+        "normalized": "3",
+        "correct": true,
+        "latency_seconds": 0.76
+      },
+      "chronological": {
+        "step1_memory": "Answer: 3.",
+        "raw": "Answer: 3.\n\nExplanation: The person launched objects on the table 3 times.",
+        "normalized": "3",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "Answer: 3.",
+        "raw": "Answer: 3.",
+        "normalized": "3",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 7,
+      "id": "video_7958",
+      "category": "Action & Event Counting",
+      "question": "How many times did the person launch the object on the slanted plane?",
+      "ground_truth": "3",
+      "joint": {
+        "raw": "Answer: 3.",
+        "normalized": "3",
+        "correct": true,
+        "latency_seconds": 0.65
+      },
+      "chronological": {
+        "step1_memory": "Answer: 3.",
+        "raw": "Answer: 3.\n\nExplanation: The person launched the object on the slanted plane 3 times.",
+        "normalized": "3",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "Answer: 3.",
+        "raw": "Answer: 3.",
+        "normalized": "3",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 8,
+      "id": "video_3228",
+      "category": "Action & Event Counting",
+      "question": "How many times did the person launch the object on the slanted plane?",
+      "ground_truth": "3",
+      "joint": {
+        "raw": "Answer: 4.",
+        "normalized": "4",
+        "correct": false,
+        "latency_seconds": 0.69
+      },
+      "chronological": {
+        "step1_memory": "Answer: 5.",
+        "raw": "Answer: 4.\n\nExplanation: The person launched the object on the slanted plane 4 times.",
+        "normalized": "4",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Answer: 4.",
+        "raw": "Answer: 4.",
+        "normalized": "4",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 9,
+      "id": "video_6301",
+      "category": "Action & Event Counting",
+      "question": "How many times did the person show objects to the camera?",
+      "ground_truth": "6",
+      "joint": {
+        "raw": "Answer: 8.",
+        "normalized": "8",
+        "correct": false,
+        "latency_seconds": 0.75
+      },
+      "chronological": {
+        "step1_memory": "Answer: 8.",
+        "raw": "Answer: 8.\n\nThe person showed objects to the camera 8 times.",
+        "normalized": "8",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Answer: 8.",
+        "raw": "Answer: 3.",
+        "normalized": "3",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 10,
+      "id": "video_6392",
+      "category": "Action & Event Counting",
+      "question": "How many times did the person launch the object on the slanted plane?",
+      "ground_truth": "3",
+      "joint": {
+        "raw": "Answer: 4.",
+        "normalized": "4",
+        "correct": false,
+        "latency_seconds": 0.84
+      },
+      "chronological": {
+        "step1_memory": "Answer: 5.",
+        "raw": "Answer: 4.\n\nExplanation: The person launched the object on the slanted plane 4 times.",
+        "normalized": "4",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Answer: 4.",
+        "raw": "Answer: 4.",
+        "normalized": "4",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 11,
+      "id": "ZNQVC",
+      "category": "Temporal Sequence & Action Order",
+      "question": "In the given video, when does the action 'a person is tidying up the cabinet' take place?",
+      "ground_truth": "Throughout the entire video.",
+      "joint": {
+        "raw": "At the end of the video.",
+        "normalized": "At the end of the video.",
+        "correct": false,
+        "latency_seconds": 1.02
+      },
+      "chronological": {
+        "step1_memory": "At the beginning of the video.",
+        "raw": "At the beginning of the video.",
+        "normalized": "At the beginning of the video.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "In the middle of the video.",
+        "raw": "In the given video, when does the action 'a person is tidying up the cabinet' take place?\nAnswer: Throughout the entire video.",
+        "normalized": "Throughout the entire video.",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 12,
+      "id": "L2502",
+      "category": "Temporal Sequence & Action Order",
+      "question": "When in the video sequence do we observe the action 'person fixes their hair in a mirror'?",
+      "ground_truth": "Throughout the entire video.",
+      "joint": {
+        "raw": "In the video sequence, we observe the action 'person fixes their hair in a mirror'.",
+        "normalized": "At the end of the video.",
+        "correct": false,
+        "latency_seconds": 2.15
+      },
+      "chronological": {
+        "step1_memory": "At the end of the video.",
+        "raw": "In the video sequence, we observe the action 'person fixes their hair in a mirror'.",
+        "normalized": "At the end of the video.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "In the video sequence, we observe the action 'person fixes their hair in a mirror'.",
+        "raw": "In the video sequence, we observe the action 'person fixes their hair in a mirror'.",
+        "normalized": "At the end of the video.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 13,
+      "id": "TKAUR",
+      "category": "Temporal Sequence & Action Order",
+      "question": "When in the video sequence do we observe the action 'person reads a book'?",
+      "ground_truth": "Throughout the entire video.",
+      "joint": {
+        "raw": "At the end of the video.",
+        "normalized": "At the end of the video.",
+        "correct": false,
+        "latency_seconds": 0.98
+      },
+      "chronological": {
+        "step1_memory": "At the beginning of the video.",
+        "raw": "At the beginning of the video.",
+        "normalized": "At the beginning of the video.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "At the beginning of the video.",
+        "raw": "In the video sequence, we observe the action 'person reads a book'.",
+        "normalized": "In the middle of the video.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 14,
+      "id": "YAFX0",
+      "category": "Temporal Sequence & Action Order",
+      "question": "In the given video, when does the action 'person looks out the window' take place?",
+      "ground_truth": "Throughout the entire video.",
+      "joint": {
+        "raw": "At the end of the video.",
+        "normalized": "At the end of the video.",
+        "correct": false,
+        "latency_seconds": 0.93
+      },
+      "chronological": {
+        "step1_memory": "At the beginning of the video.",
+        "raw": "At the beginning of the video.",
+        "normalized": "At the beginning of the video.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "At the end of the video.",
+        "raw": "In the given video, when does the action 'person looks out the window' take place?\nAnswer: At the end of the video.",
+        "normalized": "At the end of the video.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 15,
+      "id": "JT537",
+      "category": "Object Possession & State Tracking",
+      "question": "At what moment in the video does the action 'person put down broom' occur?",
+      "ground_truth": "At the end of the video.",
+      "joint": {
+        "raw": "At the end of the video.",
+        "normalized": "At the end of the video.",
+        "correct": true,
+        "latency_seconds": 1.32
+      },
+      "chronological": {
+        "step1_memory": "At the end of the video.",
+        "raw": "At the end of the video.",
+        "normalized": "At the end of the video.",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "At the end of the video.",
+        "raw": "At the end of the video.",
+        "normalized": "At the end of the video.",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 16,
+      "id": "43FG9",
+      "category": "Object Possession & State Tracking",
+      "question": "What happened after the person put down the clothes?",
+      "ground_truth": "Threw the towel.",
+      "joint": {
+        "raw": "Opened the door.",
+        "normalized": "Opened the door.",
+        "correct": false,
+        "latency_seconds": 0.71
+      },
+      "chronological": {
+        "step1_memory": "Opened the door.",
+        "raw": "Opened the door.",
+        "normalized": "Opened the door.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Opened the door.",
+        "raw": "Opened the door.",
+        "normalized": "Opened the door.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 17,
+      "id": "PQYWB",
+      "category": "Object Possession & State Tracking",
+      "question": "What happened after the person held the phone/camera?",
+      "ground_truth": "Put down the towel.",
+      "joint": {
+        "raw": "Opened the window.",
+        "normalized": "Opened the window.",
+        "correct": false,
+        "latency_seconds": 0.63
+      },
+      "chronological": {
+        "step1_memory": "Opened the window.",
+        "raw": "Opened the window.",
+        "normalized": "Opened the window.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Opened the window.",
+        "raw": "Opened the window.",
+        "normalized": "Opened the window.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 18,
+      "id": "GLGQJ",
+      "category": "Object Possession & State Tracking",
+      "question": "What happened after the person took the phone/camera?",
+      "ground_truth": "Closed the window.",
+      "joint": {
+        "raw": "Took the book.",
+        "normalized": "Took the book.",
+        "correct": false,
+        "latency_seconds": 0.64
+      },
+      "chronological": {
+        "step1_memory": "Took the food.",
+        "raw": "Took the book.",
+        "normalized": "Took the book.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Took the book.",
+        "raw": "Took the book.",
+        "normalized": "Took the book.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 19,
+      "id": "AJTDO",
+      "category": "Action Prediction (Future Horizon)",
+      "question": "What will the person do next?",
+      "ground_truth": "Put down the pillow.",
+      "joint": {
+        "raw": "Open the closet/cabinet.",
+        "normalized": "Open the closet/cabinet.",
+        "correct": false,
+        "latency_seconds": 0.98
+      },
+      "chronological": {
+        "step1_memory": "Open the closet/cabinet.",
+        "raw": "Open the door.",
+        "normalized": "Open the door.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "Open the closet/cabinet.",
+        "raw": "Open the door.",
+        "normalized": "Open the door.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 20,
+      "id": "RJCNV",
+      "category": "Action Prediction (Future Horizon)",
+      "question": "What will the person do next?",
+      "ground_truth": "Open the book.",
+      "joint": {
+        "raw": "Open the book.",
+        "normalized": "Open the book.",
+        "correct": true,
+        "latency_seconds": 0.66
+      },
+      "chronological": {
+        "step1_memory": "Open the book.",
+        "raw": "Open the book.",
+        "normalized": "Open the book.",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "Open the book.",
+        "raw": "Open the book.",
+        "normalized": "Open the book.",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 21,
+      "id": "X8JVY",
+      "category": "Action Prediction (Future Horizon)",
+      "question": "What will the person do next?",
+      "ground_truth": "Take the book.",
+      "joint": {
+        "raw": "Take the book.",
+        "normalized": "Take the book.",
+        "correct": true,
+        "latency_seconds": 0.67
+      },
+      "chronological": {
+        "step1_memory": "Take the book.",
+        "raw": "Take the book.",
+        "normalized": "Take the book.",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "Take the book.",
+        "raw": "Take the book.",
+        "normalized": "Take the book.",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 22,
+      "id": "3CAPI",
+      "category": "Action Prediction (Future Horizon)",
+      "question": "What will the person do next?",
+      "ground_truth": "Throw the blanket.",
+      "joint": {
+        "raw": "Put down the clothes.",
+        "normalized": "Put down the clothes.",
+        "correct": false,
+        "latency_seconds": 0.63
+      },
+      "chronological": {
+        "step1_memory": "Throw the blanket.",
+        "raw": "Throw the blanket.",
+        "normalized": "Throw the blanket.",
+        "correct": true
+      },
+      "delayed": {
+        "step1_memory": "Throw the blanket.",
+        "raw": "Throw the blanket.",
+        "normalized": "Throw the blanket.",
+        "correct": true
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 23,
+      "id": "Top010_04755",
+      "category": "State Change & Physical Dynamics",
+      "question": "What's the right option for how the scenes in the video change?",
+      "ground_truth": "From the server room to the control center.",
+      "joint": {
+        "raw": "From the reception desk to the conference room.",
+        "normalized": "From the reception desk to the conference room.",
+        "correct": false,
+        "latency_seconds": 1.85
+      },
+      "chronological": {
+        "step1_memory": "From the reception desk to the conference room.",
+        "raw": "From the reception desk to the conference room.",
+        "normalized": "From the reception desk to the conference room.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "From the reception desk to the conference room.",
+        "raw": "From the reception desk to the conference room.",
+        "normalized": "From the reception desk to the conference room.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 24,
+      "id": "Top008_00430",
+      "category": "State Change & Physical Dynamics",
+      "question": "What's the right option for how the scenes in the video change?",
+      "ground_truth": "From the creek to the stairs.",
+      "joint": {
+        "raw": "From the playground to the office.",
+        "normalized": "From the playground to the office.",
+        "correct": false,
+        "latency_seconds": 5.41
+      },
+      "chronological": {
+        "step1_memory": "From the garden to the mall.",
+        "raw": "From the garden to the mall.",
+        "normalized": "From the garden to the mall.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "From the garden to the mall.",
+        "raw": "From the garden to the mall.",
+        "normalized": "From the garden to the mall.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    },
+    {
+      "index": 25,
+      "id": "Top012_03585",
+      "category": "State Change & Physical Dynamics",
+      "question": "What's the right option for how the scenes in the video change?",
+      "ground_truth": "From the library to the conference room.",
+      "joint": {
+        "raw": "From the classroom to the art gallery.",
+        "normalized": "From the classroom to the art gallery.",
+        "correct": false,
+        "latency_seconds": 1.1
+      },
+      "chronological": {
+        "step1_memory": "From the classroom to the art gallery.",
+        "raw": "From the classroom to the art gallery.",
+        "normalized": "From the classroom to the art gallery.",
+        "correct": false
+      },
+      "delayed": {
+        "step1_memory": "From the classroom to the art gallery.",
+        "raw": "From the classroom to the art gallery.",
+        "normalized": "From the classroom to the art gallery.",
+        "correct": false
+      },
+      "streaming_order_gap": 0.0
+    }
+  ]
+}

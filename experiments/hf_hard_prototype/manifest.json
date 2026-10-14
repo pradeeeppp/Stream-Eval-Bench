@@ -1,0 +1,417 @@
+[
+  {
+    "index": 1,
+    "category": "Multi-Object Occlusion Tracking",
+    "id": "video_10336",
+    "filename": "video_10336.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_10336.mp4",
+    "frames_count": 59,
+    "resolution": "1920x1080",
+    "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+    "candidates": [
+      "Under the first object from the left.",
+      "Under the third object from the left.",
+      "Under the second object from the left."
+    ],
+    "ground_truth_answer": "Under the third object from the left."
+  },
+  {
+    "index": 2,
+    "category": "Multi-Object Occlusion Tracking",
+    "id": "video_8176",
+    "filename": "video_8176.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_8176.mp4",
+    "frames_count": 48,
+    "resolution": "1920x1080",
+    "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+    "candidates": [
+      "Under the first object from the left.",
+      "Under the third object from the left.",
+      "Under the second object from the left."
+    ],
+    "ground_truth_answer": "Under the second object from the left."
+  },
+  {
+    "index": 3,
+    "category": "Multi-Object Occlusion Tracking",
+    "id": "video_10803",
+    "filename": "video_10803.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_10803.mp4",
+    "frames_count": 44,
+    "resolution": "1920x1080",
+    "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+    "candidates": [
+      "Under the first object from the left.",
+      "Under the second object from the left.",
+      "Under the third object from the left."
+    ],
+    "ground_truth_answer": "Under the first object from the left."
+  },
+  {
+    "index": 4,
+    "category": "Multi-Object Occlusion Tracking",
+    "id": "video_3889",
+    "filename": "video_3889.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_3889.mp4",
+    "frames_count": 72,
+    "resolution": "1280x720",
+    "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+    "candidates": [
+      "Under the second object from the left.",
+      "Under the third object from the left.",
+      "Under the fourth object from the left."
+    ],
+    "ground_truth_answer": "Under the second object from the left."
+  },
+  {
+    "index": 5,
+    "category": "Multi-Object Occlusion Tracking",
+    "id": "video_7110",
+    "filename": "video_7110.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_7110.mp4",
+    "frames_count": 43,
+    "resolution": "1280x720",
+    "question": "The person uses multiple similar objects to play an occlusion game. Where is the hidden object at the end of the game from the person's point of view?",
+    "candidates": [
+      "Under the first object from the left.",
+      "Under the second object from the left.",
+      "Under the third object from the left."
+    ],
+    "ground_truth_answer": "Under the first object from the left."
+  },
+  {
+    "index": 6,
+    "category": "Action & Event Counting",
+    "id": "video_6480",
+    "filename": "video_6480.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_6480.mp4",
+    "frames_count": 32,
+    "resolution": "1280x720",
+    "question": "How many times did the person launch objects on the table?",
+    "candidates": [
+      "3",
+      "2",
+      "4"
+    ],
+    "ground_truth_answer": "3"
+  },
+  {
+    "index": 7,
+    "category": "Action & Event Counting",
+    "id": "video_7958",
+    "filename": "video_7958.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_7958.mp4",
+    "frames_count": 51,
+    "resolution": "1920x1080",
+    "question": "How many times did the person launch the object on the slanted plane?",
+    "candidates": [
+      "1",
+      "3",
+      "4"
+    ],
+    "ground_truth_answer": "3"
+  },
+  {
+    "index": 8,
+    "category": "Action & Event Counting",
+    "id": "video_3228",
+    "filename": "video_3228.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_3228.mp4",
+    "frames_count": 59,
+    "resolution": "1920x1080",
+    "question": "How many times did the person launch the object on the slanted plane?",
+    "candidates": [
+      "5",
+      "3",
+      "4"
+    ],
+    "ground_truth_answer": "3"
+  },
+  {
+    "index": 9,
+    "category": "Action & Event Counting",
+    "id": "video_6301",
+    "filename": "video_6301.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_6301.mp4",
+    "frames_count": 55,
+    "resolution": "1920x1080",
+    "question": "How many times did the person show objects to the camera?",
+    "candidates": [
+      "8",
+      "3",
+      "6"
+    ],
+    "ground_truth_answer": "6"
+  },
+  {
+    "index": 10,
+    "category": "Action & Event Counting",
+    "id": "video_6392",
+    "filename": "video_6392.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\video_6392.mp4",
+    "frames_count": 30,
+    "resolution": "1920x1080",
+    "question": "How many times did the person launch the object on the slanted plane?",
+    "candidates": [
+      "5",
+      "3",
+      "4"
+    ],
+    "ground_truth_answer": "3"
+  },
+  {
+    "index": 11,
+    "category": "Temporal Sequence & Action Order",
+    "id": "ZNQVC",
+    "filename": "ZNQVC.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\ZNQVC.mp4",
+    "frames_count": 64,
+    "resolution": "270x480",
+    "question": "In the given video, when does the action 'a person is tidying up the cabinet' take place?",
+    "candidates": [
+      "In the middle of the video.",
+      "Throughout the entire video.",
+      "At the beginning of the video.",
+      "At the end of the video."
+    ],
+    "ground_truth_answer": "Throughout the entire video."
+  },
+  {
+    "index": 12,
+    "category": "Temporal Sequence & Action Order",
+    "id": "L2502",
+    "filename": "L2502.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\L2502.mp4",
+    "frames_count": 69,
+    "resolution": "540x360",
+    "question": "When in the video sequence do we observe the action 'person fixes their hair in a mirror'?",
+    "candidates": [
+      "At the end of the video.",
+      "In the middle of the video.",
+      "At the beginning of the video.",
+      "Throughout the entire video."
+    ],
+    "ground_truth_answer": "Throughout the entire video."
+  },
+  {
+    "index": 13,
+    "category": "Temporal Sequence & Action Order",
+    "id": "TKAUR",
+    "filename": "TKAUR.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\TKAUR.mp4",
+    "frames_count": 85,
+    "resolution": "480x720",
+    "question": "When in the video sequence do we observe the action 'person reads a book'?",
+    "candidates": [
+      "In the middle of the video.",
+      "At the beginning of the video.",
+      "At the end of the video.",
+      "Throughout the entire video."
+    ],
+    "ground_truth_answer": "Throughout the entire video."
+  },
+  {
+    "index": 14,
+    "category": "Temporal Sequence & Action Order",
+    "id": "YAFX0",
+    "filename": "YAFX0.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\YAFX0.mp4",
+    "frames_count": 76,
+    "resolution": "640x480",
+    "question": "In the given video, when does the action 'person looks out the window' take place?",
+    "candidates": [
+      "In the middle of the video.",
+      "At the end of the video.",
+      "Throughout the entire video.",
+      "At the beginning of the video."
+    ],
+    "ground_truth_answer": "Throughout the entire video."
+  },
+  {
+    "index": 15,
+    "category": "Object Possession & State Tracking",
+    "id": "JT537",
+    "filename": "JT537.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\JT537.mp4",
+    "frames_count": 55,
+    "resolution": "608x1080",
+    "question": "At what moment in the video does the action 'person put down broom' occur?",
+    "candidates": [
+      "At the end of the video.",
+      "At the beginning of the video.",
+      "In the middle of the video.",
+      "Throughout the entire video."
+    ],
+    "ground_truth_answer": "At the end of the video."
+  },
+  {
+    "index": 16,
+    "category": "Object Possession & State Tracking",
+    "id": "43FG9",
+    "filename": "43FG9.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\43FG9.mp4",
+    "frames_count": 34,
+    "resolution": "480x360",
+    "question": "What happened after the person put down the clothes?",
+    "candidates": [
+      "Took the broom.",
+      "Took the blanket.",
+      "Opened the door.",
+      "Threw the towel."
+    ],
+    "ground_truth_answer": "Threw the towel."
+  },
+  {
+    "index": 17,
+    "category": "Object Possession & State Tracking",
+    "id": "PQYWB",
+    "filename": "PQYWB.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\PQYWB.mp4",
+    "frames_count": 93,
+    "resolution": "270x480",
+    "question": "What happened after the person held the phone/camera?",
+    "candidates": [
+      "Closed the refrigerator.",
+      "Put down the towel.",
+      "Put down the laptop.",
+      "Opened the window."
+    ],
+    "ground_truth_answer": "Put down the towel."
+  },
+  {
+    "index": 18,
+    "category": "Object Possession & State Tracking",
+    "id": "GLGQJ",
+    "filename": "GLGQJ.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\GLGQJ.mp4",
+    "frames_count": 81,
+    "resolution": "480x270",
+    "question": "What happened after the person took the phone/camera?",
+    "candidates": [
+      "Took the book.",
+      "Put down the pillow.",
+      "Closed the window.",
+      "Took the food."
+    ],
+    "ground_truth_answer": "Closed the window."
+  },
+  {
+    "index": 19,
+    "category": "Action Prediction (Future Horizon)",
+    "id": "AJTDO",
+    "filename": "AJTDO.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\AJTDO.mp4",
+    "frames_count": 75,
+    "resolution": "480x360",
+    "question": "What will the person do next?",
+    "candidates": [
+      "Put down the pillow.",
+      "Open the door.",
+      "Take the book.",
+      "Open the closet/cabinet."
+    ],
+    "ground_truth_answer": "Put down the pillow."
+  },
+  {
+    "index": 20,
+    "category": "Action Prediction (Future Horizon)",
+    "id": "RJCNV",
+    "filename": "RJCNV.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\RJCNV.mp4",
+    "frames_count": 58,
+    "resolution": "480x270",
+    "question": "What will the person do next?",
+    "candidates": [
+      "Sit on the floor.",
+      "Put down the cup/glass/bottle.",
+      "Take the book.",
+      "Open the book."
+    ],
+    "ground_truth_answer": "Open the book."
+  },
+  {
+    "index": 21,
+    "category": "Action Prediction (Future Horizon)",
+    "id": "X8JVY",
+    "filename": "X8JVY.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\X8JVY.mp4",
+    "frames_count": 60,
+    "resolution": "480x270",
+    "question": "What will the person do next?",
+    "candidates": [
+      "Put down the cup/glass/bottle.",
+      "Take the book.",
+      "Eat the sandwich.",
+      "Put down the dish."
+    ],
+    "ground_truth_answer": "Take the book."
+  },
+  {
+    "index": 22,
+    "category": "Action Prediction (Future Horizon)",
+    "id": "3CAPI",
+    "filename": "3CAPI.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\3CAPI.mp4",
+    "frames_count": 67,
+    "resolution": "480x270",
+    "question": "What will the person do next?",
+    "candidates": [
+      "Tidy up the broom.",
+      "Put down the clothes.",
+      "Put down the food.",
+      "Throw the blanket."
+    ],
+    "ground_truth_answer": "Throw the blanket."
+  },
+  {
+    "index": 23,
+    "category": "State Change & Physical Dynamics",
+    "id": "Top010_04755",
+    "filename": "Top010_04755.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\Top010_04755.mp4",
+    "frames_count": 42,
+    "resolution": "748x320",
+    "question": "What's the right option for how the scenes in the video change?",
+    "candidates": [
+      "From the reception desk to the conference room.",
+      "From the kitchen to the dining area.",
+      "From the server room to the control center.",
+      "From the classroom to the library."
+    ],
+    "ground_truth_answer": "From the server room to the control center."
+  },
+  {
+    "index": 24,
+    "category": "State Change & Physical Dynamics",
+    "id": "Top008_00430",
+    "filename": "Top008_00430.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\Top008_00430.mp4",
+    "frames_count": 42,
+    "resolution": "592x320",
+    "question": "What's the right option for how the scenes in the video change?",
+    "candidates": [
+      "From the garden to the mall.",
+      "From the playground to the office.",
+      "From the beach to the mountaintop.",
+      "From the creek to the stairs."
+    ],
+    "ground_truth_answer": "From the creek to the stairs."
+  },
+  {
+    "index": 25,
+    "category": "State Change & Physical Dynamics",
+    "id": "Top012_03585",
+    "filename": "Top012_03585.mp4",
+    "video_path": "experiments\\hf_hard_prototype\\videos\\Top012_03585.mp4",
+    "frames_count": 42,
+    "resolution": "752x320",
+    "question": "What's the right option for how the scenes in the video change?",
+    "candidates": [
+      "From the kitchen to the garden.",
+      "From the office to the coffee shop.",
+      "From the classroom to the art gallery.",
+      "From the library to the conference room."
+    ],
+    "ground_truth_answer": "From the library to the conference room."
+  }
+]
