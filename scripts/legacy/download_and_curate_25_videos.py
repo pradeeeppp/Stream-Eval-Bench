@@ -9,7 +9,7 @@ import time
 from huggingface_hub import hf_hub_download
 import decord
 
-REPO_ROOT = pathlib.Path(__file__).resolve().parent
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUTPUT_DIR = REPO_ROOT / "experiments" / "hf_hard_prototype"
 VIDEOS_DIR = OUTPUT_DIR / "videos"
 VIDEOS_DIR.mkdir(parents=True, exist_ok=True)

@@ -13,7 +13,7 @@ from PIL import Image
 import torch
 from transformers import AutoProcessor, AutoModelForImageTextToText
 
-REPO_ROOT = pathlib.Path(__file__).resolve().parent
+REPO_ROOT = pathlib.Path(__file__).resolve().parents[2]
 PROTOTYPE_DIR = REPO_ROOT / "experiments" / "hf_hard_prototype"
 MANIFEST_PATH = PROTOTYPE_DIR / "manifest.json"
 RESULTS_PATH = PROTOTYPE_DIR / "evaluation_results.json"

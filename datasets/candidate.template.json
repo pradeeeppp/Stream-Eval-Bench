@@ -1,0 +1,78 @@
+{
+  "schema_version": "candidate_episode_v1",
+  "is_template": true,
+  "episode_id": null,
+  "source": {
+    "dataset": null,
+    "release_or_revision": null,
+    "recording_id": null,
+    "source_uri": null,
+    "source_sha256": null,
+    "split_group_id": null,
+    "access_and_license_reference": null
+  },
+  "construction": {
+    "track": null,
+    "intervention_description": null,
+    "audio_and_overlay_policy": null
+  },
+  "event": {
+    "event_id": null,
+    "capture_interval_seconds": [null, null],
+    "description": null,
+    "confusable_event_ids": []
+  },
+  "target_claim": {
+    "claim_id": null,
+    "predicate": null,
+    "object_and_reference_frame": null,
+    "initial_expected_belief": null,
+    "expected_belief_after_evidence": null,
+    "physical_value_at_original_event": null
+  },
+  "packets": [
+    {
+      "packet_id": null,
+      "camera_id": null,
+      "capture_interval_seconds": [null, null],
+      "arrival_index": null,
+      "arrival_time_seconds": null,
+      "source_frame_indices": [],
+      "actual_source_pts_seconds": [],
+      "model_input_paths": [],
+      "model_input_sha256": [],
+      "evaluated_resolution": null
+    }
+  ],
+  "evidence_link": {
+    "packet_id": null,
+    "target_event_id": null,
+    "linkage_class": null,
+    "evidence_effect": null,
+    "evidence_available_at_seconds": null,
+    "supporting_frame_indices": [],
+    "support_rationale": null
+  },
+  "protected_claims": [],
+  "dependent_decisions_optional": [],
+  "annotation": {
+    "prefix_only_judgments": [],
+    "independent_evidence_judgments": [],
+    "adjudication_record": null,
+    "model_results_hidden_during_admission": null
+  },
+  "admission": {
+    "status": "candidate",
+    "target_defined": null,
+    "event_link_verified": null,
+    "prefix_knowledge_verified": null,
+    "evidence_effect_verified": null,
+    "protected_claims_verified": null,
+    "timebases_verified": null,
+    "exact_model_inputs_reviewed": null,
+    "independent_annotation_complete": null,
+    "shortcut_controls_reviewed": null,
+    "source_and_split_verified": null,
+    "rejection_or_deferral_reason": null
+  }
+}

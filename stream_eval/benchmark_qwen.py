@@ -1,17 +1,13 @@
-"""Turnkey benchmark runner for Qwen2.5-VL-7B and Qwen2.5-VL-72B across the 4-Gate Protocol."""
+"""Run explicit model backends or clearly labelled mock schedule checks."""
 
 from __future__ import annotations
 import argparse
 import json
 import pathlib
-import sys
-import time
 from datetime import datetime
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 from stream_eval.core.environment import StreamingEnvironment
-from stream_eval.core.models import Observation
-from stream_eval.core.evaluator import StreamEvaluator
 from stream_eval.core.agents import (
     BaseStreamingAgent,
     LocalHuggingFaceBackend,
@@ -31,15 +27,23 @@ def run_qwen_benchmark(
     usecase_id: str = "table_assembly_tray",
     output_dir: Optional[pathlib.Path] = None,
 ) -> Dict[str, Any]:
-    """Runs the complete 4-gate causal streaming protocol on a specified model."""
+    """Compare three schedules; preserve the actual agent identity in the report."""
     usecase = get_usecase(usecase_id)
-    output_dir = output_dir or (REPO_ROOT / "experiments" / "qwen_benchmarks")
+    is_mock = isinstance(agent, MockAgent)
+    evaluation_kind = "mock_simulation" if is_mock else "agent_evaluation"
+    report_label = f"mock_{agent.mode}" if is_mock else model_name
+    default_dir = REPO_ROOT / "experiments" / ("runs/mock_benchmarks" if is_mock else "qwen_benchmarks")
+    output_dir = output_dir or default_dir
     output_dir.mkdir(parents=True, exist_ok=True)
 
     print(f"\n=======================================================")
-    print(f"BENCHMARKING MODEL: {model_name}")
+    print(f"AGENT: {agent.name} | KIND: {evaluation_kind}")
+    if is_mock:
+        print(f"Requested label {model_name!r} is not a measured model; this is a mock check.")
+    else:
+        print(f"DECLARED MODEL: {model_name}")
     print(f"USECASE: {usecase.name} [{usecase_id}]")
-    print(f"PROTOCOL: 4-Gate Causal Retrospective Revision")
+    print("PROTOCOL: joint, chronological and delayed schedule comparison")
     print(f"=======================================================\n")
 
     # Run the 3 core conditions: Together (Joint), Chronological, Delayed (Streaming CRR)
@@ -71,7 +75,10 @@ def run_qwen_benchmark(
 
     summary = {
         "timestamp": datetime.now().isoformat(),
-        "model_name": model_name,
+        "model_name": None if is_mock else model_name,
+        "requested_model_name": model_name,
+        "evaluation_kind": evaluation_kind,
+        "agent_metadata": agent.get_metadata(),
         "usecase_id": usecase_id,
         "metrics_summary": {
             "joint_accuracy": joint_acc,
@@ -85,7 +92,7 @@ def run_qwen_benchmark(
         "episodes": {cond: ep.to_dict() for cond, ep in episodes.items()},
     }
 
-    report_path = output_dir / f"{model_name.replace('/', '_').replace('-', '_')}_{usecase_id}.json"
+    report_path = output_dir / f"{report_label.replace('/', '_').replace('-', '_')}_{usecase_id}.json"
     report_path.write_text(json.dumps(summary, indent=2))
     print(f"\n[*] Full Benchmark Report Saved: {report_path}")
     print(f"[*] Streaming Order-Effect Gap: {streaming_order_gap:+.1%}")
@@ -105,7 +112,7 @@ def main():
     parser.add_argument(
         "--backend",
         type=str,
-        default="mock",
+        required=True,
         choices=["openai", "local", "mock"],
         help="Backend to use: 'openai' (vLLM/Ollama/DeepInfra/API), 'local' (transformers), or 'mock' (diagnostic baseline)",
     )
@@ -117,7 +124,10 @@ def main():
     args = parser.parse_args()
 
     models_to_run = []
-    if args.model in ["both", "all"]:
+    if args.backend == "mock":
+        # One actual mock agent, not two measurements of the requested model labels.
+        models_to_run = [args.model]
+    elif args.model in ["both", "all"]:
         models_to_run = ["Qwen2.5-VL-7B", "Qwen2.5-VL-72B"]
     else:
         models_to_run = [args.model]
@@ -137,7 +147,7 @@ def main():
             )
             agent = VLMStreamingAgent(name=m, backend=backend)
         else:
-            # Deterministic simulation baseline mimicking the observed large-VLM behavior
+            # Harness baseline only; never publish these as measured model results.
             agent = MockAgent(mode="oracle")
 
         run_qwen_benchmark(model_name=m, agent=agent, usecase_id=args.usecase)

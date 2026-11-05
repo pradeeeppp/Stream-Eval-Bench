@@ -233,3 +233,8 @@ venv/
 *.pt
 experiment_record.json
 streaming_video_experiment_record.json
+
+# Local scratch files and reversible recovery archives
+.local_archive/
+tmp/
+.DS_Store

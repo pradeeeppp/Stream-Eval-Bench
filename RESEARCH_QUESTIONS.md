@@ -1,55 +1,91 @@
-# Research questions after the completed prototype
+# Active research questions
 
-Updated 2026-10-09. These are proposed questions, not established findings or verified novelty claims.
+Updated 5 November 2026. This is the current question set, consolidated around
+the project's central statement. Prior formulations are preserved in
+[docs/history](docs/history/README.md). Results and completion status belong in
+[CURRENT_STATE.md](CURRENT_STATE.md).
 
-## One central goal
+## Central question
 
-Measure and improve selective retrospective correction in streaming video: when later footage clarifies an earlier event, associate it with the right event, correct only supported facts, and preserve understanding of the ongoing stream.
+Stream-Eval-Bench asks whether a video model can use late-arriving evidence to
+correct what it knows about the past, apply that evidence to the correct
+historical event, and preserve unrelated facts and already established recent
+states.
 
-## Evidence motivating the questions
+An event does not change after it happens. What may change is the model's
+knowledge of that event. This is the distinction between revising knowledge and
+rewriting event history.
 
-The completed two-source controlled HoloAssist prototype returned ten model answers. The camera's revealed lens was recognized, but its frame was associated with the wrong earlier observation even in the joint control. For the printer, joint answering was correct while answering with its own earlier response was wrong on identical final visual input. The printer's initial response already contained unsupported claims. Both findings are case-level observations; neither satisfies all original clean-initial-uncertainty qualification gates. Reproducibility, natural-stream prevalence and literature novelty are not established.
+The unit is an identifiable event occurrence and its claims. A later physical
+state, a newly repeated action, and new evidence about an old occurrence are
+different situations. They need separate labels and controls.
 
-See `experiments/fixed_hypothesis/FINDINGS.md` and `RESULTS.md`. Four additional proposed repetitions are unexecuted because automatic approval review requested separate authorization. Do not describe them as completed.
+## RQ1. Historical knowledge revision
 
-## RQ1 — Associate later evidence with the correct earlier event
+When new visual evidence concerns a fixed past event, does the model update its
+previously expressed claims in the way that evidence justifies?
 
-**When later footage resolves an earlier ambiguity, how reliably can a streaming VLM identify which earlier event the evidence belongs to, beyond simply recognizing what the new footage shows?**
+- Distinguish unknown-to-known completion, wrong-to-correct revision,
+  confirmation, refinement and evidence that remains inconclusive.
+- Record the claim before and after evidence, capture time, arrival time,
+  supporting observations and the reason an update is permitted.
+- A correct final answer, an unchanged correct guess or a value change caused by
+  a fixed answer schedule is insufficient evidence of visually grounded revision.
+- Use perception controls, joint/full-history references, no-new-information
+  controls and comparisons with initially correct versus incorrect memory.
 
-- Purpose: separate recognition from historical event association. The camera example motivates this separation.
-- Required comparison: standalone recognition, joint evidence association, and incremental association. Include visually similar competing earlier events and explicit same-event/new-event controls.
-- Main measurements: event-association accuracy conditional on successful recognition; replay-versus-new-event discrimination reported separately.
-- Example: two camera-handling actions occur. A later close view shows a detached lens. Seeing a lens is insufficient: the system must attach that information to the correct earlier action.
+## RQ2. Evidence-to-event attribution
 
-## RQ2 — Determine whether unsupported earlier answers impede correction
+Can the model identify which historical occurrence the new evidence concerns,
+including distinguishing the same event, a similar new occurrence, unrelated
+evidence and evidence insufficient for a reliable match?
 
-**Does a VLM's own unsupported earlier answer reduce the accuracy of later event association and correction compared with an uncertain earlier answer or no earlier answer, when the final visual evidence is identical?**
+- Separate recognizing a visible fact from attaching it to an event.
+- Include confusable candidate events and repeated actions.
+- Report attribution and revision separately. A supplied A/B packet citation is
+  a simpler temporal-reference test, not proof of natural event reidentification.
+- Preserve event IDs and occurrence counts when evidence is replayed; create a
+  new occurrence only when the scene actually contains one.
 
-- Purpose: test a possible mechanism behind the printer discrepancy rather than assume the mechanism is proven.
-- Required comparison: identical final frames with no prior answer, the model's actual earlier answer, and a controlled uncertain answer. Separate naturally generated histories from interventions; randomize condition order and repeat runs.
-- Main measurements: paired differences in association and supported-correction accuracy, with response variability and independent episode counts reported.
-- Example: the system initially guesses that a hidden printer display was illuminated. Later evidence shows which earlier observation had a dark display. Does the original guess lead it to attach that evidence to the wrong observation or retain a contradicted claim?
+## RQ3. Selective preservation and current-state continuity
 
-## RQ3 — Correct selectively while preserving the live state
+While revising an affected past claim, does the model preserve unsupported
+uncertainty, unrelated verified facts and already established recent states?
 
-**When a past event is corrected, can the system preserve unrelated verified facts and the latest live state, without treating replayed footage as a new event or revising facts that the new evidence does not support?**
+- Predeclare affected claims and protected claims rather than choosing them
+  after seeing a response.
+- Measure collateral changes, false updates, unsupported certainty, duplicate
+  or merged events and loss of correct current facts.
+- A preservation trial requires a correct prior value. A wrong answer remaining
+  wrong is a persistent error, not loss of established knowledge.
+- Evaluate live continuity when there is an actual concurrent task; model
+  generation time alone is not a measurement of missed live events.
 
-- Purpose: measure whether correction is safe for the rest of the event record, not merely whether one answer changed.
-- Required comparison: revealing evidence, irrelevant later evidence, replay of a different event, and genuinely new but visually similar actions. Use verified facts to test preservation, and unknown facts to test unsupported inference separately.
-- Main measurements: justified-correction rate, collateral fact changes, false revisions, duplicate-event rate, and preservation of the latest live state.
-- Example: a later replay establishes what part was removed earlier. It must not overwrite what is currently attached to the camera or count the old removal twice.
+## Method question: representation, retrieval and budget
 
-## RQ4 — Improve correction under deployment constraints
+Once qualifying episodes and reproducible effects exist, compare prior-answer
+memory, retained visual history, retrieval, immutable claim ledgers and model-built
+evidence graphs with comparable information and inference budgets.
 
-**Can an evidence-grounded update policy improve correct historical revisions while reducing wrong-event updates and collateral changes, under the same visual-memory and inference budget as standard history-conditioned prompting?**
+The evaluator's gold graph stays private. An oracle graph or oracle prior is a
+diagnostic upper bound, not an end-to-end model result. A graph benefit must be
+separated from benefits due to extra information, correct answers or more tokens.
 
-- Purpose: turn the measured weaknesses into an intervention whose benefits and costs can be tested.
-- Design requirement: establish event identity and claim-specific support before committing an update, while retaining the option to remain uncertain. This is a requirement, not a claim that a new algorithm has already been invented.
-- Required comparison: ordinary history-conditioned prompting, joint-context reference, retrieval/reinspection and abstention baselines, and a proposed policy; equalize available frames, memory and inference budget.
-- Main measurements: the same RQ1–RQ3 outcomes together with evidence inspected, memory consumption and measured latency. Penalize policies that avoid errors merely by refusing all corrections.
+## Optional extension: downstream decisions
 
-## Priority and boundaries
+An event revision may change a pending alert, recommendation or task status.
+This is a useful extension, but is not required to admit a sample for the three
+core questions above. If evaluated, predeclare claim-to-decision dependencies
+and score retain/change/retract decisions. Do not infer physical outcome benefits
+from offline video answers.
 
-First repeat the printer comparison before investing in a larger benchmark. RQ2 is the most focused candidate hypothesis; RQ1 and RQ3 define the required controls and outcomes; RQ4 becomes justified only after a reproducible failure is established. Keep all four within streaming video and retrospective evidence.
+## Current evidence boundary
 
-The current controlled images do not establish native continuous-stream behavior. A natural-stream benchmark needs independently validated initial ambiguity, later resolving evidence and event identity. No question here is labelled 100% novel: that requires a separate, current comparison against the closest literature, and absolute absence of prior work cannot be guaranteed.
+The archived 20-video run is a sampled two-packet diagnostic with supplied
+timestamps, not a full test of natural event association or long-stream revision.
+Its reviewed evidence graphs were used for preparation and evaluation provenance;
+the model did not receive graph memory. The [taxonomy](experiments/holoassist_20/belief_revision_v1/taxonomy/README.md)
+improves measurement but does not establish a causal mechanism or novelty.
+
+Dataset expansion should follow [the admission protocol](docs/DATASET_EXPANSION.md)
+and retain successes, counterexamples and model failures under the same rules.

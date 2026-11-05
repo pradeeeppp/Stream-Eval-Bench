@@ -1,76 +1,85 @@
 # Stream-Eval-Bench
 
-Research prototype for evaluating historical-evidence updates in streaming video understanding. Intended research direction: CVPR. This repository does **not** establish a novel streaming-specific failure or contain a finished benchmark.
-
-## Streaming Agent Environment (`stream_eval`)
-
-The repository includes a modular, extensible **Agent Environment** for running streaming video evaluation experiments.
-
-### Key Architecture:
-- **`StreamingEnvironment`**: Simulates live video streams step-by-step with arrival watermarking (`latest_capture_boundary`) and state memory management.
-- **Schedules (`DeliverySchedule`)**:
-  - `chronological`: Packets arrive strictly ordered by capture time ($t_1 \to t_2 \to \dots$).
-  - `delayed`: Simulates out-of-order / network latency ($t_2 \to t_1$), isolating whether late-arriving past evidence causes historical updates without corrupting current state.
-  - `together`: Batch control where all evidence arrives simultaneously.
-  - `drop`: Simulates network packet loss.
-- **Pluggable Agent Backends (`BaseStreamingAgent`)**:
-  - `MockAgent`: Fast deterministic baselines (`oracle`, `recency_bias`, `no_revision`, `intermediate_error`).
-  - `VLMStreamingAgent`: Connects to Gradio spaces (Qwen3-VL demo), local HuggingFace models (`Qwen2.5-VL`, `Qwen3-VL`), or OpenAI-compatible vision endpoints.
-- **Evaluation Metrics (`StreamEvaluator`)**:
-  - **Historical Update Accuracy**: Did late-arriving past evidence update unobserved fields to ground truth?
-  - **Recency Preservation Rate**: Was latest capture-time state preserved when older footage arrived?
-  - **Trajectory Fidelity**: Step-by-step state adherence across the entire episode.
-  - **JSON Schema Adherence & Timing**.
-
-### Quick Start:
-
-```bash
-# Install package
-pip install -e .
-
-# Run all conditions on the table assembly task with an oracle agent
-stream-eval --usecase table_assembly_tray --condition all --agent mock-oracle
-
-# Test a simulated failure mode (e.g. failure to revise history)
-stream-eval --usecase table_assembly_tray --condition delayed --agent mock-no-revision
-
-# Run multi-packet camera part detachment sequence
-stream-eval --usecase camera_detachment --condition all --agent mock-oracle
-
-# Run Python quickstart tutorial
-python examples/quickstart_experiment.py
-```
+Stream-Eval-Bench asks whether a video model can use late-arriving evidence to
+correct what it knows about the past, apply that evidence to the correct
+historical event, and preserve unrelated facts and already established recent
+states. An event remains fixed; the model's knowledge of it can change.
 
 ## Start here
 
-| Directory | Contents | Status |
-|---|---|---|
-| `experiments/holoassist_20/belief_revision_v1/` | Local Qwen2.5-VL-3B comparison across all 20 videos: joint, chronological and reversed arrival; raw responses, per-video analyses and belief trace graphs | See execution status and explicit denominators in [results](experiments/holoassist_20/belief_revision_v1/RESULTS.md); 17 provisionally scored targets, three diagnostic-only |
-| `experiments/two_clip_diagnostic/` | Five-call arrival-order test, exact MP4 inputs, prompts, responses, protocol, and runnable script | Complete; all three final conditions correct; one intermediate chronological error |
-| `experiments/evidence_revision_pilot/direct_revision/` | Corrected controlled still-image evaluation, inputs, model manifest, diagnostics, tests, and results | Complete saved pilot; not a streaming-specific finding |
-| `experiments/evidence_revision_pilot/streaming_trial/` | Earlier sampled-video protocol, preparation scripts, local/hosted runners, and saved partial outputs | Historical incomplete attempt; do not treat as a completed paired evaluation |
-| `experiments/evidence_revision_pilot/` | Initial acquisition scripts, source metadata, provenance, baseline code, and historical logs | Earlier exploratory work; see corrected pilot for authoritative image-update results |
+| Document | Purpose |
+|---|---|
+| [CURRENT_STATE.md](CURRENT_STATE.md) | Canonical handoff: work completed, results, limitations and next steps |
+| [RESEARCH_QUESTIONS.md](RESEARCH_QUESTIONS.md) | Active questions and evidence required to answer them |
+| [Dataset expansion](docs/DATASET_EXPANSION.md) | Candidate sources, admission gates, controls and collection stages |
+| [Experiment index](experiments/README.md) | Completed, historical, inconclusive and mock work |
+| [Failure taxonomy](experiments/holoassist_20/belief_revision_v1/taxonomy/README.md) | Exclusive outcome rules, all-video assignments and research gaps |
 
-Read the [twenty-video Qwen2.5-VL-3B findings](experiments/holoassist_20/belief_revision_v1/RESULTS.md) and its [protocol and reproduction instructions](experiments/holoassist_20/belief_revision_v1/README.md). The earlier [two-clip results](experiments/two_clip_diagnostic/RESULTS.md) used a public demo declaring Qwen3-VL-235B-A22B-Instruct. With supplied capture times and explicit instructions, it correctly updated the past while preserving the latest state in one two-clip example. No population-level reliability or novelty claim follows.
+## Current measured result
 
-## Run the earlier hosted diagnostic
+The archived HoloAssist experiment contains **100 actual Qwen2.5-VL-3B requests
+across 20 recordings**, with exact inputs, raw outputs and a pinned checkpoint.
+Seventeen targets are provisionally scored; three require adjudication. This is
+a sampled two-packet diagnostic with prior-response memory, not a completed
+natural-event-revision benchmark. Gold evidence graphs were used offline and
+were not supplied as model memory.
 
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r experiments/two_clip_diagnostic/requirements.txt
-python experiments/two_clip_diagnostic/run.py
+Read the [results](experiments/holoassist_20/belief_revision_v1/RESULTS.md),
+[failure-analysis PDF](output/pdf/HOLOASSIST_20_FAILURE_ANALYSIS_EN.pdf),
+[protocol](experiments/holoassist_20/belief_revision_v1/README.md), and
+[exact-input data instructions](experiments/holoassist_20/data/README.md).
+For a new measured GPU run, use the separate
+[CUDA rerun procedure](experiments/holoassist_20/belief_revision_v1/CUDA_RERUN.md).
+
+Four older files named for Qwen 7B/72B contain mock-oracle outputs. Their
+[provenance correction](experiments/qwen_benchmarks/README.md) explains why they
+are not model measurements. No novelty or streaming-specific failure mechanism
+has been established by the current pilots.
+
+## Repository map
+
+| Location | Role |
+|---|---|
+| `stream_eval/` | Generic streaming schedule/agent environment and legacy use cases |
+| `tests/` | Environment and benchmark-provenance checks |
+| `experiments/holoassist_20/belief_revision_v1/` | Frozen local run, reports, taxonomy, audits and fresh-run tools |
+| `experiments/` | Other experiments, each with its own scope and provenance |
+| `datasets/` | New-episode template and candidate-record conventions |
+| `docs/` | Dataset admission and historical planning records |
+| `scripts/legacy/` | Older root utilities retained for historical work |
+| `output/pdf/` | Shareable report artifacts |
+
+The older root research filenames for the synthesis, decision and literature
+plan remain as links to [historical snapshots](docs/history/README.md).
+Source recordings, model caches, environments and scratch/recovery files stay
+outside the normal tracked work. The exact evaluated input bundle and legacy
+25-video assets are intentional tracked data; their reports specify the scope.
+
+## Verify saved work without model inference
+
+```sh
+python3 -m unittest discover -s tests -p 'test_*.py'
+python3 -m unittest discover -s experiments/holoassist_20/belief_revision_v1 -p 'test_*.py'
+python3 -m unittest discover -s experiments/holoassist_20/belief_revision_v1/taxonomy -p 'test_*.py'
+python3 experiments/holoassist_20/belief_revision_v1/audit.py
 ```
 
-The runner resumes existing results, which are already complete in this checkout. For a fresh run, copy the diagnostic directory to a separate location and remove **that copy's** `results.json` and `experiment_record.json`, if present. Invoke the script five times; each invocation executes one pending call. Retain the published results unchanged. Hosted service availability and decoding settings are not controlled.
+The audit defaults to committed artifacts; media checks require restored inputs.
+See the experiment README for input/source verification and deterministic report
+regeneration. Preserve frozen outputs and put every new run in a new directory.
 
-The local image pilot has separate pinned dependencies and reproduction instructions in its README. Do not assume the older Qwen2-VL and newer Qwen3-VL runners share a compatible environment.
+## Generic environment smoke check
 
-## Research integrity
+```sh
+python3 -m pip install -e .
+stream-eval --usecase table_assembly_tray --condition all --agent mock-oracle
+```
 
-- `direct_revision/results/invalidated_cached/` is retained as an audit trail only. Those runs used an invalid feature-caching optimization and must not be pooled with corrected results.
-- The earlier streaming directory is a recovered partial checkpoint. Later unsaved runs were lost and are not reconstructed here.
-- Sampled four-frame packets are not equivalent to continuous livestream evaluation. Replay detection, event association, and long-stream performance remain untested in the completed two-clip experiment.
-- No model weights, generated tensor caches, Python caches, credentials, or duplicate recovery bundles are committed.
+This exercises software with known mock answers. It measures no model ability.
+The generic Qwen runner requires explicit `--backend` selection; mock reports
+identify the real agent, use `model_name=null` and default to an ignored mock-run
+directory. Its legacy aggregate metrics are not the canonical 20-video scorer.
 
-See [third-party provenance](THIRD_PARTY.md). The repository's MIT license does not relicense third-party dataset material or copied reference code.
+See [third-party provenance](THIRD_PARTY.md) and the experiment-specific data
+notices. Original project code is MIT; dataset/model/reference materials retain
+their own terms.

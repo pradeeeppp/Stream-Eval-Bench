@@ -19,6 +19,11 @@ The [failure analysis](FAILURE_ANALYSIS.md) follows the supplied reference's thr
 research questions and includes failure traces and an all-video appendix.
 Read the [six-page PDF with evidence frames](../../../output/pdf/HOLOASSIST_20_FAILURE_ANALYSIS_EN.pdf).
 
+The [detailed failure taxonomy](taxonomy/README.md) provides exclusive per-unit
+categories, [all-video assignments](taxonomy/FINDINGS.md), and a separate
+[data, interface, design and measurement gap register](taxonomy/GAPS.md).
+It classifies the archived traces without changing the original scoring protocol.
+
 ## Inputs and experiment
 
 Each video supplies two event-centered packets, each containing four native

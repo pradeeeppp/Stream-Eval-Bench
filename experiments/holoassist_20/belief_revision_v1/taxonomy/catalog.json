@@ -1,0 +1,188 @@
+{
+  "version": "1.0.0",
+  "units": {
+    "request_format": "request",
+    "state": "field at request",
+    "citation": "field at request",
+    "same_claim_consistency": "same-claim request",
+    "transition": "fixed capture-time claim across two requests"
+  },
+  "partitions": {
+    "request_format": {
+      "R00": {
+        "name": "Valid exact JSON",
+        "definition": "One JSON object satisfying the frozen four-key schema."
+      },
+      "R10": {
+        "name": "Unrecoverable JSON",
+        "definition": "No recoverable JSON object; excludes valid JSON with the wrong schema."
+      },
+      "R11": {
+        "name": "Schema violation",
+        "definition": "Recoverable JSON, but wrong type, keys, values, IDs or duplicate citation IDs."
+      },
+      "R12": {
+        "name": "Extra output around JSON",
+        "definition": "A valid schema object can be extracted, but the complete response is not that JSON object."
+      },
+      "R20": {
+        "name": "Missing result",
+        "definition": "No saved step. Not a semantic model error."
+      },
+      "R21": {
+        "name": "Infrastructure failure",
+        "definition": "Saved step reports a non-ok execution status. Not a semantic model error."
+      }
+    },
+    "state": {
+      "S00": {
+        "name": "Correct known value",
+        "definition": "Expected yes/no and the output matches."
+      },
+      "S01": {
+        "name": "Correct abstention before evidence",
+        "definition": "Target packet not received; expected and output are unknown."
+      },
+      "S02": {
+        "name": "Correct abstention on unsettled evidence",
+        "definition": "Target packet received, provisional label remains unknown, output unknown."
+      },
+      "S10": {
+        "name": "Commitment before target evidence",
+        "definition": "Output yes/no while target packet has not been received."
+      },
+      "S11": {
+        "name": "Commitment on unsettled evidence",
+        "definition": "Output yes/no after the target packet arrived, although its provisional label remains unknown."
+      },
+      "S12": {
+        "name": "Abstention on a provisionally known state",
+        "definition": "Output unknown where the frozen label is yes/no. Does not establish a perception failure."
+      },
+      "S13": {
+        "name": "Opposite binary value",
+        "definition": "Expected yes/no, output is the other binary value. Does not identify the internal cause."
+      }
+    },
+    "citation": {
+      "E00": {
+        "name": "Requested packet named",
+        "definition": "Exactly the received packet for the requested capture time. Does not verify visual support or the state value."
+      },
+      "E01": {
+        "name": "Empty citation permitted",
+        "definition": "No citation and no known-state support requirement: unseen target or an unresolved label."
+      },
+      "E10": {
+        "name": "Required citation missing",
+        "definition": "Known expected value and received target packet, but an empty evidence list. Independent of value correctness."
+      },
+      "E11": {
+        "name": "Wrong received capture-time packet",
+        "definition": "All references received, but list is not exactly the requested packet; includes both A and B."
+      },
+      "E12": {
+        "name": "Unreceived packet named",
+        "definition": "At least one reference not received; takes precedence over wrong-time citation."
+      }
+    },
+    "same_claim_consistency": {
+      "K00": {
+        "name": "Same answer",
+        "definition": "Both fields target the same predicate and capture time and have equal values; may still both be wrong."
+      },
+      "K10": {
+        "name": "Binary contradiction",
+        "definition": "Same claim gets opposing yes/no answers."
+      },
+      "K11": {
+        "name": "Certainty disagreement",
+        "definition": "Same claim gets unknown in one field and yes/no in the other. Not a yes/no contradiction."
+      }
+    },
+    "transition": {
+      "T00": {
+        "name": "Correct new-evidence value update",
+        "definition": "Expected unknown becomes known, prior output correctly unknown, final output matches the new label. No grounding claim."
+      },
+      "T01": {
+        "name": "Correct value maintained",
+        "definition": "Expected value unchanged and both outputs match; includes justified unknown remaining unknown."
+      },
+      "T02": {
+        "name": "Recovery after an incorrect prior",
+        "definition": "Expected value unchanged; incorrect prior becomes correct. Does not prove retrieval of earlier visual evidence."
+      },
+      "T10": {
+        "name": "Missed resolution after evidence",
+        "definition": "Expected unknown becomes known, correctly unknown prior stays unknown."
+      },
+      "T11": {
+        "name": "Wrong resolution after evidence",
+        "definition": "Expected unknown becomes known, correctly unknown prior resolves to the wrong binary value."
+      },
+      "T12": {
+        "name": "Appropriate uncertainty lost",
+        "definition": "Expected unknown unchanged; prior correctly unknown becomes binary."
+      },
+      "T13": {
+        "name": "Known value withdrawn",
+        "definition": "Expected yes/no unchanged; initially correct value becomes unknown."
+      },
+      "T14": {
+        "name": "Known value inverted",
+        "definition": "Expected yes/no unchanged; initially correct value becomes the other binary value."
+      },
+      "T15": {
+        "name": "Prior error not repaired",
+        "definition": "Expected value unchanged; both prior and final outputs wrong. Excludes loss of a correct prior."
+      },
+      "T16": {
+        "name": "Update starts from an incorrect prior",
+        "definition": "Expected value changes but the prior was already wrong; not a clean update trial. Final correctness is retained separately."
+      }
+    }
+  },
+  "primary_claim_partition": {
+    "unit": "one capture-time claim per request, collapsing aliased fields",
+    "codes": [
+      "S00",
+      "S01",
+      "S02",
+      "S10",
+      "S11",
+      "S12",
+      "S13",
+      "K10",
+      "K11"
+    ],
+    "precedence": "If aliased fields disagree, assign K10/K11 only. Otherwise assign one S code for the shared value. Citation and transition facets are not added to this partition."
+  },
+  "case_profile": {
+    "order": [
+      "joint final",
+      "chronological final",
+      "reversed final"
+    ],
+    "values": [
+      "000",
+      "001",
+      "010",
+      "011",
+      "100",
+      "101",
+      "110",
+      "111",
+      "ungraded_target",
+      "blocked_response"
+    ]
+  },
+  "study_gap_register": "GAPS.md",
+  "curated_task_blockers": {
+    "unit": "ungraded task, assigned from reviewed source/task findings",
+    "D01": "Target identity or occurrence specification requires clarification.",
+    "D04": "Specified target and intended positive evidence window do not align.",
+    "precedence": "Resolve target meaning before asserting a task/window mismatch; not inferred from model outputs."
+  },
+  "overlap_policy": "One code per eligible unit within each partition. Never sum different partitions. A case can contain many distinct observations."
+}
