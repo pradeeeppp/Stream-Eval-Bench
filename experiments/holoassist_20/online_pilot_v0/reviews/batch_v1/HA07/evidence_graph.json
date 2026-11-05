@@ -1,0 +1,529 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_07",
+  "source_id": "HA07",
+  "original_instruction": "Alert when the action camera is removed from the white packaging insert.",
+  "source": {
+    "session_id": "R071-19July-GoPro",
+    "sha256": "90cfe66fb7b9fa67ccc5ccdbbdcc83d443fb6e108137ec7512ff06568e01d8ee",
+    "video_path": "videos/R071-19July-GoPro.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 8585,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          149,
+          297,
+          446,
+          594,
+          743,
+          891,
+          1040,
+          1188,
+          1337,
+          1486,
+          1634,
+          1783,
+          1931,
+          2080,
+          2228,
+          2377,
+          2525,
+          2674,
+          2823,
+          2971,
+          3120,
+          3268,
+          3417,
+          3565,
+          3714,
+          3862,
+          4011,
+          4160,
+          4308,
+          4457,
+          4605,
+          4754,
+          4902,
+          5051,
+          5199,
+          5348,
+          5497,
+          5645,
+          5794,
+          5942,
+          6091,
+          6239,
+          6388,
+          6536,
+          6685,
+          6834,
+          6982,
+          7131,
+          7279,
+          7428,
+          7576,
+          7725,
+          7873,
+          8022,
+          8170,
+          8319,
+          8468,
+          8584
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA07/overview_01.png",
+            "sha256": "a42d68219e04077c8be64dad2ce79dcb24254354d86880b8a0093c53a2c93194"
+          },
+          {
+            "path": "full_review/batch_v1/HA07/overview_02.png",
+            "sha256": "f39971ac53214f0f7112891a840fa846367a99f57ab142912e9118745e377ffe"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          238,
+          253,
+          267,
+          282,
+          297,
+          312,
+          327,
+          342,
+          357,
+          371,
+          386,
+          401,
+          416,
+          431,
+          446,
+          461,
+          475,
+          490,
+          505,
+          520,
+          535
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA07/candidate_01.png",
+            "sha256": "071007de9e69bf3a76d7595c8fbaba95418dc04704ad2bd69a28454c26dfd004"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          401,
+          402,
+          403,
+          404,
+          405,
+          406,
+          407,
+          408,
+          409,
+          410,
+          411,
+          412,
+          413,
+          414,
+          415,
+          416
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA07/native1_01.png",
+            "sha256": "bdf68bce7323a20ea094e8fc3405afacf68d0a92039a3e5785ca9bdb94b62964"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          401,
+          430,
+          460
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA07/delivered_01.png",
+            "sha256": "4e3072997d0690cdca55c39dd96de359fa3af150d33fc41bd196e9011656048a"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Opening the case precedes camera extraction and must not trigger the task. Later accessory/battery work is a different event.",
+    "flags": [
+      "clearance_boundary_partly_occluded"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "action camera"
+    },
+    {
+      "id": "object_2",
+      "description": "white molded insert"
+    },
+    {
+      "id": "object_3",
+      "description": "black case"
+    },
+    {
+      "id": "object_4",
+      "description": "battery"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 327,
+      "source_pts_seconds": 11.00607,
+      "path": "full_review/batch_v1/HA07/anchors/000327.jpg",
+      "description": "Action camera rests in the open white insert.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Action camera rests in the open white insert.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 401,
+      "source_pts_seconds": 13.49674,
+      "path": "full_review/batch_v1/HA07/anchors/000401.jpg",
+      "description": "Hands grasp and lift the camera near the insert; clearance still partly occluded.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Hands grasp and lift the camera near the insert; clearance still partly occluded.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 416,
+      "source_pts_seconds": 14.001606,
+      "path": "full_review/batch_v1/HA07/anchors/000416.jpg",
+      "description": "Camera is visibly raised clear of the insert.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Camera is visibly raised clear of the insert.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "clear_of",
+        "object": "object_2"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 446,
+      "source_pts_seconds": 15.011337,
+      "path": "full_review/batch_v1/HA07/anchors/000446.jpg",
+      "description": "Camera held separately above the open packaging.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Camera held separately above the open packaging.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "distractor",
+      "frame_index_zero_based": 1634,
+      "source_pts_seconds": 54.996692,
+      "path": "full_review/batch_v1/HA07/anchors/001634.jpg",
+      "description": "Later battery handling belongs to camera operation, not another removal from packaging.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Later battery handling belongs to camera operation, not another removal from packaging.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA07:reviewed_occurrence_1",
+      "event_class": "camera_removal_from_insert",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_1",
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 14.001606,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 14,
+      "native_frame_index": 430,
+      "source_pts_seconds": 14.472814,
+      "decoded_scaled_frame_md5": "adf5e987d650061495183710ca2e1e6a",
+      "stream_path": "stream_frames/R071-19July-GoPro/0015.jpg",
+      "stream_jpeg_sha256": "964c6edb793f2798a1aee07ef0cb8a356000af0856aacea3eba0181d4f4f4901",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the action camera is visibly clear of the white molded insert. Opening the black case or touching the camera while it remains seated does not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 14,
+      "source_capture_boundary_seconds": 14.472814,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 20,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "insufficient_alone_to_trigger",
+      "target": "alert_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 8,
+        "native_frame_index": 252,
+        "source_pts_seconds": 8.481742,
+        "decoded_scaled_frame_md5": "ae950018aad408cd3c0c229a573c2f03",
+        "stream_path": "stream_frames/R071-19July-GoPro/0009.jpg",
+        "stream_jpeg_sha256": "99957db1cf4de9ce8bdda367655c97d36172559a59854a4fabdf72fefc6f99f6"
+      },
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 282,
+        "source_pts_seconds": 9.491473,
+        "decoded_scaled_frame_md5": "3136be24c8ba1b9d7d384d6e9b37f22b",
+        "stream_path": "stream_frames/R071-19July-GoPro/0010.jpg",
+        "stream_jpeg_sha256": "24e0c99ba972fff943f3b94652b6fad9eb0f29bb0e92a1506f5faf3728f3bea6"
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 311,
+        "source_pts_seconds": 10.467547,
+        "decoded_scaled_frame_md5": "0ac8759d32c4808f0a33f20b9b84c654",
+        "stream_path": "stream_frames/R071-19July-GoPro/0011.jpg",
+        "stream_jpeg_sha256": "13121d7f448c87f373a184868888362001a609bfa77ec23e2e331692fb1ee9d5"
+      },
+      {
+        "packet_time_seconds": 11,
+        "native_frame_index": 341,
+        "source_pts_seconds": 11.477278,
+        "decoded_scaled_frame_md5": "65012ff4cc7ecd6ff129eb89af1346e9",
+        "stream_path": "stream_frames/R071-19July-GoPro/0012.jpg",
+        "stream_jpeg_sha256": "c6577e856018774127234976a2f17f9322af2e66bc650ee581b61fa4003e856e"
+      },
+      {
+        "packet_time_seconds": 12,
+        "native_frame_index": 371,
+        "source_pts_seconds": 12.487009,
+        "decoded_scaled_frame_md5": "2e3c3f6a76fe5ec6653e220e267d3f0a",
+        "stream_path": "stream_frames/R071-19July-GoPro/0013.jpg",
+        "stream_jpeg_sha256": "b9103d70aab771602e13509384926e59874d6a18549479c0457eac21c8a7b46f"
+      },
+      {
+        "packet_time_seconds": 13,
+        "native_frame_index": 401,
+        "source_pts_seconds": 13.49674,
+        "decoded_scaled_frame_md5": "a3c2bbcc50d8264e0db146aa199af797",
+        "stream_path": "stream_frames/R071-19July-GoPro/0014.jpg",
+        "stream_jpeg_sha256": "1c49ae6a880041b1dfd607291c8a2cf242aadc3189de749ae94e2cdc2b94f548"
+      },
+      {
+        "packet_time_seconds": 14,
+        "native_frame_index": 430,
+        "source_pts_seconds": 14.472814,
+        "decoded_scaled_frame_md5": "adf5e987d650061495183710ca2e1e6a",
+        "stream_path": "stream_frames/R071-19July-GoPro/0015.jpg",
+        "stream_jpeg_sha256": "964c6edb793f2798a1aee07ef0cb8a356000af0856aacea3eba0181d4f4f4901"
+      },
+      {
+        "packet_time_seconds": 15,
+        "native_frame_index": 460,
+        "source_pts_seconds": 15.482545,
+        "decoded_scaled_frame_md5": "1c41787b9d584375ed77dad2bc735fef",
+        "stream_path": "stream_frames/R071-19July-GoPro/0016.jpg",
+        "stream_jpeg_sha256": "0d53332a0601bfcba11bf86ec0afe559c17fd5dd2f4f25c1e98a79566c9f1a66"
+      },
+      {
+        "packet_time_seconds": 16,
+        "native_frame_index": 490,
+        "source_pts_seconds": 16.492276,
+        "decoded_scaled_frame_md5": "decb47709bf164da1e48fd1cc782fd49",
+        "stream_path": "stream_frames/R071-19July-GoPro/0017.jpg",
+        "stream_jpeg_sha256": "aac0d1b2e79926820f0fa9098324118d702f9b603a6a4b3aaa0b28e4acbd9f7e"
+      },
+      {
+        "packet_time_seconds": 17,
+        "native_frame_index": 519,
+        "source_pts_seconds": 17.468349,
+        "decoded_scaled_frame_md5": "1c19629171408987b9eb9ca2cb6251c6",
+        "stream_path": "stream_frames/R071-19July-GoPro/0018.jpg",
+        "stream_jpeg_sha256": "91cd0c36abcfc59925520f70486895e6ce65d01edf73dd57bf2f3dc34df8696d"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the action camera is visibly clear of the white molded insert. Opening the black case or touching the camera while it remains seated does not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

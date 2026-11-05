@@ -224,6 +224,7 @@ __marimo__/
 __pycache__/
 *.py[cod]
 .venv/
+.venv-qwen3b/
 venv/
 .env
 .env.*

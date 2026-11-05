@@ -1,0 +1,10 @@
+{
+  "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+  "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+  "requested_model": "Qwen2.5-VL-3B, matching the supplied PDF",
+  "download_started_utc": "2026-11-04T16:06:04.392760+00:00",
+  "weights": "official unquantized checkpoint",
+  "status": "download_complete",
+  "local_path": "/Users/abhishekpandir/Documents/Stream-Eval-Bench/experiments/holoassist_20/.model_cache/qwen2_5_vl_3b",
+  "download_completed_utc": "2026-11-04T16:36:59.095001+00:00"
+}

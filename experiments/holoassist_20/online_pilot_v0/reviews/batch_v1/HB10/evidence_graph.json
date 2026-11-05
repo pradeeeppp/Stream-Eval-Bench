@@ -1,0 +1,716 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_b2_10",
+  "source_id": "HB10",
+  "original_instruction": "Alert when the machine's removable water reservoir is held under the running faucet.",
+  "source": {
+    "session_id": "z043-june-24-22-nespresso",
+    "sha256": "3ff9c84f7eddc46a30efbc0702bfc9f2e0c0d32fd2f338c0ea231cb2b77abf3d",
+    "video_path": "videos/z043-june-24-22-nespresso.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 6614,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          149,
+          298,
+          447,
+          596,
+          745,
+          895,
+          1044,
+          1193,
+          1342,
+          1491,
+          1640,
+          1789,
+          1938,
+          2087,
+          2236,
+          2385,
+          2534,
+          2684,
+          2833,
+          2982,
+          3131,
+          3280,
+          3429,
+          3578,
+          3727,
+          3876,
+          4025,
+          4174,
+          4323,
+          4473,
+          4622,
+          4771,
+          4920,
+          5069,
+          5218,
+          5367,
+          5516,
+          5665,
+          5814,
+          5963,
+          6112,
+          6262,
+          6411,
+          6560,
+          6613
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB10/overview_01.png",
+            "sha256": "a78f43da025d7364e3dafee9481a982a3971534cf255adae69c9c4abebf6ef5d"
+          },
+          {
+            "path": "full_review/batch_v1/HB10/overview_02.png",
+            "sha256": "d5d45223bc92a6b0f240b0dd48bc3d31bba92eebba21139d17dab78d5c59d059"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          596,
+          611,
+          626,
+          641,
+          656,
+          671,
+          686,
+          701,
+          716,
+          731,
+          745,
+          760,
+          775,
+          790,
+          805,
+          820,
+          835,
+          850,
+          865,
+          880,
+          895,
+          909,
+          924,
+          939,
+          954,
+          969,
+          984,
+          999,
+          1014,
+          1029,
+          1044,
+          1058,
+          1073
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 35,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB10/candidate_01.png",
+            "sha256": "214b3afaefc5999814845da18c15749e564d5598d67d0b4f2f03f0921dd56f2d"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          775,
+          776,
+          777,
+          778,
+          779,
+          780,
+          781,
+          782,
+          783,
+          784,
+          785,
+          786,
+          787,
+          788,
+          789,
+          790
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB10/native1_01.png",
+            "sha256": "3004035a1b85494ca4f6f6839b4d231806bf41a78b526192cdbefb43662cfdf4"
+          }
+        ]
+      },
+      {
+        "name": "extra",
+        "native_indices": [
+          745,
+          760,
+          775,
+          790,
+          805,
+          984
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 6,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB10/extra_01.png",
+            "sha256": "5d7d5fade77259d4cc118d9e2851e3f7d9a7642d81c090877b801755c0462c0a"
+          }
+        ]
+      },
+      {
+        "name": "flow_detail",
+        "native_indices": [
+          760,
+          775,
+          790,
+          805,
+          820,
+          835,
+          850,
+          865,
+          880,
+          984
+        ],
+        "display_width": 640,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 2,
+        "render_per_page": 10,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB10/flow_detail_01.png",
+            "sha256": "1c76852acfda81f72c70ba006b76aad2c249aeb574a5041456b83d0b124c4d5d"
+          }
+        ]
+      },
+      {
+        "name": "native2",
+        "native_indices": [
+          805,
+          806,
+          807,
+          808,
+          809,
+          810,
+          811,
+          812,
+          813,
+          814,
+          815,
+          816,
+          817,
+          818,
+          819,
+          820
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB10/native2_01.png",
+            "sha256": "e97c7692588c3ec6bea59328fbff0ed981bd87c71ae64dc8fb9b9997db32e0cc"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          790,
+          819,
+          849
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB10/delivered_01.png",
+            "sha256": "8c28ca987a23144bb5496eef3cbcf9628bcd263aa9670c81537af9e3f8fa9de8"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Higher-resolution review distinguishes alignment/handle operation at 26\u201327 s from clearly visible flowing water at about 27.5 s, earlier than the legacy 33 s label.",
+    "flags": [
+      "legacy_positive_late",
+      "flow_onset_visibility_uncertain"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "removable reservoir"
+    },
+    {
+      "id": "object_2",
+      "description": "faucet"
+    },
+    {
+      "id": "object_3",
+      "description": "visible water stream"
+    },
+    {
+      "id": "object_4",
+      "description": "coffee machine"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "context",
+      "frame_index_zero_based": 671,
+      "source_pts_seconds": 22.504099,
+      "path": "full_review/batch_v1/HB10/anchors/000671.jpg",
+      "description": "Reservoir removed from machine before sink interaction.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Reservoir removed from machine before sink interaction.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 760,
+      "source_pts_seconds": 25.488994,
+      "path": "full_review/batch_v1/HB10/anchors/000760.jpg",
+      "description": "Reservoir held near the faucet while its handle is operated; water flow not clearly established in this sample.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Reservoir held near the faucet while its handle is operated; water flow not clearly established in this sample.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 775,
+      "source_pts_seconds": 25.992066,
+      "path": "full_review/batch_v1/HB10/anchors/000775.jpg",
+      "description": "Faucet operation and reservoir alignment continue; onset of visible flow needs close inspection.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Faucet operation and reservoir alignment continue; onset of visible flow needs close inspection.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 805,
+      "source_pts_seconds": 26.998211,
+      "path": "full_review/batch_v1/HB10/anchors/000805.jpg",
+      "description": "Reservoir is aligned under the outlet; a sustained water stream is not yet clearly visible.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Reservoir is aligned under the outlet; a sustained water stream is not yet clearly visible.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 819,
+      "source_pts_seconds": 27.467745,
+      "path": "full_review/batch_v1/HB10/anchors/000819.jpg",
+      "description": "A sustained visible water stream descends into the reservoir opening.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "A sustained visible water stream descends into the reservoir opening.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "under_flow_from",
+        "object": "object_2"
+      }
+    },
+    {
+      "id": "observation_5",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 835,
+      "source_pts_seconds": 28.004355,
+      "path": "full_review/batch_v1/HB10/anchors/000835.jpg",
+      "description": "Reservoir remains under the clearly running faucet.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_5",
+      "type": "state_claim",
+      "text": "Reservoir remains under the clearly running faucet.",
+      "evidence_ids": [
+        "observation_5"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_6",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 1193,
+      "source_pts_seconds": 40.011013,
+      "path": "full_review/batch_v1/HB10/anchors/001193.jpg",
+      "description": "Reservoir returned to machine in the overview.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_6",
+      "type": "state_claim",
+      "text": "Reservoir returned to machine in the overview.",
+      "evidence_ids": [
+        "observation_6"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HB10:reviewed_occurrence_1",
+      "event_class": "reservoir_under_running_faucet",
+      "positive_evidence_ids": [
+        "observation_4"
+      ],
+      "entity_ids": [
+        "object_1",
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 27.467745,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 27,
+      "native_frame_index": 819,
+      "source_pts_seconds": 27.467745,
+      "decoded_scaled_frame_md5": "abd4b8af6855511054584a93c0db97d4",
+      "stream_path": "stream_frames/z043-june-24-22-nespresso/0028.jpg",
+      "stream_jpeg_sha256": "0c02b9eb3918f397f99b606aee3f46fd13bcfc477fbb0b401aba1f1c910a1951",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the detached reservoir is visibly positioned under flowing faucet water; holding it under a stopped faucet does not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 27,
+      "source_capture_boundary_seconds": 27.467745,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 38,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "observation_0",
+      "relation": "context_for",
+      "target": "event_1",
+      "same_occurrence_link_certified": false
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "claim_1",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "observation_2",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "claim_4",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_5",
+      "relation": "supports",
+      "target": "claim_5"
+    },
+    {
+      "source": "observation_5",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_6",
+      "relation": "supports",
+      "target": "claim_6"
+    },
+    {
+      "source": "claim_6",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 20,
+        "native_frame_index": 611,
+        "source_pts_seconds": 20.49181,
+        "decoded_scaled_frame_md5": "877f9040d2e3ca22e50aceeb7b69ed79",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0021.jpg",
+        "stream_jpeg_sha256": "27c66ecdabdf608b2d5f3c38a7fcf90b95580b34a09b67e11a174e476a401412"
+      },
+      {
+        "packet_time_seconds": 21,
+        "native_frame_index": 641,
+        "source_pts_seconds": 21.497954,
+        "decoded_scaled_frame_md5": "3ab92c50865ed2cf131375fff6b74c53",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0022.jpg",
+        "stream_jpeg_sha256": "bd013af4cb7a913b36d630c25fdb7f10d5cd6b26dac5e80a24041d2b0bcbf6c8"
+      },
+      {
+        "packet_time_seconds": 22,
+        "native_frame_index": 670,
+        "source_pts_seconds": 22.47056,
+        "decoded_scaled_frame_md5": "b559521b2891fc6b124e384583b59735",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0023.jpg",
+        "stream_jpeg_sha256": "9533fe322e3677db40e727cc8d4b1f712fb3d5de427e4ec072f5f458eec6a417"
+      },
+      {
+        "packet_time_seconds": 23,
+        "native_frame_index": 700,
+        "source_pts_seconds": 23.476705,
+        "decoded_scaled_frame_md5": "34836754c92be5e57de4e469c14a5de0",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0024.jpg",
+        "stream_jpeg_sha256": "90fa69a7a885f79ac5ed051eb010802316139a2d68ffc512f05f5ddde0cbe47e"
+      },
+      {
+        "packet_time_seconds": 24,
+        "native_frame_index": 730,
+        "source_pts_seconds": 24.482849,
+        "decoded_scaled_frame_md5": "c7f967bf1f4a688fc936bc0c72351fc4",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0025.jpg",
+        "stream_jpeg_sha256": "c0fc2e8585673a532671951c9e7c1c1890c0fa08172b83ad1cf756b8b37e9a84"
+      },
+      {
+        "packet_time_seconds": 25,
+        "native_frame_index": 760,
+        "source_pts_seconds": 25.488994,
+        "decoded_scaled_frame_md5": "d4be3153b64537cf14695f1ce19db6b2",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0026.jpg",
+        "stream_jpeg_sha256": "0dad4c295ff936634d1e6cda43469d339be87d5da0ab32291947988a7ee5012d"
+      },
+      {
+        "packet_time_seconds": 26,
+        "native_frame_index": 790,
+        "source_pts_seconds": 26.495138,
+        "decoded_scaled_frame_md5": "cd64223fec625bc2070607445ac4baba",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0027.jpg",
+        "stream_jpeg_sha256": "324573f527b9a59b6a3388bcd5876c783915920ac380928b7f7f23ff2879faf8"
+      },
+      {
+        "packet_time_seconds": 27,
+        "native_frame_index": 819,
+        "source_pts_seconds": 27.467745,
+        "decoded_scaled_frame_md5": "abd4b8af6855511054584a93c0db97d4",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0028.jpg",
+        "stream_jpeg_sha256": "0c02b9eb3918f397f99b606aee3f46fd13bcfc477fbb0b401aba1f1c910a1951"
+      },
+      {
+        "packet_time_seconds": 28,
+        "native_frame_index": 849,
+        "source_pts_seconds": 28.473889,
+        "decoded_scaled_frame_md5": "567220e4c8d3a7e61f46f5c6394708a3",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0029.jpg",
+        "stream_jpeg_sha256": "de0c3fef3591d80930ae763c38fa4e41a54321811c7d3026dbf3dabd79013e58"
+      },
+      {
+        "packet_time_seconds": 29,
+        "native_frame_index": 879,
+        "source_pts_seconds": 29.480034,
+        "decoded_scaled_frame_md5": "573b86aaa35eb2a5d9d236b4a78c5bb8",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0030.jpg",
+        "stream_jpeg_sha256": "91dcd51050de3ff9ce24b6494eb6501e2673e43d30a872ac4764da9736b48dc0"
+      },
+      {
+        "packet_time_seconds": 30,
+        "native_frame_index": 909,
+        "source_pts_seconds": 30.486178,
+        "decoded_scaled_frame_md5": "351b598df99e15850911e935aacc6235",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0031.jpg",
+        "stream_jpeg_sha256": "e12e9d7060f3bcd3b17b536e87992bca8649552b81c05cf34413b9a5de63ebd3"
+      },
+      {
+        "packet_time_seconds": 31,
+        "native_frame_index": 939,
+        "source_pts_seconds": 31.492323,
+        "decoded_scaled_frame_md5": "823b5fdaccebdb945f8e91a5737104bf",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0032.jpg",
+        "stream_jpeg_sha256": "b57819f41dc7bc35ba468f58d88b47bde6a4b12dcf8cd432ec0a61c3f4545fb8"
+      },
+      {
+        "packet_time_seconds": 32,
+        "native_frame_index": 969,
+        "source_pts_seconds": 32.498467,
+        "decoded_scaled_frame_md5": "6b0e3f59b26af11e2f2ab933b9e661b7",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0033.jpg",
+        "stream_jpeg_sha256": "fcab5a78fdc7a3e59e301d350380ad90c808ea8fffec6e014420fc625df9bd72"
+      },
+      {
+        "packet_time_seconds": 33,
+        "native_frame_index": 998,
+        "source_pts_seconds": 33.471074,
+        "decoded_scaled_frame_md5": "d1258a9cc2729d72a71c29abea3eb3c1",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0034.jpg",
+        "stream_jpeg_sha256": "0e9f1c8875387c0c3979d20f6770771803442fd4a9288718d5248b82132133c3"
+      },
+      {
+        "packet_time_seconds": 34,
+        "native_frame_index": 1028,
+        "source_pts_seconds": 34.477218,
+        "decoded_scaled_frame_md5": "5ea801831e6c5cd812c67e8cf5265b0b",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0035.jpg",
+        "stream_jpeg_sha256": "2d486d300044628eff1717101b23e28e9a55c56220fabc4e061b362994a3f219"
+      },
+      {
+        "packet_time_seconds": 35,
+        "native_frame_index": 1058,
+        "source_pts_seconds": 35.483363,
+        "decoded_scaled_frame_md5": "8bbc4ffb9c1c3150b51d07ee1fac9719",
+        "stream_path": "stream_frames/z043-june-24-22-nespresso/0036.jpg",
+        "stream_jpeg_sha256": "2925598b06bd3a778d37daa2dde093abde9c44b74375ae18d8d12189f8a2b8f5"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the detached reservoir is visibly positioned under flowing faucet water; holding it under a stopped faucet does not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

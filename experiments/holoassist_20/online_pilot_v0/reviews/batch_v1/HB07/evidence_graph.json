@@ -1,0 +1,485 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_b2_07",
+  "source_id": "HB07",
+  "original_instruction": "Alert when the round tabletop is lifted off the white support frame.",
+  "source": {
+    "session_id": "z020-june-20-22-gladom_disassemble",
+    "sha256": "712e79dc046cc4422987749e4004f892d2a80bdc7648046e673f0c126d4597e6",
+    "video_path": "videos/z020-june-20-22-gladom_disassemble.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 3143,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          300,
+          450,
+          600,
+          750,
+          900,
+          1050,
+          1200,
+          1350,
+          1500,
+          1650,
+          1800,
+          1950,
+          2100,
+          2250,
+          2400,
+          2550,
+          2700,
+          2850,
+          3000,
+          3142
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB07/overview_01.png",
+            "sha256": "e50df024f22d34d666d805488268be668d2c4d243671df6b2c28acc3211265ce"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          120,
+          135,
+          150,
+          165,
+          180,
+          195,
+          210,
+          225,
+          240,
+          255,
+          270,
+          285,
+          300,
+          315,
+          330,
+          345,
+          360,
+          375,
+          390,
+          405,
+          420
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB07/candidate_01.png",
+            "sha256": "6fbd8dca9f4387f05a25ee93efa37c00e929fbcbbdb5de4a3af0e479997c9770"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB07/native1_01.png",
+            "sha256": "444acb2eeb241d51ca7edea43063eed1d366f3e949b71f8a499546a882a702fe"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          225,
+          255,
+          285
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB07/delivered_01.png",
+            "sha256": "cf6816ce5f385e56522c56ca89fc401021db0991edec03f148a00e367837dd8e"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Separate grasping, initial lift, complete clearance and setting the top aside.",
+    "flags": [
+      "lift_vs_full_clearance_boundary"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "round tabletop"
+    },
+    {
+      "id": "object_2",
+      "description": "white support frame"
+    },
+    {
+      "id": "object_3",
+      "description": "hands"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 225,
+      "source_pts_seconds": 7.499585,
+      "path": "full_review/batch_v1/HB07/anchors/000225.jpg",
+      "description": "Tabletop appears seated on the white frame while its rim is grasped.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Tabletop appears seated on the white frame while its rim is grasped.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 240,
+      "source_pts_seconds": 7.999558,
+      "path": "full_review/batch_v1/HB07/anchors/000240.jpg",
+      "description": "Tabletop starts lifting; clearance from supports is partly obscured.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Tabletop starts lifting; clearance from supports is partly obscured.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 255,
+      "source_pts_seconds": 8.49953,
+      "path": "full_review/batch_v1/HB07/anchors/000255.jpg",
+      "description": "Round tabletop is visibly lifted clear of the frame.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Round tabletop is visibly lifted clear of the frame.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "clear_of",
+        "object": "object_2"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 300,
+      "source_pts_seconds": 9.999447,
+      "path": "full_review/batch_v1/HB07/anchors/000300.jpg",
+      "description": "Removed tabletop is set on the work surface separately from the frame.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Removed tabletop is set on the work surface separately from the frame.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 345,
+      "source_pts_seconds": 11.499364,
+      "path": "full_review/batch_v1/HB07/anchors/000345.jpg",
+      "description": "Empty support ring visible with tabletop set aside.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Empty support ring visible with tabletop set aside.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HB07:reviewed_occurrence_1",
+      "event_class": "tabletop_removal",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_1",
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 8.49953,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 8,
+      "native_frame_index": 255,
+      "source_pts_seconds": 8.49953,
+      "decoded_scaled_frame_md5": "4a6864c317f79d858ff6291570ee13e1",
+      "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0009.jpg",
+      "stream_jpeg_sha256": "91fa721918ac69f212b04cdc2b4656e9d968a762d33883e2257d4814cdbac1a2",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the round tabletop is visibly clear of the white support frame; grasping its rim alone does not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 8,
+      "source_capture_boundary_seconds": 8.49953,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 16,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "claim_3",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 4,
+        "native_frame_index": 135,
+        "source_pts_seconds": 4.499751,
+        "decoded_scaled_frame_md5": "e555fab44464af2fba075000d7ceb320",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0005.jpg",
+        "stream_jpeg_sha256": "760465061e8869612bbef85760d674c3577903ded5e4298189d4a0342074cceb"
+      },
+      {
+        "packet_time_seconds": 5,
+        "native_frame_index": 165,
+        "source_pts_seconds": 5.499696,
+        "decoded_scaled_frame_md5": "039b34ae33d5e4e81612a899ae925ff4",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0006.jpg",
+        "stream_jpeg_sha256": "0a72eba8db77d9718e693ceee69097da3da0c956c3f4fcc29d2487e21df9b6ce"
+      },
+      {
+        "packet_time_seconds": 6,
+        "native_frame_index": 195,
+        "source_pts_seconds": 6.499641,
+        "decoded_scaled_frame_md5": "795c6c506321834066560ba626b6501c",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0007.jpg",
+        "stream_jpeg_sha256": "6f1f19c8ce070f2c7127b8bd92a4c6de3d90f11dbe9565c92171219ef7aaacb8"
+      },
+      {
+        "packet_time_seconds": 7,
+        "native_frame_index": 225,
+        "source_pts_seconds": 7.499585,
+        "decoded_scaled_frame_md5": "5b9f8cb66dd0b5d5b26f49d9a35942d7",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0008.jpg",
+        "stream_jpeg_sha256": "728c472603c096da073283623ea4e021468a461558ca6ffd274308646a64f837"
+      },
+      {
+        "packet_time_seconds": 8,
+        "native_frame_index": 255,
+        "source_pts_seconds": 8.49953,
+        "decoded_scaled_frame_md5": "4a6864c317f79d858ff6291570ee13e1",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0009.jpg",
+        "stream_jpeg_sha256": "91fa721918ac69f212b04cdc2b4656e9d968a762d33883e2257d4814cdbac1a2"
+      },
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 285,
+        "source_pts_seconds": 9.499475,
+        "decoded_scaled_frame_md5": "edafb3fe3d43249713fa546cd493604a",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0010.jpg",
+        "stream_jpeg_sha256": "e51256655638b6933ecabe6d7216e092840acaddd85e39b86e2dbf7971fd89d9"
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 315,
+        "source_pts_seconds": 10.499419,
+        "decoded_scaled_frame_md5": "bdbaaff2ae89a272441014384778b0a1",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0011.jpg",
+        "stream_jpeg_sha256": "9d4aa3cb9edf46205e4bdf14e004af8f784e4c88b0a625e40658a0a72cb0855d"
+      },
+      {
+        "packet_time_seconds": 11,
+        "native_frame_index": 345,
+        "source_pts_seconds": 11.499364,
+        "decoded_scaled_frame_md5": "950ccc3cade242fa3e31969af834a64d",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0012.jpg",
+        "stream_jpeg_sha256": "06d7588ce221d2b6caf47bcc2af1f0126b900109fa192c8b05df74492ab610ed"
+      },
+      {
+        "packet_time_seconds": 12,
+        "native_frame_index": 375,
+        "source_pts_seconds": 12.499309,
+        "decoded_scaled_frame_md5": "401b8f621955e182dfa15f42d421021e",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0013.jpg",
+        "stream_jpeg_sha256": "d37616661acb7f3d49953ca8bb682f0a645bc7045ff5ff5af2a71fbc9abe9c23"
+      },
+      {
+        "packet_time_seconds": 13,
+        "native_frame_index": 405,
+        "source_pts_seconds": 13.499253,
+        "decoded_scaled_frame_md5": "ddbada06155e79f7fdce83a38d964c6d",
+        "stream_path": "stream_frames/z020-june-20-22-gladom_disassemble/0014.jpg",
+        "stream_jpeg_sha256": "7cc818b2f1eefbb84487e35ab75cc12981f4efd4a28e21570edd724625d61839"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the round tabletop is visibly clear of the white support frame; grasping its rim alone does not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

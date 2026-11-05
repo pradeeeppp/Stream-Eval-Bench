@@ -1,0 +1,499 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_b2_05",
+  "source_id": "HB05",
+  "original_instruction": "Alert when the desktop computer side panel is removed.",
+  "source": {
+    "session_id": "R181-12Oct-RAM",
+    "sha256": "eb7692f3831a4a4fe0fbfe9bdc06bbf56b350a236df345e5df5c7063abe59d29",
+    "video_path": "videos/R181-12Oct-RAM.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 3624,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          149,
+          298,
+          448,
+          597,
+          746,
+          895,
+          1045,
+          1194,
+          1343,
+          1492,
+          1641,
+          1791,
+          1940,
+          2089,
+          2238,
+          2388,
+          2537,
+          2686,
+          2835,
+          2985,
+          3134,
+          3283,
+          3432,
+          3581,
+          3623
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 30,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB05/overview_01.png",
+            "sha256": "00968cc6a967f1552165538636251a8e49c16f3222b03116ee78f637dc1ab8bf"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          597,
+          612,
+          627,
+          642,
+          657,
+          672,
+          686,
+          701,
+          716,
+          731,
+          746,
+          761,
+          776,
+          791,
+          806,
+          821,
+          836,
+          851,
+          866,
+          880,
+          895,
+          910,
+          925
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB05/candidate_01.png",
+            "sha256": "b71c4e52f4f90aa019011dade3bd27c6fa8ec13d5c902556002540f7023f51f5"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          791,
+          792,
+          793,
+          794,
+          795,
+          796,
+          797,
+          798,
+          799,
+          800,
+          801,
+          802,
+          803,
+          804,
+          805,
+          806
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB05/native1_01.png",
+            "sha256": "d364253c8c2cd6b7dedf7705f980fc4535f4f788ced0003acae0090fd1c16060"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          790,
+          820,
+          850
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB05/delivered_01.png",
+            "sha256": "388ba528f6c31ae57c197b4e85f310e02bfb737b15f4f79e8e93a43c6ea08571"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Separate moving the whole tower, releasing/sliding the panel, and complete panel removal.",
+    "flags": [
+      "sliding_vs_full_clearance_boundary"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "desktop computer chassis"
+    },
+    {
+      "id": "object_2",
+      "description": "black side panel"
+    },
+    {
+      "id": "object_3",
+      "description": "internal components"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 776,
+      "source_pts_seconds": 26.000828,
+      "path": "full_review/batch_v1/HB05/anchors/000776.jpg",
+      "description": "Black side panel still covers the chassis.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Black side panel still covers the chassis.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 791,
+      "source_pts_seconds": 26.503421,
+      "path": "full_review/batch_v1/HB05/anchors/000791.jpg",
+      "description": "Panel is lifted away from the chassis.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Panel is lifted away from the chassis.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 806,
+      "source_pts_seconds": 27.006014,
+      "path": "full_review/batch_v1/HB05/anchors/000806.jpg",
+      "description": "Panel is held clear and the chassis interior is exposed.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Panel is held clear and the chassis interior is exposed.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_2",
+        "predicate": "clear_of",
+        "object": "object_1"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 836,
+      "source_pts_seconds": 28.011201,
+      "path": "full_review/batch_v1/HB05/anchors/000836.jpg",
+      "description": "Computer interior remains exposed with panel set aside.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Computer interior remains exposed with panel set aside.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 3134,
+      "source_pts_seconds": 105.008497,
+      "path": "full_review/batch_v1/HB05/anchors/003134.jpg",
+      "description": "Black panel is being returned over the chassis in the overview.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Black panel is being returned over the chassis in the overview.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HB05:reviewed_occurrence_1",
+      "event_class": "computer_side_panel_removal",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_2",
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 27.006014,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 27,
+      "native_frame_index": 820,
+      "source_pts_seconds": 27.475101,
+      "decoded_scaled_frame_md5": "71da601b939878ca6ad99ad482883ee1",
+      "stream_path": "stream_frames/R181-12Oct-RAM/0028.jpg",
+      "stream_jpeg_sha256": "079514fbd491a13733e42372d9cee5147f37031484d5e60db8ca31c96c6b0dbc",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the black side panel is visibly clear of the desktop chassis and its interior is exposed.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 27,
+      "source_capture_boundary_seconds": 27.475101,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 33,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "claim_4",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 20,
+        "native_frame_index": 611,
+        "source_pts_seconds": 20.472301,
+        "decoded_scaled_frame_md5": "8a378b811e45a9734ceaf8d06280cef1",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0021.jpg",
+        "stream_jpeg_sha256": "cc4badebff4f01bc9dc3dda9371d40db3991c45bb240f9bb5e88e720d8ddeace"
+      },
+      {
+        "packet_time_seconds": 21,
+        "native_frame_index": 641,
+        "source_pts_seconds": 21.477488,
+        "decoded_scaled_frame_md5": "87e3893f6f30e001d4378cacb85c7a4c",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0022.jpg",
+        "stream_jpeg_sha256": "cac0e4e18346321dfc5f032644c7c008051fe5a701cf664e5f0de22f67dff703"
+      },
+      {
+        "packet_time_seconds": 22,
+        "native_frame_index": 671,
+        "source_pts_seconds": 22.482674,
+        "decoded_scaled_frame_md5": "38828f2a0d8e17d7536ddfa4323ca0d5",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0023.jpg",
+        "stream_jpeg_sha256": "e698925c90f21fa378c3063df60417c357b4ccc43241f999381240a261420029"
+      },
+      {
+        "packet_time_seconds": 23,
+        "native_frame_index": 701,
+        "source_pts_seconds": 23.487861,
+        "decoded_scaled_frame_md5": "1557c97cf59ce090b61643ea70a78841",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0024.jpg",
+        "stream_jpeg_sha256": "54a17b82ceae20f922af17437a8e2c9bed50126fe3dfc1b461115b06dc363298"
+      },
+      {
+        "packet_time_seconds": 24,
+        "native_frame_index": 731,
+        "source_pts_seconds": 24.493048,
+        "decoded_scaled_frame_md5": "db63932621bb2a7073a1624689a475d6",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0025.jpg",
+        "stream_jpeg_sha256": "a0e7566834858719642be3c3ab6ed05f4f8da78c301eab12d1742d149e9fecda"
+      },
+      {
+        "packet_time_seconds": 25,
+        "native_frame_index": 761,
+        "source_pts_seconds": 25.498234,
+        "decoded_scaled_frame_md5": "aecc443cbe4aa3f34c9a1a32e13aa69b",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0026.jpg",
+        "stream_jpeg_sha256": "cdef6f682a485d3dbb0dff6cd7e6741e24c40a7353527fd4d8065f986f0daa3f"
+      },
+      {
+        "packet_time_seconds": 26,
+        "native_frame_index": 790,
+        "source_pts_seconds": 26.469915,
+        "decoded_scaled_frame_md5": "ae5a8be128869d9c2bec50881e412f01",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0027.jpg",
+        "stream_jpeg_sha256": "5aac9b3c539e6544ce436ae36249ceac313741251a95a409f906ecdf0541eed7"
+      },
+      {
+        "packet_time_seconds": 27,
+        "native_frame_index": 820,
+        "source_pts_seconds": 27.475101,
+        "decoded_scaled_frame_md5": "71da601b939878ca6ad99ad482883ee1",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0028.jpg",
+        "stream_jpeg_sha256": "079514fbd491a13733e42372d9cee5147f37031484d5e60db8ca31c96c6b0dbc"
+      },
+      {
+        "packet_time_seconds": 28,
+        "native_frame_index": 850,
+        "source_pts_seconds": 28.480288,
+        "decoded_scaled_frame_md5": "f2519c63e428a008b24f3a315227d4ca",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0029.jpg",
+        "stream_jpeg_sha256": "7c32c26cad99484800d44daba2daa6af9b15533523605edc11ad83daccbc32a2"
+      },
+      {
+        "packet_time_seconds": 29,
+        "native_frame_index": 880,
+        "source_pts_seconds": 29.485475,
+        "decoded_scaled_frame_md5": "2613c87e61910c841aec880cd6773cc3",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0030.jpg",
+        "stream_jpeg_sha256": "f57949d43ea3476425ea7546894b38fc8e384a566c18d8afbff1e0bfe254260a"
+      },
+      {
+        "packet_time_seconds": 30,
+        "native_frame_index": 910,
+        "source_pts_seconds": 30.490661,
+        "decoded_scaled_frame_md5": "6e262623f15306e65970c7ce27405548",
+        "stream_path": "stream_frames/R181-12Oct-RAM/0031.jpg",
+        "stream_jpeg_sha256": "e0459f35467ebd5c15967d9ca2a4870e94f983e8017a2fe6113083e43ed09f1a"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the black side panel is visibly clear of the desktop chassis and its interior is exposed.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

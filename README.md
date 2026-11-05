@@ -45,14 +45,15 @@ python examples/quickstart_experiment.py
 
 | Directory | Contents | Status |
 |---|---|---|
+| `experiments/holoassist_20/belief_revision_v1/` | Local Qwen2.5-VL-3B comparison across all 20 videos: joint, chronological and reversed arrival; raw responses, per-video analyses and belief trace graphs | See execution status and explicit denominators in [results](experiments/holoassist_20/belief_revision_v1/RESULTS.md); 17 provisionally scored targets, three diagnostic-only |
 | `experiments/two_clip_diagnostic/` | Five-call arrival-order test, exact MP4 inputs, prompts, responses, protocol, and runnable script | Complete; all three final conditions correct; one intermediate chronological error |
 | `experiments/evidence_revision_pilot/direct_revision/` | Corrected controlled still-image evaluation, inputs, model manifest, diagnostics, tests, and results | Complete saved pilot; not a streaming-specific finding |
 | `experiments/evidence_revision_pilot/streaming_trial/` | Earlier sampled-video protocol, preparation scripts, local/hosted runners, and saved partial outputs | Historical incomplete attempt; do not treat as a completed paired evaluation |
 | `experiments/evidence_revision_pilot/` | Initial acquisition scripts, source metadata, provenance, baseline code, and historical logs | Earlier exploratory work; see corrected pilot for authoritative image-update results |
 
-Read [latest results](experiments/two_clip_diagnostic/RESULTS.md) and [protocol](experiments/two_clip_diagnostic/README.md). The latest experiment used a public demo declaring Qwen3-VL-235B-A22B-Instruct. With supplied capture times and explicit instructions, it correctly updated the past while preserving the latest state in one two-clip example. No population-level reliability or novelty claim follows.
+Read the [twenty-video Qwen2.5-VL-3B findings](experiments/holoassist_20/belief_revision_v1/RESULTS.md) and its [protocol and reproduction instructions](experiments/holoassist_20/belief_revision_v1/README.md). The earlier [two-clip results](experiments/two_clip_diagnostic/RESULTS.md) used a public demo declaring Qwen3-VL-235B-A22B-Instruct. With supplied capture times and explicit instructions, it correctly updated the past while preserving the latest state in one two-clip example. No population-level reliability or novelty claim follows.
 
-## Run the latest diagnostic
+## Run the earlier hosted diagnostic
 
 ```bash
 python -m venv .venv

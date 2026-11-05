@@ -1,0 +1,3 @@
+The source recordings are from HoloAssist: Xin Wang et al., “HoloAssist: an Egocentric Human Interaction Dataset for Interactive AI Assistants in the Real World,” ICCV 2023. Project and official download information: https://holoassist.github.io/ . The project states a CDLA-Permissive 2.0 data license.
+
+The local MP4s used to prepare this pilot were fetched from the pinned lmms-lab/EgoIT-99K HoloAssist mirror listed in `sources.json`. They are not bundled with this benchmark package. The mirror copies have not been byte-compared with the official HoloAssist archive. Any redistribution of the underlying videos or extracted frames should use the publisher's terms and notices.

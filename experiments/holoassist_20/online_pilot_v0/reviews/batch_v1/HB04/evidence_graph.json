@@ -1,0 +1,475 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_b2_04",
+  "source_id": "HB04",
+  "original_instruction": "Alert when the action camera is removed from the white packaging insert.",
+  "source": {
+    "session_id": "R105-3Aug-GoPro",
+    "sha256": "4d2bbccd47429250e8578b8f4bfff199d20132ba9b608aba8eb60f7af6865532",
+    "video_path": "videos/R105-3Aug-GoPro.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 4731,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          149,
+          299,
+          448,
+          597,
+          746,
+          896,
+          1045,
+          1194,
+          1344,
+          1493,
+          1642,
+          1791,
+          1941,
+          2090,
+          2239,
+          2389,
+          2538,
+          2687,
+          2836,
+          2986,
+          3135,
+          3284,
+          3433,
+          3583,
+          3732,
+          3881,
+          4031,
+          4180,
+          4329,
+          4478,
+          4628,
+          4730
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 35,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB04/overview_01.png",
+            "sha256": "64b8b1c826ed4a1fe6444a70e67ef028a042167369467eaf651bcb1ffd82bace"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          239,
+          254,
+          269,
+          284,
+          299,
+          313,
+          328,
+          343,
+          358,
+          373,
+          388,
+          403,
+          418,
+          433,
+          448,
+          463,
+          478,
+          493,
+          508,
+          522,
+          537,
+          552,
+          567
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB04/candidate_01.png",
+            "sha256": "693e3b17fe433e884b83d2bc66ed69d35810370ec444e6791725fccbf5221d06"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          433,
+          434,
+          435,
+          436,
+          437,
+          438,
+          439,
+          440,
+          441,
+          442,
+          443,
+          444,
+          445,
+          446,
+          447,
+          448
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB04/native1_01.png",
+            "sha256": "537bfa6672d5c4f2e9354496f8e00ef947833887fb724674ef29e49870636668"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          432,
+          462,
+          492
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB04/delivered_01.png",
+            "sha256": "cb6e03f20ef9f275d68a685253d85c5afae02457a8d77fa382f2c917d1961032"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Distinguish opening the packaging from the camera clearing its recess.",
+    "flags": [
+      "clearance_boundary_partly_occluded"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "action camera"
+    },
+    {
+      "id": "object_2",
+      "description": "white molded packaging insert"
+    },
+    {
+      "id": "object_3",
+      "description": "black case"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 313,
+      "source_pts_seconds": 10.483535,
+      "path": "full_review/batch_v1/HB04/anchors/000313.jpg",
+      "description": "Camera seated in the open white insert.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Camera seated in the open white insert.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 433,
+      "source_pts_seconds": 14.502782,
+      "path": "full_review/batch_v1/HB04/anchors/000433.jpg",
+      "description": "Camera being lifted from the insert; clearance partly obscured by hands.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Camera being lifted from the insert; clearance partly obscured by hands.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 448,
+      "source_pts_seconds": 15.005188,
+      "path": "full_review/batch_v1/HB04/anchors/000448.jpg",
+      "description": "Camera visibly held clear of the insert.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Camera visibly held clear of the insert.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "clear_of",
+        "object": "object_2"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 478,
+      "source_pts_seconds": 16.009999,
+      "path": "full_review/batch_v1/HB04/anchors/000478.jpg",
+      "description": "Camera remains outside the insert.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Camera remains outside the insert.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HB04:reviewed_occurrence_1",
+      "event_class": "camera_removal_from_insert",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_1",
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 15.005188,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 15,
+      "native_frame_index": 462,
+      "source_pts_seconds": 15.4741,
+      "decoded_scaled_frame_md5": "1da5891b3169ae55d577561cb04bb3a9",
+      "stream_path": "stream_frames/R105-3Aug-GoPro/0016.jpg",
+      "stream_jpeg_sha256": "21be5896722e2d13736db438e15be4ea1564259e101fc3de55bf8c4e38bc46a6",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the action camera is visibly clear of the white molded insert; opening the case or grasping the camera is insufficient.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 15,
+      "source_capture_boundary_seconds": 15.4741,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 21,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 8,
+        "native_frame_index": 253,
+        "source_pts_seconds": 8.473912,
+        "decoded_scaled_frame_md5": "91329b70259e57c62458835b9609350c",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0009.jpg",
+        "stream_jpeg_sha256": "0a8cbf9777cb16c0e960ca7fc80a769e599f52d3ed62cb5e7814b02fb8abb3e9"
+      },
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 283,
+        "source_pts_seconds": 9.478723,
+        "decoded_scaled_frame_md5": "c5abf63b11af6a6a34595cad0a223b6f",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0010.jpg",
+        "stream_jpeg_sha256": "81780a5f42a23bc6d88158aa78134e4e0ce67c8748a94bc81aead159dfab01e6"
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 313,
+        "source_pts_seconds": 10.483535,
+        "decoded_scaled_frame_md5": "abfdc433521aca034aed83562aca5b31",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0011.jpg",
+        "stream_jpeg_sha256": "4c80d099fe0e0969510768fb8503ebe7bebd8c4116a53b5d5512f681826b3bd7"
+      },
+      {
+        "packet_time_seconds": 11,
+        "native_frame_index": 343,
+        "source_pts_seconds": 11.488347,
+        "decoded_scaled_frame_md5": "92f6c9484a018f387856fbe53b83104d",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0012.jpg",
+        "stream_jpeg_sha256": "9aa557d8cbe99112ebe7d3fe534196b2b3f62213ad179ba083d9f7eae681b592"
+      },
+      {
+        "packet_time_seconds": 12,
+        "native_frame_index": 373,
+        "source_pts_seconds": 12.493158,
+        "decoded_scaled_frame_md5": "7bd5a442b2f91fa7b652accd1722ad2b",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0013.jpg",
+        "stream_jpeg_sha256": "25307d332513e61b92df925dc0319bc67d55e7413cd5894bfc92434faf678181"
+      },
+      {
+        "packet_time_seconds": 13,
+        "native_frame_index": 403,
+        "source_pts_seconds": 13.49797,
+        "decoded_scaled_frame_md5": "e1fb325f1c0ad579d4b96a13f062419f",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0014.jpg",
+        "stream_jpeg_sha256": "20c9003c71c9e31c39705cb5ae9ba6733aa0bd3d2c063212fa4bfe985ac59678"
+      },
+      {
+        "packet_time_seconds": 14,
+        "native_frame_index": 432,
+        "source_pts_seconds": 14.469288,
+        "decoded_scaled_frame_md5": "5220486dc5650110977281bd42365926",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0015.jpg",
+        "stream_jpeg_sha256": "6b04d306a5efe5c78647ac74bb08dac1b0787b0de1d151921a2e999fba10ac72"
+      },
+      {
+        "packet_time_seconds": 15,
+        "native_frame_index": 462,
+        "source_pts_seconds": 15.4741,
+        "decoded_scaled_frame_md5": "1da5891b3169ae55d577561cb04bb3a9",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0016.jpg",
+        "stream_jpeg_sha256": "21be5896722e2d13736db438e15be4ea1564259e101fc3de55bf8c4e38bc46a6"
+      },
+      {
+        "packet_time_seconds": 16,
+        "native_frame_index": 492,
+        "source_pts_seconds": 16.478911,
+        "decoded_scaled_frame_md5": "a713c58f6e67e4cbc33308a6ede3e5f5",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0017.jpg",
+        "stream_jpeg_sha256": "7455c2feee94b0af42e10e80399c81e56bbf40261a6e911dce94c6e4a8ffcf0a"
+      },
+      {
+        "packet_time_seconds": 17,
+        "native_frame_index": 522,
+        "source_pts_seconds": 17.483723,
+        "decoded_scaled_frame_md5": "5fefe8620cb5f6fe00169fe25f405e20",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0018.jpg",
+        "stream_jpeg_sha256": "4176370d50575dca0c3a759ba1e4489352b982946cec3b300f55a543ad0413fd"
+      },
+      {
+        "packet_time_seconds": 18,
+        "native_frame_index": 552,
+        "source_pts_seconds": 18.488535,
+        "decoded_scaled_frame_md5": "10d0fdb9951e0ffc2c5fd006ce29c695",
+        "stream_path": "stream_frames/R105-3Aug-GoPro/0019.jpg",
+        "stream_jpeg_sha256": "f9031815f039ee4a55ec313b1088854088b8e97296ea5846caa60dd3d4ae7569"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the action camera is visibly clear of the white molded insert; opening the case or grasping the camera is insufficient.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

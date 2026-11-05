@@ -1,0 +1,446 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_b2_09",
+  "source_id": "HB09",
+  "original_instruction": "Alert when the printer's lower paper tray is pulled open.",
+  "source": {
+    "session_id": "z039-june-23-22-printer_big",
+    "sha256": "1a85c6ebe916f610a049e74f3426e5a70eb1d70ad744202a014cfff15555da22",
+    "video_path": "videos/z039-june-23-22-printer_big.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 3417,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          300,
+          450,
+          600,
+          750,
+          900,
+          1050,
+          1200,
+          1350,
+          1500,
+          1650,
+          1800,
+          1950,
+          2100,
+          2249,
+          2399,
+          2549,
+          2699,
+          2849,
+          2999,
+          3149,
+          3299,
+          3416
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB09/overview_01.png",
+            "sha256": "042cf668201267ed22f0be7479a947b58f9af28027b5a04c65646f531d0d28a7"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          1470,
+          1485,
+          1500,
+          1515,
+          1530,
+          1545,
+          1560,
+          1575,
+          1590,
+          1605,
+          1620,
+          1635,
+          1650
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 15,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB09/candidate_01.png",
+            "sha256": "81488efd2a2c46016fd00d2c7ee996ad70477194dda88c73804628cd39236594"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          1545,
+          1546,
+          1547,
+          1548,
+          1549,
+          1550,
+          1551,
+          1552,
+          1553,
+          1554,
+          1555,
+          1556,
+          1557,
+          1558,
+          1559,
+          1560
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB09/native1_01.png",
+            "sha256": "54aa799bdec12b5c71362605b17325f0fa7947e8a67e68c7906f9df5346d949c"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          1544,
+          1574,
+          1604
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB09/delivered_01.png",
+            "sha256": "33847403672823329a56f9ec0c7e1ef58e78e10bbc1fd8f0e3861255338250ff"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Specify the paper drawer below the main front cover. Do not merge it with later toner-cover opening.",
+    "flags": [
+      "drawer_identity_should_be_explicit"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "printer"
+    },
+    {
+      "id": "object_2",
+      "description": "paper drawer below main front cover"
+    },
+    {
+      "id": "object_3",
+      "description": "toner access cover"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 1530,
+      "source_pts_seconds": 51.012137,
+      "path": "full_review/batch_v1/HB09/anchors/001530.jpg",
+      "description": "Paper drawer front still near the closed position while handle is raised.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Paper drawer front still near the closed position while handle is raised.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 1545,
+      "source_pts_seconds": 51.512256,
+      "path": "full_review/batch_v1/HB09/anchors/001545.jpg",
+      "description": "Drawer begins sliding outward.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Drawer begins sliding outward.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 1560,
+      "source_pts_seconds": 52.012375,
+      "path": "full_review/batch_v1/HB09/anchors/001560.jpg",
+      "description": "Drawer is visibly extended with paper and interior guides exposed.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Drawer is visibly extended with paper and interior guides exposed.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_2",
+        "predicate": "extended_from",
+        "object": "object_1"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 1590,
+      "source_pts_seconds": 53.012613,
+      "path": "full_review/batch_v1/HB09/anchors/001590.jpg",
+      "description": "Paper drawer remains open.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Paper drawer remains open.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "distractor",
+      "frame_index_zero_based": 2399,
+      "source_pts_seconds": 79.985698,
+      "path": "full_review/batch_v1/HB09/anchors/002399.jpg",
+      "description": "Later toner-access opening exposes cartridges; a different cover and event.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Later toner-access opening exposes cartridges; a different cover and event.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HB09:reviewed_occurrence_1",
+      "event_class": "paper_drawer_opening",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_2",
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 52.012375,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 52,
+      "native_frame_index": 1574,
+      "source_pts_seconds": 52.479153,
+      "decoded_scaled_frame_md5": "bd5ee14cf1aa39a8a73bb90ef3f41fae",
+      "stream_path": "stream_frames/z039-june-23-22-printer_big/0053.jpg",
+      "stream_jpeg_sha256": "e00f49519b380548da9c40f309debf3952ba712c7bb2c83855eac18e076dad13",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the paper drawer immediately below the printer main front cover is visibly pulled outward; opening the toner cover does not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 52,
+      "source_capture_boundary_seconds": 52.479153,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 57,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "insufficient_alone_to_trigger",
+      "target": "alert_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 49,
+        "native_frame_index": 1484,
+        "source_pts_seconds": 49.478439,
+        "decoded_scaled_frame_md5": "3e5e3eb2fd733f66c29cac252dc367e5",
+        "stream_path": "stream_frames/z039-june-23-22-printer_big/0050.jpg",
+        "stream_jpeg_sha256": "65313fb0d28756942912368d6ac697cea9add0242b5f9f6d51730c346a60014c"
+      },
+      {
+        "packet_time_seconds": 50,
+        "native_frame_index": 1514,
+        "source_pts_seconds": 50.478677,
+        "decoded_scaled_frame_md5": "3e75423466d93b3b546b7965933cab7a",
+        "stream_path": "stream_frames/z039-june-23-22-printer_big/0051.jpg",
+        "stream_jpeg_sha256": "e57d941701b7efbafab6475d94301e5bae96c1898bf1722471c25dd9e745949f"
+      },
+      {
+        "packet_time_seconds": 51,
+        "native_frame_index": 1544,
+        "source_pts_seconds": 51.478915,
+        "decoded_scaled_frame_md5": "8867d09b75b499ba06a15eb149ed24b5",
+        "stream_path": "stream_frames/z039-june-23-22-printer_big/0052.jpg",
+        "stream_jpeg_sha256": "bb88551337dd5eb7d59a49a970bc2937bcb9123dcf6e8f4e18dde5a6dac8110d"
+      },
+      {
+        "packet_time_seconds": 52,
+        "native_frame_index": 1574,
+        "source_pts_seconds": 52.479153,
+        "decoded_scaled_frame_md5": "bd5ee14cf1aa39a8a73bb90ef3f41fae",
+        "stream_path": "stream_frames/z039-june-23-22-printer_big/0053.jpg",
+        "stream_jpeg_sha256": "e00f49519b380548da9c40f309debf3952ba712c7bb2c83855eac18e076dad13"
+      },
+      {
+        "packet_time_seconds": 53,
+        "native_frame_index": 1604,
+        "source_pts_seconds": 53.479391,
+        "decoded_scaled_frame_md5": "9779e019c27d153f35f131e48719d599",
+        "stream_path": "stream_frames/z039-june-23-22-printer_big/0054.jpg",
+        "stream_jpeg_sha256": "2b4104d7e55b577e536795494057e3ed3a8d3b6b34c868571540e0d6f9a16619"
+      },
+      {
+        "packet_time_seconds": 54,
+        "native_frame_index": 1634,
+        "source_pts_seconds": 54.479629,
+        "decoded_scaled_frame_md5": "c5bffa4ac2af690678f5de5e76ae4304",
+        "stream_path": "stream_frames/z039-june-23-22-printer_big/0055.jpg",
+        "stream_jpeg_sha256": "c53ea6674ec418a39885f68a11cb040afd5b4811106d37825fd8bff2db6a75a2"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the paper drawer immediately below the printer main front cover is visibly pulled outward; opening the toner cover does not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

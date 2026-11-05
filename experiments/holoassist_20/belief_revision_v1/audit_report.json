@@ -1,0 +1,12 @@
+{
+  "status": "pass",
+  "checked_utc": "2026-11-04T16:55:44.993770+00:00",
+  "counts": {
+    "videos": 20,
+    "reviewed_frames": 160,
+    "saved_requests": 100,
+    "completed_episodes": 20
+  },
+  "failures": [],
+  "scope": "Provenance, protocol and score consistency; not independent semantic annotation."
+}

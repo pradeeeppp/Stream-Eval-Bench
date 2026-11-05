@@ -1,0 +1,519 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_03",
+  "source_id": "HA03",
+  "original_instruction": "Alert when the round tabletop is placed on the assembled white support frame.",
+  "source": {
+    "session_id": "z060-june-28-22-gladom_assemble",
+    "sha256": "0f45226c0138d890cfb474fea4f387e865c6731acc083bf32147dc93da8a3b39",
+    "video_path": "videos/z060-june-28-22-gladom_assemble.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 3645,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          299,
+          449,
+          599,
+          749,
+          898,
+          1048,
+          1198,
+          1347,
+          1497,
+          1647,
+          1797,
+          1946,
+          2096,
+          2246,
+          2396,
+          2545,
+          2695,
+          2845,
+          2994,
+          3144,
+          3294,
+          3444,
+          3593,
+          3644
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 30,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA03/overview_01.png",
+            "sha256": "1cb5bfb27f851d190971395bac959348965bbacc7f8393697e0e8a6fb5d27052"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          3144,
+          3159,
+          3174,
+          3189,
+          3204,
+          3219,
+          3234,
+          3249,
+          3264,
+          3279,
+          3294,
+          3309,
+          3324,
+          3339,
+          3354,
+          3369,
+          3384,
+          3399,
+          3414,
+          3429,
+          3444,
+          3459,
+          3474,
+          3488,
+          3503,
+          3518,
+          3533,
+          3548,
+          3563,
+          3578,
+          3593,
+          3608,
+          3623
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 35,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA03/candidate_01.png",
+            "sha256": "aaf66c25b0ef9061f1337932ac6a980801f12e6bd5a0a30a9a2885b48b58061f"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          3503,
+          3504,
+          3505,
+          3506,
+          3507,
+          3508,
+          3509,
+          3510,
+          3511,
+          3512,
+          3513,
+          3514,
+          3515,
+          3516,
+          3517,
+          3518
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA03/native1_01.png",
+            "sha256": "7f09f2630c0341dd7ae9caefc675d24a2d3516c5b67ca3bcc0f16b90c15478cc"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          3488,
+          3518,
+          3548
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA03/delivered_01.png",
+            "sha256": "228fba632182d047e3fa80501b34abbdb09c3a7c19c31012e2616c4853b65248"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Separate carrying/alignment from seated placement and later unsupported standing. Do not infer that every fastener is secure.",
+    "flags": [
+      "contact_boundary_unresolved",
+      "assembled_security_unverified"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "round tabletop"
+    },
+    {
+      "id": "object_2",
+      "description": "white support frame"
+    },
+    {
+      "id": "object_3",
+      "description": "hands"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 3354,
+      "source_pts_seconds": 112.008792,
+      "path": "full_review/batch_v1/HA03/anchors/003354.jpg",
+      "description": "Round tabletop and upright support frame remain visibly separate.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Round tabletop and upright support frame remain visibly separate.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 3444,
+      "source_pts_seconds": 115.014395,
+      "path": "full_review/batch_v1/HA03/anchors/003444.jpg",
+      "description": "Hands guide the tabletop over the upright support frame; support/contact boundary not established.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Hands guide the tabletop over the upright support frame; support/contact boundary not established.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 3518,
+      "source_pts_seconds": 117.485668,
+      "path": "full_review/batch_v1/HA03/anchors/003518.jpg",
+      "description": "Tabletop appears seated on the standing frame; left hand withdraws while right hand remains near the rim.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Tabletop appears seated on the standing frame; left hand withdraws while right hand remains near the rim.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "visibly_seated_on",
+        "object": "object_2"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 3593,
+      "source_pts_seconds": 119.990337,
+      "path": "full_review/batch_v1/HA03/anchors/003593.jpg",
+      "description": "Assembled table stands without hand support.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Assembled table stands without hand support.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA03:reviewed_occurrence_1",
+      "event_class": "tabletop_placement",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_1",
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 117.485668,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 117,
+      "native_frame_index": 3518,
+      "source_pts_seconds": 117.485668,
+      "decoded_scaled_frame_md5": "98f127878580b318303874fff19d728f",
+      "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0118.jpg",
+      "stream_jpeg_sha256": "bffd3631b6942f9a0db82d35eaeb2d840be0d4cf60f3bf538aa50b76bcfa7ef2",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the round tabletop is visibly seated on the upright white support frame; carrying it above or beside the frame does not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 117,
+      "source_capture_boundary_seconds": 117.485668,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 121,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 105,
+        "native_frame_index": 3159,
+        "source_pts_seconds": 105.496653,
+        "decoded_scaled_frame_md5": "d348e3fdef9f166e5ff99c3b6d4348a1",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0106.jpg",
+        "stream_jpeg_sha256": "311fae1f43cd83b96a3ea99f81a8e277a56f56270fc7d8de84d7108b04fdf80f"
+      },
+      {
+        "packet_time_seconds": 106,
+        "native_frame_index": 3189,
+        "source_pts_seconds": 106.49852,
+        "decoded_scaled_frame_md5": "ec952fc28776b1730b703164f74f9eed",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0107.jpg",
+        "stream_jpeg_sha256": "f28de5a74fca7995033b6be565e83332acfe8607817e6e220e4f302e40ecf4e3"
+      },
+      {
+        "packet_time_seconds": 107,
+        "native_frame_index": 3218,
+        "source_pts_seconds": 107.466992,
+        "decoded_scaled_frame_md5": "fea11a3229667fdf2354b2d7516b8f6a",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0108.jpg",
+        "stream_jpeg_sha256": "da41102c6504644e0125d49df041ba8865755374537c92d572920b128ccab68f"
+      },
+      {
+        "packet_time_seconds": 108,
+        "native_frame_index": 3248,
+        "source_pts_seconds": 108.46886,
+        "decoded_scaled_frame_md5": "8e65c64edf4c5b1f4a2f05a8a4b0ec45",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0109.jpg",
+        "stream_jpeg_sha256": "e51b80b0f9db846028a30e0f9298d4750d55da4d0375564b8e6e4c66007d20f7"
+      },
+      {
+        "packet_time_seconds": 109,
+        "native_frame_index": 3278,
+        "source_pts_seconds": 109.470728,
+        "decoded_scaled_frame_md5": "12650a1de363cf36d70be3a3daa5a17c",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0110.jpg",
+        "stream_jpeg_sha256": "cf586aab414377172bbb486a42489b4c839b1d3cf090980a3b26722e577b9aaf"
+      },
+      {
+        "packet_time_seconds": 110,
+        "native_frame_index": 3308,
+        "source_pts_seconds": 110.472595,
+        "decoded_scaled_frame_md5": "9e0bfaee08f2e776aefd420b320ce288",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0111.jpg",
+        "stream_jpeg_sha256": "001750072a4cbe8e95b1ffa9c9dc7cb32f1f6d24f8d069a21150b5620a70689e"
+      },
+      {
+        "packet_time_seconds": 111,
+        "native_frame_index": 3338,
+        "source_pts_seconds": 111.474463,
+        "decoded_scaled_frame_md5": "6bd2466d991533dc31ec143c72f1b603",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0112.jpg",
+        "stream_jpeg_sha256": "90569cd3c811f3bf48d9ab0b4fd8e47da5a77f2836cecf567475b39b2eb18960"
+      },
+      {
+        "packet_time_seconds": 112,
+        "native_frame_index": 3368,
+        "source_pts_seconds": 112.47633,
+        "decoded_scaled_frame_md5": "2fd029138464214d5bab8a889a074aa1",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0113.jpg",
+        "stream_jpeg_sha256": "3d4468f6bdd291c90eafeb88e23df75be984e711333a0d634649a01a812aab1b"
+      },
+      {
+        "packet_time_seconds": 113,
+        "native_frame_index": 3398,
+        "source_pts_seconds": 113.478198,
+        "decoded_scaled_frame_md5": "390d436deb6cd31d46d629fc187a0e96",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0114.jpg",
+        "stream_jpeg_sha256": "5ba7d7cf3b517ff4b422406277c3b95d30adcf54ace93379ed097cbe75561d4c"
+      },
+      {
+        "packet_time_seconds": 114,
+        "native_frame_index": 3428,
+        "source_pts_seconds": 114.480065,
+        "decoded_scaled_frame_md5": "8dea843f37a18ffe4407939ef6b8391b",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0115.jpg",
+        "stream_jpeg_sha256": "6b1e1dd7748039990539bbb2e68958121fa566e553f8128b19e32d3ecbe9eced"
+      },
+      {
+        "packet_time_seconds": 115,
+        "native_frame_index": 3458,
+        "source_pts_seconds": 115.481933,
+        "decoded_scaled_frame_md5": "0eebb5d9497dd03af60ed3c6b1ca7866",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0116.jpg",
+        "stream_jpeg_sha256": "1904cd2058895e5b6d6660014e9a1c447a5135502741aa12a4d65725aa62582b"
+      },
+      {
+        "packet_time_seconds": 116,
+        "native_frame_index": 3488,
+        "source_pts_seconds": 116.4838,
+        "decoded_scaled_frame_md5": "456a60dcca9e046ce082f3235db8b85d",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0117.jpg",
+        "stream_jpeg_sha256": "ef91f612bc5a5511db1d041efc5e63d87c215bab9d7ca16dd04b80827e25ad17"
+      },
+      {
+        "packet_time_seconds": 117,
+        "native_frame_index": 3518,
+        "source_pts_seconds": 117.485668,
+        "decoded_scaled_frame_md5": "98f127878580b318303874fff19d728f",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0118.jpg",
+        "stream_jpeg_sha256": "bffd3631b6942f9a0db82d35eaeb2d840be0d4cf60f3bf538aa50b76bcfa7ef2"
+      },
+      {
+        "packet_time_seconds": 118,
+        "native_frame_index": 3548,
+        "source_pts_seconds": 118.487535,
+        "decoded_scaled_frame_md5": "679919343746e8af10ee33a4ddfdf907",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0119.jpg",
+        "stream_jpeg_sha256": "bf06517d7ab2f95b4a906df8d09c5ed855d84a57dcc3f913accf6d69aca643ef"
+      },
+      {
+        "packet_time_seconds": 119,
+        "native_frame_index": 3578,
+        "source_pts_seconds": 119.489403,
+        "decoded_scaled_frame_md5": "207d06fe78710b1694aefa107cc98962",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0120.jpg",
+        "stream_jpeg_sha256": "7f64b366b36ae2c8686d2106a108423876607b825cc920fc5499899d8925a9b4"
+      },
+      {
+        "packet_time_seconds": 120,
+        "native_frame_index": 3608,
+        "source_pts_seconds": 120.491271,
+        "decoded_scaled_frame_md5": "7507c48fb64db0e73bc884766707226c",
+        "stream_path": "stream_frames/z060-june-28-22-gladom_assemble/0121.jpg",
+        "stream_jpeg_sha256": "7b55990050c1b148c02335fd5cdb6d3b57d38f986c844ac54245810c3fb516b0"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the round tabletop is visibly seated on the upright white support frame; carrying it above or beside the frame does not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

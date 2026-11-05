@@ -1,0 +1,53 @@
+{
+  "started_utc": "2026-11-04T16:42:03.776074+00:00",
+  "signatures": {
+    "cases_sha256": "07a5c318facaaa61ce456a8d9467f236533dfe2e0a099b706a462ab9a4ed5040",
+    "protocol_sha256": "22a60dfab87207a87f20b1bfad11bf48ee0f1369669332f3f1546d7cd1405170",
+    "runner_sha256": "1d322f8bc8fe7232e384b2dc3bd2bb148d5ffb02fd429f113b0b7577002b7274",
+    "model_revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+    "device": "mps",
+    "config": {
+      "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+      "seed": 20261104,
+      "dtype": "float16",
+      "attention": "sdpa",
+      "max_new_tokens": 128,
+      "do_sample": false,
+      "num_beams": 1,
+      "max_pixels_per_frame": 112896,
+      "min_pixels_per_frame": 3136,
+      "trials_per_condition": 1,
+      "visual_memory": "current packet only; previous raw output verbatim",
+      "input_mode": "two four-frame video tensors; actual capture times in prompt",
+      "phases": [
+        "joint",
+        "chronological_0",
+        "chronological_1",
+        "delayed_0",
+        "delayed_1"
+      ]
+    }
+  },
+  "packages": {
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "transformers": "4.57.6",
+    "accelerate": "1.15.0",
+    "Pillow": "13.0.0",
+    "numpy": "2.4.6",
+    "safetensors": "0.8.0"
+  },
+  "mps_cpu_fallback_enabled": true,
+  "official_model": {
+    "model_id": "Qwen/Qwen2.5-VL-3B-Instruct",
+    "revision": "66285546d2b821cf421d4f5eb2576359d3770cd3",
+    "requested_model": "Qwen2.5-VL-3B, matching the supplied PDF",
+    "download_started_utc": "2026-11-04T16:06:04.392760+00:00",
+    "weights": "official unquantized checkpoint",
+    "status": "download_complete",
+    "local_path": "/Users/abhishekpandir/Documents/Stream-Eval-Bench/experiments/holoassist_20/.model_cache/qwen2_5_vl_3b",
+    "download_completed_utc": "2026-11-04T16:36:59.095001+00:00"
+  },
+  "benchmark_requests_planned": 100,
+  "independent_annotation": false
+}

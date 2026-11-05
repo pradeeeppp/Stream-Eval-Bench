@@ -1,0 +1,21 @@
+{
+  "time_utc": "2026-11-04T16:42:27.728391+00:00",
+  "prompt": "What is the dominant color in this video? Answer with one word.",
+  "input": "four constant red RGB frames, 56x56",
+  "raw_response": "Red",
+  "is_benchmark_request": false,
+  "generation_seconds": 2.577183457906358,
+  "input_tokens": 43,
+  "generated_tokens": 2,
+  "video_grid_thw": [
+    [
+      2,
+      4,
+      4
+    ]
+  ],
+  "second_per_grid_ts": [
+    0.20000000298023224
+  ],
+  "rendered_prompt_sha256": "e5b1a63e0344f8243bb1aa92c212e53606c96fd265ec790b721a47dabb634e77"
+}

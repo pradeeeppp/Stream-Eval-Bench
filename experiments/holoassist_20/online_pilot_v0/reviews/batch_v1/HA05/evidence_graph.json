@@ -1,0 +1,605 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_05",
+  "source_id": "HA05",
+  "original_instruction": "Alert when the person's hand reaches into the clear bin of metal fasteners.",
+  "source": {
+    "session_id": "R066-15July-ATV-Part1",
+    "sha256": "2b7a9c9f000dd51175d812cd7e4292cbce9031d5f112df9474306989ba5f658c",
+    "video_path": "videos/R066-15July-ATV-Part1.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 5586,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          149,
+          299,
+          448,
+          597,
+          746,
+          896,
+          1045,
+          1194,
+          1343,
+          1493,
+          1642,
+          1791,
+          1940,
+          2090,
+          2239,
+          2388,
+          2537,
+          2687,
+          2836,
+          2985,
+          3134,
+          3284,
+          3433,
+          3582,
+          3731,
+          3881,
+          4030,
+          4179,
+          4329,
+          4478,
+          4627,
+          4776,
+          4926,
+          5075,
+          5224,
+          5373,
+          5523,
+          5585
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA05/overview_01.png",
+            "sha256": "2b6a33093b7dcca49cc28cb0688a2b0268831c2e2fd57ad32dd68a12e0833bff"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          836,
+          851,
+          866,
+          881,
+          896,
+          910,
+          925,
+          940,
+          955,
+          970,
+          985,
+          1000,
+          1015,
+          1030,
+          1045,
+          1060,
+          1075,
+          1090,
+          1105,
+          1119,
+          1134,
+          1149,
+          1164,
+          1179,
+          1194,
+          1209,
+          1224
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 30,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA05/candidate_01.png",
+            "sha256": "d60fddbb9fb0ef07b73b679cddf86aa63389fc213841f514fd24ed360f0f680d"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          865,
+          866,
+          867,
+          868,
+          869,
+          870,
+          871,
+          872,
+          873,
+          874,
+          875,
+          876,
+          877,
+          878,
+          879,
+          880
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA05/native1_01.png",
+            "sha256": "5c2dfd50a9d599907235fb8f9b96554af4ca0078fbbdc40ce1b0e9f8e5f60bfe"
+          }
+        ]
+      },
+      {
+        "name": "native2",
+        "native_indices": [
+          1134,
+          1135,
+          1136,
+          1137,
+          1138,
+          1139,
+          1140,
+          1141,
+          1142,
+          1143,
+          1144,
+          1145,
+          1146,
+          1147,
+          1148,
+          1149
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA05/native2_01.png",
+            "sha256": "e5cef7e0618e3b5e79b3d66d02818f3d9991498266701379495dda3808b300df"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          850,
+          880,
+          910
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA05/delivered_01.png",
+            "sha256": "4d3e8933dcaeb58ee8de0cf88932fe024f5bb8ce65ddca038f0ec5173b84990e"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "An earlier washer-bin reach is visible around 29.5 s; later screw-bin reach is around 38.5 s. Broad metal-fasteners wording may admit the earlier occurrence, conflicting with legacy early-alert scoring.",
+    "flags": [
+      "task_definition_ambiguous",
+      "earlier_qualifying_candidate",
+      "different_bins_must_not_be_merged"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "washer bin"
+    },
+    {
+      "id": "object_2",
+      "description": "screw bin"
+    },
+    {
+      "id": "object_3",
+      "description": "right hand"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 850,
+      "source_pts_seconds": 28.473831,
+      "path": "full_review/batch_v1/HA05/anchors/000850.jpg",
+      "description": "Hand is approaching the hardware storage area.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Hand is approaching the hardware storage area.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 865,
+      "source_pts_seconds": 28.97631,
+      "path": "full_review/batch_v1/HA05/anchors/000865.jpg",
+      "description": "Fingers approach the clear bin containing washers.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Fingers approach the clear bin containing washers.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 880,
+      "source_pts_seconds": 29.478789,
+      "path": "full_review/batch_v1/HA05/anchors/000880.jpg",
+      "description": "Hand is visibly inside the washer bin, earlier than the legacy target window.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Hand is visibly inside the washer bin, earlier than the legacy target window.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_3",
+        "predicate": "inside",
+        "object": "object_1"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "context",
+      "frame_index_zero_based": 1149,
+      "source_pts_seconds": 38.489919,
+      "path": "full_review/batch_v1/HA05/anchors/001149.jpg",
+      "description": "Hand later enters a different clear bin containing screws.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Hand later enters a different clear bin containing screws.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "context",
+      "frame_index_zero_based": 1194,
+      "source_pts_seconds": 39.997358,
+      "path": "full_review/batch_v1/HA05/anchors/001194.jpg",
+      "description": "Small hardware held above the later screw bin.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Small hardware held above the later screw bin.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA05:reviewed_occurrence_1",
+      "event_class": "hand_entry_into_hardware_bin",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_3",
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 29.478789,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "requires_adjudication"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 29,
+      "native_frame_index": 880,
+      "source_pts_seconds": 29.478789,
+      "decoded_scaled_frame_md5": "591b200fcfc852c0c1ff8d23a87c96f5",
+      "stream_path": "stream_frames/R066-15July-ATV-Part1/0030.jpg",
+      "stream_jpeg_sha256": "6ae1dc5ccd0b3f061b76e25f2f0c17868e90d8e287cd6e9c3a3dbf16bf03dcda",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "blocked_on_task_definition",
+      "policy": "Specify the target bin and contents. If screws are intended, alert once when the hand enters the screw-filled bin; washer-bin entry is a different occurrence.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 29,
+      "source_capture_boundary_seconds": 29.478789,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 43,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    },
+    {
+      "id": "screw_bin_reach_1",
+      "type": "event",
+      "event_class": "hand_entry_into_screw_bin",
+      "occurrence_id": "HA05:screw_bin_reach_1",
+      "entity_ids": [
+        "object_2",
+        "object_3"
+      ],
+      "evidence_ids": [
+        "observation_3",
+        "observation_4"
+      ],
+      "physical_onset_seconds": null,
+      "qualification": "observed_distinct_event",
+      "note": "Different bin and later reach; not corroboration of the earlier washer-bin entry."
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "context_for",
+      "target": "event_1",
+      "same_occurrence_link_certified": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "context_for",
+      "target": "event_1",
+      "same_occurrence_link_certified": false
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports_separate_event",
+      "target": "screw_bin_reach_1"
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports_separate_event",
+      "target": "screw_bin_reach_1"
+    },
+    {
+      "source": "screw_bin_reach_1",
+      "relation": "distinct_from",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 27,
+        "native_frame_index": 820,
+        "source_pts_seconds": 27.468872,
+        "decoded_scaled_frame_md5": "ee16207a6942d901ca45f2406acf6894",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0028.jpg",
+        "stream_jpeg_sha256": "d94ccba8838aed7eb4fdfdff761663c452152c154a5df762231f82b7f83161af"
+      },
+      {
+        "packet_time_seconds": 28,
+        "native_frame_index": 850,
+        "source_pts_seconds": 28.473831,
+        "decoded_scaled_frame_md5": "65c4bbf75181a40c36c0864a65c2c583",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0029.jpg",
+        "stream_jpeg_sha256": "f6aaef972189a39f55159d391e5d724e8564b4af8114d94dbd1dcba24d086a4b"
+      },
+      {
+        "packet_time_seconds": 29,
+        "native_frame_index": 880,
+        "source_pts_seconds": 29.478789,
+        "decoded_scaled_frame_md5": "591b200fcfc852c0c1ff8d23a87c96f5",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0030.jpg",
+        "stream_jpeg_sha256": "6ae1dc5ccd0b3f061b76e25f2f0c17868e90d8e287cd6e9c3a3dbf16bf03dcda"
+      },
+      {
+        "packet_time_seconds": 30,
+        "native_frame_index": 910,
+        "source_pts_seconds": 30.483748,
+        "decoded_scaled_frame_md5": "22aa4a2d3ba36d295275f45c2ff82680",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0031.jpg",
+        "stream_jpeg_sha256": "2cd14fe3ee351d8dc9682ae8470306592fcbcb3bd9667009bf0f40b7d388c2f9"
+      },
+      {
+        "packet_time_seconds": 31,
+        "native_frame_index": 940,
+        "source_pts_seconds": 31.488707,
+        "decoded_scaled_frame_md5": "d01aa2e399c3fd038cf7f1c83b737f23",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0032.jpg",
+        "stream_jpeg_sha256": "1c8f968acdd6d0e5b23fd3da0ec976de2f688e3d611293c29466152d281102ba"
+      },
+      {
+        "packet_time_seconds": 32,
+        "native_frame_index": 970,
+        "source_pts_seconds": 32.493666,
+        "decoded_scaled_frame_md5": "d6a23708587120071572bcffe99d0401",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0033.jpg",
+        "stream_jpeg_sha256": "c39f694caaaea4b814dc8e037bf17c65106b4394a34e3bc07f8db0fac59e0cd8"
+      },
+      {
+        "packet_time_seconds": 33,
+        "native_frame_index": 1000,
+        "source_pts_seconds": 33.498624,
+        "decoded_scaled_frame_md5": "61385565b615bb035b2fa7160334b4f4",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0034.jpg",
+        "stream_jpeg_sha256": "726cf9111f4a76dad7461d74aee87efb60e5e5515bb48eca48f94c8d3e33215e"
+      },
+      {
+        "packet_time_seconds": 34,
+        "native_frame_index": 1029,
+        "source_pts_seconds": 34.470085,
+        "decoded_scaled_frame_md5": "d0999b7171a05c315b636324f24fbefa",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0035.jpg",
+        "stream_jpeg_sha256": "19fe9681c56528bcc8e07ae2facca070bf531dea565c239e4bc0194e8d87d193"
+      },
+      {
+        "packet_time_seconds": 35,
+        "native_frame_index": 1059,
+        "source_pts_seconds": 35.475043,
+        "decoded_scaled_frame_md5": "d450e81e8f8bc24d0ac03fbfa859a649",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0036.jpg",
+        "stream_jpeg_sha256": "49d1545fe4a29adf2316588b0b22ab87c1a1748c06a0ad29e9524b0920a2de53"
+      },
+      {
+        "packet_time_seconds": 36,
+        "native_frame_index": 1089,
+        "source_pts_seconds": 36.480002,
+        "decoded_scaled_frame_md5": "770b241b1c176613d68191dce7b4d1c1",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0037.jpg",
+        "stream_jpeg_sha256": "32bcf7bfa137c0ab06e94d5f3bb691049458565d6c30bda0abff354503850d87"
+      },
+      {
+        "packet_time_seconds": 37,
+        "native_frame_index": 1119,
+        "source_pts_seconds": 37.484961,
+        "decoded_scaled_frame_md5": "8b1687650ff436fc21809bb941dcd973",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0038.jpg",
+        "stream_jpeg_sha256": "0a54eb4c3d54626def9ac060d5f0683328e9f33d1148cb5c898b3901e99d00d7"
+      },
+      {
+        "packet_time_seconds": 38,
+        "native_frame_index": 1149,
+        "source_pts_seconds": 38.489919,
+        "decoded_scaled_frame_md5": "721d2b1547dda4cce85650175cf0a462",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0039.jpg",
+        "stream_jpeg_sha256": "e970999a6e2b1e0bd05293c4fb71f08b524910150db45ec74eb6c8eb8a1509f2"
+      },
+      {
+        "packet_time_seconds": 39,
+        "native_frame_index": 1179,
+        "source_pts_seconds": 39.494878,
+        "decoded_scaled_frame_md5": "aa6cc3aae766f937adba2d390f72ad86",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0040.jpg",
+        "stream_jpeg_sha256": "66704b6a407ebf72873d0bb82088e9d9d4aa19928b4ac65485bb31c9404eb187"
+      },
+      {
+        "packet_time_seconds": 40,
+        "native_frame_index": 1209,
+        "source_pts_seconds": 40.499837,
+        "decoded_scaled_frame_md5": "f9ae80ed6b3628bfebdbd6284319f435",
+        "stream_path": "stream_frames/R066-15July-ATV-Part1/0041.jpg",
+        "stream_jpeg_sha256": "0bed3aa9b6e2365be41c8b55f381aa806f5abeaa38634a06b7be6451ea297881"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Specify the target bin and contents. If screws are intended, alert once when the hand enters the screw-filled bin; washer-bin entry is a different occurrence.",
+    "qualification": "requires_adjudication",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

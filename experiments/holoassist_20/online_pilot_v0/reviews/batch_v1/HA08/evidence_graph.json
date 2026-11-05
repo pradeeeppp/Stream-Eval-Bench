@@ -1,0 +1,495 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_08",
+  "source_id": "HA08",
+  "original_instruction": "Alert when the person tips a clear vessel over the open machine reservoir.",
+  "source": {
+    "session_id": "R085-26July-Nespresso",
+    "sha256": "44d52058f1cf19aa4be90b469e7c449a0549d0e43dceefcfa8a7fe3d5110d078",
+    "video_path": "videos/R085-26July-Nespresso.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 4403,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          300,
+          450,
+          600,
+          750,
+          900,
+          1050,
+          1200,
+          1350,
+          1500,
+          1650,
+          1800,
+          1950,
+          2100,
+          2250,
+          2400,
+          2550,
+          2700,
+          2850,
+          3000,
+          3150,
+          3300,
+          3450,
+          3600,
+          3750,
+          3900,
+          4050,
+          4200,
+          4350,
+          4402
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 35,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA08/overview_01.png",
+            "sha256": "6756630875ab3414686676ebcd01481dbb832c8950b57a337d35092dc55c73cc"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          420,
+          435,
+          450,
+          465,
+          480,
+          495,
+          510,
+          525,
+          540,
+          555,
+          570,
+          585,
+          600,
+          615,
+          630,
+          645,
+          660,
+          675,
+          690,
+          705,
+          720
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA08/candidate_01.png",
+            "sha256": "c03abfd2a7a8ccf6c3cd1f34db6824d5b26c474b48b646282c4d1b04ef9a25c9"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          600,
+          601,
+          602,
+          603,
+          604,
+          605,
+          606,
+          607,
+          608,
+          609,
+          610,
+          611,
+          612,
+          613,
+          614,
+          615
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA08/native1_01.png",
+            "sha256": "b6692f97e5abf6f3e7ed7d5b7aec18398090a4ba5e121a4a881e0b5ebd65d082"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          585,
+          615,
+          645
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA08/delivered_01.png",
+            "sha256": "a4a4dadc6de1a82d8e179bc8220a1cb74b351f6c388290a4ca7a651e0fe0d4c5"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "The visual target is vessel tilt over the opening. Do not infer water flow, amount transferred, or reservoir detachment from this pose alone.",
+    "flags": [
+      "liquid_transfer_not_verified",
+      "reservoir_detachment_not_established"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "clear vessel"
+    },
+    {
+      "id": "object_2",
+      "description": "machine reservoir"
+    },
+    {
+      "id": "object_3",
+      "description": "reservoir lid"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 585,
+      "source_pts_seconds": 19.498907,
+      "path": "full_review/batch_v1/HA08/anchors/000585.jpg",
+      "description": "Vessel held approximately upright beside the open reservoir.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Vessel held approximately upright beside the open reservoir.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 600,
+      "source_pts_seconds": 19.998879,
+      "path": "full_review/batch_v1/HA08/anchors/000600.jpg",
+      "description": "Vessel begins tilting toward the reservoir opening.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Vessel begins tilting toward the reservoir opening.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 615,
+      "source_pts_seconds": 20.498851,
+      "path": "full_review/batch_v1/HA08/anchors/000615.jpg",
+      "description": "Clear vessel visibly tilted with its mouth over the open reservoir.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Clear vessel visibly tilted with its mouth over the open reservoir.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "tipped_over",
+        "object": "object_2"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 660,
+      "source_pts_seconds": 21.998767,
+      "path": "full_review/batch_v1/HA08/anchors/000660.jpg",
+      "description": "Tilted vessel remains over the reservoir.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Tilted vessel remains over the reservoir.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 750,
+      "source_pts_seconds": 24.998599,
+      "path": "full_review/batch_v1/HA08/anchors/000750.jpg",
+      "description": "Vessel returned toward an upright pose.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Vessel returned toward an upright pose.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA08:reviewed_occurrence_1",
+      "event_class": "vessel_tipping_over_reservoir",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_1",
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 20.498851,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 20,
+      "native_frame_index": 615,
+      "source_pts_seconds": 20.498851,
+      "decoded_scaled_frame_md5": "322d0ea9de48de7bb00397fc0e8babbd",
+      "stream_path": "stream_frames/R085-26July-Nespresso/0021.jpg",
+      "stream_jpeg_sha256": "a55132ccc092e57f2dbde50b92558966a15c8a54f82edb4b03477139260db894",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the clear vessel is visibly tilted with its mouth over the open reservoir. Require this pose, not inferred liquid flow.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 20,
+      "source_capture_boundary_seconds": 20.498851,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 26,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "claim_4",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 14,
+        "native_frame_index": 435,
+        "source_pts_seconds": 14.499187,
+        "decoded_scaled_frame_md5": "d5b44460715d6cf856eeb7b655faa301",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0015.jpg",
+        "stream_jpeg_sha256": "f40da098ee74d1d7f2b908281826d9b4e5fa36d96f47fe50adf398bbe88b4cfa"
+      },
+      {
+        "packet_time_seconds": 15,
+        "native_frame_index": 465,
+        "source_pts_seconds": 15.499131,
+        "decoded_scaled_frame_md5": "f90cbc16ac640217a1f22ba8ffff7d7c",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0016.jpg",
+        "stream_jpeg_sha256": "14cec51af38670f97dd08edc56ca125ef3a195dbce2df998730ae5af955a4898"
+      },
+      {
+        "packet_time_seconds": 16,
+        "native_frame_index": 495,
+        "source_pts_seconds": 16.499075,
+        "decoded_scaled_frame_md5": "43a93128a70f00207f64437b44b57e09",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0017.jpg",
+        "stream_jpeg_sha256": "928e3694163297fff8eb813b829740ec2f9a161ed07ca533f4b85269b3f47dc9"
+      },
+      {
+        "packet_time_seconds": 17,
+        "native_frame_index": 525,
+        "source_pts_seconds": 17.499019,
+        "decoded_scaled_frame_md5": "c2031fddb4f18a26a59b184027b95f5e",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0018.jpg",
+        "stream_jpeg_sha256": "d26e331ba3903cb02a2eddf12a349d986e11527cd0d6e9ba8a6c0b85e5333fb6"
+      },
+      {
+        "packet_time_seconds": 18,
+        "native_frame_index": 555,
+        "source_pts_seconds": 18.498963,
+        "decoded_scaled_frame_md5": "b58737afa094fbf6fb6c9aab1888206b",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0019.jpg",
+        "stream_jpeg_sha256": "46e9ba6d1e1b4ed2961cf725de0f835bfcc27e4ebcbf144c518fdd45d8c6da45"
+      },
+      {
+        "packet_time_seconds": 19,
+        "native_frame_index": 585,
+        "source_pts_seconds": 19.498907,
+        "decoded_scaled_frame_md5": "d80dc83da1be55b33deef1f7816b2320",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0020.jpg",
+        "stream_jpeg_sha256": "9f3ab2ac78bc2ea6eb2631742dec8df023d94ab9ebaaaa2537d63ecc685f6526"
+      },
+      {
+        "packet_time_seconds": 20,
+        "native_frame_index": 615,
+        "source_pts_seconds": 20.498851,
+        "decoded_scaled_frame_md5": "322d0ea9de48de7bb00397fc0e8babbd",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0021.jpg",
+        "stream_jpeg_sha256": "a55132ccc092e57f2dbde50b92558966a15c8a54f82edb4b03477139260db894"
+      },
+      {
+        "packet_time_seconds": 21,
+        "native_frame_index": 645,
+        "source_pts_seconds": 21.498795,
+        "decoded_scaled_frame_md5": "6172aa207a4a9cce8a38be3410657ddc",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0022.jpg",
+        "stream_jpeg_sha256": "8f0657a4d7408ad70fd797154b5e17ef0899230b382b521e6ae33e2e88f337c9"
+      },
+      {
+        "packet_time_seconds": 22,
+        "native_frame_index": 675,
+        "source_pts_seconds": 22.498739,
+        "decoded_scaled_frame_md5": "d2d1d9e999083b640e2e40aca971ec07",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0023.jpg",
+        "stream_jpeg_sha256": "c56132626a88e604db105bf283e88889f527a6000b33933cc26c3c62793c2d89"
+      },
+      {
+        "packet_time_seconds": 23,
+        "native_frame_index": 705,
+        "source_pts_seconds": 23.498683,
+        "decoded_scaled_frame_md5": "0b24fb9a9eb92d6d304ef020b4b28d10",
+        "stream_path": "stream_frames/R085-26July-Nespresso/0024.jpg",
+        "stream_jpeg_sha256": "4b517f7161a4b0e90630ab3e635d185d631c5f11fe6e7dad5e6e747337f4c480"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the clear vessel is visibly tilted with its mouth over the open reservoir. Require this pose, not inferred liquid flow.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

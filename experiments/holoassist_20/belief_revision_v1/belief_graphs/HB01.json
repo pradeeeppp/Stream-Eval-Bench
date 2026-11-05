@@ -1,0 +1,400 @@
+{
+  "case_id": "HB01",
+  "graph_type": "expressed_belief_trace",
+  "paths_relative_to": "experiment root: directory containing cases.json",
+  "primary_qualified": true,
+  "reviewed_factual_graph": "../online_pilot_v0/reviews/batch_v1/HB01/evidence_graph.json",
+  "reviewed_factual_graph_sha256": "98195c1859509c185127d626c876eaeaddd5919c1137c6f534d920a89916997f",
+  "citation_semantics": "Model citations are assertions, not verified support edges.",
+  "nodes": [
+    {
+      "id": "packet:A",
+      "type": "evidence_packet",
+      "capture_start": 34.187969,
+      "capture_end": 34.489038,
+      "frames": [
+        {
+          "native_frame_index": 1022,
+          "source_pts_seconds": 34.187969,
+          "path": "media/HB01/001022.jpg",
+          "sha256": "5b65ca2116e9cb7ad148460a72cd3e3998dd54ca183278368dc9acabbc48c8d2"
+        },
+        {
+          "native_frame_index": 1025,
+          "source_pts_seconds": 34.288326,
+          "path": "media/HB01/001025.jpg",
+          "sha256": "a6106b85f3e7d8a6f2c54a921f637d03b0d0e29a61f2933f2f35aab8860d6781"
+        },
+        {
+          "native_frame_index": 1028,
+          "source_pts_seconds": 34.388682,
+          "path": "media/HB01/001028.jpg",
+          "sha256": "b2cd72ab9233696914e7d5a204df7944b3d379d151d719e90cab183a687c263c"
+        },
+        {
+          "native_frame_index": 1031,
+          "source_pts_seconds": 34.489038,
+          "path": "media/HB01/001031.jpg",
+          "sha256": "924996b48477ba6c8f0be0bbfe9626dbd648042672d0366916c23675507993f9"
+        }
+      ]
+    },
+    {
+      "id": "packet:B",
+      "type": "evidence_packet",
+      "capture_start": 41.480511,
+      "capture_end": 41.781579,
+      "frames": [
+        {
+          "native_frame_index": 1240,
+          "source_pts_seconds": 41.480511,
+          "path": "media/HB01/001240.jpg",
+          "sha256": "010b4f7643547409d751923a01bf42c6d842b436c8708a52fed13fe8a3bb42fd"
+        },
+        {
+          "native_frame_index": 1243,
+          "source_pts_seconds": 41.580867,
+          "path": "media/HB01/001243.jpg",
+          "sha256": "fd71d6fe10b1c786582082cf7b548eee8299679f779ed8637c1626f768a74460"
+        },
+        {
+          "native_frame_index": 1246,
+          "source_pts_seconds": 41.681223,
+          "path": "media/HB01/001246.jpg",
+          "sha256": "92ff6c31350b81eec8708a4b1de5383a4ad5930b1ca69ab62f4e03ae000640c1"
+        },
+        {
+          "native_frame_index": 1249,
+          "source_pts_seconds": 41.781579,
+          "path": "media/HB01/001249.jpg",
+          "sha256": "5d19ad088d1d7fbb29d863a2c3400a3efe638c203ac497ffc35c0a43c887c45f"
+        }
+      ]
+    },
+    {
+      "id": "claim:A",
+      "type": "capture_time_claim",
+      "predicate": "the black drive belt is free of the machine pulley route",
+      "capture_time": 34.489038,
+      "provisional_evidence_label": "no",
+      "independently_adjudicated": false
+    },
+    {
+      "id": "claim:B",
+      "type": "capture_time_claim",
+      "predicate": "the black drive belt is free of the machine pulley route",
+      "capture_time": 41.781579,
+      "provisional_evidence_label": "yes",
+      "independently_adjudicated": false
+    },
+    {
+      "id": "request:joint",
+      "type": "model_request",
+      "phase": "joint",
+      "raw_record": "responses/HB01.json#/steps/joint",
+      "raw_response": "{\n    \"earlier\": \"no\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}",
+      "exact_json": true,
+      "schema_valid": true,
+      "arrived_packets": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "id": "belief:joint:earlier",
+      "type": "expressed_model_belief",
+      "field": "earlier",
+      "value": "no",
+      "capture_time": 34.489038,
+      "citations_valid_list": true
+    },
+    {
+      "id": "belief:joint:latest",
+      "type": "expressed_model_belief",
+      "field": "latest",
+      "value": "yes",
+      "capture_time": 41.781579,
+      "citations_valid_list": true
+    },
+    {
+      "id": "request:chronological_0",
+      "type": "model_request",
+      "phase": "chronological_0",
+      "raw_record": "responses/HB01.json#/steps/chronological_0",
+      "raw_response": "{\n    \"earlier\": \"no\",\n    \"latest\": \"no\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": []\n}",
+      "exact_json": true,
+      "schema_valid": true,
+      "arrived_packets": [
+        "A"
+      ]
+    },
+    {
+      "id": "belief:chronological_0:earlier",
+      "type": "expressed_model_belief",
+      "field": "earlier",
+      "value": "no",
+      "capture_time": 34.489038,
+      "citations_valid_list": true
+    },
+    {
+      "id": "belief:chronological_0:latest",
+      "type": "expressed_model_belief",
+      "field": "latest",
+      "value": "no",
+      "capture_time": 34.489038,
+      "citations_valid_list": true
+    },
+    {
+      "id": "request:chronological_1",
+      "type": "model_request",
+      "phase": "chronological_1",
+      "raw_record": "responses/HB01.json#/steps/chronological_1",
+      "raw_response": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"no\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}",
+      "exact_json": true,
+      "schema_valid": true,
+      "arrived_packets": [
+        "A",
+        "B"
+      ]
+    },
+    {
+      "id": "belief:chronological_1:earlier",
+      "type": "expressed_model_belief",
+      "field": "earlier",
+      "value": "unknown",
+      "capture_time": 34.489038,
+      "citations_valid_list": true
+    },
+    {
+      "id": "belief:chronological_1:latest",
+      "type": "expressed_model_belief",
+      "field": "latest",
+      "value": "no",
+      "capture_time": 41.781579,
+      "citations_valid_list": true
+    },
+    {
+      "id": "request:delayed_0",
+      "type": "model_request",
+      "phase": "delayed_0",
+      "raw_record": "responses/HB01.json#/steps/delayed_0",
+      "raw_response": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"no\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}",
+      "exact_json": true,
+      "schema_valid": true,
+      "arrived_packets": [
+        "B"
+      ]
+    },
+    {
+      "id": "belief:delayed_0:earlier",
+      "type": "expressed_model_belief",
+      "field": "earlier",
+      "value": "unknown",
+      "capture_time": 34.489038,
+      "citations_valid_list": true
+    },
+    {
+      "id": "belief:delayed_0:latest",
+      "type": "expressed_model_belief",
+      "field": "latest",
+      "value": "no",
+      "capture_time": 41.781579,
+      "citations_valid_list": true
+    },
+    {
+      "id": "request:delayed_1",
+      "type": "model_request",
+      "phase": "delayed_1",
+      "raw_record": "responses/HB01.json#/steps/delayed_1",
+      "raw_response": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"no\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": []\n}",
+      "exact_json": true,
+      "schema_valid": true,
+      "arrived_packets": [
+        "B",
+        "A"
+      ]
+    },
+    {
+      "id": "belief:delayed_1:earlier",
+      "type": "expressed_model_belief",
+      "field": "earlier",
+      "value": "unknown",
+      "capture_time": 34.489038,
+      "citations_valid_list": true
+    },
+    {
+      "id": "belief:delayed_1:latest",
+      "type": "expressed_model_belief",
+      "field": "latest",
+      "value": "no",
+      "capture_time": 41.781579,
+      "citations_valid_list": true
+    }
+  ],
+  "edges": [
+    {
+      "type": "visual_input",
+      "source": "packet:A",
+      "target": "request:joint"
+    },
+    {
+      "type": "visual_input",
+      "source": "packet:B",
+      "target": "request:joint"
+    },
+    {
+      "type": "generated",
+      "source": "request:joint",
+      "target": "belief:joint:earlier"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:joint:earlier",
+      "target": "claim:A"
+    },
+    {
+      "type": "generated",
+      "source": "request:joint",
+      "target": "belief:joint:latest"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:joint:latest",
+      "target": "claim:B"
+    },
+    {
+      "type": "model_cites",
+      "source": "belief:joint:latest",
+      "target": "packet:B",
+      "packet_received": true,
+      "matches_requested_capture_time": true,
+      "support_verification": "model_assertion_only"
+    },
+    {
+      "type": "visual_input",
+      "source": "packet:A",
+      "target": "request:chronological_0"
+    },
+    {
+      "type": "generated",
+      "source": "request:chronological_0",
+      "target": "belief:chronological_0:earlier"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:chronological_0:earlier",
+      "target": "claim:A"
+    },
+    {
+      "type": "generated",
+      "source": "request:chronological_0",
+      "target": "belief:chronological_0:latest"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:chronological_0:latest",
+      "target": "claim:A"
+    },
+    {
+      "type": "visual_input",
+      "source": "packet:B",
+      "target": "request:chronological_1"
+    },
+    {
+      "type": "verbatim_response_memory",
+      "source": "request:chronological_0",
+      "target": "request:chronological_1"
+    },
+    {
+      "type": "generated",
+      "source": "request:chronological_1",
+      "target": "belief:chronological_1:earlier"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:chronological_1:earlier",
+      "target": "claim:A"
+    },
+    {
+      "type": "generated",
+      "source": "request:chronological_1",
+      "target": "belief:chronological_1:latest"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:chronological_1:latest",
+      "target": "claim:B"
+    },
+    {
+      "type": "model_cites",
+      "source": "belief:chronological_1:latest",
+      "target": "packet:B",
+      "packet_received": true,
+      "matches_requested_capture_time": true,
+      "support_verification": "model_assertion_only"
+    },
+    {
+      "type": "visual_input",
+      "source": "packet:B",
+      "target": "request:delayed_0"
+    },
+    {
+      "type": "generated",
+      "source": "request:delayed_0",
+      "target": "belief:delayed_0:earlier"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:delayed_0:earlier",
+      "target": "claim:A"
+    },
+    {
+      "type": "generated",
+      "source": "request:delayed_0",
+      "target": "belief:delayed_0:latest"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:delayed_0:latest",
+      "target": "claim:B"
+    },
+    {
+      "type": "model_cites",
+      "source": "belief:delayed_0:latest",
+      "target": "packet:B",
+      "packet_received": true,
+      "matches_requested_capture_time": true,
+      "support_verification": "model_assertion_only"
+    },
+    {
+      "type": "visual_input",
+      "source": "packet:A",
+      "target": "request:delayed_1"
+    },
+    {
+      "type": "verbatim_response_memory",
+      "source": "request:delayed_0",
+      "target": "request:delayed_1"
+    },
+    {
+      "type": "generated",
+      "source": "request:delayed_1",
+      "target": "belief:delayed_1:earlier"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:delayed_1:earlier",
+      "target": "claim:A"
+    },
+    {
+      "type": "generated",
+      "source": "request:delayed_1",
+      "target": "belief:delayed_1:latest"
+    },
+    {
+      "type": "asserts",
+      "source": "belief:delayed_1:latest",
+      "target": "claim:B"
+    }
+  ]
+}

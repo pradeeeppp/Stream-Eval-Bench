@@ -1,0 +1,589 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_b2_06",
+  "source_id": "HB06",
+  "original_instruction": "Alert when the green expansion card is removed from the desktop computer.",
+  "source": {
+    "session_id": "R197-25Oct-GraphicsCard",
+    "sha256": "50f9dcff639d3b3a9c61ba89af5ab370b473e714f0b2b4ab1248ad43685ec44b",
+    "video_path": "videos/R197-25Oct-GraphicsCard.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 3396,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          136,
+          272,
+          408,
+          544,
+          680,
+          816,
+          952,
+          1088,
+          1224,
+          1360,
+          1496,
+          1632,
+          1768,
+          1904,
+          2040,
+          2176,
+          2312,
+          2448,
+          2584,
+          2720,
+          2856,
+          2992,
+          3128,
+          3264,
+          3395
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 30,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB06/overview_01.png",
+            "sha256": "c1bf4cd79313a81da6db3926c39106a3459bcda5fd58f6bff8bc8cfc22dd66e7"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          1849,
+          1863,
+          1877,
+          1890,
+          1904,
+          1917,
+          1931,
+          1945,
+          1958,
+          1972,
+          1985,
+          1999,
+          2013,
+          2026,
+          2040,
+          2053,
+          2067,
+          2081,
+          2094,
+          2108,
+          2121,
+          2135,
+          2149,
+          2162,
+          2176,
+          2189,
+          2203,
+          2217,
+          2230,
+          2244,
+          2257,
+          2271,
+          2285,
+          2298,
+          2312,
+          2325,
+          2339,
+          2353,
+          2366,
+          2380,
+          2393
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB06/candidate_01.png",
+            "sha256": "3860118be3ba61cac8b80ad725491bca218f40a24eed33fd778a4eb6ec92d6b6"
+          },
+          {
+            "path": "full_review/batch_v1/HB06/candidate_02.png",
+            "sha256": "9754cd617ee1319ee132bce79692a8bd55af4a0b251c96266de6f63988a609d0"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          2094,
+          2095,
+          2096,
+          2097,
+          2098,
+          2099,
+          2100,
+          2101,
+          2102,
+          2103,
+          2104,
+          2105,
+          2106,
+          2107,
+          2108
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 15,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB06/native1_01.png",
+            "sha256": "0494ef47e13c9174d4804ff1b05ee29b6605b89617a48d10dfdb3b6d5db7bbce"
+          }
+        ]
+      },
+      {
+        "name": "extra",
+        "native_indices": [
+          2081,
+          2094,
+          2108,
+          2121,
+          2244,
+          2257,
+          2312
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 9,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB06/extra_01.png",
+            "sha256": "9537aac27fb136b313fbe02a5d6a35540ad4caf3685d480a678db9220cfc6403"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          2080,
+          2107,
+          2135
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB06/delivered_01.png",
+            "sha256": "8ffc43921b261f3856b372c7ff02745c6023e4d9a6ca9871cd32da2420737ef0"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "A green expansion board is visibly removed around 77.5 s, well before the legacy 85 s positive. Avoid merging later board handling into the same occurrence.",
+    "flags": [
+      "legacy_positive_late",
+      "multiple_board_identity_review_needed"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "desktop chassis"
+    },
+    {
+      "id": "object_2",
+      "description": "green expansion board"
+    },
+    {
+      "id": "object_3",
+      "description": "expansion slot"
+    },
+    {
+      "id": "object_4",
+      "description": "additional circuit boards"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 2094,
+      "source_pts_seconds": 76.991727,
+      "path": "full_review/batch_v1/HB06/anchors/002094.jpg",
+      "description": "Hand remains inside chassis at the expansion-board location; full removal not yet visible.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Hand remains inside chassis at the expansion-board location; full removal not yet visible.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 2107,
+      "source_pts_seconds": 77.469708,
+      "path": "full_review/batch_v1/HB06/anchors/002107.jpg",
+      "description": "Green expansion board is held outside the chassis.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Green expansion board is held outside the chassis.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_2",
+        "predicate": "outside",
+        "object": "object_1"
+      }
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 2121,
+      "source_pts_seconds": 77.984457,
+      "path": "full_review/batch_v1/HB06/anchors/002121.jpg",
+      "description": "Removed board remains outside while the other hand reaches into the computer.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Removed board remains outside while the other hand reaches into the computer.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "context",
+      "frame_index_zero_based": 2257,
+      "source_pts_seconds": 82.984875,
+      "path": "full_review/batch_v1/HB06/anchors/002257.jpg",
+      "description": "Later additional board handling occurs; board identities should be kept distinct.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Later additional board handling occurs; board identities should be kept distinct.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HB06:reviewed_occurrence_1",
+      "event_class": "expansion_board_removal",
+      "positive_evidence_ids": [
+        "observation_1"
+      ],
+      "entity_ids": [
+        "object_2",
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 77.469708,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 77,
+      "native_frame_index": 2107,
+      "source_pts_seconds": 77.469708,
+      "decoded_scaled_frame_md5": "a8c85f22967108aef17e84af67b0751d",
+      "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0078.jpg",
+      "stream_jpeg_sha256": "8c1513c4a9f20629bc1c24aa9eaefc7e655ebf7e38502a7811e325299e789ee6",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when a green expansion board is visibly clear of the desktop chassis. If a particular card is intended, identify that card explicitly.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 77,
+      "source_capture_boundary_seconds": 77.469708,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 90,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "claim_1",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "observation_2",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "context_for",
+      "target": "event_1",
+      "same_occurrence_link_certified": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 68,
+        "native_frame_index": 1863,
+        "source_pts_seconds": 68.49837,
+        "decoded_scaled_frame_md5": "f37282ea637ca0bd9d04a5ab65069f1d",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0069.jpg",
+        "stream_jpeg_sha256": "5cffb145707cdcb34a25ef05feb78c4ba70602120ee757b70e6bc7f16be6c962"
+      },
+      {
+        "packet_time_seconds": 69,
+        "native_frame_index": 1890,
+        "source_pts_seconds": 69.4911,
+        "decoded_scaled_frame_md5": "eeac00c26ef1427273ec8fb71407549e",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0070.jpg",
+        "stream_jpeg_sha256": "82c60645f9a974e6b300d5b0273d1a6de529c9a46997b09e262372b0f0cff2d2"
+      },
+      {
+        "packet_time_seconds": 70,
+        "native_frame_index": 1917,
+        "source_pts_seconds": 70.48383,
+        "decoded_scaled_frame_md5": "335919634f9112cb644dbecfe9534abd",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0071.jpg",
+        "stream_jpeg_sha256": "f2771f4c37e34e92605928b524aed8d53ba49fa3e636846a4d6b5f2866bc827d"
+      },
+      {
+        "packet_time_seconds": 71,
+        "native_frame_index": 1944,
+        "source_pts_seconds": 71.47656,
+        "decoded_scaled_frame_md5": "a4c422fb595ca1d2a2fb64127a7c3030",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0072.jpg",
+        "stream_jpeg_sha256": "0e994a61c88ddc93f44198cbf25ae9d5fd1d4bdf692245c2a6ab3e77329e944c"
+      },
+      {
+        "packet_time_seconds": 72,
+        "native_frame_index": 1971,
+        "source_pts_seconds": 72.46929,
+        "decoded_scaled_frame_md5": "32035039ad562881009c438b78798c5f",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0073.jpg",
+        "stream_jpeg_sha256": "c35487f9c3daa2fd4061e209f3a32cb58eaabd64cec69953dcdce75e96d787c5"
+      },
+      {
+        "packet_time_seconds": 73,
+        "native_frame_index": 1999,
+        "source_pts_seconds": 73.498788,
+        "decoded_scaled_frame_md5": "35876fac14005fba547bd71761083359",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0074.jpg",
+        "stream_jpeg_sha256": "f7cf36dec98a87f94289a3557f42b3a270abf9d23998a6851129a8d4fb304bc6"
+      },
+      {
+        "packet_time_seconds": 74,
+        "native_frame_index": 2026,
+        "source_pts_seconds": 74.491518,
+        "decoded_scaled_frame_md5": "6dc12f59e38fb6dde1e979b965df0afd",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0075.jpg",
+        "stream_jpeg_sha256": "2bd7eb2e38d8357bbb545311705ec41f535d41cc1cafd8a085dfa06de3fa4fe2"
+      },
+      {
+        "packet_time_seconds": 75,
+        "native_frame_index": 2053,
+        "source_pts_seconds": 75.484248,
+        "decoded_scaled_frame_md5": "54880c5c1e4931c8715ccc2b6d569c83",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0076.jpg",
+        "stream_jpeg_sha256": "cca254a7c6103f066068d986626a9a8ccf8432ef03cfe2624b027d3431b006d0"
+      },
+      {
+        "packet_time_seconds": 76,
+        "native_frame_index": 2080,
+        "source_pts_seconds": 76.476978,
+        "decoded_scaled_frame_md5": "084d9c1aa7189e987c03ca04fddaeea2",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0077.jpg",
+        "stream_jpeg_sha256": "9275ec478c382c917362dc62869930143d586ec6b63da2f3084a38b0330d02a2"
+      },
+      {
+        "packet_time_seconds": 77,
+        "native_frame_index": 2107,
+        "source_pts_seconds": 77.469708,
+        "decoded_scaled_frame_md5": "a8c85f22967108aef17e84af67b0751d",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0078.jpg",
+        "stream_jpeg_sha256": "8c1513c4a9f20629bc1c24aa9eaefc7e655ebf7e38502a7811e325299e789ee6"
+      },
+      {
+        "packet_time_seconds": 78,
+        "native_frame_index": 2135,
+        "source_pts_seconds": 78.499206,
+        "decoded_scaled_frame_md5": "b806fc670e02bb7a695f384a3bdc3a4e",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0079.jpg",
+        "stream_jpeg_sha256": "873786422ff21388786275e2acecc669c8ca4235c5cc0ba3ef4d49717145f21b"
+      },
+      {
+        "packet_time_seconds": 79,
+        "native_frame_index": 2162,
+        "source_pts_seconds": 79.491936,
+        "decoded_scaled_frame_md5": "e361545fc737805bdc39eecc055ffb5e",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0080.jpg",
+        "stream_jpeg_sha256": "f31838a38f2256447efe4bda88207660e00808be256b0190ba95b8ade9f96d03"
+      },
+      {
+        "packet_time_seconds": 80,
+        "native_frame_index": 2189,
+        "source_pts_seconds": 80.484666,
+        "decoded_scaled_frame_md5": "3cef35e49e6e0578cc2da6b7d1040645",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0081.jpg",
+        "stream_jpeg_sha256": "d7feefba817bf1bca66a157e63e5621ce32724065c59b6651c935768f20c2d75"
+      },
+      {
+        "packet_time_seconds": 81,
+        "native_frame_index": 2216,
+        "source_pts_seconds": 81.477396,
+        "decoded_scaled_frame_md5": "f34bebb5dc53824ab68e803dd3e68525",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0082.jpg",
+        "stream_jpeg_sha256": "fd63aabe19f908ab062cc34c20130ff4bf7d0ac9aae5e040c2f439abbe9f3fc1"
+      },
+      {
+        "packet_time_seconds": 82,
+        "native_frame_index": 2243,
+        "source_pts_seconds": 82.470126,
+        "decoded_scaled_frame_md5": "229d747bfe37fcf7416e2e61b7c03fe4",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0083.jpg",
+        "stream_jpeg_sha256": "c373ec3c772faa49192fde0678a4e12a90c5131494d5723ded2ee2234fda748f"
+      },
+      {
+        "packet_time_seconds": 83,
+        "native_frame_index": 2271,
+        "source_pts_seconds": 83.499624,
+        "decoded_scaled_frame_md5": "4398369fc554ba9ac2864b792ce45e00",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0084.jpg",
+        "stream_jpeg_sha256": "298e8acac476979f041cda0bf8354148988c3b804ac452a655464502c531d076"
+      },
+      {
+        "packet_time_seconds": 84,
+        "native_frame_index": 2298,
+        "source_pts_seconds": 84.492354,
+        "decoded_scaled_frame_md5": "fdc88ae7688dc4566f5a71f201c142df",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0085.jpg",
+        "stream_jpeg_sha256": "8761cf7c73399a762574a0501566f5abcead59530441f9f02757ba4f8d4f45ba"
+      },
+      {
+        "packet_time_seconds": 85,
+        "native_frame_index": 2325,
+        "source_pts_seconds": 85.485084,
+        "decoded_scaled_frame_md5": "8bc934fff4aab0ae1b75db9760cd1944",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0086.jpg",
+        "stream_jpeg_sha256": "b963eb04972dbcb36dc4fe95b949a691c0e5ff30dca9badfb013c0cab1b3d2e1"
+      },
+      {
+        "packet_time_seconds": 86,
+        "native_frame_index": 2352,
+        "source_pts_seconds": 86.477814,
+        "decoded_scaled_frame_md5": "e849342706aee3b6812ca7e80029c35f",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0087.jpg",
+        "stream_jpeg_sha256": "3e76a8287b2e44ce710aa9fb41a455d196499fd8c659ca44189dd43acdd301ec"
+      },
+      {
+        "packet_time_seconds": 87,
+        "native_frame_index": 2379,
+        "source_pts_seconds": 87.470544,
+        "decoded_scaled_frame_md5": "7c0973e207b6cfc12a37e2ad758acaf0",
+        "stream_path": "stream_frames/R197-25Oct-GraphicsCard/0088.jpg",
+        "stream_jpeg_sha256": "e40b8f378d4320c0b0e70b69590dca78efc55b0c112591d690dc5b7a2d4b39eb"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when a green expansion board is visibly clear of the desktop chassis. If a particular card is intended, identify that card explicitly.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

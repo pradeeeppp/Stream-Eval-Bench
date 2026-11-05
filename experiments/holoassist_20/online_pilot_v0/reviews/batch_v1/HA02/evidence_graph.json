@@ -1,0 +1,520 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_02",
+  "source_id": "HA02",
+  "original_instruction": "Alert when the printer's central display first becomes illuminated.",
+  "source": {
+    "session_id": "R071-19July-BigPrinter",
+    "sha256": "455ce3d7c3af6e48bbbc703fe58d50448708913fba94a6cc393d07c2c95bd4f5",
+    "video_path": "videos/R071-19July-BigPrinter.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 2248,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          148,
+          296,
+          443,
+          591,
+          739,
+          887,
+          1034,
+          1182,
+          1330,
+          1478,
+          1625,
+          1773,
+          1921,
+          2069,
+          2217,
+          2247
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA02/overview_01.png",
+            "sha256": "609290f74080017cfcd99fdcf2749b907b1a33ecfe32d24a82710e8dce41cb5b"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          236,
+          251,
+          266,
+          281,
+          296,
+          310,
+          325,
+          340,
+          355,
+          369,
+          384,
+          399,
+          414,
+          429,
+          443,
+          458,
+          473,
+          488,
+          502,
+          517,
+          532,
+          547,
+          562
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA02/candidate_01.png",
+            "sha256": "e527fe7280d66b16a5cb37b5ce6c252328436dd723a452b36fdb7afc37df9b9b"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          458,
+          459,
+          460,
+          461,
+          462,
+          463,
+          464,
+          465,
+          466,
+          467,
+          468,
+          469,
+          470,
+          471,
+          472,
+          473
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA02/native1_01.png",
+            "sha256": "9fd6941e62e185343d9106a95f3668e7c360a6b743438d90645bb32fe0a4efa4"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          428,
+          458,
+          487
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA02/delivered_01.png",
+            "sha256": "02d79b0f092126ceb58bfe2934e326b4105c8d5b55ba2c30e439047b70608da8"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Separate central LCD illumination from earlier side-button lights. Display later darkens, which does not erase the illumination event.",
+    "flags": [
+      "first_occurrence_not_exhaustively_verified",
+      "physical_onset_unresolved"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "printer"
+    },
+    {
+      "id": "object_2",
+      "description": "central LCD display"
+    },
+    {
+      "id": "object_3",
+      "description": "side indicator lights"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 460,
+      "source_pts_seconds": 15.564464,
+      "path": "full_review/batch_v1/HA02/anchors/000460.jpg",
+      "description": "Central LCD appears dark immediately before the brightness change.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Central LCD appears dark immediately before the brightness change.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "distractor",
+      "frame_index_zero_based": 443,
+      "source_pts_seconds": 14.989256,
+      "path": "full_review/batch_v1/HA02/anchors/000443.jpg",
+      "description": "Side LEDs are already illuminated while the central display remains dark.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Side LEDs are already illuminated while the central display remains dark.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 461,
+      "source_pts_seconds": 15.5983,
+      "path": "full_review/batch_v1/HA02/anchors/000461.jpg",
+      "description": "A narrow bright band appears on the central LCD; full-display visibility is transitional.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "A narrow bright band appears on the central LCD; full-display visibility is transitional.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 462,
+      "source_pts_seconds": 15.632136,
+      "path": "full_review/batch_v1/HA02/anchors/000462.jpg",
+      "description": "Central LCD is visibly illuminated with interface content.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Central LCD is visibly illuminated with interface content.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_2",
+        "predicate": "visibly_illuminated",
+        "object": null
+      }
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 473,
+      "source_pts_seconds": 16.004329,
+      "path": "full_review/batch_v1/HA02/anchors/000473.jpg",
+      "description": "Central display remains illuminated.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Central display remains illuminated.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_5",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 1182,
+      "source_pts_seconds": 39.993906,
+      "path": "full_review/batch_v1/HA02/anchors/001182.jpg",
+      "description": "Central display appears dark again in the coarse overview.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_5",
+      "type": "state_claim",
+      "text": "Central display appears dark again in the coarse overview.",
+      "evidence_ids": [
+        "observation_5"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA02:reviewed_occurrence_1",
+      "event_class": "central_display_illumination",
+      "positive_evidence_ids": [
+        "observation_3"
+      ],
+      "entity_ids": [
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 15.632136,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 16,
+      "native_frame_index": 487,
+      "source_pts_seconds": 16.478031,
+      "decoded_scaled_frame_md5": "856f949f96e634e004baf423e4a154fa",
+      "stream_path": "stream_frames/R071-19July-BigPrinter/0017.jpg",
+      "stream_jpeg_sha256": "a553283b4a4050954c05c7d6d53f051a1d7e6d926f9c6aaf0df26143c3c2b174",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the large central LCD visibly illuminates; side-button or status LEDs alone do not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 16,
+      "source_capture_boundary_seconds": 16.478031,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 21,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "insufficient_alone_to_trigger",
+      "target": "alert_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "observation_2",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "claim_3",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_5",
+      "relation": "supports",
+      "target": "claim_5"
+    },
+    {
+      "source": "claim_5",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 8,
+        "native_frame_index": 251,
+        "source_pts_seconds": 8.492784,
+        "decoded_scaled_frame_md5": "77c70bc3339fde62a7e6db64500a6136",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0009.jpg",
+        "stream_jpeg_sha256": "949af6497db417d4445fa1a322a836641ca50617a3cea52179f35b5a23200f5f"
+      },
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 280,
+        "source_pts_seconds": 9.474022,
+        "decoded_scaled_frame_md5": "15e4ca554d014869cc886b4d938bbec4",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0010.jpg",
+        "stream_jpeg_sha256": "636d5fc96476969e72b5392085bbe9f87528d034063bb5d6d1a2c4709b0bab93"
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 310,
+        "source_pts_seconds": 10.489095,
+        "decoded_scaled_frame_md5": "81504e5ade1aa9d21f04cbbdb70f8438",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0011.jpg",
+        "stream_jpeg_sha256": "b34d73e9e524d3178443d316fcbbf849c5121ae6ec6bf67b5062539dc9a93425"
+      },
+      {
+        "packet_time_seconds": 11,
+        "native_frame_index": 339,
+        "source_pts_seconds": 11.470333,
+        "decoded_scaled_frame_md5": "67f3c7ea496f01f5af1d2fcee3d75f15",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0012.jpg",
+        "stream_jpeg_sha256": "413c1ac2e7b9d659acdd085da7f98e9bb8412560024cef0523483a76ada3d3da"
+      },
+      {
+        "packet_time_seconds": 12,
+        "native_frame_index": 369,
+        "source_pts_seconds": 12.485407,
+        "decoded_scaled_frame_md5": "c3a0805d9beef52f5b45ab3b23ac0fa8",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0013.jpg",
+        "stream_jpeg_sha256": "412f827e542a8c07245e85db8dedc7c9acee9a9d71e09b55412a1af8952d1715"
+      },
+      {
+        "packet_time_seconds": 13,
+        "native_frame_index": 398,
+        "source_pts_seconds": 13.466645,
+        "decoded_scaled_frame_md5": "163f1a6963679360668f9fd4a9a6f2b6",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0014.jpg",
+        "stream_jpeg_sha256": "f4d41821849a2a1eaa28a3c8db364ac169789b02f6b28247c74d7b72cf096676"
+      },
+      {
+        "packet_time_seconds": 14,
+        "native_frame_index": 428,
+        "source_pts_seconds": 14.481719,
+        "decoded_scaled_frame_md5": "28cb4d624cfa623b49b53c28bb21e39f",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0015.jpg",
+        "stream_jpeg_sha256": "2a4e0fbb62bf43fceeebc02c53d5a14d8d0999b51af4d19a6221dc54372f1414"
+      },
+      {
+        "packet_time_seconds": 15,
+        "native_frame_index": 458,
+        "source_pts_seconds": 15.496793,
+        "decoded_scaled_frame_md5": "c30bf53164d3a22751525aa303825929",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0016.jpg",
+        "stream_jpeg_sha256": "dc584f221a36f7df32b1e37211d09267972152c0fb247b22ad287fb16e0efcab"
+      },
+      {
+        "packet_time_seconds": 16,
+        "native_frame_index": 487,
+        "source_pts_seconds": 16.478031,
+        "decoded_scaled_frame_md5": "856f949f96e634e004baf423e4a154fa",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0017.jpg",
+        "stream_jpeg_sha256": "a553283b4a4050954c05c7d6d53f051a1d7e6d926f9c6aaf0df26143c3c2b174"
+      },
+      {
+        "packet_time_seconds": 17,
+        "native_frame_index": 517,
+        "source_pts_seconds": 17.493104,
+        "decoded_scaled_frame_md5": "50452181cd308c1c8000d760b125bcf3",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0018.jpg",
+        "stream_jpeg_sha256": "a219de4b2005e629614495df8592fbdbd67299e2ee1370d0f563d91893127fd0"
+      },
+      {
+        "packet_time_seconds": 18,
+        "native_frame_index": 546,
+        "source_pts_seconds": 18.474342,
+        "decoded_scaled_frame_md5": "b01cc9d995a5d71017ee6d2822ba48e7",
+        "stream_path": "stream_frames/R071-19July-BigPrinter/0019.jpg",
+        "stream_jpeg_sha256": "a6d8819711e4ee1bee2d3539f04591a9ca120db1a28c2cdb99facb50e667d4bd"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the large central LCD visibly illuminates; side-button or status LEDs alone do not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

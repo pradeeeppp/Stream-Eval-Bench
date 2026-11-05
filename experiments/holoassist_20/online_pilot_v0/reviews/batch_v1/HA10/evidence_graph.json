@@ -1,0 +1,538 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_10",
+  "source_id": "HA10",
+  "original_instruction": "Alert when the upper mesh basket is tilted away from the upright cart frame.",
+  "source": {
+    "session_id": "z013-june-16-22-rashult_disassemble",
+    "sha256": "aad9df49f73e10d54a7bd5a4d3ae1a348a102b2c1bfe15fc6efc6159d503754e",
+    "video_path": "videos/z013-june-16-22-rashult_disassemble.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 9911,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          300,
+          450,
+          600,
+          750,
+          900,
+          1050,
+          1200,
+          1350,
+          1500,
+          1650,
+          1800,
+          1950,
+          2100,
+          2250,
+          2400,
+          2550,
+          2700,
+          2850,
+          3000,
+          3150,
+          3300,
+          3450,
+          3600,
+          3750,
+          3900,
+          4050,
+          4200,
+          4350,
+          4500,
+          4650,
+          4800,
+          4950,
+          5100,
+          5250,
+          5400,
+          5550,
+          5700,
+          5850,
+          6000,
+          6150,
+          6300,
+          6450,
+          6600,
+          6750,
+          6900,
+          7050,
+          7200,
+          7350,
+          7500,
+          7650,
+          7800,
+          7950,
+          8100,
+          8250,
+          8400,
+          8550,
+          8700,
+          8850,
+          9000,
+          9150,
+          9300,
+          9450,
+          9600,
+          9750,
+          9900,
+          9910
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA10/overview_01.png",
+            "sha256": "02418cb3dd96526147fc4d924e1ab316e1b6f08431ae8a02d12ae9894943ec60"
+          },
+          {
+            "path": "full_review/batch_v1/HA10/overview_02.png",
+            "sha256": "e6e3bc9ceec213d5bbd33556e428659b8bcd52edb12ae7369d5f68d59ed0b781"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          540,
+          555,
+          570,
+          585,
+          600,
+          615,
+          630,
+          645,
+          660,
+          675,
+          690,
+          705,
+          720,
+          735,
+          750,
+          765,
+          780
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA10/candidate_01.png",
+            "sha256": "cd14f17d3c00907131895fe6f424b066a2d0480a37760dff46fb401c7a36b3f2"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          675,
+          676,
+          677,
+          678,
+          679,
+          680,
+          681,
+          682,
+          683,
+          684,
+          685,
+          686,
+          687,
+          688,
+          689,
+          690
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA10/native1_01.png",
+            "sha256": "ee74ab9ca7d1fc7ecf93539386f44794181f9ed7138543374336637d02aeea71"
+          }
+        ]
+      },
+      {
+        "name": "extra",
+        "native_indices": [
+          630,
+          660,
+          675,
+          690,
+          705,
+          720,
+          4200
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 9,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA10/extra_01.png",
+            "sha256": "e5e7d7cc18be1f228f679aa87cbb6a153a22b1013eb01a67e1cf5d667f76de8a"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          674,
+          704,
+          734
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA10/delivered_01.png",
+            "sha256": "75782759016d586ad2d6b3b26484d55df53e35fc477ada7943ba330a87ea6408"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Legacy target segment primarily shows reorientation of the whole cart. Tilting away from an upright frame is not supported when the frame tilts too.",
+    "flags": [
+      "target_relative_motion_unsupported",
+      "whole_object_vs_part_motion",
+      "task_rewrite_required"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "entire wheeled cart"
+    },
+    {
+      "id": "object_2",
+      "description": "upper mesh basket"
+    },
+    {
+      "id": "object_3",
+      "description": "cart frame"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 630,
+      "source_pts_seconds": 21.000981,
+      "path": "full_review/batch_v1/HA10/anchors/000630.jpg",
+      "description": "Cart upright; upper basket seated within the frame.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Cart upright; upper basket seated within the frame.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 675,
+      "source_pts_seconds": 22.501051,
+      "path": "full_review/batch_v1/HA10/anchors/000675.jpg",
+      "description": "Performer begins tilting the cart.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Performer begins tilting the cart.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 690,
+      "source_pts_seconds": 23.001075,
+      "path": "full_review/batch_v1/HA10/anchors/000690.jpg",
+      "description": "Cart and baskets tilt together; independent upper-basket motion relative to the frame is not established.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Cart and baskets tilt together; independent upper-basket motion relative to the frame is not established.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "tilted",
+        "object": null
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 720,
+      "source_pts_seconds": 24.001121,
+      "path": "full_review/batch_v1/HA10/anchors/000720.jpg",
+      "description": "Cart is laid toward its side with the frame and basket still aligned.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Cart is laid toward its side with the frame and basket still aligned.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "context",
+      "frame_index_zero_based": 4200,
+      "source_pts_seconds": 140.006541,
+      "path": "full_review/batch_v1/HA10/anchors/004200.jpg",
+      "description": "Basket separation occurs much later during disassembly in the overview.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Basket separation occurs much later during disassembly in the overview.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA10:reviewed_occurrence_1",
+      "event_class": "whole_cart_reorientation",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 23.001075,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "requires_adjudication"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 23,
+      "native_frame_index": 704,
+      "source_pts_seconds": 23.467763,
+      "decoded_scaled_frame_md5": "9a11489f16e07d5742b8bc0bf200be7b",
+      "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0024.jpg",
+      "stream_jpeg_sha256": "56313375073e5e151c430038b9513806539d48b343b4a44b8e03793257f89aac",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "blocked_on_task_definition",
+      "policy": "Either target whole-cart tipping, or annotate the later basket/frame separation separately. Do not use the current relative-basket wording with this window.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 23,
+      "source_capture_boundary_seconds": 23.467763,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 28,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "context_for",
+      "target": "event_1",
+      "same_occurrence_link_certified": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 18,
+        "native_frame_index": 554,
+        "source_pts_seconds": 18.467529,
+        "decoded_scaled_frame_md5": "90120febc51692962abb271930174bb3",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0019.jpg",
+        "stream_jpeg_sha256": "a6a97f64ef6f94a1a68c0a1b86e91d2a58829284e42203d6aece8c5c2a153146"
+      },
+      {
+        "packet_time_seconds": 19,
+        "native_frame_index": 584,
+        "source_pts_seconds": 19.467576,
+        "decoded_scaled_frame_md5": "dc5be0327324e67e6221ecbd14895985",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0020.jpg",
+        "stream_jpeg_sha256": "57dfeebcf04d2e1b235d09e385d0a93ea725eb1a85490f213e37ea70ebbdef3a"
+      },
+      {
+        "packet_time_seconds": 20,
+        "native_frame_index": 614,
+        "source_pts_seconds": 20.467623,
+        "decoded_scaled_frame_md5": "6a4da654f232c6b02aa327816716e4fb",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0021.jpg",
+        "stream_jpeg_sha256": "dbad0e42f351b96a9233d69098462b73859fc1486c0772f2b4543761103cb0f8"
+      },
+      {
+        "packet_time_seconds": 21,
+        "native_frame_index": 644,
+        "source_pts_seconds": 21.46767,
+        "decoded_scaled_frame_md5": "32ec39795b5a57bb16778554394f482f",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0022.jpg",
+        "stream_jpeg_sha256": "7f902f0595aab4624fd14c8ebf0bdd6eedc9a8baf4268e7d1dbf72cd723364ec"
+      },
+      {
+        "packet_time_seconds": 22,
+        "native_frame_index": 674,
+        "source_pts_seconds": 22.467716,
+        "decoded_scaled_frame_md5": "e2e71dd08fd4e91370742a74a0614344",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0023.jpg",
+        "stream_jpeg_sha256": "cfe0047a354a0af00cf96145c5314808e106e4b92fcb2cbbb2ccd01c851d8197"
+      },
+      {
+        "packet_time_seconds": 23,
+        "native_frame_index": 704,
+        "source_pts_seconds": 23.467763,
+        "decoded_scaled_frame_md5": "9a11489f16e07d5742b8bc0bf200be7b",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0024.jpg",
+        "stream_jpeg_sha256": "56313375073e5e151c430038b9513806539d48b343b4a44b8e03793257f89aac"
+      },
+      {
+        "packet_time_seconds": 24,
+        "native_frame_index": 734,
+        "source_pts_seconds": 24.46781,
+        "decoded_scaled_frame_md5": "43c8973b7dc0d5cebd4059030192e7a7",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0025.jpg",
+        "stream_jpeg_sha256": "7950956e1e39d2cc316670109212746637d300ba6c3dd7c69b4f5ec46f9cb7fd"
+      },
+      {
+        "packet_time_seconds": 25,
+        "native_frame_index": 764,
+        "source_pts_seconds": 25.467856,
+        "decoded_scaled_frame_md5": "e8ad111f2c7b214b15e65989192f6c96",
+        "stream_path": "stream_frames/z013-june-16-22-rashult_disassemble/0026.jpg",
+        "stream_jpeg_sha256": "6fc30431831db9ef679004c53ce9fe12de39257b96d2c0c5183861a71f29330e"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Either target whole-cart tipping, or annotate the later basket/frame separation separately. Do not use the current relative-basket wording with this window.",
+    "qualification": "requires_adjudication",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

@@ -1,0 +1,562 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_09",
+  "source_id": "HA09",
+  "original_instruction": "Alert when the round perforated panel is turned over to expose its underside.",
+  "source": {
+    "session_id": "z009-june-15-22-marius_assemble",
+    "sha256": "e3cb4649c5f23b09ad551a701d0ce1d4f4220358465a44ea50a4397bb872f30f",
+    "video_path": "videos/z009-june-15-22-marius_assemble.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 8614,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          299,
+          449,
+          598,
+          748,
+          897,
+          1047,
+          1196,
+          1346,
+          1495,
+          1645,
+          1794,
+          1944,
+          2093,
+          2243,
+          2392,
+          2542,
+          2691,
+          2841,
+          2990,
+          3140,
+          3289,
+          3439,
+          3589,
+          3738,
+          3888,
+          4037,
+          4187,
+          4336,
+          4486,
+          4635,
+          4785,
+          4934,
+          5084,
+          5233,
+          5383,
+          5532,
+          5682,
+          5831,
+          5981,
+          6130,
+          6280,
+          6429,
+          6579,
+          6728,
+          6878,
+          7028,
+          7177,
+          7327,
+          7476,
+          7626,
+          7775,
+          7925,
+          8074,
+          8224,
+          8373,
+          8523,
+          8613
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA09/overview_01.png",
+            "sha256": "e9c5860871241e9118626f43ddb68b06c0bf82ff176eb1afd52fbbcb51dd3c09"
+          },
+          {
+            "path": "full_review/batch_v1/HA09/overview_02.png",
+            "sha256": "e976a2e7d58cc1bcb24c456ec9385f80884b37ac8064cb5d264bbfb2198e098c"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          269,
+          284,
+          299,
+          314,
+          329,
+          344,
+          359,
+          374,
+          389,
+          404,
+          419,
+          434,
+          449,
+          464,
+          478,
+          493,
+          508
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA09/candidate_01.png",
+            "sha256": "7437f9a25e1af6b316bf4c0a494f83336855be9ae8b93ec384cd28a1a6df8ca5"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          374,
+          375,
+          376,
+          377,
+          378,
+          379,
+          380,
+          381,
+          382,
+          383,
+          384,
+          385,
+          386,
+          387,
+          388,
+          389,
+          390,
+          391,
+          392,
+          393,
+          394,
+          395,
+          396,
+          397,
+          398,
+          399,
+          400,
+          401,
+          402,
+          403,
+          404
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 35,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA09/native1_01.png",
+            "sha256": "4ef553ac562d43a2dbebf7e14fca7ca2c1f6c962977afe112f55ec75f9eb5113"
+          }
+        ]
+      },
+      {
+        "name": "extra",
+        "native_indices": [
+          150,
+          299,
+          359,
+          374,
+          389,
+          404,
+          419,
+          464,
+          478
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 9,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA09/extra_01.png",
+            "sha256": "0ba19efe7bc1bc5fd139d4b97eed38ca4f972181e0ba115bba2952ff40b94007"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          403,
+          433,
+          463
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA09/delivered_01.png",
+            "sha256": "1dfac5d88061f17eaa9af07da97d18f9303bbff9490c99fb7036670bd6a1ab53"
+          }
+        ]
+      },
+      {
+        "name": "anchor_check",
+        "native_indices": [
+          479
+        ],
+        "display_width": 640,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA09/anchor_check_01.png",
+            "sha256": "c1d199a192df003dfe950a25d9c95b26090a9e41678aa2d6677db072eacec763"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "The ringed face shown by the legacy positive is already visible earlier. The clip establishes lifting/rotation, but underside identity and a newly revealed underside require adjudication.",
+    "flags": [
+      "target_face_identity_unverified",
+      "initial_face_already_visible",
+      "task_definition_ambiguous"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "round perforated panel"
+    },
+    {
+      "id": "object_2",
+      "description": "ringed panel face"
+    },
+    {
+      "id": "object_3",
+      "description": "opposite panel face"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 150,
+      "source_pts_seconds": 5.015978,
+      "path": "full_review/batch_v1/HA09/anchors/000150.jpg",
+      "description": "Ringed face of the panel is already visible on the work surface.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Ringed face of the panel is already visible on the work surface.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 359,
+      "source_pts_seconds": 12.004907,
+      "path": "full_review/batch_v1/HA09/anchors/000359.jpg",
+      "description": "Hand grips the panel before lifting and rotating it.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Hand grips the panel before lifting and rotating it.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "context",
+      "frame_index_zero_based": 374,
+      "source_pts_seconds": 12.506505,
+      "path": "full_review/batch_v1/HA09/anchors/000374.jpg",
+      "description": "Panel lifted and tilted; visible face changes with pose.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Panel lifted and tilted; visible face changes with pose.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 419,
+      "source_pts_seconds": 14.011298,
+      "path": "full_review/batch_v1/HA09/anchors/000419.jpg",
+      "description": "Ringed face is visible while the panel is held up; this does not independently identify an underside.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Ringed face is visible while the panel is held up; this does not independently identify an underside.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "ringed_face_visible",
+        "object": null
+      }
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 479,
+      "source_pts_seconds": 16.017689,
+      "path": "full_review/batch_v1/HA09/anchors/000479.jpg",
+      "description": "Panel subsequently rotates to show its flatter opposite face.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Panel subsequently rotates to show its flatter opposite face.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA09:reviewed_occurrence_1",
+      "event_class": "panel_orientation_change",
+      "positive_evidence_ids": [
+        "observation_3"
+      ],
+      "entity_ids": [
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 14.011298,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "requires_adjudication"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 14,
+      "native_frame_index": 433,
+      "source_pts_seconds": 14.479456,
+      "decoded_scaled_frame_md5": "a94895477978c724a5ba10ba9da9c825",
+      "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0015.jpg",
+      "stream_jpeg_sha256": "2186791a786babfc64ed1b74a715025ab28c5befa7b82e33725eb24dedeaab61",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "blocked_on_task_definition",
+      "policy": "Define the target face using an explicit visual description or reference. Do not equate any panel lift/rotation with a verified underside reveal.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 14,
+      "source_capture_boundary_seconds": 14.479456,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 19,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "observation_2",
+      "relation": "context_for",
+      "target": "event_1",
+      "same_occurrence_link_certified": false
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "claim_3",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "claim_4",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 284,
+        "source_pts_seconds": 9.496918,
+        "decoded_scaled_frame_md5": "29debdef3268c67d43deb5e9fd27b870",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0010.jpg",
+        "stream_jpeg_sha256": "be3302f4fd55b3b8600195d6f76535437e0683d022c166a6e6d429e9d0b5070d"
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 313,
+        "source_pts_seconds": 10.466674,
+        "decoded_scaled_frame_md5": "dd045455e863994927bd8af5ce20df9c",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0011.jpg",
+        "stream_jpeg_sha256": "62c57ed3b4b1c7aa0ffba7c50178011f5d09ec32ce34e173336e9d67e507d594"
+      },
+      {
+        "packet_time_seconds": 11,
+        "native_frame_index": 343,
+        "source_pts_seconds": 11.469869,
+        "decoded_scaled_frame_md5": "b2cf5f80673c83b544acc1c623c3d08d",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0012.jpg",
+        "stream_jpeg_sha256": "86ab7dd1a4677cc66cf991b485a5c49137310c6aa6225250400179e52b24e78d"
+      },
+      {
+        "packet_time_seconds": 12,
+        "native_frame_index": 373,
+        "source_pts_seconds": 12.473065,
+        "decoded_scaled_frame_md5": "11510822b5843f6bee5517bc43c8b34d",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0013.jpg",
+        "stream_jpeg_sha256": "9869d2ee62eca48f91271460ef69bc1a0956b24cde839804e9d15f61b89a34db"
+      },
+      {
+        "packet_time_seconds": 13,
+        "native_frame_index": 403,
+        "source_pts_seconds": 13.47626,
+        "decoded_scaled_frame_md5": "d0b925231270d7f8be9f0f4b499b3642",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0014.jpg",
+        "stream_jpeg_sha256": "641e5fe2c8af30df36bc7f301c6aae4f72e8753cc8aa5fcb0ee69f638fb5ab59"
+      },
+      {
+        "packet_time_seconds": 14,
+        "native_frame_index": 433,
+        "source_pts_seconds": 14.479456,
+        "decoded_scaled_frame_md5": "a94895477978c724a5ba10ba9da9c825",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0015.jpg",
+        "stream_jpeg_sha256": "2186791a786babfc64ed1b74a715025ab28c5befa7b82e33725eb24dedeaab61"
+      },
+      {
+        "packet_time_seconds": 15,
+        "native_frame_index": 463,
+        "source_pts_seconds": 15.482652,
+        "decoded_scaled_frame_md5": "5f9e01203be07d19a109c5f2b1d38a6e",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0016.jpg",
+        "stream_jpeg_sha256": "e9cdfc01f733dfa9f4473c0796bfcfc14ac9dad08c2a89ce3d103ae75f5fa538"
+      },
+      {
+        "packet_time_seconds": 16,
+        "native_frame_index": 493,
+        "source_pts_seconds": 16.485847,
+        "decoded_scaled_frame_md5": "0be9758d546116136b465d46cbd8e47e",
+        "stream_path": "stream_frames/z009-june-15-22-marius_assemble/0017.jpg",
+        "stream_jpeg_sha256": "4bbd492526f7bb2d4096ccc66c11f9a9076c329df9303e74bc722b91af1fddf4"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Define the target face using an explicit visual description or reference. Do not equate any panel lift/rotation with a verified underside reveal.",
+    "qualification": "requires_adjudication",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

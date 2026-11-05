@@ -1,0 +1,3838 @@
+{
+  "status": "complete",
+  "totals": {
+    "n_source_videos": 20,
+    "n_primary_qualified": 17,
+    "n_clean_revision_opportunities": 14,
+    "n_completed_primary": 17,
+    "n_completed_diagnostic": 3,
+    "n_actual_benchmark_responses": 100
+  },
+  "metrics": {
+    "uncertainty_preserved_before_earlier_evidence": {
+      "successes": 17,
+      "denominator": 17,
+      "rate": 1.0
+    },
+    "unsupported_earlier_commitment": {
+      "successes": 0,
+      "denominator": 17,
+      "rate": 0.0
+    },
+    "historical_final_factual_correct": {
+      "successes": 13,
+      "denominator": 14,
+      "rate": 0.9285714285714286
+    },
+    "historical_epistemic_correct": {
+      "successes": 13,
+      "denominator": 17,
+      "rate": 0.7647058823529411
+    },
+    "clean_historical_update_success": {
+      "successes": 13,
+      "denominator": 14,
+      "rate": 0.9285714285714286
+    },
+    "recent_fact_preserved": {
+      "successes": 14,
+      "denominator": 14,
+      "rate": 1.0
+    },
+    "past_fact_preserved_chronological": {
+      "successes": 0,
+      "denominator": 1,
+      "rate": 0.0
+    },
+    "joint_final_perfect": {
+      "successes": 4,
+      "denominator": 17,
+      "rate": 0.23529411764705882
+    },
+    "chronological_final_perfect": {
+      "successes": 11,
+      "denominator": 17,
+      "rate": 0.6470588235294118
+    },
+    "delayed_final_perfect": {
+      "successes": 12,
+      "denominator": 17,
+      "rate": 0.7058823529411765
+    },
+    "joint_correct_both_sequential_fail": {
+      "successes": 2,
+      "denominator": 17,
+      "rate": 0.11764705882352941
+    },
+    "joint_and_chronological_correct_delayed_fails": {
+      "successes": 1,
+      "denominator": 17,
+      "rate": 0.058823529411764705
+    }
+  },
+  "condition_totals": {
+    "joint": {
+      "correct_state_fields": 21,
+      "state_fields": 34,
+      "correct_known_fields": 18,
+      "known_fields": 31,
+      "correct_known_value_and_packet": 16,
+      "both_fields_correct_cases": 4,
+      "cases": 17
+    },
+    "chronological_0": {
+      "correct_state_fields": 7,
+      "state_fields": 34,
+      "correct_known_fields": 3,
+      "known_fields": 28,
+      "correct_known_value_and_packet": 0,
+      "both_fields_correct_cases": 2,
+      "cases": 17
+    },
+    "chronological_1": {
+      "correct_state_fields": 24,
+      "state_fields": 34,
+      "correct_known_fields": 23,
+      "known_fields": 31,
+      "correct_known_value_and_packet": 12,
+      "both_fields_correct_cases": 11,
+      "cases": 17
+    },
+    "delayed_0": {
+      "correct_state_fields": 31,
+      "state_fields": 34,
+      "correct_known_fields": 14,
+      "known_fields": 17,
+      "correct_known_value_and_packet": 14,
+      "both_fields_correct_cases": 14,
+      "cases": 17
+    },
+    "delayed_1": {
+      "correct_state_fields": 27,
+      "state_fields": 34,
+      "correct_known_fields": 27,
+      "known_fields": 31,
+      "correct_known_value_and_packet": 0,
+      "both_fields_correct_cases": 12,
+      "cases": 17
+    }
+  },
+  "response_format": {
+    "scored_responses": 100,
+    "exact_json": 100,
+    "valid_four_key_schema": 100
+  },
+  "descriptive_checks": {
+    "chronological_first_same_capture_time_disagreement": {
+      "successes": 14,
+      "denominator": 17,
+      "rate": 0.8235294117647058
+    },
+    "delayed_final_latest_cites_older_packet_A": {
+      "successes": 14,
+      "denominator": 17,
+      "rate": 0.8235294117647058
+    },
+    "status": "Descriptive checks added during result inspection; qualified cases only."
+  },
+  "analytical_no_pixel_schedule_baseline": {
+    "joint": {
+      "prediction": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "correct_fields": 31,
+      "fields": 34,
+      "both_correct": 14,
+      "cases": 17
+    },
+    "chronological_0": {
+      "prediction": {
+        "earlier": "no",
+        "latest": "no"
+      },
+      "correct_fields": 28,
+      "fields": 34,
+      "both_correct": 14,
+      "cases": 17
+    },
+    "chronological_1": {
+      "prediction": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "correct_fields": 31,
+      "fields": 34,
+      "both_correct": 14,
+      "cases": 17
+    },
+    "delayed_0": {
+      "prediction": {
+        "earlier": "unknown",
+        "latest": "yes"
+      },
+      "correct_fields": 34,
+      "fields": 34,
+      "both_correct": 17,
+      "cases": 17
+    },
+    "delayed_1": {
+      "prediction": {
+        "earlier": "no",
+        "latest": "yes"
+      },
+      "correct_fields": 31,
+      "fields": 34,
+      "both_correct": 14,
+      "cases": 17
+    }
+  },
+  "case_groups": {
+    "joint_correct_both_sequential_fail": [
+      "HB01",
+      "HB06"
+    ],
+    "joint_and_chronological_correct_delayed_fails": [
+      "HA08"
+    ],
+    "clean_historical_update_success": [
+      "HA01",
+      "HA02",
+      "HA03",
+      "HA04",
+      "HA07",
+      "HB02",
+      "HB03",
+      "HB04",
+      "HB05",
+      "HB07",
+      "HB08",
+      "HB09",
+      "HB10"
+    ]
+  },
+  "per_video": [
+    {
+      "case_id": "HA01",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "yes",
+              "latest": "no",
+              "earlier_evidence": [
+                "A"
+              ],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": false,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HA02",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": false,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HA03",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HA04",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HA05",
+      "primary_qualified": false,
+      "clean_revision_opportunity": false,
+      "episode": {
+        "status": "diagnostic_only",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "yes",
+              "latest": "no",
+              "earlier_evidence": [
+                "A"
+              ],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          }
+        },
+        "metrics": null
+      },
+      "research_question_answers": [
+        "The original target definition is unresolved, so a correct historical belief and its revision cannot be scored. Raw outputs are retained for inspection.",
+        "Evidence citations can be inspected, but correctness of event association requires resolving the target definition first.",
+        "Do not label model certainty or abstention unjustified from unresolved ground truth. This case is excluded from primary accuracy and revision rates."
+      ]
+    },
+    {
+      "case_id": "HA06",
+      "primary_qualified": true,
+      "clean_revision_opportunity": false,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "unknown"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": null,
+          "historical_epistemic_correct": false,
+          "clean_historical_update_success": null,
+          "recent_preservation_applicable": false,
+          "recent_fact_preserved": null,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": false,
+          "delayed_final_perfect": false,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "The earlier relation is unresolved even in the checked prior packet. This is an uncertainty-maintenance case, not a clean unknown-to-known correction opportunity. The final earlier answer is no; expected unknown under the provisional evidence labels.",
+        "Final delayed evidence lists: earlier=[], latest=[]. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The later fact was not initially correct, so conditional preservation is not applicable. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HA07",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HA08",
+      "primary_qualified": true,
+      "clean_revision_opportunity": false,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "unknown"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": null,
+          "historical_epistemic_correct": false,
+          "clean_historical_update_success": null,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": true,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": false,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": true
+        }
+      },
+      "research_question_answers": [
+        "The earlier relation is unresolved even in the checked prior packet. This is an uncertainty-maintenance case, not a clean unknown-to-known correction opportunity. The final earlier answer is no; expected unknown under the provisional evidence labels.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HA09",
+      "primary_qualified": false,
+      "clean_revision_opportunity": false,
+      "episode": {
+        "status": "diagnostic_only",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          }
+        },
+        "metrics": null
+      },
+      "research_question_answers": [
+        "The original target definition is unresolved, so a correct historical belief and its revision cannot be scored. Raw outputs are retained for inspection.",
+        "Evidence citations can be inspected, but correctness of event association requires resolving the target definition first.",
+        "Do not label model certainty or abstention unjustified from unresolved ground truth. This case is excluded from primary accuracy and revision rates."
+      ]
+    },
+    {
+      "case_id": "HA10",
+      "primary_qualified": false,
+      "clean_revision_opportunity": false,
+      "episode": {
+        "status": "diagnostic_only",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "yes",
+              "latest": "no",
+              "earlier_evidence": [
+                "A"
+              ],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": null,
+            "state_accuracy": null,
+            "state_perfect": null,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null
+          }
+        },
+        "metrics": null
+      },
+      "research_question_answers": [
+        "The original target definition is unresolved, so a correct historical belief and its revision cannot be scored. Raw outputs are retained for inspection.",
+        "Evidence citations can be inspected, but correctness of event association requires resolving the target definition first.",
+        "Do not label model certainty or abstention unjustified from unresolved ground truth. This case is excluded from primary accuracy and revision rates."
+      ]
+    },
+    {
+      "case_id": "HB01",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": false,
+          "historical_epistemic_correct": false,
+          "clean_historical_update_success": false,
+          "recent_preservation_applicable": false,
+          "recent_fact_preserved": null,
+          "historical_preservation_applicable": true,
+          "past_fact_preserved_chronological": false,
+          "joint_final_perfect": true,
+          "chronological_final_perfect": false,
+          "delayed_final_perfect": false,
+          "joint_correct_both_sequential_fail": true,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "The historical field did not complete the required unknown-to-correct transition: unknown -> unknown; expected final no.",
+        "Final delayed evidence lists: earlier=[], latest=[]. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The later fact was not initially correct, so conditional preservation is not applicable. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB02",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB03",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": false,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB04",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB05",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB06",
+      "primary_qualified": true,
+      "clean_revision_opportunity": false,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "unknown"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": null,
+            "known_fields": 0,
+            "known_binding_accuracy": null,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "yes",
+              "latest": "no",
+              "earlier_evidence": [
+                "A"
+              ],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": null,
+          "historical_epistemic_correct": false,
+          "clean_historical_update_success": null,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": true,
+          "chronological_final_perfect": false,
+          "delayed_final_perfect": false,
+          "joint_correct_both_sequential_fail": true,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "The earlier relation is unresolved even in the checked prior packet. This is an uncertainty-maintenance case, not a clean unknown-to-known correction opportunity. The final earlier answer is no; expected unknown under the provisional evidence labels.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB07",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": true,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB08",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "unknown",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "no",
+              "earlier_evidence": [],
+              "latest_evidence": []
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": false,
+          "recent_fact_preserved": null,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": false,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=[]. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The later fact was not initially correct, so conditional preservation is not applicable. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB09",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    },
+    {
+      "case_id": "HB10",
+      "primary_qualified": true,
+      "clean_revision_opportunity": true,
+      "episode": {
+        "status": "complete",
+        "steps": {
+          "joint": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 0.5,
+            "state_perfect": false,
+            "known_state_accuracy": 0.5,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": false,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "no"
+            },
+            "state_accuracy": 0.0,
+            "state_perfect": false,
+            "known_state_accuracy": 0.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": false,
+              "latest": false
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "chronological_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.5,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_0": {
+            "parsed": {
+              "earlier": "unknown",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "B"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "unknown",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 1,
+            "known_binding_accuracy": 1.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": true
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          },
+          "delayed_1": {
+            "parsed": {
+              "earlier": "no",
+              "latest": "yes",
+              "earlier_evidence": [],
+              "latest_evidence": [
+                "A"
+              ]
+            },
+            "exact_json": true,
+            "schema_valid": true,
+            "expected_state": {
+              "earlier": "no",
+              "latest": "yes"
+            },
+            "state_accuracy": 1.0,
+            "state_perfect": true,
+            "known_state_accuracy": 1.0,
+            "known_fields": 2,
+            "known_binding_accuracy": 0.0,
+            "field_matches": {
+              "earlier": true,
+              "latest": true
+            },
+            "evidence_targeting": {
+              "earlier": true,
+              "latest": false
+            },
+            "future_packet_citation": {
+              "earlier": false,
+              "latest": false
+            }
+          }
+        },
+        "metrics": {
+          "uncertainty_preserved_before_earlier_evidence": true,
+          "unsupported_earlier_commitment": false,
+          "historical_final_factual_correct": true,
+          "historical_epistemic_correct": true,
+          "clean_historical_update_success": true,
+          "recent_preservation_applicable": true,
+          "recent_fact_preserved": true,
+          "historical_preservation_applicable": false,
+          "past_fact_preserved_chronological": null,
+          "joint_final_perfect": false,
+          "chronological_final_perfect": true,
+          "delayed_final_perfect": true,
+          "joint_correct_both_sequential_fail": false,
+          "joint_and_chronological_correct_delayed_fails": false
+        }
+      },
+      "research_question_answers": [
+        "An observable historical value correction occurred: unknown -> no. This concerns the model output; it does not establish an internal mechanism.",
+        "Final delayed evidence lists: earlier=[], latest=['A']. Known-target value-plus-citation accuracy is 0.0. Earlier evidence must target A and later evidence B. Incorrect citations or state values are observable output errors; they do not distinguish internal forgetting, overwriting and misbinding. Packet identities/times are supplied, so natural same-event discovery is not tested.",
+        "Before A arrives, the historical field is unknown: appropriate unknown. The already-correct later fact remained correct after the older packet arrived. This measures expressed answers and abstention, not calibrated confidence."
+      ]
+    }
+  ]
+}

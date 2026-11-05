@@ -1,0 +1,485 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_b2_08",
+  "source_id": "HB08",
+  "original_instruction": "Alert when a long black rail is detached from the table frame.",
+  "source": {
+    "session_id": "z022-june-21-22-knarrevik_disassemble",
+    "sha256": "191e2860df9539825c53c84d2b75698e86471f3091cec9db331e3c9e6b87b600",
+    "video_path": "videos/z022-june-21-22-knarrevik_disassemble.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 8320,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          300,
+          450,
+          600,
+          750,
+          900,
+          1050,
+          1200,
+          1350,
+          1500,
+          1649,
+          1799,
+          1949,
+          2099,
+          2249,
+          2399,
+          2549,
+          2699,
+          2849,
+          2999,
+          3149,
+          3299,
+          3449,
+          3599,
+          3749,
+          3899,
+          4049,
+          4199,
+          4349,
+          4499,
+          4649,
+          4799,
+          4948,
+          5098,
+          5248,
+          5398,
+          5548,
+          5698,
+          5848,
+          5998,
+          6148,
+          6298,
+          6448,
+          6598,
+          6748,
+          6898,
+          7048,
+          7198,
+          7348,
+          7498,
+          7648,
+          7798,
+          7948,
+          8098,
+          8247,
+          8319
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB08/overview_01.png",
+            "sha256": "2d8c2bcece5158fa112fa017b8f00624ed3e244c9a4704cbc4fcd73c0f964a03"
+          },
+          {
+            "path": "full_review/batch_v1/HB08/overview_02.png",
+            "sha256": "300fb04214b7d17b82708c10f43df569c1d09ca6b8912cbab556e6f525af8391"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          2879,
+          2894,
+          2909,
+          2924,
+          2939,
+          2954,
+          2969,
+          2984,
+          2999,
+          3014,
+          3029,
+          3044,
+          3059,
+          3074,
+          3089,
+          3104,
+          3119,
+          3134,
+          3149
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB08/candidate_01.png",
+            "sha256": "62d201573c7c533d8e31212e12a04c9fff2fcbdfe0a112d71b6c2262a3dc6c60"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          3029,
+          3030,
+          3031,
+          3032,
+          3033,
+          3034,
+          3035,
+          3036,
+          3037,
+          3038,
+          3039,
+          3040,
+          3041,
+          3042,
+          3043,
+          3044
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB08/native1_01.png",
+            "sha256": "f1b9c26e6a06a864f68644f01f93f2dcec1ca8dcfb978c1b4033d00c9ac1888d"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          3014,
+          3044,
+          3074
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HB08/delivered_01.png",
+            "sha256": "3c727f56e9762bfff1bc2300ceae66cf25905d7ebc5b180a7c15d15d6774cdc8"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Fastener manipulation is preparatory; the target is clearance of one tracked long rail from the remaining frame.",
+    "flags": [
+      "joint_release_partly_occluded",
+      "multiple_rails_need_identity"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "long black rail"
+    },
+    {
+      "id": "object_2",
+      "description": "remaining table frame"
+    },
+    {
+      "id": "object_3",
+      "description": "fasteners"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 3029,
+      "source_pts_seconds": 100.997374,
+      "path": "full_review/batch_v1/HB08/anchors/003029.jpg",
+      "description": "Long rail remains against the frame while grasped at its junction.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Long rail remains against the frame while grasped at its junction.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 3044,
+      "source_pts_seconds": 101.497526,
+      "path": "full_review/batch_v1/HB08/anchors/003044.jpg",
+      "description": "Rail is held separately with a visible gap from the remaining frame.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Rail is held separately with a visible gap from the remaining frame.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_1",
+        "predicate": "separated_from",
+        "object": "object_2"
+      }
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 3059,
+      "source_pts_seconds": 101.997678,
+      "path": "full_review/batch_v1/HB08/anchors/003059.jpg",
+      "description": "Detached rail carried over the work surface.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Detached rail carried over the work surface.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 3074,
+      "source_pts_seconds": 102.49783,
+      "path": "full_review/batch_v1/HB08/anchors/003074.jpg",
+      "description": "Rail being set down separately.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Rail being set down separately.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HB08:reviewed_occurrence_1",
+      "event_class": "rail_detachment",
+      "positive_evidence_ids": [
+        "observation_1"
+      ],
+      "entity_ids": [
+        "object_1",
+        "object_2"
+      ],
+      "conservative_positive_source_pts_seconds": 101.497526,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 101,
+      "native_frame_index": 3044,
+      "source_pts_seconds": 101.497526,
+      "decoded_scaled_frame_md5": "b697bc9e4d17bd086358b60dd03c2523",
+      "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0102.jpg",
+      "stream_jpeg_sha256": "220f9e7e0ba8029270f7b88661a51c5aa884db33775806989cd4c5b8304f7115",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the tracked long black rail is visibly separated from the remaining table frame; unscrewing a fastener alone does not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 101,
+      "source_capture_boundary_seconds": 101.497526,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 107,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "claim_1",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "observation_2",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "claim_3",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 96,
+        "native_frame_index": 2894,
+        "source_pts_seconds": 96.496006,
+        "decoded_scaled_frame_md5": "95d5d224857516e63c540ecdbd7646c1",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0097.jpg",
+        "stream_jpeg_sha256": "2a56ea029a18cf20059119aec99c4e2ff3f6f6f5fb261bfe2b8d38cafa0d2338"
+      },
+      {
+        "packet_time_seconds": 97,
+        "native_frame_index": 2924,
+        "source_pts_seconds": 97.49631,
+        "decoded_scaled_frame_md5": "fe937f3f07de48de8f1a79e70da7a4bc",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0098.jpg",
+        "stream_jpeg_sha256": "c75d347c215c8269bc9c17ee105dd61de9cc13f85a1271d9f73f3cc17e129e0f"
+      },
+      {
+        "packet_time_seconds": 98,
+        "native_frame_index": 2954,
+        "source_pts_seconds": 98.496614,
+        "decoded_scaled_frame_md5": "c9c3bb0cd119d2a1a6d3ce76c44b9863",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0099.jpg",
+        "stream_jpeg_sha256": "2c5cafd8fe6494443bd2561ea443d319de0670ee8f83854a29438f03f27f2dec"
+      },
+      {
+        "packet_time_seconds": 99,
+        "native_frame_index": 2984,
+        "source_pts_seconds": 99.496918,
+        "decoded_scaled_frame_md5": "a916249b063f8a49e76e0a0f10675be0",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0100.jpg",
+        "stream_jpeg_sha256": "290308a404d50fb2765136166f27d9f32fddbd8bb95cdb66261bd2ab33127c6a"
+      },
+      {
+        "packet_time_seconds": 100,
+        "native_frame_index": 3014,
+        "source_pts_seconds": 100.497222,
+        "decoded_scaled_frame_md5": "b9a431be10d82842ff9497bc858ccaa6",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0101.jpg",
+        "stream_jpeg_sha256": "83ef56ee859ff565f5a4827054233909029cbae92d6d6ec96dced4f099883c2e"
+      },
+      {
+        "packet_time_seconds": 101,
+        "native_frame_index": 3044,
+        "source_pts_seconds": 101.497526,
+        "decoded_scaled_frame_md5": "b697bc9e4d17bd086358b60dd03c2523",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0102.jpg",
+        "stream_jpeg_sha256": "220f9e7e0ba8029270f7b88661a51c5aa884db33775806989cd4c5b8304f7115"
+      },
+      {
+        "packet_time_seconds": 102,
+        "native_frame_index": 3074,
+        "source_pts_seconds": 102.49783,
+        "decoded_scaled_frame_md5": "d886892ca2f9403d0b64a0a94bd3903c",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0103.jpg",
+        "stream_jpeg_sha256": "49797ed7188418d23f2ef07194c5a63465961023df7fb7bc157aa3b1d77ba5dc"
+      },
+      {
+        "packet_time_seconds": 103,
+        "native_frame_index": 3104,
+        "source_pts_seconds": 103.498135,
+        "decoded_scaled_frame_md5": "73dfa937f7af4bb27437ebf2dd1423f9",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0104.jpg",
+        "stream_jpeg_sha256": "2e970360ed3aaa692d70164150c72ce70bd8b8e044c37d8afa7f74773abdd500"
+      },
+      {
+        "packet_time_seconds": 104,
+        "native_frame_index": 3134,
+        "source_pts_seconds": 104.498439,
+        "decoded_scaled_frame_md5": "39e005443cf8196c036aaa5e6adcc59f",
+        "stream_path": "stream_frames/z022-june-21-22-knarrevik_disassemble/0105.jpg",
+        "stream_jpeg_sha256": "f87ec43df45442647438c8c89034970e1dcf97e4b251fb8ce93707ff5bfd79c5"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the tracked long black rail is visibly separated from the remaining table frame; unscrewing a fastener alone does not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

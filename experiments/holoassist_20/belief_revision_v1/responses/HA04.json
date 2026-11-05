@@ -1,0 +1,525 @@
+{
+  "case_id": "HA04",
+  "steps": {
+    "delayed_0": {
+      "status": "ok",
+      "started_utc": "2026-11-04T16:44:15.225591+00:00",
+      "completed_utc": "2026-11-04T16:44:20.015176+00:00",
+      "phase": "delayed_0",
+      "current_packets": [
+        "B"
+      ],
+      "arrived_packets": [
+        "B"
+      ],
+      "prompt": "Evaluate the following visible condition at the requested capture times.\nCondition: the main cabinet access door is open with interior components exposed.\nearlier: did this condition hold at capture time 17.978414 seconds?\nlatest: did this condition hold at the latest capture time received, 18.780425 seconds?\nAnswer yes, no, or unknown for each field. Use unknown when the evidence for that capture time has not been received or does not settle the condition. Do not infer an earlier state from a later state.\nA packet arriving later can have an older capture time. Preserve supported facts about other capture times.\nPacket IDs received so far, in arrival order: [\"B\"].\nLatest capture-time boundary received: 18.780425 seconds.\nAttached video packet B: frame capture times 18.479671, 18.579922, 18.680174, 18.780425 seconds, in chronological order.\nNo previous model response is available in this condition.\nReturn only one JSON object with exactly these keys: earlier, latest, earlier_evidence, latest_evidence.\nearlier and latest must each be yes, no, or unknown. The two evidence values must be lists of supporting packet IDs, using only A or B. Cite the packet for the requested capture time. Use an empty list when no supporting packet was received. Do not cite future packets.",
+      "previous_memory": null,
+      "raw_response": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}",
+      "input_frames": [
+        {
+          "packet_id": "B",
+          "native_frame_index": 553,
+          "source_pts_seconds": 18.479671,
+          "path": "media/HA04/000553.jpg",
+          "sha256": "8a4ccf4e0520f570902337c5be54727dae84e6fec4ad5ccdca9b54f9b509f3b9"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 556,
+          "source_pts_seconds": 18.579922,
+          "path": "media/HA04/000556.jpg",
+          "sha256": "75a09cce94fa2f67e73faa16609291970c467c10255b3bbe4aa55a545b4dc7e8"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 559,
+          "source_pts_seconds": 18.680174,
+          "path": "media/HA04/000559.jpg",
+          "sha256": "20072be161dd9f8832789be7bac1d0ea5f4a7c8562a0cecb9463e8d932e3882b"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 562,
+          "source_pts_seconds": 18.780425,
+          "path": "media/HA04/000562.jpg",
+          "sha256": "4b1c25d5e1ecedccb36db2d901152bd167befc7af9119f508e5311beb2692650"
+        }
+      ],
+      "generation_seconds": 4.772427165997215,
+      "input_tokens": 622,
+      "generated_tokens": 35,
+      "video_grid_thw": [
+        [
+          2,
+          18,
+          32
+        ]
+      ],
+      "second_per_grid_ts": [
+        0.2005026638507843
+      ],
+      "rendered_prompt_sha256": "647ea12e1d15996cbe70af468fdb91a11fbf30b08ea8eb15ab7ee2e71e3e70dc"
+    },
+    "delayed_1": {
+      "status": "ok",
+      "started_utc": "2026-11-04T16:44:20.023402+00:00",
+      "completed_utc": "2026-11-04T16:44:25.125539+00:00",
+      "phase": "delayed_1",
+      "current_packets": [
+        "A"
+      ],
+      "arrived_packets": [
+        "B",
+        "A"
+      ],
+      "prompt": "Evaluate the following visible condition at the requested capture times.\nCondition: the main cabinet access door is open with interior components exposed.\nearlier: did this condition hold at capture time 17.978414 seconds?\nlatest: did this condition hold at the latest capture time received, 18.780425 seconds?\nAnswer yes, no, or unknown for each field. Use unknown when the evidence for that capture time has not been received or does not settle the condition. Do not infer an earlier state from a later state.\nA packet arriving later can have an older capture time. Preserve supported facts about other capture times.\nPacket IDs received so far, in arrival order: [\"B\", \"A\"].\nLatest capture-time boundary received: 18.780425 seconds.\nAttached video packet A: frame capture times 17.677660, 17.777911, 17.878163, 17.978414 seconds, in chronological order.\nPrevious model response, verbatim (your external memory):\n{\n    \"earlier\": \"unknown\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}\nReturn only one JSON object with exactly these keys: earlier, latest, earlier_evidence, latest_evidence.\nearlier and latest must each be yes, no, or unknown. The two evidence values must be lists of supporting packet IDs, using only A or B. Cite the packet for the requested capture time. Use an empty list when no supporting packet was received. Do not cite future packets.",
+      "previous_memory": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}",
+      "raw_response": "{\n    \"earlier\": \"no\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"A\"]\n}",
+      "input_frames": [
+        {
+          "packet_id": "A",
+          "native_frame_index": 529,
+          "source_pts_seconds": 17.67766,
+          "path": "media/HA04/000529.jpg",
+          "sha256": "d11220c4da83c39e868589447842f3768075edfec352aad0cac8cbe340d66c86"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 532,
+          "source_pts_seconds": 17.777911,
+          "path": "media/HA04/000532.jpg",
+          "sha256": "b7f098c8640d3f1530e245368a21626c120f853e4a6d12011abfa3b5c93e4869"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 535,
+          "source_pts_seconds": 17.878163,
+          "path": "media/HA04/000535.jpg",
+          "sha256": "42c3e11b8e1be4deb48796494e8ecdeca1aa8ae4efd902999964f8a22ccbaebd"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 538,
+          "source_pts_seconds": 17.978414,
+          "path": "media/HA04/000538.jpg",
+          "sha256": "546f6d6aa0f23fde64904fb4f991208b1616755127a2aeb76a705e2fe0ab7a98"
+        }
+      ],
+      "generation_seconds": 5.082766040926799,
+      "input_tokens": 660,
+      "generated_tokens": 35,
+      "video_grid_thw": [
+        [
+          2,
+          18,
+          32
+        ]
+      ],
+      "second_per_grid_ts": [
+        0.2005026638507843
+      ],
+      "rendered_prompt_sha256": "948ce92be5650180f4215312578fa401d65001375f228e4955442af4c8da3074"
+    },
+    "joint": {
+      "status": "ok",
+      "started_utc": "2026-11-04T16:44:25.139084+00:00",
+      "completed_utc": "2026-11-04T16:44:31.875193+00:00",
+      "phase": "joint",
+      "current_packets": [
+        "A",
+        "B"
+      ],
+      "arrived_packets": [
+        "A",
+        "B"
+      ],
+      "prompt": "Evaluate the following visible condition at the requested capture times.\nCondition: the main cabinet access door is open with interior components exposed.\nearlier: did this condition hold at capture time 17.978414 seconds?\nlatest: did this condition hold at the latest capture time received, 18.780425 seconds?\nAnswer yes, no, or unknown for each field. Use unknown when the evidence for that capture time has not been received or does not settle the condition. Do not infer an earlier state from a later state.\nA packet arriving later can have an older capture time. Preserve supported facts about other capture times.\nPacket IDs received so far, in arrival order: [\"A\", \"B\"].\nLatest capture-time boundary received: 18.780425 seconds.\nAttached video packet A: frame capture times 17.677660, 17.777911, 17.878163, 17.978414 seconds, in chronological order.\nAttached video packet B: frame capture times 18.479671, 18.579922, 18.680174, 18.780425 seconds, in chronological order.\nNo previous model response is available in this condition.\nReturn only one JSON object with exactly these keys: earlier, latest, earlier_evidence, latest_evidence.\nearlier and latest must each be yes, no, or unknown. The two evidence values must be lists of supporting packet IDs, using only A or B. Cite the packet for the requested capture time. Use an empty list when no supporting packet was received. Do not cite future packets.",
+      "previous_memory": null,
+      "raw_response": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}",
+      "input_frames": [
+        {
+          "packet_id": "A",
+          "native_frame_index": 529,
+          "source_pts_seconds": 17.67766,
+          "path": "media/HA04/000529.jpg",
+          "sha256": "d11220c4da83c39e868589447842f3768075edfec352aad0cac8cbe340d66c86"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 532,
+          "source_pts_seconds": 17.777911,
+          "path": "media/HA04/000532.jpg",
+          "sha256": "b7f098c8640d3f1530e245368a21626c120f853e4a6d12011abfa3b5c93e4869"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 535,
+          "source_pts_seconds": 17.878163,
+          "path": "media/HA04/000535.jpg",
+          "sha256": "42c3e11b8e1be4deb48796494e8ecdeca1aa8ae4efd902999964f8a22ccbaebd"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 538,
+          "source_pts_seconds": 17.978414,
+          "path": "media/HA04/000538.jpg",
+          "sha256": "546f6d6aa0f23fde64904fb4f991208b1616755127a2aeb76a705e2fe0ab7a98"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 553,
+          "source_pts_seconds": 18.479671,
+          "path": "media/HA04/000553.jpg",
+          "sha256": "8a4ccf4e0520f570902337c5be54727dae84e6fec4ad5ccdca9b54f9b509f3b9"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 556,
+          "source_pts_seconds": 18.579922,
+          "path": "media/HA04/000556.jpg",
+          "sha256": "75a09cce94fa2f67e73faa16609291970c467c10255b3bbe4aa55a545b4dc7e8"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 559,
+          "source_pts_seconds": 18.680174,
+          "path": "media/HA04/000559.jpg",
+          "sha256": "20072be161dd9f8832789be7bac1d0ea5f4a7c8562a0cecb9463e8d932e3882b"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 562,
+          "source_pts_seconds": 18.780425,
+          "path": "media/HA04/000562.jpg",
+          "sha256": "4b1c25d5e1ecedccb36db2d901152bd167befc7af9119f508e5311beb2692650"
+        }
+      ],
+      "generation_seconds": 6.692804582999088,
+      "input_tokens": 972,
+      "generated_tokens": 35,
+      "video_grid_thw": [
+        [
+          2,
+          18,
+          32
+        ],
+        [
+          2,
+          18,
+          32
+        ]
+      ],
+      "second_per_grid_ts": [
+        0.2005026638507843,
+        0.2005026638507843
+      ],
+      "rendered_prompt_sha256": "42eaa43c282f60e6f642635049aeb431555964ff8d1f52f105a2dcfd98c2f0b3"
+    },
+    "chronological_0": {
+      "status": "ok",
+      "started_utc": "2026-11-04T16:44:31.890711+00:00",
+      "completed_utc": "2026-11-04T16:44:37.117889+00:00",
+      "phase": "chronological_0",
+      "current_packets": [
+        "A"
+      ],
+      "arrived_packets": [
+        "A"
+      ],
+      "prompt": "Evaluate the following visible condition at the requested capture times.\nCondition: the main cabinet access door is open with interior components exposed.\nearlier: did this condition hold at capture time 17.978414 seconds?\nlatest: did this condition hold at the latest capture time received, 17.978414 seconds?\nAnswer yes, no, or unknown for each field. Use unknown when the evidence for that capture time has not been received or does not settle the condition. Do not infer an earlier state from a later state.\nA packet arriving later can have an older capture time. Preserve supported facts about other capture times.\nPacket IDs received so far, in arrival order: [\"A\"].\nLatest capture-time boundary received: 17.978414 seconds.\nAttached video packet A: frame capture times 17.677660, 17.777911, 17.878163, 17.978414 seconds, in chronological order.\nNo previous model response is available in this condition.\nReturn only one JSON object with exactly these keys: earlier, latest, earlier_evidence, latest_evidence.\nearlier and latest must each be yes, no, or unknown. The two evidence values must be lists of supporting packet IDs, using only A or B. Cite the packet for the requested capture time. Use an empty list when no supporting packet was received. Do not cite future packets.",
+      "previous_memory": null,
+      "raw_response": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"A\"]\n}",
+      "input_frames": [
+        {
+          "packet_id": "A",
+          "native_frame_index": 529,
+          "source_pts_seconds": 17.67766,
+          "path": "media/HA04/000529.jpg",
+          "sha256": "d11220c4da83c39e868589447842f3768075edfec352aad0cac8cbe340d66c86"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 532,
+          "source_pts_seconds": 17.777911,
+          "path": "media/HA04/000532.jpg",
+          "sha256": "b7f098c8640d3f1530e245368a21626c120f853e4a6d12011abfa3b5c93e4869"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 535,
+          "source_pts_seconds": 17.878163,
+          "path": "media/HA04/000535.jpg",
+          "sha256": "42c3e11b8e1be4deb48796494e8ecdeca1aa8ae4efd902999964f8a22ccbaebd"
+        },
+        {
+          "packet_id": "A",
+          "native_frame_index": 538,
+          "source_pts_seconds": 17.978414,
+          "path": "media/HA04/000538.jpg",
+          "sha256": "546f6d6aa0f23fde64904fb4f991208b1616755127a2aeb76a705e2fe0ab7a98"
+        }
+      ],
+      "generation_seconds": 5.187930707936175,
+      "input_tokens": 622,
+      "generated_tokens": 35,
+      "video_grid_thw": [
+        [
+          2,
+          18,
+          32
+        ]
+      ],
+      "second_per_grid_ts": [
+        0.2005026638507843
+      ],
+      "rendered_prompt_sha256": "aaf3f5381624943406f478d0e7958af89f7220373e91bad535044cccc578bc62"
+    },
+    "chronological_1": {
+      "status": "ok",
+      "started_utc": "2026-11-04T16:44:37.124926+00:00",
+      "completed_utc": "2026-11-04T16:44:42.558676+00:00",
+      "phase": "chronological_1",
+      "current_packets": [
+        "B"
+      ],
+      "arrived_packets": [
+        "A",
+        "B"
+      ],
+      "prompt": "Evaluate the following visible condition at the requested capture times.\nCondition: the main cabinet access door is open with interior components exposed.\nearlier: did this condition hold at capture time 17.978414 seconds?\nlatest: did this condition hold at the latest capture time received, 18.780425 seconds?\nAnswer yes, no, or unknown for each field. Use unknown when the evidence for that capture time has not been received or does not settle the condition. Do not infer an earlier state from a later state.\nA packet arriving later can have an older capture time. Preserve supported facts about other capture times.\nPacket IDs received so far, in arrival order: [\"A\", \"B\"].\nLatest capture-time boundary received: 18.780425 seconds.\nAttached video packet B: frame capture times 18.479671, 18.579922, 18.680174, 18.780425 seconds, in chronological order.\nPrevious model response, verbatim (your external memory):\n{\n    \"earlier\": \"unknown\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"A\"]\n}\nReturn only one JSON object with exactly these keys: earlier, latest, earlier_evidence, latest_evidence.\nearlier and latest must each be yes, no, or unknown. The two evidence values must be lists of supporting packet IDs, using only A or B. Cite the packet for the requested capture time. Use an empty list when no supporting packet was received. Do not cite future packets.",
+      "previous_memory": "{\n    \"earlier\": \"unknown\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"A\"]\n}",
+      "raw_response": "{\n    \"earlier\": \"no\",\n    \"latest\": \"yes\",\n    \"earlier_evidence\": [],\n    \"latest_evidence\": [\"B\"]\n}",
+      "input_frames": [
+        {
+          "packet_id": "B",
+          "native_frame_index": 553,
+          "source_pts_seconds": 18.479671,
+          "path": "media/HA04/000553.jpg",
+          "sha256": "8a4ccf4e0520f570902337c5be54727dae84e6fec4ad5ccdca9b54f9b509f3b9"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 556,
+          "source_pts_seconds": 18.579922,
+          "path": "media/HA04/000556.jpg",
+          "sha256": "75a09cce94fa2f67e73faa16609291970c467c10255b3bbe4aa55a545b4dc7e8"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 559,
+          "source_pts_seconds": 18.680174,
+          "path": "media/HA04/000559.jpg",
+          "sha256": "20072be161dd9f8832789be7bac1d0ea5f4a7c8562a0cecb9463e8d932e3882b"
+        },
+        {
+          "packet_id": "B",
+          "native_frame_index": 562,
+          "source_pts_seconds": 18.780425,
+          "path": "media/HA04/000562.jpg",
+          "sha256": "4b1c25d5e1ecedccb36db2d901152bd167befc7af9119f508e5311beb2692650"
+        }
+      ],
+      "generation_seconds": 5.411028083064593,
+      "input_tokens": 660,
+      "generated_tokens": 35,
+      "video_grid_thw": [
+        [
+          2,
+          18,
+          32
+        ]
+      ],
+      "second_per_grid_ts": [
+        0.2005026638507843
+      ],
+      "rendered_prompt_sha256": "84ea23e6c8adf15344c8bdf0170b904b123c6017163a015d98048b15407f8bd8"
+    }
+  },
+  "created_utc": "2026-11-04T16:44:15.217226+00:00",
+  "analysis": {
+    "status": "complete",
+    "steps": {
+      "joint": {
+        "parsed": {
+          "earlier": "unknown",
+          "latest": "yes",
+          "earlier_evidence": [],
+          "latest_evidence": [
+            "B"
+          ]
+        },
+        "exact_json": true,
+        "schema_valid": true,
+        "expected_state": {
+          "earlier": "no",
+          "latest": "yes"
+        },
+        "state_accuracy": 0.5,
+        "state_perfect": false,
+        "known_state_accuracy": 0.5,
+        "known_fields": 2,
+        "known_binding_accuracy": 0.5,
+        "field_matches": {
+          "earlier": false,
+          "latest": true
+        },
+        "evidence_targeting": {
+          "earlier": true,
+          "latest": true
+        },
+        "future_packet_citation": {
+          "earlier": false,
+          "latest": false
+        }
+      },
+      "chronological_0": {
+        "parsed": {
+          "earlier": "unknown",
+          "latest": "yes",
+          "earlier_evidence": [],
+          "latest_evidence": [
+            "A"
+          ]
+        },
+        "exact_json": true,
+        "schema_valid": true,
+        "expected_state": {
+          "earlier": "no",
+          "latest": "no"
+        },
+        "state_accuracy": 0.0,
+        "state_perfect": false,
+        "known_state_accuracy": 0.0,
+        "known_fields": 2,
+        "known_binding_accuracy": 0.0,
+        "field_matches": {
+          "earlier": false,
+          "latest": false
+        },
+        "evidence_targeting": {
+          "earlier": true,
+          "latest": true
+        },
+        "future_packet_citation": {
+          "earlier": false,
+          "latest": false
+        }
+      },
+      "chronological_1": {
+        "parsed": {
+          "earlier": "no",
+          "latest": "yes",
+          "earlier_evidence": [],
+          "latest_evidence": [
+            "B"
+          ]
+        },
+        "exact_json": true,
+        "schema_valid": true,
+        "expected_state": {
+          "earlier": "no",
+          "latest": "yes"
+        },
+        "state_accuracy": 1.0,
+        "state_perfect": true,
+        "known_state_accuracy": 1.0,
+        "known_fields": 2,
+        "known_binding_accuracy": 0.5,
+        "field_matches": {
+          "earlier": true,
+          "latest": true
+        },
+        "evidence_targeting": {
+          "earlier": true,
+          "latest": true
+        },
+        "future_packet_citation": {
+          "earlier": false,
+          "latest": false
+        }
+      },
+      "delayed_0": {
+        "parsed": {
+          "earlier": "unknown",
+          "latest": "yes",
+          "earlier_evidence": [],
+          "latest_evidence": [
+            "B"
+          ]
+        },
+        "exact_json": true,
+        "schema_valid": true,
+        "expected_state": {
+          "earlier": "unknown",
+          "latest": "yes"
+        },
+        "state_accuracy": 1.0,
+        "state_perfect": true,
+        "known_state_accuracy": 1.0,
+        "known_fields": 1,
+        "known_binding_accuracy": 1.0,
+        "field_matches": {
+          "earlier": true,
+          "latest": true
+        },
+        "evidence_targeting": {
+          "earlier": true,
+          "latest": true
+        },
+        "future_packet_citation": {
+          "earlier": false,
+          "latest": false
+        }
+      },
+      "delayed_1": {
+        "parsed": {
+          "earlier": "no",
+          "latest": "yes",
+          "earlier_evidence": [],
+          "latest_evidence": [
+            "A"
+          ]
+        },
+        "exact_json": true,
+        "schema_valid": true,
+        "expected_state": {
+          "earlier": "no",
+          "latest": "yes"
+        },
+        "state_accuracy": 1.0,
+        "state_perfect": true,
+        "known_state_accuracy": 1.0,
+        "known_fields": 2,
+        "known_binding_accuracy": 0.0,
+        "field_matches": {
+          "earlier": true,
+          "latest": true
+        },
+        "evidence_targeting": {
+          "earlier": true,
+          "latest": false
+        },
+        "future_packet_citation": {
+          "earlier": false,
+          "latest": false
+        }
+      }
+    },
+    "metrics": {
+      "uncertainty_preserved_before_earlier_evidence": true,
+      "unsupported_earlier_commitment": false,
+      "historical_final_factual_correct": true,
+      "historical_epistemic_correct": true,
+      "clean_historical_update_success": true,
+      "recent_preservation_applicable": true,
+      "recent_fact_preserved": true,
+      "historical_preservation_applicable": false,
+      "past_fact_preserved_chronological": null,
+      "joint_final_perfect": false,
+      "chronological_final_perfect": true,
+      "delayed_final_perfect": true,
+      "joint_correct_both_sequential_fail": false,
+      "joint_and_chronological_correct_delayed_fails": false
+    }
+  }
+}

@@ -1,0 +1,536 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_01",
+  "source_id": "HA01",
+  "original_instruction": "Alert when the zoom lens is detached from the DSLR body.",
+  "source": {
+    "session_id": "z176-sep-05-22-dslr",
+    "sha256": "3eead3bbf2fe8ebb48a1888b99d0fd55385fd13ebc3ebd361d77597ab86c86cc",
+    "video_path": "videos/z176-sep-05-22-dslr.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 2040,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          300,
+          449,
+          599,
+          749,
+          899,
+          1049,
+          1198,
+          1348,
+          1498,
+          1648,
+          1797,
+          1947,
+          2039
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 15,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA01/overview_01.png",
+            "sha256": "eae6febf9620d33957bd709c704a83b099ca7c61e7910ee56bb8c10539e0113f"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          150,
+          165,
+          180,
+          195,
+          210,
+          225,
+          240,
+          255,
+          270,
+          285,
+          300,
+          315,
+          330
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 15,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA01/candidate_01.png",
+            "sha256": "b7f4a494e0d01740bf1dae8f7a1eaf3f3cb85de534d008c66865708c77d79fca"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          230,
+          231,
+          232,
+          233,
+          234,
+          235,
+          236,
+          237,
+          238,
+          239,
+          240,
+          241,
+          242,
+          243,
+          244,
+          245,
+          246,
+          247,
+          248,
+          249,
+          250,
+          251,
+          252,
+          253,
+          254,
+          255,
+          256,
+          257,
+          258,
+          259,
+          260,
+          261,
+          262,
+          263,
+          264,
+          265,
+          266,
+          267,
+          268,
+          269,
+          270
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 40,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA01/native1_01.png",
+            "sha256": "84bdbda6b8364ef9664f372c03bc91c45a6469ec20f977231b5ad8ca19852e85"
+          },
+          {
+            "path": "full_review/batch_v1/HA01/native1_02.png",
+            "sha256": "edd99169c69acf13ea0b623227a99ebb252e73627ae240cb4e8018714b68dad0"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          224,
+          254,
+          284
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA01/delivered_01.png",
+            "sha256": "e0462e76bc180d2d63cfb826fc5d25f60f984727ef6bb7e9a70ed40ea05ddfa4"
+          }
+        ]
+      }
+    ],
+    "prior_review": {
+      "path": "online_pilot_v0/reviews/stream_alert_01/evidence_graph.json",
+      "sha256": "0e3ea77fd8821166acd1b5c16f1aac9528c553eb6febfeee720a0af967889b8f",
+      "native_indices": [
+        241,
+        243,
+        246,
+        250,
+        270,
+        315,
+        369,
+        495
+      ]
+    },
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Distinct lens detachment, return and cap removal. Preserve historical detachment after current state changes.",
+    "flags": [
+      "physical_onset_unresolved"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "DSLR body"
+    },
+    {
+      "id": "object_2",
+      "description": "interchangeable lens"
+    },
+    {
+      "id": "object_3",
+      "description": "front lens cap"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 241,
+      "source_pts_seconds": 8.044704,
+      "path": "full_review/batch_v1/HA01/anchors/000241.jpg",
+      "description": "Lens appears seated against the body; mount lock is not visible.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Lens appears seated against the body; mount lock is not visible.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 243,
+      "source_pts_seconds": 8.111465,
+      "path": "full_review/batch_v1/HA01/anchors/000243.jpg",
+      "description": "Lens moving away; release boundary partly occluded.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Lens moving away; release boundary partly occluded.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 246,
+      "source_pts_seconds": 8.211607,
+      "path": "full_review/batch_v1/HA01/anchors/000246.jpg",
+      "description": "Exposed body mount and lens visibly separate.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Exposed body mount and lens visibly separate.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_2",
+        "predicate": "separated_from",
+        "object": "object_1"
+      }
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 270,
+      "source_pts_seconds": 9.012739,
+      "path": "full_review/batch_v1/HA01/anchors/000270.jpg",
+      "description": "Lens remains separate from the body.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Lens remains separate from the body.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 369,
+      "source_pts_seconds": 12.31741,
+      "path": "full_review/batch_v1/HA01/anchors/000369.jpg",
+      "description": "Lens appears mounted again without right-hand support.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Lens appears mounted again without right-hand support.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_5",
+      "type": "observation",
+      "role": "distractor",
+      "frame_index_zero_based": 495,
+      "source_pts_seconds": 16.523355,
+      "path": "full_review/batch_v1/HA01/anchors/000495.jpg",
+      "description": "Front cap held separately while lens remains with body.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_5",
+      "type": "state_claim",
+      "text": "Front cap held separately while lens remains with body.",
+      "evidence_ids": [
+        "observation_5"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA01:reviewed_occurrence_1",
+      "event_class": "lens_detachment",
+      "positive_evidence_ids": [
+        "observation_2"
+      ],
+      "entity_ids": [
+        "object_2",
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 8.211607,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 8,
+      "native_frame_index": 254,
+      "source_pts_seconds": 8.478651,
+      "decoded_scaled_frame_md5": "2c97eaa4a7907cee6bb01f1afbb182f2",
+      "stream_path": "stream_frames/z176-sep-05-22-dslr/0009.jpg",
+      "stream_jpeg_sha256": "0018fb2742d6e6c335b29a62175aae86bacf091712afadfecf7fedccc23cf861",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the interchangeable lens is clearly separated from the DSLR body. Touching/rotating the lens and removing only the front cap do not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 8,
+      "source_capture_boundary_seconds": 8.478651,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 13,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    },
+    {
+      "id": "cap_removal_1",
+      "type": "event",
+      "event_class": "front_cap_removal",
+      "occurrence_id": "HA01:cap_removal_1",
+      "entity_ids": [
+        "object_2",
+        "object_3"
+      ],
+      "evidence_ids": [
+        "observation_5"
+      ],
+      "physical_onset_seconds": null,
+      "qualification": "observed_distinct_event",
+      "note": "Cap removal is not lens-body separation."
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "claim_2",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "observation_3",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "claim_4",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "observation_5",
+      "relation": "supports",
+      "target": "claim_5"
+    },
+    {
+      "source": "observation_5",
+      "relation": "insufficient_alone_to_trigger",
+      "target": "alert_1"
+    },
+    {
+      "source": "observation_5",
+      "relation": "supports_separate_event",
+      "target": "cap_removal_1"
+    },
+    {
+      "source": "cap_removal_1",
+      "relation": "distinct_from",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 5,
+        "native_frame_index": 164,
+        "source_pts_seconds": 5.474405,
+        "decoded_scaled_frame_md5": "541e71d3185e04ed9f2fa553e2e61fbc",
+        "stream_path": "stream_frames/z176-sep-05-22-dslr/0006.jpg",
+        "stream_jpeg_sha256": "e9031c37546347b05a856bb1dc34531b6f6dbeed3139fb5b248d8e33df0099a1"
+      },
+      {
+        "packet_time_seconds": 6,
+        "native_frame_index": 194,
+        "source_pts_seconds": 6.47582,
+        "decoded_scaled_frame_md5": "cb5ab4d8cabcc871d658c11c2b223fd3",
+        "stream_path": "stream_frames/z176-sep-05-22-dslr/0007.jpg",
+        "stream_jpeg_sha256": "2fa2df89b64b04f60a097d2eb7255df28a58ea6a6ea59912a4aca8a05671e0d8"
+      },
+      {
+        "packet_time_seconds": 7,
+        "native_frame_index": 224,
+        "source_pts_seconds": 7.477236,
+        "decoded_scaled_frame_md5": "78434c52172404bd2bc4eb9f5528a9e0",
+        "stream_path": "stream_frames/z176-sep-05-22-dslr/0008.jpg",
+        "stream_jpeg_sha256": "cfaac3d3b77c1c3182f92947b840ad225bc614238b7aa459e9c7ea762502b32f"
+      },
+      {
+        "packet_time_seconds": 8,
+        "native_frame_index": 254,
+        "source_pts_seconds": 8.478651,
+        "decoded_scaled_frame_md5": "2c97eaa4a7907cee6bb01f1afbb182f2",
+        "stream_path": "stream_frames/z176-sep-05-22-dslr/0009.jpg",
+        "stream_jpeg_sha256": "0018fb2742d6e6c335b29a62175aae86bacf091712afadfecf7fedccc23cf861"
+      },
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 284,
+        "source_pts_seconds": 9.480067,
+        "decoded_scaled_frame_md5": "62dbd857658eb1572228ad8fc6b559de",
+        "stream_path": "stream_frames/z176-sep-05-22-dslr/0010.jpg",
+        "stream_jpeg_sha256": "bc6ff0f108008dff76cff37aa010d1f9ca890469b6eae70bf8e3d085f910eaf5"
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 314,
+        "source_pts_seconds": 10.481482,
+        "decoded_scaled_frame_md5": "e94cdd7a4c612e75f39ecbbfb0e5fe39",
+        "stream_path": "stream_frames/z176-sep-05-22-dslr/0011.jpg",
+        "stream_jpeg_sha256": "fae8156ad17b08f52fe36ca7eeaa2d40c0cf1d6c37c21307ce4bfa4553bcde14"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the interchangeable lens is clearly separated from the DSLR body. Touching/rotating the lens and removing only the front cap do not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

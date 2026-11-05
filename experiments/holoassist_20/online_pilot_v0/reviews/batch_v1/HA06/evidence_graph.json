@@ -1,0 +1,502 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_06",
+  "source_id": "HA06",
+  "original_instruction": "Alert when the camera battery is removed from the DSLR.",
+  "source": {
+    "session_id": "R071-19July-DSLR",
+    "sha256": "04139a5aefb1ee7900e8b52b9f7c06bdf91cc77bba6581b521f7c39517efb9d6",
+    "video_path": "videos/R071-19July-DSLR.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 3482,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          149,
+          298,
+          447,
+          596,
+          744,
+          893,
+          1042,
+          1191,
+          1340,
+          1489,
+          1638,
+          1787,
+          1936,
+          2085,
+          2233,
+          2382,
+          2531,
+          2680,
+          2829,
+          2978,
+          3127,
+          3276,
+          3425,
+          3481
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 25,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA06/overview_01.png",
+            "sha256": "89605a2b1b7958484ce7010eafacc59cf73ed56452cb4277e72ac9f39c626aac"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          2263,
+          2278,
+          2293,
+          2308,
+          2323,
+          2338,
+          2353,
+          2367,
+          2382,
+          2397,
+          2412,
+          2427,
+          2442,
+          2457,
+          2472,
+          2487,
+          2501
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA06/candidate_01.png",
+            "sha256": "fcf106e9b7a807d2fff8db40ef43e043a3915e1ed52c9eb050bc427bab25bfcc"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          2397,
+          2398,
+          2399,
+          2400,
+          2401,
+          2402,
+          2403,
+          2404,
+          2405,
+          2406,
+          2407,
+          2408,
+          2409,
+          2410,
+          2411,
+          2412,
+          2413
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA06/native1_01.png",
+            "sha256": "c7b9ce09c963bbf0173f7f9e16dad993ddcf56792b8b7394bad28ec60a52b874"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          2397,
+          2427,
+          2456
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA06/delivered_01.png",
+            "sha256": "d59ea554e9e7af8da7ead20ea2563b74a3a8387a056467a2df9ef54161f94d17"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Separate opening the compartment, partial ejection, full removal, and later memory-card manipulation.",
+    "flags": [
+      "ejection_vs_full_removal_boundary"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "DSLR body"
+    },
+    {
+      "id": "object_2",
+      "description": "battery compartment"
+    },
+    {
+      "id": "object_3",
+      "description": "rectangular battery"
+    },
+    {
+      "id": "object_4",
+      "description": "memory card"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 2382,
+      "source_pts_seconds": 79.988538,
+      "path": "full_review/batch_v1/HA06/anchors/002382.jpg",
+      "description": "Battery compartment open; battery is not yet clearly free of the camera.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Battery compartment open; battery is not yet clearly free of the camera.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 2397,
+      "source_pts_seconds": 80.492244,
+      "path": "full_review/batch_v1/HA06/anchors/002397.jpg",
+      "description": "White rectangular battery protrudes from the compartment while still near the opening.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "White rectangular battery protrudes from the compartment while still near the opening.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 2413,
+      "source_pts_seconds": 81.029531,
+      "path": "full_review/batch_v1/HA06/anchors/002413.jpg",
+      "description": "Battery is being drawn out; full rear clearance is not certified at this anchor.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "Battery is being drawn out; full rear clearance is not certified at this anchor.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 2427,
+      "source_pts_seconds": 81.499657,
+      "path": "full_review/batch_v1/HA06/anchors/002427.jpg",
+      "description": "Battery is held clearly outside the camera with visible separation from the compartment.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Battery is held clearly outside the camera with visible separation from the compartment.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_3",
+        "predicate": "outside",
+        "object": "object_1"
+      }
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 2442,
+      "source_pts_seconds": 82.003363,
+      "path": "full_review/batch_v1/HA06/anchors/002442.jpg",
+      "description": "Battery remains held outside the compartment.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Battery remains held outside the compartment.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_5",
+      "type": "observation",
+      "role": "distractor",
+      "frame_index_zero_based": 3127,
+      "source_pts_seconds": 105.005944,
+      "path": "full_review/batch_v1/HA06/anchors/003127.jpg",
+      "description": "Later small memory-card handling is distinct from battery removal.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_5",
+      "type": "state_claim",
+      "text": "Later small memory-card handling is distinct from battery removal.",
+      "evidence_ids": [
+        "observation_5"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA06:reviewed_occurrence_1",
+      "event_class": "battery_removal",
+      "positive_evidence_ids": [
+        "observation_3"
+      ],
+      "entity_ids": [
+        "object_3",
+        "object_1"
+      ],
+      "conservative_positive_source_pts_seconds": 81.499657,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 81,
+      "native_frame_index": 2427,
+      "source_pts_seconds": 81.499657,
+      "decoded_scaled_frame_md5": "7c0cdfa6bd5987c7f213cbf4afc9efdc",
+      "stream_path": "stream_frames/R071-19July-DSLR/0082.jpg",
+      "stream_jpeg_sha256": "47801b99bf792043fa6d9f6be73d213c7fd2eafac014db74c6010f2e32dbc3f7",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when the rectangular battery is visibly free of the DSLR battery compartment; opening the door or partially ejecting it alone does not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 81,
+      "source_capture_boundary_seconds": 81.499657,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 86,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "observation_2",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "claim_3",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_5",
+      "relation": "supports",
+      "target": "claim_5"
+    },
+    {
+      "source": "observation_5",
+      "relation": "insufficient_alone_to_trigger",
+      "target": "alert_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 76,
+        "native_frame_index": 2278,
+        "source_pts_seconds": 76.496176,
+        "decoded_scaled_frame_md5": "40980f016cd8ffc38d38cbf67d714bf7",
+        "stream_path": "stream_frames/R071-19July-DSLR/0077.jpg",
+        "stream_jpeg_sha256": "594f4f4f7849ff5fa975124df8ed6ae1a08edd3968869a25163f528b7f7701a6"
+      },
+      {
+        "packet_time_seconds": 77,
+        "native_frame_index": 2307,
+        "source_pts_seconds": 77.470007,
+        "decoded_scaled_frame_md5": "e3602bd26f6628f387cc5abce54b109d",
+        "stream_path": "stream_frames/R071-19July-DSLR/0078.jpg",
+        "stream_jpeg_sha256": "a9448d379ac4d7336c8c1b83f48903f01438cf9b7cff8773a1a75e2ee10b3f23"
+      },
+      {
+        "packet_time_seconds": 78,
+        "native_frame_index": 2337,
+        "source_pts_seconds": 78.47742,
+        "decoded_scaled_frame_md5": "4b61ec27381a0b749c076e947abaa6f1",
+        "stream_path": "stream_frames/R071-19July-DSLR/0079.jpg",
+        "stream_jpeg_sha256": "5dacc8e0aaa46c0960145c5664e0195a11307449d4c51a9825c0dca53ce1a20c"
+      },
+      {
+        "packet_time_seconds": 79,
+        "native_frame_index": 2367,
+        "source_pts_seconds": 79.484832,
+        "decoded_scaled_frame_md5": "6cdd88e80c79d9c25bd5c4d54ed9e321",
+        "stream_path": "stream_frames/R071-19July-DSLR/0080.jpg",
+        "stream_jpeg_sha256": "96ec27d27b0fafa23de7d2e535c4ffff7f1610a8ef1bc686585a7793cd95d223"
+      },
+      {
+        "packet_time_seconds": 80,
+        "native_frame_index": 2397,
+        "source_pts_seconds": 80.492244,
+        "decoded_scaled_frame_md5": "a359330a0a3e22365a8eb9e4ca99149d",
+        "stream_path": "stream_frames/R071-19July-DSLR/0081.jpg",
+        "stream_jpeg_sha256": "c49260c74e35f58b2a9a3af26751e1f255d3cb8cc8e1f784d87e1a5b0e06d56d"
+      },
+      {
+        "packet_time_seconds": 81,
+        "native_frame_index": 2427,
+        "source_pts_seconds": 81.499657,
+        "decoded_scaled_frame_md5": "7c0cdfa6bd5987c7f213cbf4afc9efdc",
+        "stream_path": "stream_frames/R071-19July-DSLR/0082.jpg",
+        "stream_jpeg_sha256": "47801b99bf792043fa6d9f6be73d213c7fd2eafac014db74c6010f2e32dbc3f7"
+      },
+      {
+        "packet_time_seconds": 82,
+        "native_frame_index": 2456,
+        "source_pts_seconds": 82.473489,
+        "decoded_scaled_frame_md5": "d078891b9bfbe667150bbbb54cfdda52",
+        "stream_path": "stream_frames/R071-19July-DSLR/0083.jpg",
+        "stream_jpeg_sha256": "ab91f7ba09c4ee5d73d2ac7ac9f2fc9a76f0a74809aea7b9489104fd83bac9ac"
+      },
+      {
+        "packet_time_seconds": 83,
+        "native_frame_index": 2486,
+        "source_pts_seconds": 83.480901,
+        "decoded_scaled_frame_md5": "9cc9ca9761926c551f61b5e8c54b535b",
+        "stream_path": "stream_frames/R071-19July-DSLR/0084.jpg",
+        "stream_jpeg_sha256": "a9632a2125f5135d5182ba335dc8af1760be97ed92b8055ddc48618fd847cc33"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when the rectangular battery is visibly free of the DSLR battery compartment; opening the door or partially ejecting it alone does not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}

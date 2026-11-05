@@ -1,0 +1,661 @@
+{
+  "schema_version": "reviewed_evidence_graph_v2",
+  "task_id": "stream_alert_04",
+  "source_id": "HA04",
+  "original_instruction": "Alert when the caution-marked electrical cabinet is opened.",
+  "source": {
+    "session_id": "R063-15July-circuit-breaker",
+    "sha256": "8d853a942f6c41210b49bcdbaac8ae88118d5fb6867e18cdc2e0b80a7a341d51",
+    "video_path": "videos/R063-15July-circuit-breaker.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "native_frame_count": 4287,
+    "frame_index_convention": "zero-based presentation order"
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "material": [
+      {
+        "name": "overview",
+        "native_indices": [
+          0,
+          150,
+          299,
+          449,
+          598,
+          748,
+          898,
+          1047,
+          1197,
+          1347,
+          1496,
+          1646,
+          1795,
+          1945,
+          2095,
+          2244,
+          2394,
+          2544,
+          2693,
+          2843,
+          2992,
+          3142,
+          3292,
+          3441,
+          3591,
+          3741,
+          3890,
+          4040,
+          4189,
+          4286
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 30,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA04/overview_01.png",
+            "sha256": "5431da39db0e5af9c52b647a537b2c5a02a3597adc0eb46719b35e414aa5e561"
+          }
+        ]
+      },
+      {
+        "name": "candidate",
+        "native_indices": [
+          239,
+          254,
+          269,
+          284,
+          299,
+          314,
+          329,
+          344,
+          359,
+          374,
+          389,
+          404,
+          419,
+          434,
+          449,
+          464,
+          479,
+          494,
+          509,
+          524,
+          539,
+          554,
+          569,
+          584,
+          598,
+          613,
+          628,
+          643,
+          658
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 30,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA04/candidate_01.png",
+            "sha256": "6c66826e96b077186a198da48d2192322c14e9fb47df718a3781d7f10cc19c51"
+          }
+        ]
+      },
+      {
+        "name": "native1",
+        "native_indices": [
+          538,
+          539,
+          540,
+          541,
+          542,
+          543,
+          544,
+          545,
+          546,
+          547,
+          548,
+          549,
+          550,
+          551,
+          552,
+          553
+        ],
+        "display_width": 320,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 5,
+        "render_per_page": 20,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA04/native1_01.png",
+            "sha256": "45bf7602d4548bea6cba303393681e139ee5106506d434821509092add00fde7"
+          }
+        ]
+      },
+      {
+        "name": "extra",
+        "native_indices": [
+          344,
+          374,
+          404,
+          524,
+          539,
+          554
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 6,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA04/extra_01.png",
+            "sha256": "6f3f73153648988b8de438f80156a4143666f724883b902962cc13923e77e1ef"
+          }
+        ]
+      },
+      {
+        "name": "delivered",
+        "native_indices": [
+          523,
+          553,
+          583
+        ],
+        "display_width": 480,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA04/delivered_01.png",
+            "sha256": "997ba61a0fff950b5f151730d54b00c1b82d89429dc0146664cd5cc208b9bcba"
+          }
+        ]
+      },
+      {
+        "name": "anchor_check",
+        "native_indices": [
+          388,
+          568,
+          3442
+        ],
+        "display_width": 640,
+        "status": "visually_inspected_by_codex_2026_11_02",
+        "render_columns": 3,
+        "render_per_page": 3,
+        "sheets": [
+          {
+            "path": "full_review/batch_v1/HA04/anchor_check_01.png",
+            "sha256": "faa14b1c8d1aded7ee9567292b0df6732aca1845535e51384bdef4382a988bc7"
+          }
+        ]
+      }
+    ],
+    "prior_review": null,
+    "audio_reviewed": false,
+    "full_native_rate_review": false,
+    "original_gold_modified": false,
+    "findings": "Closer inspection separates earlier handle operation and camera motion from actual door opening around 18.3\u201318.5 s. Later close/reopen is a separate occurrence candidate.",
+    "flags": [
+      "opening_extent_policy_needed",
+      "multiple_occurrences_in_overview"
+    ],
+    "historical_evidence_revision_qualification": "not_established",
+    "limitations": [
+      "Conservative anchors are not exact physical onset.",
+      "Sparse whole-clip overview cannot certify first occurrence or event counts.",
+      "No intent, safety, mechanical security or task-success claim is assigned."
+    ]
+  },
+  "entities": [
+    {
+      "id": "object_1",
+      "description": "caution-marked cabinet"
+    },
+    {
+      "id": "object_2",
+      "description": "front access panels"
+    },
+    {
+      "id": "object_3",
+      "description": "visible internal components"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "observation_0",
+      "type": "observation",
+      "role": "pre",
+      "frame_index_zero_based": 538,
+      "source_pts_seconds": 17.978414,
+      "path": "full_review/batch_v1/HA04/anchors/000538.jpg",
+      "description": "Main door still appears closed; earlier handle operation has not exposed components.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_0",
+      "type": "state_claim",
+      "text": "Main door still appears closed; earlier handle operation has not exposed components.",
+      "evidence_ids": [
+        "observation_0"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_1",
+      "type": "observation",
+      "role": "distractor",
+      "frame_index_zero_based": 388,
+      "source_pts_seconds": 12.965845,
+      "path": "full_review/batch_v1/HA04/anchors/000388.jpg",
+      "description": "Camera viewpoint moves across the cabinet face; this does not establish door opening.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_1",
+      "type": "state_claim",
+      "text": "Camera viewpoint moves across the cabinet face; this does not establish door opening.",
+      "evidence_ids": [
+        "observation_1"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_2",
+      "type": "observation",
+      "role": "transition",
+      "frame_index_zero_based": 548,
+      "source_pts_seconds": 18.312585,
+      "path": "full_review/batch_v1/HA04/anchors/000548.jpg",
+      "description": "A narrow gap appears as the main door swings outward.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_2",
+      "type": "state_claim",
+      "text": "A narrow gap appears as the main door swings outward.",
+      "evidence_ids": [
+        "observation_2"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_3",
+      "type": "observation",
+      "role": "positive",
+      "frame_index_zero_based": 553,
+      "source_pts_seconds": 18.479671,
+      "path": "full_review/batch_v1/HA04/anchors/000553.jpg",
+      "description": "Open-door gap visibly exposes internal components.",
+      "available_by_confirmed_packet": true
+    },
+    {
+      "id": "claim_3",
+      "type": "state_claim",
+      "text": "Open-door gap visibly exposes internal components.",
+      "evidence_ids": [
+        "observation_3"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only",
+      "relation": {
+        "subject": "object_2",
+        "predicate": "open_exposing",
+        "object": "object_3"
+      }
+    },
+    {
+      "id": "observation_4",
+      "type": "observation",
+      "role": "corroboration",
+      "frame_index_zero_based": 568,
+      "source_pts_seconds": 18.980928,
+      "path": "full_review/batch_v1/HA04/anchors/000568.jpg",
+      "description": "Larger open-door view confirms the interior.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_4",
+      "type": "state_claim",
+      "text": "Larger open-door view confirms the interior.",
+      "evidence_ids": [
+        "observation_4"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_5",
+      "type": "observation",
+      "role": "later_state",
+      "frame_index_zero_based": 2394,
+      "source_pts_seconds": 80.000602,
+      "path": "full_review/batch_v1/HA04/anchors/002394.jpg",
+      "description": "Cabinet face appears closed again in the overview.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_5",
+      "type": "state_claim",
+      "text": "Cabinet face appears closed again in the overview.",
+      "evidence_ids": [
+        "observation_5"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "observation_6",
+      "type": "observation",
+      "role": "context",
+      "frame_index_zero_based": 3442,
+      "source_pts_seconds": 115.02175,
+      "path": "full_review/batch_v1/HA04/anchors/003442.jpg",
+      "description": "A later open interior is visible after intervening closed views.",
+      "available_by_confirmed_packet": false
+    },
+    {
+      "id": "claim_6",
+      "type": "state_claim",
+      "text": "A later open interior is visible after intervening closed views.",
+      "evidence_ids": [
+        "observation_6"
+      ],
+      "certainty": "single_assistant_visual_assessment",
+      "scope": "this_observation_only"
+    },
+    {
+      "id": "event_1",
+      "type": "event",
+      "occurrence_id": "HA04:reviewed_occurrence_1",
+      "event_class": "cabinet_access_opening",
+      "positive_evidence_ids": [
+        "observation_3"
+      ],
+      "entity_ids": [
+        "object_2",
+        "object_3"
+      ],
+      "conservative_positive_source_pts_seconds": 18.479671,
+      "physical_onset_seconds": null,
+      "first_occurrence_certified": false,
+      "first_detectable_frame_certified": false,
+      "identity_basis": "Local visual sequence; exact inspected indices are in review.material. No replay or cross-event identity claim is inferred from temporal order.",
+      "supports_original_task": "provisional"
+    },
+    {
+      "id": "delivered_positive",
+      "type": "stream_observation",
+      "packet_time_seconds": 18,
+      "native_frame_index": 553,
+      "source_pts_seconds": 18.479671,
+      "decoded_scaled_frame_md5": "625901530bdb7ac3f578c465cdbe76b7",
+      "stream_path": "stream_frames/R063-15July-circuit-breaker/0019.jpg",
+      "stream_jpeg_sha256": "831417fee7ce688faff2dfedfd9e1bfa9d314b1dd502a45fa09acbe5a77dd17f",
+      "visual_assessment": "Supports the reviewed observation/event; original-task qualification is separate.",
+      "is_earliest_qualifying_packet_certified": false
+    },
+    {
+      "id": "alert_1",
+      "type": "decision",
+      "status": "provisional_target_supported",
+      "policy": "Alert once when opening the main caution-marked door visibly exposes internal components; handle operation and camera motion alone do not qualify.",
+      "evidence_dependencies": [
+        "delivered_positive"
+      ],
+      "confirmed_packet_time_seconds": 18,
+      "source_capture_boundary_seconds": 18.479671,
+      "wall_clock_decision_time": null,
+      "legacy_deadline_packet_seconds": 24,
+      "deadline_basis": "Inherited pilot scoring allowance; not video-derived or deployment-validated.",
+      "scorer_migration_applied": false
+    },
+    {
+      "id": "reopening_candidate_2",
+      "type": "event_candidate",
+      "event_class": "cabinet_reopening_candidate",
+      "occurrence_id": "HA04:reopening_candidate_2",
+      "entity_ids": [
+        "object_1",
+        "object_2",
+        "object_3"
+      ],
+      "evidence_ids": [
+        "observation_6"
+      ],
+      "physical_onset_seconds": null,
+      "qualification": "candidate_from_coarse_overview",
+      "note": "Open view after an intervening closed view suggests another occurrence; exact boundary and identity not exhaustively reviewed."
+    }
+  ],
+  "edges": [
+    {
+      "source": "observation_0",
+      "relation": "supports",
+      "target": "claim_0"
+    },
+    {
+      "source": "claim_0",
+      "relation": "prior_state_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "supports",
+      "target": "claim_1"
+    },
+    {
+      "source": "observation_1",
+      "relation": "insufficient_alone_to_trigger",
+      "target": "alert_1"
+    },
+    {
+      "source": "observation_2",
+      "relation": "supports",
+      "target": "claim_2"
+    },
+    {
+      "source": "observation_2",
+      "relation": "localizes_or_limits",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_3",
+      "relation": "supports",
+      "target": "claim_3"
+    },
+    {
+      "source": "claim_3",
+      "relation": "outcome_evidence_for",
+      "target": "event_1"
+    },
+    {
+      "source": "observation_4",
+      "relation": "supports",
+      "target": "claim_4"
+    },
+    {
+      "source": "observation_4",
+      "relation": "corroborates",
+      "target": "event_1",
+      "used_for_initial_decision": false
+    },
+    {
+      "source": "observation_5",
+      "relation": "supports",
+      "target": "claim_5"
+    },
+    {
+      "source": "claim_5",
+      "relation": "subsequent_state_in_episode",
+      "target": "event_1",
+      "retracts_historical_occurrence": false
+    },
+    {
+      "source": "observation_6",
+      "relation": "supports",
+      "target": "claim_6"
+    },
+    {
+      "source": "observation_6",
+      "relation": "context_for",
+      "target": "event_1",
+      "same_occurrence_link_certified": false
+    },
+    {
+      "source": "observation_6",
+      "relation": "suggests_candidate",
+      "target": "reopening_candidate_2"
+    },
+    {
+      "source": "reopening_candidate_2",
+      "relation": "must_not_be_automatically_merged_with",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "supports_reviewed_event",
+      "target": "event_1"
+    },
+    {
+      "source": "delivered_positive",
+      "relation": "available_evidence_for",
+      "target": "alert_1"
+    },
+    {
+      "source": "event_1",
+      "relation": "triggers_if_target_definition_accepted",
+      "target": "alert_1"
+    }
+  ],
+  "timing": {
+    "packet_labels": "FFmpeg 1 FPS output grid, not source capture PTS",
+    "mapping_verification": "Selected native and fps=1 scaled-frame MD5s match; selected existing JPEGs reproduce byte-for-byte.",
+    "verified_packets": [
+      {
+        "packet_time_seconds": 8,
+        "native_frame_index": 254,
+        "source_pts_seconds": 8.48795,
+        "decoded_scaled_frame_md5": "abcac8699ab42fed344918ba9e390cb6",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0009.jpg",
+        "stream_jpeg_sha256": "e32c1aeb097a8844bdf4bbfc5d60636e6f69c8e8cab034abfa8b3f88cb1980e7"
+      },
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 284,
+        "source_pts_seconds": 9.490464,
+        "decoded_scaled_frame_md5": "c899f6cd4eecfbf953167f238579660e",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0010.jpg",
+        "stream_jpeg_sha256": "4faa3d92a5d273138f23e7566700f922cf29eae2890b24aaea455a54b3d5448b"
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 314,
+        "source_pts_seconds": 10.492978,
+        "decoded_scaled_frame_md5": "671b18bf94c1a306fcfe073a0accf7a4",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0011.jpg",
+        "stream_jpeg_sha256": "1f88ff7e6b4b9a9dcaa58e5333607626783e8b6627099e8e03ff65addb38272a"
+      },
+      {
+        "packet_time_seconds": 11,
+        "native_frame_index": 344,
+        "source_pts_seconds": 11.495492,
+        "decoded_scaled_frame_md5": "dd4cda5fa7fd23e45eeb7d1ec10e8355",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0012.jpg",
+        "stream_jpeg_sha256": "83330616e45d939a9ae9e9fa9065e64eb9ce5293a03f47121640919bb9087c1b"
+      },
+      {
+        "packet_time_seconds": 12,
+        "native_frame_index": 374,
+        "source_pts_seconds": 12.498005,
+        "decoded_scaled_frame_md5": "487d7b8c29ac2922ae61218dcf6ae7c7",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0013.jpg",
+        "stream_jpeg_sha256": "238e14f503b98b098002a830c63527d569a8eada145be4cd8e74c7c84a5069c0"
+      },
+      {
+        "packet_time_seconds": 13,
+        "native_frame_index": 403,
+        "source_pts_seconds": 13.467102,
+        "decoded_scaled_frame_md5": "529d70c45c28e7988c1bb0c49397587f",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0014.jpg",
+        "stream_jpeg_sha256": "a0873f4463bb8c0b177b05c96d693de22cfa448284c8549b0a19c15b6a0400df"
+      },
+      {
+        "packet_time_seconds": 14,
+        "native_frame_index": 433,
+        "source_pts_seconds": 14.469616,
+        "decoded_scaled_frame_md5": "956cf84b388af05ea6a6a03c465734a6",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0015.jpg",
+        "stream_jpeg_sha256": "0d5340875a42d97c237cc6d90d0917918a2ad2b6359422c1f1d1c7b81aee7e33"
+      },
+      {
+        "packet_time_seconds": 15,
+        "native_frame_index": 463,
+        "source_pts_seconds": 15.47213,
+        "decoded_scaled_frame_md5": "e76664c4a150c79b97dd1f0ef72a4ad9",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0016.jpg",
+        "stream_jpeg_sha256": "db501b82bd1a5a4d2aaced92b802f0cf07f3488a4422520d77d4c4b16d85aef0"
+      },
+      {
+        "packet_time_seconds": 16,
+        "native_frame_index": 493,
+        "source_pts_seconds": 16.474644,
+        "decoded_scaled_frame_md5": "004028877c65c32574760234a47f9442",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0017.jpg",
+        "stream_jpeg_sha256": "e0cdc4308a7764087235aee6ccc555d66489af265bd42a0276748e60d112c027"
+      },
+      {
+        "packet_time_seconds": 17,
+        "native_frame_index": 523,
+        "source_pts_seconds": 17.477157,
+        "decoded_scaled_frame_md5": "ff4605cc96644d390a5f108b91055792",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0018.jpg",
+        "stream_jpeg_sha256": "fabfbdace16b200ba72d533f22637af0b33d4267ff0d47e7341b0419dada5fde"
+      },
+      {
+        "packet_time_seconds": 18,
+        "native_frame_index": 553,
+        "source_pts_seconds": 18.479671,
+        "decoded_scaled_frame_md5": "625901530bdb7ac3f578c465cdbe76b7",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0019.jpg",
+        "stream_jpeg_sha256": "831417fee7ce688faff2dfedfd9e1bfa9d314b1dd502a45fa09acbe5a77dd17f"
+      },
+      {
+        "packet_time_seconds": 19,
+        "native_frame_index": 583,
+        "source_pts_seconds": 19.482185,
+        "decoded_scaled_frame_md5": "967893b731ffbfc1e0a9f4c082305274",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0020.jpg",
+        "stream_jpeg_sha256": "7a108595034a7e43080225c4fa02ef1db3c2f36723bbcb692a87d4135f8cec36"
+      },
+      {
+        "packet_time_seconds": 20,
+        "native_frame_index": 613,
+        "source_pts_seconds": 20.484699,
+        "decoded_scaled_frame_md5": "b2d9a21438d6ccc6f5b508075c2d319f",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0021.jpg",
+        "stream_jpeg_sha256": "6081d260d30b7f1328117b1701c1ac61f0ee802e8183f4376a5bea267e7520fb"
+      },
+      {
+        "packet_time_seconds": 21,
+        "native_frame_index": 643,
+        "source_pts_seconds": 21.487213,
+        "decoded_scaled_frame_md5": "46e6b6d24f72b5973c4df7f7a38a0514",
+        "stream_path": "stream_frames/R063-15July-circuit-breaker/0022.jpg",
+        "stream_jpeg_sha256": "d92526924e60a573e2b1bbc52bbe20ed7ba1b108fbbe37e2e9b749914fddf414"
+      }
+    ]
+  },
+  "task_proposal": {
+    "instruction": "Alert once when opening the main caution-marked door visibly exposes internal components; handle operation and camera motion alone do not qualify.",
+    "qualification": "provisional",
+    "independent_review_required": true,
+    "legacy_scorer_consumes_this_graph": false
+  }
+}
