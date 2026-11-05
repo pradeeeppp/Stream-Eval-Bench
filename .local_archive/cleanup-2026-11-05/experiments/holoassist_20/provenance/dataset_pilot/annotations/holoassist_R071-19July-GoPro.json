@@ -1,0 +1,84 @@
+{
+  "annotation_id": "holoassist_R071-19July-GoPro_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "R071-19July-GoPro",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R071-19July-GoPro.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "90cfe66fb7b9fa67ccc5ccdbbdcc83d443fb6e108137ec7512ff06568e01d8ee",
+    "duration_seconds": 288.951,
+    "asset_caveat": "EgoIT-99K rehost; not byte-verified against original HoloAssist archive."
+  },
+  "annotation_status": "draft_single_annotator_sparse_visual_review",
+  "review_scope": {
+    "sample_times_seconds": [
+      12.04,
+      36.12,
+      60.2,
+      84.28,
+      108.36,
+      132.44,
+      156.52,
+      180.59,
+      204.67,
+      228.75,
+      252.83,
+      276.91
+    ],
+    "sampling": "12 evenly spaced still frames; no audio review; intervals below bracket sampled views and are not frame accurate"
+  },
+  "episode_summary": "Action camera setup",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "unpack_camera",
+      "approximate_interval_seconds": [
+        12.04,
+        60.2
+      ],
+      "visual_observation": "Person removes an action camera and accessories from packaging.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "open_camera_compartment",
+      "approximate_interval_seconds": [
+        84.28,
+        132.44
+      ],
+      "visual_observation": "Person manipulates a camera side or battery compartment and accessories.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "handle_mount",
+      "approximate_interval_seconds": [
+        156.52,
+        204.67
+      ],
+      "visual_observation": "Person examines the camera and mounting parts.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "attach_mount",
+      "approximate_interval_seconds": [
+        228.75,
+        276.91
+      ],
+      "visual_observation": "Person works with a yellow mount or fastening tool at the camera base.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

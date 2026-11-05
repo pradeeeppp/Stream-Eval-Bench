@@ -1,0 +1,156 @@
+{
+  "schema_version": "0.1",
+  "purpose": "pilot admission tracking, not evaluation ground truth",
+  "sessions": [
+    {
+      "session_id": "R063-15July-circuit-breaker",
+      "annotation": "annotations/holoassist_R063-15July-circuit-breaker.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": true,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": true
+      }
+    },
+    {
+      "session_id": "R066-15July-ATV-Part1",
+      "annotation": "annotations/holoassist_R066-15July-ATV-Part1.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": true,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": true
+      }
+    },
+    {
+      "session_id": "R071-19July-DSLR",
+      "annotation": "annotations/holoassist_R071-19July-DSLR.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": true,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": true
+      }
+    },
+    {
+      "session_id": "R071-19July-GoPro",
+      "annotation": "annotations/holoassist_R071-19July-GoPro.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": true,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": true
+      }
+    },
+    {
+      "session_id": "R085-26July-Nespresso",
+      "annotation": "annotations/holoassist_R085-26July-Nespresso.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": true,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": true
+      }
+    },
+    {
+      "session_id": "z176-sep-05-22-dslr",
+      "annotation": "annotations/holoassist_camera_z176-sep-05-22-dslr.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": false,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": false
+      }
+    },
+    {
+      "session_id": "R071-19July-BigPrinter",
+      "annotation": "annotations/holoassist_printer_R071-19July-BigPrinter.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": false,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": false
+      }
+    },
+    {
+      "session_id": "z009-june-15-22-marius_assemble",
+      "annotation": "annotations/holoassist_z009-june-15-22-marius_assemble.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": true,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": true
+      }
+    },
+    {
+      "session_id": "z013-june-16-22-rashult_disassemble",
+      "annotation": "annotations/holoassist_z013-june-16-22-rashult_disassemble.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": true,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": true
+      }
+    },
+    {
+      "session_id": "z060-june-28-22-gladom_assemble",
+      "annotation": "annotations/holoassist_z060-june-28-22-gladom_assemble.json",
+      "admission": "pending",
+      "checks": {
+        "video_local": false,
+        "full_video_review": false,
+        "independent_review": false,
+        "adjudication": false,
+        "prefix_only_judgment": false,
+        "source_rights_cleared": false,
+        "event_graph_complete": false,
+        "sha256_matches": false
+      }
+    }
+  ]
+}

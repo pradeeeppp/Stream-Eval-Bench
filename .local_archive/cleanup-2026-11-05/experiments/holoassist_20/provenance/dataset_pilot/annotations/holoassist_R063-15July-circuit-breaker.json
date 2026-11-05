@@ -1,0 +1,94 @@
+{
+  "annotation_id": "holoassist_R063-15July-circuit-breaker_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "R063-15July-circuit-breaker",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R063-15July-circuit-breaker.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "8d853a942f6c41210b49bcdbaac8ae88118d5fb6867e18cdc2e0b80a7a341d51",
+    "duration_seconds": 143.287,
+    "asset_caveat": "EgoIT-99K rehost; not byte-verified against original HoloAssist archive."
+  },
+  "annotation_status": "draft_single_annotator_sparse_visual_review",
+  "review_scope": {
+    "sample_times_seconds": [
+      5.97,
+      17.91,
+      29.85,
+      41.79,
+      53.73,
+      65.67,
+      77.61,
+      89.55,
+      101.49,
+      113.44,
+      125.38,
+      137.32
+    ],
+    "sampling": "12 evenly spaced still frames; no audio review; intervals below bracket sampled views and are not frame accurate"
+  },
+  "episode_summary": "Industrial circuit breaker cabinet inspection",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "inspect_cabinet",
+      "approximate_interval_seconds": [
+        5.97,
+        17.91
+      ],
+      "visual_observation": "Person views a closed caution-marked electrical cabinet.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "inspect_interior",
+      "approximate_interval_seconds": [
+        29.85,
+        41.79
+      ],
+      "visual_observation": "Person views exposed wiring and components inside the cabinet.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "retrieve_tool",
+      "approximate_interval_seconds": [
+        53.73,
+        53.73
+      ],
+      "visual_observation": "Person opens a red tool chest drawer.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "handle_component",
+      "approximate_interval_seconds": [
+        65.67,
+        65.67
+      ],
+      "visual_observation": "Person holds a small electrical component near the open cabinet.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E5",
+      "event_type": "inspect_interior",
+      "approximate_interval_seconds": [
+        101.49,
+        113.44
+      ],
+      "visual_observation": "Person returns to the cabinet interior and reaches toward components.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

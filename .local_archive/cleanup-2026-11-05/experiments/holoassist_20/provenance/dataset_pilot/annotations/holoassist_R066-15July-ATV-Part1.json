@@ -1,0 +1,84 @@
+{
+  "annotation_id": "holoassist_R066-15July-ATV-Part1_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "R066-15July-ATV-Part1",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R066-15July-ATV-Part1.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "2b7a9c9f000dd51175d812cd7e4292cbce9031d5f112df9474306989ba5f658c",
+    "duration_seconds": 187.148,
+    "asset_caveat": "EgoIT-99K rehost; not byte-verified against original HoloAssist archive."
+  },
+  "annotation_status": "draft_single_annotator_sparse_visual_review",
+  "review_scope": {
+    "sample_times_seconds": [
+      7.8,
+      23.39,
+      38.99,
+      54.58,
+      70.18,
+      85.78,
+      101.37,
+      116.97,
+      132.56,
+      148.16,
+      163.75,
+      179.35
+    ],
+    "sampling": "12 evenly spaced still frames; no audio review; intervals below bracket sampled views and are not frame accurate"
+  },
+  "episode_summary": "ATV mechanical work",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "inspect_vehicle",
+      "approximate_interval_seconds": [
+        7.8,
+        7.8
+      ],
+      "visual_observation": "Person examines exposed ATV frame and engine.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "retrieve_fasteners",
+      "approximate_interval_seconds": [
+        38.99,
+        38.99
+      ],
+      "visual_observation": "Person selects small hardware from a parts bin.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "manipulate_engine_area",
+      "approximate_interval_seconds": [
+        70.18,
+        116.97
+      ],
+      "visual_observation": "Person handles a tool or small component around the engine.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "handle_control",
+      "approximate_interval_seconds": [
+        163.75,
+        179.35
+      ],
+      "visual_observation": "Person holds yellow wired controls near the vehicle.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

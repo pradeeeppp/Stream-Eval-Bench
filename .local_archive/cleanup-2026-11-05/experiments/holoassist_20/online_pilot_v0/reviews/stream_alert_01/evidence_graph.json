@@ -1,0 +1,351 @@
+{
+  "schema_version": "reviewed_evidence_graph_v1",
+  "task_id": "stream_alert_01",
+  "source_id": "HA01",
+  "source": {
+    "session_id": "z176-sep-05-22-dslr",
+    "sha256": "3eead3bbf2fe8ebb48a1888b99d0fd55385fd13ebc3ebd361d77597ab86c86cc",
+    "video_path": "videos/z176-sep-05-22-dslr.mp4",
+    "paths_relative_to": "experiments/holoassist_20",
+    "frame_index_convention": "zero-based decoded presentation order",
+    "native_frame_count": 2040
+  },
+  "review": {
+    "date": "2026-11-02",
+    "reviewer": "Codex visual review",
+    "status": "single_assistant_review_pending_independent_adjudication",
+    "full_clip_overview": {
+      "every_n_native_frames": 15,
+      "frame_count": 136
+    },
+    "dense_inspections": [
+      {
+        "start_frame": 230,
+        "end_frame": 270,
+        "stride": 1
+      },
+      {
+        "start_frame": 238,
+        "end_frame": 247,
+        "stride": 1,
+        "display_width": 640
+      },
+      {
+        "start_frame": 285,
+        "end_frame": 370,
+        "stride": 3
+      },
+      {
+        "start_frame": 460,
+        "end_frame": 570,
+        "stride": 5
+      }
+    ],
+    "audio_reviewed": false,
+    "limits": [
+      "No exact physical unlocking time assigned.",
+      "No claim that the conservative positive is the first detectable positive.",
+      "Whole clip reviewed by coarse overview; native-frame review was local, not exhaustive.",
+      "Mechanical attachment security and user intent are not established."
+    ]
+  },
+  "entities": [
+    {
+      "id": "camera_1",
+      "type": "DSLR_body"
+    },
+    {
+      "id": "lens_1",
+      "type": "interchangeable_lens"
+    },
+    {
+      "id": "cap_1",
+      "type": "front_lens_cap"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "o_seated",
+      "type": "observation",
+      "frame_index_zero_based": 241,
+      "source_pts_seconds": 8.044704,
+      "path": "full_review/z176-sep-05-22-dslr/native_000241.jpg",
+      "description": "Lens appears seated against the body; the mount interface is partly occluded. Mechanical lock engagement cannot be determined."
+    },
+    {
+      "id": "o_transition",
+      "type": "observation",
+      "frame_index_zero_based": 243,
+      "source_pts_seconds": 8.111465,
+      "path": "full_review/z176-sep-05-22-dslr/native_000243.jpg",
+      "description": "Lens is moving away from the body; small gap and partly occluded interface make the precise release boundary uncertain."
+    },
+    {
+      "id": "o_separated",
+      "type": "observation",
+      "frame_index_zero_based": 246,
+      "source_pts_seconds": 8.211607,
+      "path": "full_review/z176-sep-05-22-dslr/native_000246.jpg",
+      "description": "Open body mount and lens held away from it are visible. This is a conservative positive anchor, not a claim of the earliest possible positive frame."
+    },
+    {
+      "id": "o_clear_separation",
+      "type": "observation",
+      "frame_index_zero_based": 250,
+      "source_pts_seconds": 8.345129,
+      "path": "full_review/z176-sep-05-22-dslr/native_000250.jpg",
+      "description": "Lens and camera body visibly separated, with the open body mount exposed."
+    },
+    {
+      "id": "o_persistence",
+      "type": "observation",
+      "frame_index_zero_based": 270,
+      "source_pts_seconds": 9.012739,
+      "path": "full_review/z176-sep-05-22-dslr/native_000270.jpg",
+      "description": "Lens remains separate from the open camera body."
+    },
+    {
+      "id": "o_return",
+      "type": "observation",
+      "frame_index_zero_based": 315,
+      "source_pts_seconds": 10.514863,
+      "path": "full_review/z176-sep-05-22-dslr/native_000315.jpg",
+      "description": "Lens is brought back against the body mount; contact alone does not prove secure attachment."
+    },
+    {
+      "id": "o_mounted",
+      "type": "observation",
+      "frame_index_zero_based": 369,
+      "source_pts_seconds": 12.31741,
+      "path": "full_review/z176-sep-05-22-dslr/native_000369.jpg",
+      "description": "Lens appears mounted and remains with the body while the right hand is no longer supporting it. Lock engagement remains unverified."
+    },
+    {
+      "id": "o_cap_removed",
+      "type": "observation",
+      "frame_index_zero_based": 495,
+      "source_pts_seconds": 16.523355,
+      "path": "full_review/z176-sep-05-22-dslr/native_000495.jpg",
+      "description": "Front cap is held separately, exposing front lens glass; the lens itself remains with the camera."
+    },
+    {
+      "id": "s_seated",
+      "type": "state_claim",
+      "subject": "lens_1",
+      "predicate": "visually_seated_on",
+      "object": "camera_1",
+      "at_observation": "o_seated",
+      "certainty": "apparent; lock unknown"
+    },
+    {
+      "id": "s_detached",
+      "type": "state_claim",
+      "subject": "lens_1",
+      "predicate": "separated_from",
+      "object": "camera_1",
+      "at_observation": "o_separated",
+      "certainty": "visually clear"
+    },
+    {
+      "id": "e_detach_1",
+      "type": "event",
+      "event_class": "lens_detachment",
+      "entities": [
+        "camera_1",
+        "lens_1"
+      ],
+      "identity_basis": "Continuous local manipulation sequence; no cut in reviewed native frames 230 through 270.",
+      "physical_onset_seconds": null,
+      "visibility_transition": {
+        "last_apparently_seated_pts_seconds": 8.044704,
+        "conservative_positive_pts_seconds": 8.211607,
+        "interpretation": "Review anchors for visual certainty; not a certified bracket for physical unlocking or the earliest detectable gap."
+      }
+    },
+    {
+      "id": "s_mounted_later",
+      "type": "state_claim",
+      "subject": "lens_1",
+      "predicate": "visually_mounted_on",
+      "object": "camera_1",
+      "at_observation": "o_mounted",
+      "certainty": "apparent; lock unknown"
+    },
+    {
+      "id": "e_cap_1",
+      "type": "event",
+      "event_class": "front_lens_cap_removal",
+      "entities": [
+        "cap_1",
+        "lens_1"
+      ],
+      "positive_anchor": "o_cap_removed",
+      "physical_onset_seconds": null,
+      "role": "Different event and object; does not constitute another lens detachment."
+    },
+    {
+      "id": "a_alert",
+      "type": "decision",
+      "trigger_event": "e_detach_1",
+      "policy": "Alert once when supplied visual evidence clearly establishes lens-body separation. Touching/turning the lens or removing only its front cap is insufficient.",
+      "first_positive_packet": {
+        "packet_time_seconds": 8,
+        "source_frame_index": 254,
+        "source_pts_seconds": 8.478651
+      },
+      "deadline": {
+        "legacy_packet_time_seconds": 13,
+        "basis": "Inherited pilot policy allowance of five packet seconds after the first positive packet; not derived from the video.",
+        "validated_for_real_world_use": false
+      },
+      "uses_future_evidence": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "o_seated",
+      "relation": "supports",
+      "target": "s_seated"
+    },
+    {
+      "source": "o_separated",
+      "relation": "supports",
+      "target": "s_detached"
+    },
+    {
+      "source": "o_clear_separation",
+      "relation": "supports",
+      "target": "s_detached"
+    },
+    {
+      "source": "o_mounted",
+      "relation": "supports",
+      "target": "s_mounted_later"
+    },
+    {
+      "source": "s_seated",
+      "relation": "precondition_evidence_for",
+      "target": "e_detach_1"
+    },
+    {
+      "source": "o_transition",
+      "relation": "localizes_visual_transition_of",
+      "target": "e_detach_1"
+    },
+    {
+      "source": "s_detached",
+      "relation": "outcome_evidence_for",
+      "target": "e_detach_1"
+    },
+    {
+      "source": "o_persistence",
+      "relation": "corroborates",
+      "target": "e_detach_1",
+      "available_for_initial_alert": false
+    },
+    {
+      "source": "e_detach_1",
+      "relation": "triggers",
+      "target": "a_alert"
+    },
+    {
+      "source": "o_return",
+      "relation": "precedes",
+      "target": "o_mounted"
+    },
+    {
+      "source": "s_mounted_later",
+      "relation": "supersedes_current_state",
+      "target": "s_detached",
+      "retracts_historical_event": false
+    },
+    {
+      "source": "o_cap_removed",
+      "relation": "supports",
+      "target": "e_cap_1"
+    },
+    {
+      "source": "e_cap_1",
+      "relation": "must_not_be_counted_as",
+      "target": "e_detach_1"
+    },
+    {
+      "source": "e_detach_1",
+      "relation": "precedes",
+      "target": "e_cap_1"
+    }
+  ],
+  "stream_timing": {
+    "sampling_filter": "fps=1,scale=640:-1",
+    "packet_time_semantics": "FFmpeg output grid; not source capture PTS.",
+    "verified_mapping_method": "Match scaled decoded video frame MD5s between native and fps=1 outputs; reproduce existing first 12 JPEGs byte-for-byte.",
+    "first_12_packets": [
+      {
+        "packet_time_seconds": 0,
+        "native_frame_index": 14,
+        "source_pts_seconds": 0.467327
+      },
+      {
+        "packet_time_seconds": 1,
+        "native_frame_index": 44,
+        "source_pts_seconds": 1.468743
+      },
+      {
+        "packet_time_seconds": 2,
+        "native_frame_index": 74,
+        "source_pts_seconds": 2.470158
+      },
+      {
+        "packet_time_seconds": 3,
+        "native_frame_index": 104,
+        "source_pts_seconds": 3.471574
+      },
+      {
+        "packet_time_seconds": 4,
+        "native_frame_index": 134,
+        "source_pts_seconds": 4.472989
+      },
+      {
+        "packet_time_seconds": 5,
+        "native_frame_index": 164,
+        "source_pts_seconds": 5.474405
+      },
+      {
+        "packet_time_seconds": 6,
+        "native_frame_index": 194,
+        "source_pts_seconds": 6.47582
+      },
+      {
+        "packet_time_seconds": 7,
+        "native_frame_index": 224,
+        "source_pts_seconds": 7.477236
+      },
+      {
+        "packet_time_seconds": 8,
+        "native_frame_index": 254,
+        "source_pts_seconds": 8.478651
+      },
+      {
+        "packet_time_seconds": 9,
+        "native_frame_index": 284,
+        "source_pts_seconds": 9.480067
+      },
+      {
+        "packet_time_seconds": 10,
+        "native_frame_index": 314,
+        "source_pts_seconds": 10.481482
+      },
+      {
+        "packet_time_seconds": 11,
+        "native_frame_index": 344,
+        "source_pts_seconds": 11.482897
+      }
+    ],
+    "arrival_or_wall_clock_times": "Not recorded by this offline annotation."
+  },
+  "task_proposal": {
+    "instruction": "Alert once, as soon as the supplied frames clearly show the interchangeable lens separated from the DSLR body. Do not alert for touching or rotating the lens, or removing only the front lens cap.",
+    "existing_gold_modified": false,
+    "scorer_uses_this_graph": false
+  }
+}

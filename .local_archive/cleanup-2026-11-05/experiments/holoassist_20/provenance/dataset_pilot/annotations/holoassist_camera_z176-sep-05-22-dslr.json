@@ -1,0 +1,209 @@
+{
+  "annotation_id": "holoassist_z176_camera_parts_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "z176-sep-05-22-dslr",
+    "asset_id": "holo_1",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z176-sep-05-22-dslr.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "3eead3bbf2fe8ebb48a1888b99d0fd55385fd13ebc3ebd361d77597ab86c86cc",
+    "source_duration_seconds": 68.096252,
+    "source_fps": 29.957595718402636,
+    "asset_caveat": "The local asset was distributed through lmms-lab/EgoIT-99K and is not byte-verified against the original HoloAssist archive. Follow the original dataset and redistribution terms."
+  },
+  "annotation_status": "draft_single_annotator_visual_review",
+  "annotator_count": 1,
+  "review_scope": {
+    "source_interval_seconds": [
+      6.0,
+      24.0
+    ],
+    "observed_source_times_seconds": [
+      6.008492860774802,
+      6.976527821677409,
+      7.944562782580015,
+      8.912597743482623,
+      9.012739291162204,
+      9.98077425206481,
+      10.948809212967417,
+      11.916844173870023,
+      12.016985721549604,
+      12.98502068245221,
+      13.953055643354817,
+      14.921090604257424,
+      15.021232,
+      15.98926696090261,
+      16.957301921805218,
+      17.92533688270782,
+      18.025478,
+      18.994,
+      19.962,
+      20.93,
+      21.03,
+      21.998,
+      22.966,
+      23.9
+    ],
+    "sampling_note": "Reviewed the existing 1 FPS sampled packet frames, not every source frame. Action intervals are bounded by sampled observations and are approximate; do not interpret the bounds as frame-exact event times.",
+    "audio_reviewed": false
+  },
+  "episode_summary": "A person handles a Canon DSLR with a zoom lens on a tabletop. Within the reviewed interval, the lens is removed from the camera body and later reattached; the front lens cap is then removed and replaced. These are two different part-removal events, not a replay or a repeated removal of the same component.",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "remove_component",
+      "event_interval_seconds": {
+        "earliest_possible": 7.944562782580015,
+        "latest_possible": 8.912597743482623,
+        "precision": "sample-bracketed"
+      },
+      "actor": "person wearing the egocentric camera",
+      "object": "Canon DSLR zoom lens assembly",
+      "action": "detaches the zoom lens assembly from the camera body",
+      "event_identity_status": "distinct_occurrence",
+      "evidence": [
+        {
+          "time_seconds": 7.944562782580015,
+          "observation": "Lens appears mounted on the camera body; the person is holding and turning the assembly."
+        },
+        {
+          "time_seconds": 8.912597743482623,
+          "observation": "The camera body is visibly separated from the zoom lens, which is held in the other hand."
+        }
+      ],
+      "confidence": "high_for_action_and_object; interval_is_approximate"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "attach_component",
+      "event_interval_seconds": {
+        "earliest_possible": 10.948809212967417,
+        "latest_possible": 12.016985721549604,
+        "precision": "sample-bracketed"
+      },
+      "actor": "person wearing the egocentric camera",
+      "object": "Canon DSLR zoom lens assembly",
+      "action": "reattaches the zoom lens assembly to the camera body",
+      "event_identity_status": "distinct_occurrence",
+      "evidence": [
+        {
+          "time_seconds": 10.948809212967417,
+          "observation": "The lens is positioned over the camera mount; the exact point of engagement is not clear in this sampled frame."
+        },
+        {
+          "time_seconds": 12.016985721549604,
+          "observation": "The lens is visibly mounted on the camera body."
+        }
+      ],
+      "confidence": "medium; sampled frame at the start bound is partially occluded"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "remove_component",
+      "event_interval_seconds": {
+        "earliest_possible": 15.98926696090261,
+        "latest_possible": 16.957301921805218,
+        "precision": "sample-bracketed"
+      },
+      "actor": "person wearing the egocentric camera",
+      "object": "flat front lens cap",
+      "action": "removes the front cap from the still-mounted zoom lens",
+      "event_identity_status": "distinct_occurrence; different component from E1",
+      "evidence": [
+        {
+          "time_seconds": 15.98926696090261,
+          "observation": "The hand is manipulating the front of the mounted lens; the cap appears to be in the process of removal."
+        },
+        {
+          "time_seconds": 16.957301921805218,
+          "observation": "The exposed lens front and detached cap held separately are visible."
+        }
+      ],
+      "confidence": "high_for_cap_removal; interval_is_approximate"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "attach_component",
+      "event_interval_seconds": {
+        "earliest_possible": 17.92533688270782,
+        "latest_possible": 18.994,
+        "precision": "sample-bracketed"
+      },
+      "actor": "person wearing the egocentric camera",
+      "object": "flat front lens cap",
+      "action": "replaces the front cap on the mounted zoom lens",
+      "event_identity_status": "distinct_occurrence",
+      "evidence": [
+        {
+          "time_seconds": 17.92533688270782,
+          "observation": "The cap is being brought back to the lens front; exact engagement is obscured by the hand."
+        },
+        {
+          "time_seconds": 18.994,
+          "observation": "The cap is visibly seated on the lens front."
+        }
+      ],
+      "confidence": "medium; exact contact is occluded"
+    }
+  ],
+  "state_checkpoints": [
+    {
+      "time_seconds": 6.976527821677409,
+      "camera_body_has_zoom_lens": "yes",
+      "lens_has_front_cap": "yes",
+      "distinct_removal_count_in_review_interval": 0
+    },
+    {
+      "time_seconds": 8.912597743482623,
+      "camera_body_has_zoom_lens": "no",
+      "lens_has_front_cap": "yes",
+      "distinct_removal_count_in_review_interval": 1
+    },
+    {
+      "time_seconds": 12.98502068245221,
+      "camera_body_has_zoom_lens": "yes",
+      "lens_has_front_cap": "yes",
+      "distinct_removal_count_in_review_interval": 1
+    },
+    {
+      "time_seconds": 16.957301921805218,
+      "camera_body_has_zoom_lens": "yes",
+      "lens_has_front_cap": "no",
+      "distinct_removal_count_in_review_interval": 2
+    },
+    {
+      "time_seconds": 18.994,
+      "camera_body_has_zoom_lens": "yes",
+      "lens_has_front_cap": "yes",
+      "distinct_removal_count_in_review_interval": 2
+    }
+  ],
+  "protected_facts": [
+    "E1 and E3 are two different events involving different components.",
+    "Reattaching the lens (E2) and replacing the cap (E4) are not additional removal events.",
+    "At the final reviewed checkpoint, the zoom lens is attached to the camera and its front cap is in place.",
+    "The video does not establish the camera's power state or whether a photograph was taken."
+  ],
+  "candidate_labels": {
+    "event_order": [
+      "E1",
+      "E2",
+      "E3",
+      "E4"
+    ],
+    "removal_events_in_interval": 2,
+    "same_event_replay_present": false,
+    "later_evidence_about_a_fixed_past_event": false,
+    "eligible_for_core_retrospective_revision_task": "undetermined",
+    "later_evidence_about_fixed_past_event": "undetermined"
+  },
+  "quality_control": {
+    "prefix_only_annotation_done": false,
+    "independent_full_context_review_done": false,
+    "adjudication_done": false,
+    "model_outputs_seen_before_this_draft": true,
+    "note": "This is a pilot annotation by one reviewer using existing sampled frames. It is not ground truth yet. A second annotator should independently mark event intervals, object identity, and state checkpoints from the source video before scoring models. Because prior model experiments exist on this source, use it as a schema pilot or training/development item, not a held-out test example.",
+    "benchmark_admission": "pending",
+    "release_split": "unassigned"
+  }
+}

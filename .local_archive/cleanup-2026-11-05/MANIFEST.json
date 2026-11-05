@@ -1,0 +1,253 @@
+{
+  "reason": "Unused legacy pilot drafts and duplicate generated export; preserved for recovery",
+  "files": [
+    {
+      "original_path": "experiments/holoassist_20/belief_revision_v1/prepare.py",
+      "sha256": "4c7bcf405e4b0e04ee63a92b753418677801dfe1523d5506fd7774f478593fa7"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/README.md",
+      "sha256": "360dbe499dd8078d57c52643e24200064083b45c700c84ae7299335b7cefe4d7"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/build_evidence_graphs.py",
+      "sha256": "244e1cb091a99202ee14d6444643e9d3c0bfbf3c6899af8844097b6e68190579"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/evaluate.py",
+      "sha256": "7c948632196cbc2183e7341767e931b3981a37f36e05df8200266d1251aac400"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/evidence_graphs.jsonl",
+      "sha256": "7ea81b4e006dddf09eff67cf92f0bb4bd4cbb308d62ce0dca7a958520b37a422"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/example_adapter.py",
+      "sha256": "25c32961a798d948450443c3aa3cef018d1d7ec297d2178936018bd8eb112399"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/prepare_media.py",
+      "sha256": "a4c48e781e1852a48f4a378b0e45dbce97b58669efaf75f2740785f3e1bfb516"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/public_tasks.jsonl",
+      "sha256": "81197dbe4c5856eece2abd2cf5408eb7103c7c6d919e01653168b52c25c9133a"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/PLAN.md",
+      "sha256": "1b203455c0fe65a73815c5ead1454f8e25bfabc8a490bdf24ab141b15709c723"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA01/README.md",
+      "sha256": "c60411fa5f75927d499294a768601ad703fffc7abbd6fd6b23ef1fb994ea89f8"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA02/README.md",
+      "sha256": "c638eaf763cd0f89374ecd60e8e6377a2f1eed7506df6d2551d6bb45d9b9dc1b"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA03/README.md",
+      "sha256": "89be44d3efc1c37fbb725ac63fdbe200c436e809efae93f181267d07f85d9b92"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA04/README.md",
+      "sha256": "f3b665b3b5e7931fab43d3b66f9ca950f14b5863ad2c78008c2491eb2f5c8e41"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA05/README.md",
+      "sha256": "f536552a5bbaaedade24ad595e87a4fa3989089f6d4c09325f87b897a391c403"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA06/README.md",
+      "sha256": "019edde79dff567934e21ccef9f616f7809ae91a504e91376e4f0aa29b9c6dd4"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA07/README.md",
+      "sha256": "ee511fe4dfc5cc27a0b6b553b9c2879f1a5f8a5b94495cf3fd62c10f732dc53f"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA08/README.md",
+      "sha256": "665b72547f62b34305c70d75f34c3402716c144e903fc35e1be2db271a00508f"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA09/README.md",
+      "sha256": "00c10cae40e2f79eac497f917ef97d162195cd3f78810c516bd7f7ef11d08fd4"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HA10/README.md",
+      "sha256": "da017fcda22e8111ab475454d75684db502ea42a8906a7da0009349f016f93cf"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB01/README.md",
+      "sha256": "1d021496eef306b82265cb205d1cd79545724d0c1ee030453569336e66200267"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB02/README.md",
+      "sha256": "5ebe8dcf896229a384f49e8fafea8a5d8f10dd77c6f4fa6ddb17464484c16132"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB03/README.md",
+      "sha256": "5e00a10f4df4782c913fbd99ce4e5ef9acd628e85e76877592cb86fa049eaa4e"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB04/README.md",
+      "sha256": "53f7d8d57d98cd7810b99dba8b93f1da59a02b63226fca8eeb3c9665898be722"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB05/README.md",
+      "sha256": "70a3c5b649c8762fd90854aee5e14beb7e872d16765a8b7b27833acd4dfd4ec4"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB06/README.md",
+      "sha256": "5911a599032abb7e068c6aebcb24e83b7bfd55728751ba64c18abe5423448351"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB07/README.md",
+      "sha256": "52f09b4307fbef0f85ff20cce4ca6f68a67fc4845d046313e563f1864d12940d"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB08/README.md",
+      "sha256": "301103550548e36af4395b35f98db22830aeb746f622cd8e192ea790068f1b06"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB09/README.md",
+      "sha256": "d27afcb798c16f614552342bfbaad9eda935b1ff13f7e54723fc05b80b00b11a"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/HB10/README.md",
+      "sha256": "c9539c97a23d5932cd9ded98d010982fce90c5946ae8ad58c11c4fe865d48b57"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/README.md",
+      "sha256": "8bd8365ce0033b28f24af99875f07059ec8d84d28536468b318b4878c0ff6df5"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/STATUS.md",
+      "sha256": "e618a25c7cf90559be2cfcee2aff9d094e539f4c953a45ca16f29f94efa43ebf"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/annotations.json",
+      "sha256": "50f1e3afe36eeedd0512ca51e8293ea6babea84231a14b24cc1d99f89da43ecf"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/baseline_hashes.json",
+      "sha256": "41700280c431f8d2ddc5268c485c5e8257864d15a7b4911b77af4c2c2fd39316"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/build.py",
+      "sha256": "8a5ae474858ebfd9104a22785b1e59cb83430b3444480f10ea5f919e6e5ce51e"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/evidence_graphs.reviewed.jsonl",
+      "sha256": "28139ce3aba023e1e8606d6eb669943d2ed0f07114a78a23a3bd44e107a28915"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/rehydrate.py",
+      "sha256": "a9ce1eafbc8cca5f211aa884fe5bf5d0d3650111c1e700f4ad21f231b722ea2c"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/review_index.json",
+      "sha256": "29197ff354fe7ff07f270af54e9e68f73a85b8c46d2507a844cb76a9a4d9597b"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/review_media.py",
+      "sha256": "e5f0eb0308eef281525483f40ab817979be28a1d1356346e54d0407f8b900d88"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/test_validation.py",
+      "sha256": "4ad4ed9055aaf64ba26d9d7f8cae31b2e6851e2d7d3b24849e934af532c92f5c"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/validate.py",
+      "sha256": "41436bb42e2984c20fbd43f2c6342a384e4e5a1b126e6d6537399156cbcd3425"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/validation_report.json",
+      "sha256": "56af2395416e8a44b67c8b67157865ac6b0a9fc68b7156a9cd4cd28b29f51e91"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/batch_v1/verify_timing.py",
+      "sha256": "6eb5332fb8594e5e87d1adf2d488d4fa7f858fc7b3dbf417b93e6efdb4c0a9bf"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/stream_alert_01/README.md",
+      "sha256": "15956273ffe9fe959928da926a750afbf050164910fa6c07c06c9f3d9577cb01"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/stream_alert_01/evidence_graph.json",
+      "sha256": "0e3ea77fd8821166acd1b5c16f1aac9528c553eb6febfeee720a0af967889b8f"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/reviews/stream_alert_01/verify.py",
+      "sha256": "cf05ccf2a62acbb3d4c1d834fdb244f4b5a882b24a89b80ff14e0d163be7a068"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/score.py",
+      "sha256": "4be0353a7b1e865be3cdf24a92bdf216210c9f1f0d083f280905be7d8b77a59c"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/stream.py",
+      "sha256": "ba33b6dae77811c40b9fc7402a36e1aaae8e6216f9029caa5a60199881092414"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/tasks.jsonl",
+      "sha256": "8cb8363943f60b70b3472c91d536c7933988613e4166c20ab6edbd412b1589a1"
+    },
+    {
+      "original_path": "experiments/holoassist_20/online_pilot_v0/validate.py",
+      "sha256": "6c0928f6561694a585b5e3a827b6d7ead0af4777dd2a8932873282045c31d72d"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/admission_manifest.json",
+      "sha256": "897f43f9708b7123dd21c811d3e9a1584324d26241a77d8d870d5d2d123175bd"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_R063-15July-circuit-breaker.json",
+      "sha256": "b6bd0fecc035e4776b8446670b60bddd100f14e05b220bb5c725b197e504d8a4"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_R066-15July-ATV-Part1.json",
+      "sha256": "20a107461ca7945598a4362788788e2b9bc19e93b1483147a3b22dde5514f2a5"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_R071-19July-DSLR.json",
+      "sha256": "16deec574e869511db9de5c33445fcde5bd2bbccde4343fc59fc577f7c7938ee"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_R071-19July-GoPro.json",
+      "sha256": "2aea1b41641b2cb663dfebf3845742b5286f2664637d4f9f641f91920d6fa42c"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_R085-26July-Nespresso.json",
+      "sha256": "da580ee0d620280b6dd11839cc10bc71a624a64d1683cb883994fb5f4cbb02e9"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_camera_z176-sep-05-22-dslr.json",
+      "sha256": "74904716908d2881e11281743c8a649325504bb23db571768ecb888f749958ef"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_printer_R071-19July-BigPrinter.json",
+      "sha256": "cf15f013ee85ecd37cc1482d45c6036ee9dc3319e641291769ce74b0a486d2d5"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_z009-june-15-22-marius_assemble.json",
+      "sha256": "081325060779eab011833aeff1fb884e0d6bcfd970b4befca7c84be9db0f64c0"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_z013-june-16-22-rashult_disassemble.json",
+      "sha256": "00f37a4834a39f53913c3a3b187376320c6661847e7d7b55104f2b6f9598abac"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot/annotations/holoassist_z060-june-28-22-gladom_assemble.json",
+      "sha256": "3ddb377266fdaf8e91ed356f0f9d2138f9f88a784bdf9bdb89076b35db42bf88"
+    },
+    {
+      "original_path": "experiments/holoassist_20/provenance/dataset_pilot_batch2/selection.json",
+      "sha256": "609bfef773c334032c1f029d8d8095e5c01333e80c9d8ebd5c75362bb6947931"
+    },
+    {
+      "original_path": "experiments/holoassist_20/belief_revision_v1/belief_graphs.jsonl",
+      "sha256": "5bad504002748dfff6854c566df42ef0be109ba4f1d762e28f62a23411425c4b"
+    }
+  ]
+}

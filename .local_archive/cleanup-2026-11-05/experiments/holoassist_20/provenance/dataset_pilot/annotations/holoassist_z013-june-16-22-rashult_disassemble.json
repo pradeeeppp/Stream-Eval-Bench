@@ -1,0 +1,84 @@
+{
+  "annotation_id": "holoassist_z013-june-16-22-rashult_disassemble_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "z013-june-16-22-rashult_disassemble",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z013-june-16-22-rashult_disassemble.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "aad9df49f73e10d54a7bd5a4d3ae1a348a102b2c1bfe15fc6efc6159d503754e",
+    "duration_seconds": 330.409,
+    "asset_caveat": "EgoIT-99K rehost; not byte-verified against original HoloAssist archive."
+  },
+  "annotation_status": "draft_single_annotator_sparse_visual_review",
+  "review_scope": {
+    "sample_times_seconds": [
+      13.77,
+      41.3,
+      68.84,
+      96.37,
+      123.9,
+      151.44,
+      178.97,
+      206.51,
+      234.04,
+      261.57,
+      289.11,
+      316.64
+    ],
+    "sampling": "12 evenly spaced still frames; no audio review; intervals below bracket sampled views and are not frame accurate"
+  },
+  "episode_summary": "Mesh rolling cart disassembly",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "detach_basket",
+      "approximate_interval_seconds": [
+        13.77,
+        68.84
+      ],
+      "visual_observation": "Person handles a black mesh basket and frame connections.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "separate_parts",
+      "approximate_interval_seconds": [
+        96.37,
+        151.44
+      ],
+      "visual_observation": "Basket and wheeled components are laid out separately.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "remove_fasteners",
+      "approximate_interval_seconds": [
+        178.97,
+        261.57
+      ],
+      "visual_observation": "Person unscrews joints in the black tubular frame.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "collect_parts",
+      "approximate_interval_seconds": [
+        289.11,
+        316.64
+      ],
+      "visual_observation": "Person moves detached bars and bracket parts onto the work surface.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

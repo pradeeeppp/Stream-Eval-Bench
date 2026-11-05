@@ -1,0 +1,55 @@
+{
+  "revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+  "selected": [
+    {
+      "session_id": "R061-15July-Belt",
+      "expected_size": 78605726,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R061-15July-Belt.mp4"
+    },
+    {
+      "session_id": "R189-24Oct-CircuitBreaker",
+      "expected_size": 60209897,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R189-24Oct-CircuitBreaker.mp4"
+    },
+    {
+      "session_id": "R072-20July-DSLR",
+      "expected_size": 20304712,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R072-20July-DSLR.mp4"
+    },
+    {
+      "session_id": "R105-3Aug-GoPro",
+      "expected_size": 47968579,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R105-3Aug-GoPro.mp4"
+    },
+    {
+      "session_id": "R181-12Oct-RAM",
+      "expected_size": 78252579,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R181-12Oct-RAM.mp4"
+    },
+    {
+      "session_id": "R197-25Oct-GraphicsCard",
+      "expected_size": 75630824,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R197-25Oct-GraphicsCard.mp4"
+    },
+    {
+      "session_id": "z020-june-20-22-gladom_disassemble",
+      "expected_size": 29420860,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z020-june-20-22-gladom_disassemble.mp4"
+    },
+    {
+      "session_id": "z022-june-21-22-knarrevik_disassemble",
+      "expected_size": 80029658,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z022-june-21-22-knarrevik_disassemble.mp4"
+    },
+    {
+      "session_id": "z039-june-23-22-printer_big",
+      "expected_size": 35974698,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z039-june-23-22-printer_big.mp4"
+    },
+    {
+      "session_id": "z043-june-24-22-nespresso",
+      "expected_size": 80770617,
+      "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z043-june-24-22-nespresso.mp4"
+    }
+  ]
+}

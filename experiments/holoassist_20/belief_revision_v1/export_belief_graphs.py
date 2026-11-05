@@ -1,6 +1,8 @@
 """Export expressed beliefs separately from the reviewed factual evidence graphs."""
 import argparse
 import json
+import os
+from pathlib import Path
 
 from protocol import HERE, PHASES, parse_response
 
@@ -8,11 +10,13 @@ from protocol import HERE, PHASES, parse_response
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--jsonl', action='store_true', help='Also generate a combined JSONL copy.')
+    parser.add_argument('--run-dir', type=Path, default=HERE)
     args = parser.parse_args()
+    here = args.run_dir.resolve()
     graphs = []
-    for case in json.loads((HERE / 'cases.json').read_text()):
+    for case in json.loads((here / 'cases.json').read_text()):
         sid = case['case_id']
-        path = HERE / 'responses' / f'{sid}.json'
+        path = here / 'responses' / f'{sid}.json'
         records = json.loads(path.read_text())['steps'] if path.exists() else {}
         nodes, edges = [], []
         for pid, packet in case['packets'].items():
@@ -63,16 +67,19 @@ def main():
         graphs.append({'case_id': sid, 'graph_type': 'expressed_belief_trace',
                        'paths_relative_to': 'experiment root: directory containing cases.json',
                        'primary_qualified': case['primary_qualified'],
-                       'reviewed_factual_graph': f'../online_pilot_v0/reviews/batch_v1/{sid}/evidence_graph.json',
+                       'reviewed_factual_graph': os.path.relpath(HERE.parent / 'online_pilot_v0/reviews/batch_v1' / sid / 'evidence_graph.json', here),
                        'reviewed_factual_graph_sha256': case['graph_sha256'],
                        'citation_semantics': 'Model citations are assertions, not verified support edges.',
                        'nodes': nodes, 'edges': edges})
-    directory = HERE / 'belief_graphs'
+    if here != HERE.resolve():
+        for graph in graphs:
+            graph['input_paths_relative_to'] = str(HERE)
+    directory = here / 'belief_graphs'
     directory.mkdir(exist_ok=True)
     for graph in graphs:
         (directory / f"{graph['case_id']}.json").write_text(json.dumps(graph, indent=2) + '\n')
     if args.jsonl:
-        (HERE / 'belief_graphs.jsonl').write_text(''.join(json.dumps(g) + '\n' for g in graphs))
+        (here / 'belief_graphs.jsonl').write_text(''.join(json.dumps(g) + '\n' for g in graphs))
     print(f'Exported {len(graphs)} belief trace graphs.')
 
 

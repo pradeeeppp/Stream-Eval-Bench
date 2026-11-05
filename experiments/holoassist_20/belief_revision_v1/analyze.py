@@ -1,5 +1,8 @@
 """Generate the three-question analysis for each video from actual saved outputs."""
+import argparse
 import json
+import os
+from pathlib import Path
 
 from protocol import HERE, PHASES, expected_state, score_episode
 
@@ -68,14 +71,14 @@ def research_answers(case, episode):
     return [q1, q2, q3]
 
 
-def main():
-    cases = json.loads((HERE / 'cases.json').read_text())
+def analyze(here):
+    cases = json.loads((here / 'cases.json').read_text())
     summaries = []
-    analysis_dir = HERE / 'analysis'
+    analysis_dir = here / 'analysis'
     analysis_dir.mkdir(exist_ok=True)
     for case in cases:
         sid = case['case_id']
-        path = HERE / 'responses' / f'{sid}.json'
+        path = here / 'responses' / f'{sid}.json'
         record = json.loads(path.read_text()) if path.exists() else {'steps': {}}
         episode = score_episode(case, record['steps'])
         answers = research_answers(case, episode)
@@ -112,7 +115,7 @@ def main():
                  'continuous-stream failure, natural replay association, a causal memory mechanism, or population reliability.', '',
                  f'[Exact requests and raw responses](../responses/{sid}.json) · '
                  f'[Model belief trace graph](../belief_graphs/{sid}.json) · '
-                 f'[Reviewed factual evidence graph](../../online_pilot_v0/reviews/batch_v1/{sid}/evidence_graph.json)', '',
+                 f'[Reviewed factual evidence graph]({os.path.relpath(HERE.parent / "online_pilot_v0/reviews/batch_v1" / sid / "evidence_graph.json", analysis_dir)})', '',
                  '## Expressed evidence links', '',
                  '| Phase | Earlier evidence IDs | Latest evidence IDs |', '|---|---|---|']
         for phase in ORDER:
@@ -128,7 +131,7 @@ def main():
               'n_completed_primary': len(primary),
               'n_completed_diagnostic': sum(s['episode']['status'] == 'diagnostic_only' for s in summaries),
               'n_actual_benchmark_responses': sum(len(json.loads(p.read_text()).get('steps', {}))
-                                                for p in (HERE / 'responses').glob('*.json')) if (HERE / 'responses').exists() else 0}
+                                                for p in (here / 'responses').glob('*.json')) if (here / 'responses').exists() else 0}
     rates = {}
     if primary:
         for metric in primary[0]['episode']['metrics']:
@@ -190,7 +193,7 @@ def main():
             'response_format': formats, 'descriptive_checks': descriptive,
             'analytical_no_pixel_schedule_baseline': schedule_baseline,
             'case_groups': case_groups, 'per_video': summaries}
-    (HERE / 'analysis.json').write_text(json.dumps(full, indent=2) + '\n')
+    (here / 'analysis.json').write_text(json.dumps(full, indent=2) + '\n')
     text = ['# Twenty-video Qwen2.5-VL-3B belief revision findings', '',
             f"Execution status: **{full['status']}**. Actual saved benchmark responses: "
             f"**{totals['n_actual_benchmark_responses']}/100**.", '',
@@ -249,10 +252,12 @@ def main():
              'as a model error.', '',
              'Joint success with failure in both sequential orders describes a segmented-input difficulty; it does not '
              'identify a state-maintenance mechanism. Joint and chronological success with a delayed failure is an '
-             'order-sensitive candidate within this protocol. The only such case here, HA08, has expected earlier=unknown, '
-             'so it concerns uncertainty maintenance rather than failure to recover a known earlier fact. '
-             'HB06 also has an unknown earlier label. One trial does not establish a reproducible mechanism '
-             'or a novel streaming-specific phenomenon.', '',
+             'order-sensitive candidate within this protocol. '
+             + ('The only such case here, HA08, has expected earlier=unknown, '
+                'so it concerns uncertainty maintenance rather than failure to recover a known earlier fact. '
+                'HB06 also has an unknown earlier label. ' if here.resolve() == HERE.resolve() else
+                'Inspect each paired candidate against its known or unknown prior label; these are output patterns. ')
+             + 'One trial does not establish a reproducible mechanism or a novel streaming-specific phenomenon.', '',
              'A label-balance check reveals an additional limit: a rule that never inspects pixels and always answers '
              'earlier=unknown until A, earlier=no after A, and latest=no before B/yes after B achieves '
              f"{schedule_baseline['delayed_1']['correct_fields']}/{schedule_baseline['delayed_1']['fields']} final state fields "
@@ -263,8 +268,15 @@ def main():
              'This uses two event-centered four-frame video packets and external JSON memory. The same eight frames are '
              'used across conditions. It does not evaluate all frames of each recording or reproduce the PDF\'s separate '
              'uniform whole-video sampling. It also does not test natural replay discovery or calibrated confidence.', '']
-    (HERE / 'RESULTS.md').write_text('\n'.join(text))
+    (here / 'RESULTS.md').write_text('\n'.join(text))
     print(json.dumps({'status': full['status'], **totals}, indent=2))
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--run-dir', type=Path, default=HERE)
+    args = parser.parse_args()
+    analyze(args.run_dir.resolve())
 
 
 if __name__ == '__main__':

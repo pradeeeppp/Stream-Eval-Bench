@@ -1,0 +1,49 @@
+{
+  "annotation_id": "holoassist_z060_gladom_assemble_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "z060-june-28-22-gladom_assemble",
+    "asset_id": "holo_3",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z060-june-28-22-gladom_assemble.mp4",
+    "sha256": "0f45226c0138d890cfb474fea4f387e865c6731acc083bf32147dc93da8a3b39",
+    "duration_seconds": 121.769
+  },
+  "annotation_status": "draft_single_annotator_visual_review",
+  "review_scope": {
+    "sampling": "1 fps contact sheets; no audio review; approximate event timing"
+  },
+  "episode_summary": "Person assembles a small round table from white components and fasteners.",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "assemble_table",
+      "approximate_interval_seconds": [
+        0,
+        112
+      ],
+      "visual_observation": "Person manipulates white table components, supports, and fasteners. Exact substeps need full video review.",
+      "confidence": "medium_for_task_low_for_boundaries"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "place_tray_or_top",
+      "approximate_interval_seconds": [
+        112,
+        120
+      ],
+      "visual_observation": "Person places a round tray or top onto the assembled support.",
+      "confidence": "medium"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

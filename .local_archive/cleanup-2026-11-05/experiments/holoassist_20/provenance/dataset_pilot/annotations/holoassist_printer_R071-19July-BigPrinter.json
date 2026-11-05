@@ -1,0 +1,146 @@
+{
+  "annotation_id": "holoassist_R071_bigprinter_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "R071-19July-BigPrinter",
+    "asset_id": "holo_2",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "455ce3d7c3af6e48bbbc703fe58d50448708913fba94a6cc393d07c2c95bd4f5",
+    "duration_seconds": 76.06286,
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R071-19July-BigPrinter.mp4",
+    "asset_caveat": "Rehosted via EgoIT-99K; not byte-verified against the original HoloAssist archive. Follow the source dataset terms."
+  },
+  "annotation_status": "draft_single_annotator_visual_review",
+  "annotator_count": 1,
+  "review_scope": {
+    "source_interval_seconds": [
+      0.0,
+      76.06286
+    ],
+    "sampling": "Existing contact sheets at approximately 1 FPS; not frame-exhaustive.",
+    "audio_reviewed": false,
+    "interval_precision": "Approximate; event boundaries are sample-bracketed where possible."
+  },
+  "episode_summary": "A person interacts with a large office printer. They manipulate its controls and display, handle sheets or instruction material on top of the printer, then move to the lower paper drawers and open a drawer. The sampled visuals do not establish the precise paper or cartridge operation at the end.",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "printer_interaction",
+      "event_interval_seconds": [
+        6.5,
+        17.5
+      ],
+      "action": "The person presses printer controls; the central display changes from dark to visibly illuminated by approximately 16.5 seconds.",
+      "claims": [
+        {
+          "claim_id": "display_state_at_6s",
+          "value": "dark",
+          "support_seconds": [
+            6.5,
+            7.5
+          ]
+        },
+        {
+          "claim_id": "display_state_at_17s",
+          "value": "illuminated",
+          "support_seconds": [
+            16.5,
+            17.5
+          ]
+        }
+      ],
+      "confidence": "high_for_sampled_display_states; medium_for_exact_control_action_and_transition_time"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "printer_interaction",
+      "event_interval_seconds": [
+        38.5,
+        43.5
+      ],
+      "action": "The person reaches toward the printer controls; the central display is illuminated at approximately 41.5 seconds and appears dark by approximately 43.5 seconds.",
+      "claims": [
+        {
+          "claim_id": "display_state_at_41s",
+          "value": "illuminated",
+          "support_seconds": [
+            40.5,
+            41.5
+          ]
+        },
+        {
+          "claim_id": "display_state_at_43s",
+          "value": "dark",
+          "support_seconds": [
+            42.5,
+            43.5
+          ]
+        }
+      ],
+      "confidence": "high_for_sampled_display_states; exact state-change time is approximate"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "paper_or_instruction_sheet_handling",
+      "event_interval_seconds": [
+        44.5,
+        59.5
+      ],
+      "action": "The person lifts, turns, and examines sheets on or beside the printer.",
+      "unresolved": "The sampled frames do not establish the sheet contents, whether paper is loaded into the printer, or the specific purpose of the sheet handling.",
+      "confidence": "medium_for_sheet_handling; low_for_purpose"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "printer_drawer_interaction",
+      "event_interval_seconds": [
+        63.5,
+        76.06286
+      ],
+      "action": "The person moves to the lower printer drawers and opens/manipulates a drawer.",
+      "unresolved": "The final sampled views are blurred or partial; do not label a cartridge replacement, successful paper loading, or drawer contents without closer review.",
+      "confidence": "medium_for_drawer_opening; low_for_item_identity_and_task_success"
+    }
+  ],
+  "state_checkpoints": [
+    {
+      "time_seconds": 6.5,
+      "central_display": "dark"
+    },
+    {
+      "time_seconds": 16.5,
+      "central_display": "illuminated"
+    },
+    {
+      "time_seconds": 41.5,
+      "central_display": "illuminated"
+    },
+    {
+      "time_seconds": 43.5,
+      "central_display": "dark"
+    },
+    {
+      "time_seconds": 75.5,
+      "central_display": "dark"
+    }
+  ],
+  "protected_facts": [
+    "Display illumination changes during this one chronological recording; these observed state changes are not replay evidence about a past event.",
+    "Do not infer successful paper loading or cartridge replacement from the coarse final samples.",
+    "The display state at the end of the sampled interval is separate from its earlier state."
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "same_event_replay_present": false,
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "prefix_only_annotation_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "model_outputs_seen_before_this_draft": true,
+    "note": "Pilot-only draft based on sampled contact sheets. A second reviewer should inspect the full video and verify action boundaries. This source has prior model experiments and must not be held out as a test item.",
+    "benchmark_admission": "pending",
+    "release_split": "unassigned"
+  }
+}

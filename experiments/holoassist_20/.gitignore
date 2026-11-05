@@ -4,3 +4,5 @@ stream_frames/
 .model_cache/
 belief_revision_v1/media/
 belief_revision_v1/belief_graphs.jsonl
+runs/
+transfer/

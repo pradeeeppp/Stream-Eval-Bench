@@ -1,0 +1,97 @@
+{
+  "annotation_id": "holoassist_R085-26July-Nespresso_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "R085-26July-Nespresso",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R085-26July-Nespresso.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "44d52058f1cf19aa4be90b469e7c449a0549d0e43dceefcfa8a7fe3d5110d078",
+    "duration_seconds": 146.788,
+    "asset_caveat": "EgoIT-99K rehost; not byte-verified against original HoloAssist archive."
+  },
+  "annotation_status": "draft_single_annotator_sparse_visual_review",
+  "review_scope": {
+    "sample_times_seconds": [
+      6.12,
+      18.35,
+      30.58,
+      42.81,
+      55.05,
+      67.28,
+      79.51,
+      91.74,
+      103.97,
+      116.21,
+      128.44,
+      140.67
+    ],
+    "sampling": "12 evenly spaced still frames; no audio review; intervals below bracket sampled views and are not frame accurate",
+    "additional_review": "All 147 one-second samples reviewed in chronological contact sheets on 2026-10-28; native-frame/audio review still pending.",
+    "sample_times_seconds_1fps": "approximately 0.5 through 146.5 seconds"
+  },
+  "episode_summary": "Person fills the coffee machine water tank, positions a cup, inserts a capsule, dispenses coffee, then removes or empties the used-capsule container.",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "fill_water_tank",
+      "approximate_interval_seconds": [
+        14,
+        26
+      ],
+      "visual_observation": "Person lifts the clear water tank, pours water into it, and returns it to the machine.",
+      "confidence": "high_for_action; one-second_boundary"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "position_cup",
+      "approximate_interval_seconds": [
+        31,
+        49
+      ],
+      "visual_observation": "Person positions a paper cup beneath the spout and adjusts the machine.",
+      "confidence": "medium; one-second_boundary"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "insert_capsule",
+      "approximate_interval_seconds": [
+        57,
+        72
+      ],
+      "visual_observation": "Person retrieves a capsule from the cardboard holder and puts it in the machine, then closes the capsule compartment.",
+      "confidence": "high_for_action; one-second_boundary"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "dispense_coffee",
+      "approximate_interval_seconds": [
+        73,
+        116
+      ],
+      "visual_observation": "Cup remains beneath spout; coffee appears in cup by about 116 seconds.",
+      "confidence": "medium_for_process; one-second_boundary"
+    },
+    {
+      "event_id": "E5",
+      "event_type": "empty_used_capsule_container",
+      "approximate_interval_seconds": [
+        127,
+        142
+      ],
+      "visual_observation": "Person removes a small front container with used capsules, empties it into a bin, and returns it; a few dark pieces remain visible on table.",
+      "confidence": "medium_for_object; one-second_boundary"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "not_observed_in_1fps_review",
+    "eligible_for_core_retrospective_revision_task": "undetermined",
+    "screening_note": "Chronological process and subsequent cleanup are visible, but no clear same-event later reveal was identified. Native-frame review and independent audit required before rejection."
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

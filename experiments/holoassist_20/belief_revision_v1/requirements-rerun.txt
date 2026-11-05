@@ -1,0 +1,7 @@
+# Install the matching torch/torchvision CUDA build using pytorch.org first.
+torch>=2.6,<3
+torchvision>=0.21,<1
+transformers==4.57.6
+accelerate>=1.0,<2
+Pillow==13.0.0
+numpy>=1.26,<3

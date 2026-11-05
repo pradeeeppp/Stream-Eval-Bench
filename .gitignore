@@ -225,6 +225,7 @@ __pycache__/
 *.py[cod]
 .venv/
 .venv-qwen3b/
+.venv-cuda/
 venv/
 .env
 .env.*

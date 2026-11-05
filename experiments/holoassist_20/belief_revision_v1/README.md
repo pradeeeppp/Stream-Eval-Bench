@@ -6,6 +6,10 @@ Qwen2.5-VL-3B-Instruct checkpoint locally on Apple MPS. The checkpoint revision,
 dependencies, device and inference settings are recorded rather than inferred
 from the PDF. Exact reproduction of the PDF's undocumented settings is not claimed.
 
+For a fresh run on another machine, follow [CUDA_RERUN.md](CUDA_RERUN.md).
+It uses a separate output directory, a pinned checkpoint and transferable exact
+inputs; the completed Mac run remains available here for comparison.
+
 Start with [RESULTS.md](RESULTS.md) for the aggregate comparison and links to all
 twenty per-video reports. [analysis.json](analysis.json) contains machine-readable
 scores. [PLAN.md](PLAN.md) describes the protocol; [cases.json](cases.json) freezes
@@ -78,16 +82,20 @@ consistency. It explicitly reports that local media were not checked. Add
 to stdout; `--output PATH` saves a new report. The recorded `audit_report.json`
 documents the original full local-media audit.
 
-### Restore media or rerun inference
+### Restore media for the archived run
 
 Source URLs and local paths are pinned in
 [`sources.json`](../online_pilot_v0/sources.json); see the
-[dataset attribution](../online_pilot_v0/ATTRIBUTION.md). Download those MP4s to
-their recorded paths before restoring frames. With FFmpeg available:
+[dataset attribution](../online_pilot_v0/ATTRIBUTION.md). Use `download_videos.py`
+to fetch the pinned source MP4s and check their hashes against the included
+evidence graphs. The exact evaluated frames are included in
+`../data/holoassist20-inputs.tar.gz`; see the CUDA guide to unpack them without
+re-encoding. To recreate frames from the MP4s with FFmpeg:
 
 ```sh
 python3 -m venv .venv-qwen3b
 .venv-qwen3b/bin/python -m pip install -r experiments/holoassist_20/belief_revision_v1/requirements.lock.txt
+python3 experiments/holoassist_20/belief_revision_v1/download_videos.py
 .venv-qwen3b/bin/python experiments/holoassist_20/belief_revision_v1/rehydrate.py
 python3 experiments/holoassist_20/belief_revision_v1/audit.py --with-media
 ```
@@ -97,16 +105,12 @@ missing files. It refuses changed existing files and never rewrites labels or
 review status. Encoder or Pillow differences can cause a hash mismatch.
 
 `run.py`, `protocol.py`, `cases.json` and raw responses are preserved exactly as
-executed; their recorded hashes are part of the audit. The runner resumes saved
-responses and refuses configuration changes. Running it on the published data
-does not generate new responses. For a fresh run, use a separate checkout,
-restore its media, and remove only that checkout's `responses/` and `execution_manifest.json`
-inside this experiment directory,
-then use `download_model.py` to fetch the recorded checkpoint revision and update
-that copy's local model path before running `run.py`. This backend uses Apple MPS;
-the original Mac required execution outside the filesystem sandbox. Retain the
-published run and its manifests unchanged. `export_belief_graphs.py --jsonl`
-optionally produces an ignored combined copy of the per-video graphs.
+executed; their recorded hashes are part of the audit. `run.py` is the archived
+Mac entry point. Use `rerun.py` and a fresh `--run-dir` for new measurements, as
+described in [CUDA_RERUN.md](CUDA_RERUN.md). It downloads the pinned checkpoint
+and keeps all new outputs separate. Preserve the published responses and
+manifests. `export_belief_graphs.py --jsonl` optionally produces an ignored
+combined copy of the per-video graphs.
 
 To rebuild the failure report, install ReportLab in a separate reporting
 environment, restore media for HA01/HB01/HA08, and run `build_failure_report.py`.

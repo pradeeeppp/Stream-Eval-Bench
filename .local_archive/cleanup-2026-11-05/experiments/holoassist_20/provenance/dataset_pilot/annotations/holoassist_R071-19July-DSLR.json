@@ -1,0 +1,84 @@
+{
+  "annotation_id": "holoassist_R071-19July-DSLR_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "R071-19July-DSLR",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/R071-19July-DSLR.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "04139a5aefb1ee7900e8b52b9f7c06bdf91cc77bba6581b521f7c39517efb9d6",
+    "duration_seconds": 116.927,
+    "asset_caveat": "EgoIT-99K rehost; not byte-verified against original HoloAssist archive."
+  },
+  "annotation_status": "draft_single_annotator_sparse_visual_review",
+  "review_scope": {
+    "sample_times_seconds": [
+      4.87,
+      14.62,
+      24.36,
+      34.1,
+      43.85,
+      53.59,
+      63.34,
+      73.08,
+      82.82,
+      92.57,
+      102.31,
+      112.06
+    ],
+    "sampling": "12 evenly spaced still frames; no audio review; intervals below bracket sampled views and are not frame accurate"
+  },
+  "episode_summary": "DSLR camera handling",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "inspect_camera",
+      "approximate_interval_seconds": [
+        4.87,
+        14.62
+      ],
+      "visual_observation": "Camera rests on work surface before being picked up.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "handle_camera",
+      "approximate_interval_seconds": [
+        24.36,
+        53.59
+      ],
+      "visual_observation": "Person lifts and rotates the DSLR to inspect its front and rear.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "inspect_battery",
+      "approximate_interval_seconds": [
+        73.08,
+        92.57
+      ],
+      "visual_observation": "Person handles a camera battery and reads its label.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "handle_camera",
+      "approximate_interval_seconds": [
+        102.31,
+        112.06
+      ],
+      "visual_observation": "Person returns attention to camera body and lens area.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

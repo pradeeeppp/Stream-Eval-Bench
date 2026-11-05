@@ -13,10 +13,14 @@ def main():
     parser.add_argument('--with-media', action='store_true',
                         help='Also hash local source videos, extracted frames and contact sheets.')
     parser.add_argument('--output', type=Path, help='Save the audit report; otherwise print only.')
+    parser.add_argument('--run-dir', type=Path, default=HERE)
+    parser.add_argument('--with-inputs', action='store_true', help='Verify selected frames and sheets, without source movies')
     args = parser.parse_args()
-    cases = json.loads((HERE / 'cases.json').read_text())
-    manifest = json.loads((HERE / 'execution_manifest.json').read_text())
-    model = json.loads((HERE / 'model_manifest.json').read_text())
+    here = args.run_dir.resolve()
+    inputs = args.with_media or args.with_inputs
+    cases = json.loads((here / 'cases.json').read_text())
+    manifest = json.loads((here / 'execution_manifest.json').read_text())
+    model = json.loads((here / 'model_manifest.json').read_text())
     failures, counts = [], {'videos': len(cases), 'reviewed_frames': 0,
                             'saved_requests': 0, 'completed_episodes': 0,
                             'verified_frame_files': 0}
@@ -28,7 +32,13 @@ def main():
     signatures = manifest['signatures']
     for key, filename in [('cases_sha256', 'cases.json'), ('protocol_sha256', 'protocol.py'),
                           ('runner_sha256', 'run.py')]:
-        check(signatures[key] == digest(HERE / filename), f'{filename}: changed since execution')
+        if key in manifest.get('code_paths', {}):
+            recorded = here / manifest['code_paths'][key]
+        elif key == 'cases_sha256':
+            recorded = here / filename
+        else:
+            recorded = HERE / filename
+        check(signatures[key] == digest(recorded), f'{filename}: changed since execution')
     check(signatures['config'] == CONFIG, 'Protocol config changed')
     check(signatures['model_revision'] == model['revision'], 'Model revision changed')
     check(model['model_id'] == 'Qwen/Qwen2.5-VL-3B-Instruct', 'Wrong model')
@@ -55,7 +65,7 @@ def main():
             else:
                 check(False, f'{sid}: source video missing')
         check(case['packet_visual_review'] == 'reviewed_by_codex_2026_11_04', f'{sid}: unreviewed packets')
-        if args.with_media:
+        if inputs:
             sheet = HERE / 'media' / sid / 'review.png'
             check(sheet.exists() and digest(sheet) == case['packet_review_sha256'],
                   f'{sid}: reviewed contact sheet missing or changed')
@@ -71,7 +81,7 @@ def main():
             check(times[0] == packet['capture_start'] and times[-1] == packet['capture_end'],
                   f'{sid}/{packet_id}: packet boundary mismatch')
             for frame in packet['frames']:
-                if args.with_media:
+                if inputs:
                     image = HERE / frame['path']
                     valid = image.exists() and digest(image) == frame['sha256']
                     check(valid, f'{sid}: input frame missing or changed')
@@ -84,7 +94,7 @@ def main():
                   f'{sid}: diagnostic case has invented gold')
         if case['earlier_gold'] == 'unknown':
             check(not case['clean_revision_opportunity'], f'{sid}: unknown prior treated as correction')
-        path = HERE / 'responses' / f'{sid}.json'
+        path = here / 'responses' / f'{sid}.json'
         record = json.loads(path.read_text()) if path.exists() else {'steps': {}}
         steps = record['steps']
         check(set(steps) <= set(PHASES), f'{sid}: unexpected phase')
@@ -110,12 +120,12 @@ def main():
             counts['completed_episodes'] += 1
     check(counts['saved_requests'] == 100 and counts['completed_episodes'] == 20,
           'Benchmark run is not complete')
-    smoke_path = HERE / 'infrastructure_smoke.json'
+    smoke_path = here / 'infrastructure_smoke.json'
     check(smoke_path.exists(), 'Infrastructure smoke record missing')
     if smoke_path.exists():
         check(json.loads(smoke_path.read_text())['is_benchmark_request'] is False,
               'Infrastructure test incorrectly pooled with benchmark')
-    graph_paths = sorted((HERE / 'belief_graphs').glob('*.json'))
+    graph_paths = sorted((here / 'belief_graphs').glob('*.json'))
     check(len(graph_paths) == 20, 'Expected 20 belief trace graphs')
     if graph_paths:
         graphs = [json.loads(path.read_text()) for path in graph_paths]
@@ -134,6 +144,7 @@ def main():
     result = {'status': 'pass' if not failures else 'fail',
               'checked_utc': datetime.now(timezone.utc).isoformat(), 'counts': counts,
               'failures': failures, 'local_media_checked': args.with_media,
+              'selected_inputs_checked': inputs,
               'scope': 'Provenance, protocol and score consistency; not independent semantic annotation.'}
     if args.output:
         args.output.write_text(json.dumps(result, indent=2) + '\n')

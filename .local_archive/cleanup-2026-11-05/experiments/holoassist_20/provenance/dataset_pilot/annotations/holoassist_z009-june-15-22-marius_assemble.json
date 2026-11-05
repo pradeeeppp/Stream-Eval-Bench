@@ -1,0 +1,94 @@
+{
+  "annotation_id": "holoassist_z009-june-15-22-marius_assemble_pilot_v0_1",
+  "source": {
+    "dataset": "HoloAssist",
+    "session_id": "z009-june-15-22-marius_assemble",
+    "source_url": "https://huggingface.co/datasets/lmms-lab/EgoIT-99K/resolve/a57f1f2078a7b01ea87014050fdb3afe169e54f1/HoloAssist/video/z009-june-15-22-marius_assemble.mp4",
+    "source_revision": "a57f1f2078a7b01ea87014050fdb3afe169e54f1",
+    "sha256": "e3cb4649c5f23b09ad551a701d0ce1d4f4220358465a44ea50a4397bb872f30f",
+    "duration_seconds": 288.085,
+    "asset_caveat": "EgoIT-99K rehost; not byte-verified against original HoloAssist archive."
+  },
+  "annotation_status": "draft_single_annotator_sparse_visual_review",
+  "review_scope": {
+    "sample_times_seconds": [
+      12.0,
+      36.01,
+      60.02,
+      84.02,
+      108.03,
+      132.04,
+      156.05,
+      180.05,
+      204.06,
+      228.07,
+      252.07,
+      276.08
+    ],
+    "sampling": "12 evenly spaced still frames; no audio review; intervals below bracket sampled views and are not frame accurate"
+  },
+  "episode_summary": "Small round table assembly",
+  "events": [
+    {
+      "event_id": "E1",
+      "event_type": "sort_hardware",
+      "approximate_interval_seconds": [
+        12.0,
+        36.01
+      ],
+      "visual_observation": "Person sorts fasteners and parts beside a round tabletop.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E2",
+      "event_type": "assemble_leg_frame",
+      "approximate_interval_seconds": [
+        60.02,
+        108.03
+      ],
+      "visual_observation": "Person joins white tubular legs or supports.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E3",
+      "event_type": "attach_legs",
+      "approximate_interval_seconds": [
+        132.04,
+        204.06
+      ],
+      "visual_observation": "Person positions and tightens leg supports at the tabletop underside.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E4",
+      "event_type": "upright_table",
+      "approximate_interval_seconds": [
+        228.07,
+        228.07
+      ],
+      "visual_observation": "Table is shown standing upright.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    },
+    {
+      "event_id": "E5",
+      "event_type": "continue_fastening",
+      "approximate_interval_seconds": [
+        252.07,
+        276.08
+      ],
+      "visual_observation": "Person continues tightening hardware from the underside.",
+      "confidence": "medium_for_coarse_action_low_for_exact_boundary"
+    }
+  ],
+  "candidate_labels": {
+    "later_evidence_about_fixed_past_event": "undetermined",
+    "eligible_for_core_retrospective_revision_task": "undetermined"
+  },
+  "quality_control": {
+    "full_video_review_done": false,
+    "independent_review_done": false,
+    "adjudication_done": false,
+    "release_split": "unassigned",
+    "benchmark_admission": "pending"
+  }
+}

@@ -1,0 +1,1156 @@
+{
+  "HA01": {
+    "entities": [
+      "DSLR body",
+      "interchangeable lens",
+      "front lens cap"
+    ],
+    "event": "lens_detachment",
+    "observations": [
+      [
+        241,
+        "pre",
+        "Lens appears seated against the body; mount lock is not visible."
+      ],
+      [
+        243,
+        "transition",
+        "Lens moving away; release boundary partly occluded."
+      ],
+      [
+        246,
+        "positive",
+        "Exposed body mount and lens visibly separate."
+      ],
+      [
+        270,
+        "corroboration",
+        "Lens remains separate from the body."
+      ],
+      [
+        369,
+        "later_state",
+        "Lens appears mounted again without right-hand support."
+      ],
+      [
+        495,
+        "distractor",
+        "Front cap held separately while lens remains with body."
+      ]
+    ],
+    "native_ranges": [
+      [
+        230,
+        270
+      ]
+    ],
+    "flags": [
+      "physical_onset_unresolved"
+    ],
+    "findings": "Distinct lens detachment, return and cap removal. Preserve historical detachment after current state changes.",
+    "instruction": "Alert once when the interchangeable lens is clearly separated from the DSLR body. Touching/rotating the lens and removing only the front cap do not qualify.",
+    "confirmed_packet": 8,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate.",
+    "secondary_events": [
+      {
+        "id": "cap_removal_1",
+        "event_class": "front_cap_removal",
+        "evidence_indices": [
+          495
+        ],
+        "entity_positions": [
+          2,
+          3
+        ],
+        "qualification": "observed_distinct_event",
+        "note": "Cap removal is not lens-body separation."
+      }
+    ]
+  },
+  "HA02": {
+    "entities": [
+      "printer",
+      "central LCD display",
+      "side indicator lights"
+    ],
+    "event": "central_display_illumination",
+    "observations": [
+      [
+        460,
+        "pre",
+        "Central LCD appears dark immediately before the brightness change."
+      ],
+      [
+        443,
+        "distractor",
+        "Side LEDs are already illuminated while the central display remains dark."
+      ],
+      [
+        461,
+        "transition",
+        "A narrow bright band appears on the central LCD; full-display visibility is transitional."
+      ],
+      [
+        462,
+        "positive",
+        "Central LCD is visibly illuminated with interface content."
+      ],
+      [
+        473,
+        "corroboration",
+        "Central display remains illuminated."
+      ],
+      [
+        1182,
+        "later_state",
+        "Central display appears dark again in the coarse overview."
+      ]
+    ],
+    "native_ranges": [
+      [
+        458,
+        473
+      ]
+    ],
+    "flags": [
+      "first_occurrence_not_exhaustively_verified",
+      "physical_onset_unresolved"
+    ],
+    "findings": "Separate central LCD illumination from earlier side-button lights. Display later darkens, which does not erase the illumination event.",
+    "instruction": "Alert once when the large central LCD visibly illuminates; side-button or status LEDs alone do not qualify.",
+    "confirmed_packet": 16,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HA03": {
+    "entities": [
+      "round tabletop",
+      "white support frame",
+      "hands"
+    ],
+    "event": "tabletop_placement",
+    "observations": [
+      [
+        3354,
+        "pre",
+        "Round tabletop and upright support frame remain visibly separate."
+      ],
+      [
+        3444,
+        "transition",
+        "Hands guide the tabletop over the upright support frame; support/contact boundary not established."
+      ],
+      [
+        3518,
+        "positive",
+        "Tabletop appears seated on the standing frame; left hand withdraws while right hand remains near the rim."
+      ],
+      [
+        3593,
+        "corroboration",
+        "Assembled table stands without hand support."
+      ]
+    ],
+    "native_ranges": [
+      [
+        3503,
+        3518
+      ]
+    ],
+    "flags": [
+      "contact_boundary_unresolved",
+      "assembled_security_unverified"
+    ],
+    "findings": "Separate carrying/alignment from seated placement and later unsupported standing. Do not infer that every fastener is secure.",
+    "instruction": "Alert once when the round tabletop is visibly seated on the upright white support frame; carrying it above or beside the frame does not qualify.",
+    "confirmed_packet": 117,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HA04": {
+    "entities": [
+      "caution-marked cabinet",
+      "front access panels",
+      "visible internal components"
+    ],
+    "event": "cabinet_access_opening",
+    "observations": [
+      [
+        538,
+        "pre",
+        "Main door still appears closed; earlier handle operation has not exposed components."
+      ],
+      [
+        388,
+        "distractor",
+        "Camera viewpoint moves across the cabinet face; this does not establish door opening."
+      ],
+      [
+        548,
+        "transition",
+        "A narrow gap appears as the main door swings outward."
+      ],
+      [
+        553,
+        "positive",
+        "Open-door gap visibly exposes internal components."
+      ],
+      [
+        568,
+        "corroboration",
+        "Larger open-door view confirms the interior."
+      ],
+      [
+        2394,
+        "later_state",
+        "Cabinet face appears closed again in the overview."
+      ],
+      [
+        3442,
+        "context",
+        "A later open interior is visible after intervening closed views."
+      ]
+    ],
+    "native_ranges": [
+      [
+        538,
+        553
+      ]
+    ],
+    "extra_seconds": [
+      11.5,
+      12.5,
+      13.5,
+      17.5,
+      18,
+      18.5
+    ],
+    "flags": [
+      "opening_extent_policy_needed",
+      "multiple_occurrences_in_overview"
+    ],
+    "findings": "Closer inspection separates earlier handle operation and camera motion from actual door opening around 18.3\u201318.5 s. Later close/reopen is a separate occurrence candidate.",
+    "instruction": "Alert once when opening the main caution-marked door visibly exposes internal components; handle operation and camera motion alone do not qualify.",
+    "confirmed_packet": 18,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate.",
+    "secondary_events": [
+      {
+        "id": "reopening_candidate_2",
+        "event_class": "cabinet_reopening_candidate",
+        "evidence_indices": [
+          3442
+        ],
+        "entity_positions": [
+          1,
+          2,
+          3
+        ],
+        "qualification": "candidate_from_coarse_overview",
+        "note": "Open view after an intervening closed view suggests another occurrence; exact boundary and identity not exhaustively reviewed."
+      }
+    ]
+  },
+  "HA05": {
+    "entities": [
+      "washer bin",
+      "screw bin",
+      "right hand"
+    ],
+    "event": "hand_entry_into_hardware_bin",
+    "observations": [
+      [
+        850,
+        "pre",
+        "Hand is approaching the hardware storage area."
+      ],
+      [
+        865,
+        "transition",
+        "Fingers approach the clear bin containing washers."
+      ],
+      [
+        880,
+        "positive",
+        "Hand is visibly inside the washer bin, earlier than the legacy target window."
+      ],
+      [
+        1149,
+        "context",
+        "Hand later enters a different clear bin containing screws."
+      ],
+      [
+        1194,
+        "context",
+        "Small hardware held above the later screw bin."
+      ]
+    ],
+    "native_ranges": [
+      [
+        865,
+        880
+      ],
+      [
+        1134,
+        1149
+      ]
+    ],
+    "flags": [
+      "task_definition_ambiguous",
+      "earlier_qualifying_candidate",
+      "different_bins_must_not_be_merged"
+    ],
+    "findings": "An earlier washer-bin reach is visible around 29.5 s; later screw-bin reach is around 38.5 s. Broad metal-fasteners wording may admit the earlier occurrence, conflicting with legacy early-alert scoring.",
+    "instruction": "Specify the target bin and contents. If screws are intended, alert once when the hand enters the screw-filled bin; washer-bin entry is a different occurrence.",
+    "target_verified": false,
+    "confirmed_packet": 29,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate.",
+    "secondary_events": [
+      {
+        "id": "screw_bin_reach_1",
+        "event_class": "hand_entry_into_screw_bin",
+        "evidence_indices": [
+          1149,
+          1194
+        ],
+        "entity_positions": [
+          2,
+          3
+        ],
+        "qualification": "observed_distinct_event",
+        "note": "Different bin and later reach; not corroboration of the earlier washer-bin entry."
+      }
+    ]
+  },
+  "HA06": {
+    "entities": [
+      "DSLR body",
+      "battery compartment",
+      "rectangular battery",
+      "memory card"
+    ],
+    "event": "battery_removal",
+    "observations": [
+      [
+        2382,
+        "pre",
+        "Battery compartment open; battery is not yet clearly free of the camera."
+      ],
+      [
+        2397,
+        "transition",
+        "White rectangular battery protrudes from the compartment while still near the opening."
+      ],
+      [
+        2413,
+        "transition",
+        "Battery is being drawn out; full rear clearance is not certified at this anchor."
+      ],
+      [
+        2427,
+        "positive",
+        "Battery is held clearly outside the camera with visible separation from the compartment."
+      ],
+      [
+        2442,
+        "corroboration",
+        "Battery remains held outside the compartment."
+      ],
+      [
+        3127,
+        "distractor",
+        "Later small memory-card handling is distinct from battery removal."
+      ]
+    ],
+    "native_ranges": [
+      [
+        2397,
+        2413
+      ]
+    ],
+    "flags": [
+      "ejection_vs_full_removal_boundary"
+    ],
+    "findings": "Separate opening the compartment, partial ejection, full removal, and later memory-card manipulation.",
+    "instruction": "Alert once when the rectangular battery is visibly free of the DSLR battery compartment; opening the door or partially ejecting it alone does not qualify.",
+    "confirmed_packet": 81,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HA07": {
+    "entities": [
+      "action camera",
+      "white molded insert",
+      "black case",
+      "battery"
+    ],
+    "event": "camera_removal_from_insert",
+    "observations": [
+      [
+        327,
+        "pre",
+        "Action camera rests in the open white insert."
+      ],
+      [
+        401,
+        "transition",
+        "Hands grasp and lift the camera near the insert; clearance still partly occluded."
+      ],
+      [
+        416,
+        "positive",
+        "Camera is visibly raised clear of the insert."
+      ],
+      [
+        446,
+        "corroboration",
+        "Camera held separately above the open packaging."
+      ],
+      [
+        1634,
+        "distractor",
+        "Later battery handling belongs to camera operation, not another removal from packaging."
+      ]
+    ],
+    "native_ranges": [
+      [
+        401,
+        416
+      ]
+    ],
+    "flags": [
+      "clearance_boundary_partly_occluded"
+    ],
+    "findings": "Opening the case precedes camera extraction and must not trigger the task. Later accessory/battery work is a different event.",
+    "instruction": "Alert once when the action camera is visibly clear of the white molded insert. Opening the black case or touching the camera while it remains seated does not qualify.",
+    "confirmed_packet": 14,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HA08": {
+    "entities": [
+      "clear vessel",
+      "machine reservoir",
+      "reservoir lid"
+    ],
+    "event": "vessel_tipping_over_reservoir",
+    "observations": [
+      [
+        585,
+        "pre",
+        "Vessel held approximately upright beside the open reservoir."
+      ],
+      [
+        600,
+        "transition",
+        "Vessel begins tilting toward the reservoir opening."
+      ],
+      [
+        615,
+        "positive",
+        "Clear vessel visibly tilted with its mouth over the open reservoir."
+      ],
+      [
+        660,
+        "corroboration",
+        "Tilted vessel remains over the reservoir."
+      ],
+      [
+        750,
+        "later_state",
+        "Vessel returned toward an upright pose."
+      ]
+    ],
+    "native_ranges": [
+      [
+        600,
+        615
+      ]
+    ],
+    "flags": [
+      "liquid_transfer_not_verified",
+      "reservoir_detachment_not_established"
+    ],
+    "findings": "The visual target is vessel tilt over the opening. Do not infer water flow, amount transferred, or reservoir detachment from this pose alone.",
+    "instruction": "Alert once when the clear vessel is visibly tilted with its mouth over the open reservoir. Require this pose, not inferred liquid flow.",
+    "confirmed_packet": 20,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HA09": {
+    "entities": [
+      "round perforated panel",
+      "ringed panel face",
+      "opposite panel face"
+    ],
+    "event": "panel_orientation_change",
+    "observations": [
+      [
+        150,
+        "pre",
+        "Ringed face of the panel is already visible on the work surface."
+      ],
+      [
+        359,
+        "transition",
+        "Hand grips the panel before lifting and rotating it."
+      ],
+      [
+        374,
+        "context",
+        "Panel lifted and tilted; visible face changes with pose."
+      ],
+      [
+        419,
+        "positive",
+        "Ringed face is visible while the panel is held up; this does not independently identify an underside."
+      ],
+      [
+        479,
+        "later_state",
+        "Panel subsequently rotates to show its flatter opposite face."
+      ]
+    ],
+    "native_ranges": [
+      [
+        374,
+        404
+      ]
+    ],
+    "extra_seconds": [
+      5,
+      10,
+      12,
+      12.5,
+      13,
+      13.5,
+      14,
+      15.5,
+      16
+    ],
+    "flags": [
+      "target_face_identity_unverified",
+      "initial_face_already_visible",
+      "task_definition_ambiguous"
+    ],
+    "findings": "The ringed face shown by the legacy positive is already visible earlier. The clip establishes lifting/rotation, but underside identity and a newly revealed underside require adjudication.",
+    "instruction": "Define the target face using an explicit visual description or reference. Do not equate any panel lift/rotation with a verified underside reveal.",
+    "target_verified": false,
+    "confirmed_packet": 14,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HA10": {
+    "entities": [
+      "entire wheeled cart",
+      "upper mesh basket",
+      "cart frame"
+    ],
+    "event": "whole_cart_reorientation",
+    "observations": [
+      [
+        630,
+        "pre",
+        "Cart upright; upper basket seated within the frame."
+      ],
+      [
+        675,
+        "transition",
+        "Performer begins tilting the cart."
+      ],
+      [
+        690,
+        "positive",
+        "Cart and baskets tilt together; independent upper-basket motion relative to the frame is not established."
+      ],
+      [
+        720,
+        "corroboration",
+        "Cart is laid toward its side with the frame and basket still aligned."
+      ],
+      [
+        4200,
+        "context",
+        "Basket separation occurs much later during disassembly in the overview."
+      ]
+    ],
+    "native_ranges": [
+      [
+        675,
+        690
+      ]
+    ],
+    "extra_seconds": [
+      21,
+      22,
+      22.5,
+      23,
+      23.5,
+      24,
+      140
+    ],
+    "flags": [
+      "target_relative_motion_unsupported",
+      "whole_object_vs_part_motion",
+      "task_rewrite_required"
+    ],
+    "findings": "Legacy target segment primarily shows reorientation of the whole cart. Tilting away from an upright frame is not supported when the frame tilts too.",
+    "instruction": "Either target whole-cart tipping, or annotate the later basket/frame separation separately. Do not use the current relative-basket wording with this window.",
+    "target_verified": false,
+    "confirmed_packet": 23,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB01": {
+    "entities": [
+      "black drive belt",
+      "machine pulleys",
+      "loose belt on floor"
+    ],
+    "event": "belt_removal",
+    "observations": [
+      [
+        1031,
+        "pre",
+        "Black belt still routed over the machine pulleys."
+      ],
+      [
+        1196,
+        "transition",
+        "Belt is being lifted off the remaining pulley route; full clearance is not yet certified."
+      ],
+      [
+        1240,
+        "positive",
+        "Hand lifts the loose belt clear of the exposed pulley route."
+      ],
+      [
+        1345,
+        "corroboration",
+        "Pulleys remain visibly belt-free."
+      ],
+      [
+        1554,
+        "context",
+        "A loose black belt is later visible outside the machine on the floor."
+      ]
+    ],
+    "native_ranges": [
+      [
+        1226,
+        1241
+      ]
+    ],
+    "extra_seconds": [
+      30.0,
+      30.5,
+      31.0,
+      31.5,
+      32.0,
+      32.5,
+      33.0,
+      33.5,
+      34.0,
+      34.5,
+      35.0,
+      35.5,
+      36.0,
+      36.5,
+      37.0,
+      37.5,
+      38.0,
+      38.5,
+      39.0,
+      39.5,
+      40.0,
+      40.5,
+      41.0,
+      41.5,
+      42.0,
+      42.5,
+      43.0,
+      43.5,
+      44.0,
+      44.5,
+      45.0,
+      45.5,
+      46.0
+    ],
+    "flags": [
+      "legacy_pre_checkpoint_after_removal",
+      "physical_release_boundary_partly_occluded"
+    ],
+    "findings": "Closer review shows a loose belt clear of the pulley route around 41.5 s. The legacy 47 s pre-event checkpoint is already after removal, so valid earlier alerts could be scored false.",
+    "instruction": "Alert once when the belt is visibly clear of every pulley. Slack or lifting from only one pulley does not qualify. Re-annotate the earlier removal interval.",
+    "target_verified": true,
+    "confirmed_packet": 41,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB02": {
+    "entities": [
+      "caution-marked cabinet",
+      "main door",
+      "internal components"
+    ],
+    "event": "cabinet_door_opening",
+    "observations": [
+      [
+        477,
+        "pre",
+        "Main door appears closed while its handle is grasped."
+      ],
+      [
+        492,
+        "transition",
+        "Door swings outward; interior exposure is beginning."
+      ],
+      [
+        507,
+        "positive",
+        "Internal cabinet components visibly exposed beside the opened door."
+      ],
+      [
+        537,
+        "corroboration",
+        "Cabinet remains open."
+      ],
+      [
+        1789,
+        "later_state",
+        "Main door appears closed again."
+      ],
+      [
+        2534,
+        "context",
+        "Later opening exposes the interior again."
+      ]
+    ],
+    "native_ranges": [
+      [
+        492,
+        507
+      ]
+    ],
+    "flags": [
+      "multiple_occurrences_in_overview",
+      "opening_extent_policy_needed"
+    ],
+    "findings": "Separate handle operation from door opening. Preserve occurrence identity across later close/reopen.",
+    "instruction": "Alert once when opening the main caution-marked door visibly exposes the cabinet interior; touching the handle alone does not qualify.",
+    "confirmed_packet": 17,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate.",
+    "secondary_events": [
+      {
+        "id": "reopening_candidate_2",
+        "event_class": "cabinet_reopening_candidate",
+        "evidence_indices": [
+          2534
+        ],
+        "entity_positions": [
+          1,
+          2,
+          3
+        ],
+        "qualification": "candidate_from_coarse_overview",
+        "note": "Open view after an intervening closed view suggests another occurrence; exact boundary and identity not exhaustively reviewed."
+      }
+    ]
+  },
+  "HB03": {
+    "entities": [
+      "DSLR body",
+      "interchangeable lens",
+      "front lens cap"
+    ],
+    "event": "lens_detachment",
+    "observations": [
+      [
+        195,
+        "pre",
+        "Lens still appears seated against the DSLR body."
+      ],
+      [
+        210,
+        "positive",
+        "Lens held away from the exposed body mount."
+      ],
+      [
+        240,
+        "corroboration",
+        "Lens and body remain separate."
+      ],
+      [
+        300,
+        "later_state",
+        "Lens returned against the body mount."
+      ],
+      [
+        600,
+        "distractor",
+        "Later front-cap handling is distinct from lens detachment."
+      ]
+    ],
+    "native_ranges": [
+      [
+        195,
+        210
+      ]
+    ],
+    "flags": [
+      "physical_release_boundary_unresolved"
+    ],
+    "findings": "Separation is visible around 7 s, earlier than the legacy 8 s positive label; later return must not erase history.",
+    "instruction": "Alert once when the interchangeable lens is clearly separated from the DSLR body. Front-cap removal alone does not qualify.",
+    "confirmed_packet": 7,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB04": {
+    "entities": [
+      "action camera",
+      "white molded packaging insert",
+      "black case"
+    ],
+    "event": "camera_removal_from_insert",
+    "observations": [
+      [
+        313,
+        "pre",
+        "Camera seated in the open white insert."
+      ],
+      [
+        433,
+        "transition",
+        "Camera being lifted from the insert; clearance partly obscured by hands."
+      ],
+      [
+        448,
+        "positive",
+        "Camera visibly held clear of the insert."
+      ],
+      [
+        478,
+        "corroboration",
+        "Camera remains outside the insert."
+      ]
+    ],
+    "native_ranges": [
+      [
+        433,
+        448
+      ]
+    ],
+    "flags": [
+      "clearance_boundary_partly_occluded"
+    ],
+    "findings": "Distinguish opening the packaging from the camera clearing its recess.",
+    "instruction": "Alert once when the action camera is visibly clear of the white molded insert; opening the case or grasping the camera is insufficient.",
+    "confirmed_packet": 15,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB05": {
+    "entities": [
+      "desktop computer chassis",
+      "black side panel",
+      "internal components"
+    ],
+    "event": "computer_side_panel_removal",
+    "observations": [
+      [
+        776,
+        "pre",
+        "Black side panel still covers the chassis."
+      ],
+      [
+        791,
+        "transition",
+        "Panel is lifted away from the chassis."
+      ],
+      [
+        806,
+        "positive",
+        "Panel is held clear and the chassis interior is exposed."
+      ],
+      [
+        836,
+        "corroboration",
+        "Computer interior remains exposed with panel set aside."
+      ],
+      [
+        3134,
+        "later_state",
+        "Black panel is being returned over the chassis in the overview."
+      ]
+    ],
+    "native_ranges": [
+      [
+        791,
+        806
+      ]
+    ],
+    "flags": [
+      "sliding_vs_full_clearance_boundary"
+    ],
+    "findings": "Separate moving the whole tower, releasing/sliding the panel, and complete panel removal.",
+    "instruction": "Alert once when the black side panel is visibly clear of the desktop chassis and its interior is exposed.",
+    "confirmed_packet": 27,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB06": {
+    "entities": [
+      "desktop chassis",
+      "green expansion board",
+      "expansion slot",
+      "additional circuit boards"
+    ],
+    "event": "expansion_board_removal",
+    "observations": [
+      [
+        2094,
+        "pre",
+        "Hand remains inside chassis at the expansion-board location; full removal not yet visible."
+      ],
+      [
+        2107,
+        "positive",
+        "Green expansion board is held outside the chassis."
+      ],
+      [
+        2121,
+        "corroboration",
+        "Removed board remains outside while the other hand reaches into the computer."
+      ],
+      [
+        2257,
+        "context",
+        "Later additional board handling occurs; board identities should be kept distinct."
+      ]
+    ],
+    "native_ranges": [
+      [
+        2094,
+        2108
+      ]
+    ],
+    "extra_seconds": [
+      76.5,
+      77,
+      77.5,
+      78,
+      82.5,
+      83,
+      85
+    ],
+    "flags": [
+      "legacy_positive_late",
+      "multiple_board_identity_review_needed"
+    ],
+    "findings": "A green expansion board is visibly removed around 77.5 s, well before the legacy 85 s positive. Avoid merging later board handling into the same occurrence.",
+    "instruction": "Alert once when a green expansion board is visibly clear of the desktop chassis. If a particular card is intended, identify that card explicitly.",
+    "confirmed_packet": 77,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB07": {
+    "entities": [
+      "round tabletop",
+      "white support frame",
+      "hands"
+    ],
+    "event": "tabletop_removal",
+    "observations": [
+      [
+        225,
+        "pre",
+        "Tabletop appears seated on the white frame while its rim is grasped."
+      ],
+      [
+        240,
+        "transition",
+        "Tabletop starts lifting; clearance from supports is partly obscured."
+      ],
+      [
+        255,
+        "positive",
+        "Round tabletop is visibly lifted clear of the frame."
+      ],
+      [
+        300,
+        "later_state",
+        "Removed tabletop is set on the work surface separately from the frame."
+      ],
+      [
+        345,
+        "corroboration",
+        "Empty support ring visible with tabletop set aside."
+      ]
+    ],
+    "native_ranges": [
+      [
+        240,
+        255
+      ]
+    ],
+    "flags": [
+      "lift_vs_full_clearance_boundary"
+    ],
+    "findings": "Separate grasping, initial lift, complete clearance and setting the top aside.",
+    "instruction": "Alert once when the round tabletop is visibly clear of the white support frame; grasping its rim alone does not qualify.",
+    "confirmed_packet": 8,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB08": {
+    "entities": [
+      "long black rail",
+      "remaining table frame",
+      "fasteners"
+    ],
+    "event": "rail_detachment",
+    "observations": [
+      [
+        3029,
+        "pre",
+        "Long rail remains against the frame while grasped at its junction."
+      ],
+      [
+        3044,
+        "positive",
+        "Rail is held separately with a visible gap from the remaining frame."
+      ],
+      [
+        3059,
+        "corroboration",
+        "Detached rail carried over the work surface."
+      ],
+      [
+        3074,
+        "later_state",
+        "Rail being set down separately."
+      ]
+    ],
+    "native_ranges": [
+      [
+        3029,
+        3044
+      ]
+    ],
+    "flags": [
+      "joint_release_partly_occluded",
+      "multiple_rails_need_identity"
+    ],
+    "findings": "Fastener manipulation is preparatory; the target is clearance of one tracked long rail from the remaining frame.",
+    "instruction": "Alert once when the tracked long black rail is visibly separated from the remaining table frame; unscrewing a fastener alone does not qualify.",
+    "confirmed_packet": 101,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB09": {
+    "entities": [
+      "printer",
+      "paper drawer below main front cover",
+      "toner access cover"
+    ],
+    "event": "paper_drawer_opening",
+    "observations": [
+      [
+        1530,
+        "pre",
+        "Paper drawer front still near the closed position while handle is raised."
+      ],
+      [
+        1545,
+        "transition",
+        "Drawer begins sliding outward."
+      ],
+      [
+        1560,
+        "positive",
+        "Drawer is visibly extended with paper and interior guides exposed."
+      ],
+      [
+        1590,
+        "corroboration",
+        "Paper drawer remains open."
+      ],
+      [
+        2399,
+        "distractor",
+        "Later toner-access opening exposes cartridges; a different cover and event."
+      ]
+    ],
+    "native_ranges": [
+      [
+        1545,
+        1560
+      ]
+    ],
+    "flags": [
+      "drawer_identity_should_be_explicit"
+    ],
+    "findings": "Specify the paper drawer below the main front cover. Do not merge it with later toner-cover opening.",
+    "instruction": "Alert once when the paper drawer immediately below the printer main front cover is visibly pulled outward; opening the toner cover does not qualify.",
+    "confirmed_packet": 52,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  },
+  "HB10": {
+    "entities": [
+      "removable reservoir",
+      "faucet",
+      "visible water stream",
+      "coffee machine"
+    ],
+    "event": "reservoir_under_running_faucet",
+    "observations": [
+      [
+        671,
+        "context",
+        "Reservoir removed from machine before sink interaction."
+      ],
+      [
+        760,
+        "pre",
+        "Reservoir held near the faucet while its handle is operated; water flow not clearly established in this sample."
+      ],
+      [
+        775,
+        "transition",
+        "Faucet operation and reservoir alignment continue; onset of visible flow needs close inspection."
+      ],
+      [
+        805,
+        "transition",
+        "Reservoir is aligned under the outlet; a sustained water stream is not yet clearly visible."
+      ],
+      [
+        819,
+        "positive",
+        "A sustained visible water stream descends into the reservoir opening."
+      ],
+      [
+        835,
+        "corroboration",
+        "Reservoir remains under the clearly running faucet."
+      ],
+      [
+        1193,
+        "later_state",
+        "Reservoir returned to machine in the overview."
+      ]
+    ],
+    "native_ranges": [
+      [
+        775,
+        790
+      ],
+      [
+        805,
+        820
+      ]
+    ],
+    "extra_seconds": [
+      25,
+      25.5,
+      26,
+      26.5,
+      27,
+      33
+    ],
+    "flags": [
+      "legacy_positive_late",
+      "flow_onset_visibility_uncertain"
+    ],
+    "findings": "Higher-resolution review distinguishes alignment/handle operation at 26\u201327 s from clearly visible flowing water at about 27.5 s, earlier than the legacy 33 s label.",
+    "instruction": "Alert once when the detached reservoir is visibly positioned under flowing faucet water; holding it under a stopped faucet does not qualify.",
+    "confirmed_packet": 27,
+    "confirmed_packet_interpretation": "Supports the reviewed observation/event; original-task qualification is separate."
+  }
+}
